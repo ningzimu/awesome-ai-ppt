@@ -115,6 +115,14 @@ GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 ## 贡献
 
 欢迎提交 PR。推荐项目前请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 贡献者
+
+感谢所有参与维护和改进这个项目的人。
+
+<a href="https://github.com/ningzimu/awesome-ai-ppt/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ningzimu/awesome-ai-ppt" alt="Contributors">
+</a>
 """
 
 EN_TAIL = """## Scope
@@ -135,6 +143,14 @@ Out of scope:
 ## Contributing
 
 Pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before suggesting a project.
+
+## Contributors
+
+Thanks to everyone who has helped maintain and improve this project.
+
+<a href="https://github.com/ningzimu/awesome-ai-ppt/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ningzimu/awesome-ai-ppt" alt="Contributors">
+</a>
 """
 
 
