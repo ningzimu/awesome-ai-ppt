@@ -36,7 +36,13 @@
 | [sligter/LandPPT](https://github.com/sligter/LandPPT) | 基于 LLM 的演示生成平台，可把文档转换为专业 PPT，并支持模板、样式和多模型选择。 | HTML-first, 应用, 图片式, PDF, 视频 | 部分可编辑 | 否 | 3,265 |
 | [allweonedev/presentation-ai](https://github.com/allweonedev/presentation-ai) | 开源 Gamma 风格 AI 演示生成器，支持主题、编辑和 PowerPoint 导出。 | HTML-first, 应用, 模板 | 部分可编辑 | 否 | 2,818 |
 | [sunbigfly/ppt-agent-skills](https://github.com/sunbigfly/ppt-agent-skills) | 代码驱动的演示文稿生成框架，强调像构建软件工程一样生成演示文稿。 | HTML-first, 图片式, 自动化 | 部分可编辑 | Skill | 748 |
+| [zai-org/GLM-skills - glmv-pdf-to-ppt](https://github.com/zai-org/GLM-skills/tree/main/skills/glmv-pdf-to-ppt) | GLM-V skill，可将 PDF 转为带结构化页纲、裁图素材和摘要说明的多页 HTML 演示。 | HTML-first, PDF, 图片式, 转换 | 源码可编辑 | Skill | 390 |
+| [claude-office-skills/skills - html-slides](https://github.com/claude-office-skills/skills/tree/main/html-slides) | Claude Office Skills 中的 HTML 幻灯片 skill，用于创建带动画、代码高亮和演讲者备注的 reveal.js 演示。 | HTML-first, Reveal.js, 转换 | 源码可编辑 | Skill | 146 |
+| [code-on-sunday/slide-deck-generator](https://github.com/code-on-sunday/slide-deck-generator) | 用 React、Vite 和 Framer Motion 生成可交互浏览器幻灯片应用的 AI skill。 | HTML-first, React, Interactive, 模板 | 源码可编辑 | Skill | 116 |
 | [Kuneosu/make-slide](https://github.com/Kuneosu/make-slide) | 用于生成独立 HTML 幻灯片 deck 的通用 AI skill。 | HTML-first, PDF, 模板 | 部分可编辑 | Skill | 69 |
+| [zocomputer/skills - revealjs-presentation](https://github.com/zocomputer/skills/tree/main/Community/revealjs-presentation) | Zo Computer skills 中的 Reveal.js 演示 skill，可生成带 Chart.js 图表的单文件 HTML slide deck，并可选发布到 zo.space。 | HTML-first, Reveal.js, Charts | 源码可编辑 | Skill | 40 |
+| [kdnsna/ultimate-ppt-master-skill](https://github.com/kdnsna/ultimate-ppt-master-skill) | 本地优先的 AI 演示生产中枢，可把多类资料打包给 agent，并生成可编辑 PowerPoint 或杂志风 Web Deck。 | HTML-first, PPTX-native, 转换, 模板, 自动化 | 可编辑 | Skill | 30 |
+| [codesstar/next-slide](https://github.com/codesstar/next-slide) | 面向 Claude Code、Hermes Agent 和 OpenClaw 的 HTML 演示生成 skill，提供多风格、双语和 PPT 内容转换能力。 | HTML-first, 转换, Bilingual | 源码可编辑 | Skill | 24 |
 
 ## 图片生成式 PPT 方案
 
@@ -62,6 +68,7 @@
 | [anthropics/skills - pptx](https://github.com/anthropics/skills/tree/main/skills/pptx) | Anthropic 官方 PPTX skill，用于读取、创建、编辑和分析 PowerPoint。 | PPTX-native, 自动化 | 可编辑 | Skill | 139,790 |
 | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 从文档、URL 和 Markdown 生成原生可编辑 PowerPoint 的 AI 工作流。 | PPTX-native, 模板 | 可编辑 | Skill | 20,248 |
 | [MiniMax-AI/skills - pptx-generator](https://github.com/MiniMax-AI/skills) | MiniMax Office skill，支持生成、编辑和读取 PowerPoint。 | PPTX-native, 自动化 | 可编辑 | Skill | 12,053 |
+| [wanshuiyin/Auto-claude-code-research-in-sleep - paper-slides](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/main/skills/paper-slides) | ARIS 论文演示 skill，可从论文生成 Beamer/PDF 幻灯片和带备注、讲稿的可编辑 PPTX。 | PPTX-native, Academic, LaTeX, PDF, Notes | 可编辑 | Skill | 10,469 |
 | [veasion/AiPPT](https://github.com/veasion/AiPPT) | 可通过主题、文件或网址生成 PPT 的 AI 工具，支持自定义模板、图表、动画和 3D 特效解析渲染。 | 自动化, 转换, 应用, PPTX-native | 可编辑 | 否 | 1,882 |
 | [SmartSchoolAI/ai-to-pptx](https://github.com/SmartSchoolAI/ai-to-pptx) | 前后端开源的 AI PPTX 助手，支持生成大纲、选择模板、在线编辑并导出 PPTX。 | PPTX-native, 应用, 模板 | 可编辑 | 否 | 1,433 |
 | [Gabberflast/academic-pptx-skill](https://github.com/Gabberflast/academic-pptx-skill) | 面向学术演示的 Claude skill，强调行动标题、论证结构、图表纪律、引用规范和表达优先设计。 | PPTX-native, 模板 | 可编辑 | Skill | 448 |
@@ -86,6 +93,7 @@
 | [atharva9167j/dom-to-pptx](https://github.com/atharva9167j/dom-to-pptx) | 客户端 DOM/CSS 转可编辑 PowerPoint 工具，并提供 agent skill 安装器。 | HTML-first, 转换, 库, PPTX-native | 可编辑 | Skill | 188 |
 | [JuniverseCoder/MinerU2PPT](https://github.com/JuniverseCoder/MinerU2PPT) | 使用结构提取把 PDF 和图片转换为可编辑 PowerPoint。 | 转换, PPTX-native, PDF, 图片式 | 可编辑 | 否 | 162 |
 | [SlideSpeak/slidespeak-backend](https://github.com/SlideSpeak/slidespeak-backend) | SlideSpeak 后端，支持 AI 总结、问答和 PowerPoint 创建流程。 | 后端, 自动化, 转换, PPTX-native, PDF | 未确认 | 否 | 93 |
+| [trsdn/mcp-server-ppt](https://github.com/trsdn/mcp-server-ppt) | 通过 Windows PowerPoint COM API 自动化创建、编辑和导出 PowerPoint 的 MCP server 与 CLI。 | MCP, 自动化, PowerPoint, COM | 可编辑 | MCP | 29 |
 | [ykuwai/ppt-mcp](https://github.com/ykuwai/ppt-mcp) | 通过 COM 自动化实时控制 PowerPoint 的 MCP server。 | MCP, 自动化, PowerPoint | 可编辑 | MCP | 19 |
 | [ningzimu/image-to-editable-ppt-skill](https://github.com/ningzimu/image-to-editable-ppt-skill) | 把幻灯片图片、PDF 和图片版 PPTX 转换为可编辑 PowerPoint deck 的 Codex skill。 | 转换, 图片式, PDF | 可编辑 | Skill | 15 |
 
