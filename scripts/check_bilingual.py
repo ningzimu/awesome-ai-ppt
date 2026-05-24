@@ -14,7 +14,6 @@ USER_FACING_FILES = [
     Path("README.md"),
     Path("README_EN.md"),
     Path("CONTRIBUTING.md"),
-    Path("ARCHIVE.md"),
     Path("docs/index.html"),
     Path("docs/projects.json"),
     Path(".github/pull_request_template.md"),
@@ -73,6 +72,13 @@ def check_pr_template(errors: list[str]) -> None:
             errors.append(f"{path}: missing required PR checklist phrase: {phrase}")
 
 
+def check_contributing_language(errors: list[str]) -> None:
+    path = Path("CONTRIBUTING.md")
+    text = (ROOT / path).read_text(encoding="utf-8")
+    if has_cjk(text):
+        errors.append(f"{path}: contribution guide should be English-only.")
+
+
 def check_projects_json(errors: list[str]) -> None:
     path = Path("docs/projects.json")
     projects = json.loads((ROOT / path).read_text(encoding="utf-8"))
@@ -101,11 +107,12 @@ def main() -> int:
     errors: list[str] = []
 
     for path in USER_FACING_FILES:
-        if path == Path("README_EN.md"):
+        if path in {Path("README_EN.md"), Path("CONTRIBUTING.md")}:
             continue
         check_file_has_chinese(path, errors)
 
     check_readme_pair(errors)
+    check_contributing_language(errors)
     check_pr_template(errors)
     check_projects_json(errors)
     check_pages_default_language(errors)

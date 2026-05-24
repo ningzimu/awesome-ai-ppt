@@ -22,7 +22,6 @@ When updating any of these files, keep the Chinese and English versions synchron
 - `README.md`
 - `README_EN.md`
 - `CONTRIBUTING.md`
-- `ARCHIVE.md`
 - `docs/index.html`
 - `docs/projects.json`
 - `.github/ISSUE_TEMPLATE/*.md`
@@ -42,7 +41,7 @@ Main-list GitHub repositories should usually have at least 10 stars.
 
 Research papers, official directories, or foundational resources may be included below 10 stars only when they are clearly relevant and useful.
 
-Projects below the threshold should be moved to `ARCHIVE.md` instead of staying in the main README.
+Projects below the threshold should not stay in the main README.
 
 ## Editing Rules
 

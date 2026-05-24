@@ -117,7 +117,7 @@ GitHub 仓库通常需要至少 10 stars 才能进入主列表。论文、官方
 - 没有演示文稿工作流的泛 AI 写作工具。
 - 没有幻灯片或 deck 输出的泛图片生成工具。
 - 没有开源仓库或技术工作流的模板市场。
-- 已归档、废弃或空仓库。历史参考项目应放在 [ARCHIVE.md](ARCHIVE.md)。
+- 已归档、废弃或空仓库。
 
 ## 贡献
 
@@ -135,7 +135,7 @@ Out of scope:
 - Generic AI writing tools without a presentation workflow.
 - Generic image generators without slide or deck output.
 - Template marketplaces with no open repository or technical workflow.
-- Archived, deprecated, or empty repositories. Historical references belong in [ARCHIVE.md](ARCHIVE.md).
+- Archived, deprecated, or empty repositories.
 
 ## Contributing
 

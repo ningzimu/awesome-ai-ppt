@@ -142,7 +142,7 @@ Out of scope:
 - Generic AI writing tools without a presentation workflow.
 - Generic image generators without slide or deck output.
 - Template marketplaces with no open repository or technical workflow.
-- Archived, deprecated, or empty repositories. Historical references belong in [ARCHIVE.md](ARCHIVE.md).
+- Archived, deprecated, or empty repositories.
 
 ## Contributing
 
