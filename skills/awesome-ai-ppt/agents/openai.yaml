@@ -1,0 +1,4 @@
+interface:
+  display_name: "Awesome AI PPT"
+  short_description: "Find, compare, and contribute AI presentation tools."
+  default_prompt: "Use $awesome-ai-ppt to find and compare AI presentation tools or help contribute a project to the awesome-ai-ppt repository."

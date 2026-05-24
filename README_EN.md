@@ -18,6 +18,7 @@ Website: https://ningzimu.github.io/awesome-ai-ppt/
 - [Image-First Presentation Workflows](#image-first-presentation-workflows)
 - [PPTX-Native Generation Workflows](#pptx-native-generation-workflows)
 - [PPTX Libraries and Automation Infrastructure](#pptx-libraries-and-automation-infrastructure)
+- [Agent / Skill Access](#agent--skill-access)
 - [Scope](#scope)
 - [Contributing](#contributing)
 
@@ -96,6 +97,30 @@ Underlying PPTX libraries, MCP servers, Office automation, backend services, and
 | [trsdn/mcp-server-ppt](https://github.com/trsdn/mcp-server-ppt) | MCP server and CLI for creating, editing, and exporting PowerPoint through the Windows PowerPoint COM API. | MCP, Automation, PowerPoint, COM | Editable | MCP | 29 |
 | [ykuwai/ppt-mcp](https://github.com/ykuwai/ppt-mcp) | PowerPoint MCP server for real-time PowerPoint control through COM automation. | MCP, Automation, PowerPoint | Editable | MCP | 19 |
 | [ningzimu/image-to-editable-ppt-skill](https://github.com/ningzimu/image-to-editable-ppt-skill) | Codex skill for converting slide images, PDFs, and image-based PPTX files into editable PowerPoint decks. | Conversion, Image-based, PDF | Editable | Skill | 15 |
+
+## Agent / Skill Access
+
+This repository provides the `awesome-ai-ppt` skill. It helps AI agents use the list as a rough discovery index, inspect original repositories for detailed comparisons, and, when explicitly requested, follow the repository rules to report issues, contribute projects, or prepare PRs.
+
+Tell your AI agent: Install the awesome-ai-ppt skill from https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
+
+Manual install:
+
+```bash
+npx -y skills@latest add ningzimu/awesome-ai-ppt \
+  --skill awesome-ai-ppt \
+  --agent codex \
+  --global
+```
+
+Examples:
+
+```text
+Use the awesome-ai-ppt skill to first shortlist tools from the list, then inspect original repositories to compare options for editable PPTX generation.
+Use the awesome-ai-ppt skill to check whether this GitHub project belongs in the list.
+```
+
+See the [Agent access page](https://ningzimu.github.io/awesome-ai-ppt/agent/) for details.
 
 ## Scope
 

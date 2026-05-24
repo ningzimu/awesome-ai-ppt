@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="安装和使用 awesome-ai-ppt skill，让 AI 检索、对比和贡献 AI PPT 工具清单。">
+    <title>Agent 接入 - Awesome AI PPT</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="topbar" aria-label="Primary">
+        <a class="brand" href="../" aria-label="Awesome AI PPT home">
+          <span class="brand-mark">AI</span>
+          <span>Awesome AI PPT</span>
+        </a>
+        <div class="top-actions">
+          <a href="../" data-i18n="directory">目录</a>
+          <a href="https://github.com/ningzimu/awesome-ai-ppt">GitHub</a>
+          <a href="https://github.com/ningzimu/awesome-ai-ppt/blob/main/CONTRIBUTING.md" data-i18n="contribute">贡献</a>
+          <div class="language-switch" aria-label="Language switch">
+            <button class="active" type="button" data-lang="zh">中文</button>
+            <button type="button" data-lang="en">English</button>
+          </div>
+        </div>
+      </nav>
+      <section class="agent-hero">
+        <p class="agent-kicker" data-i18n="kicker">Agent / Skill 接入</p>
+        <h1 data-i18n="title">让 AI 学会使用和贡献这个清单。</h1>
+        <p class="hero-copy" data-i18n="subtitle">
+          awesome-ai-ppt skill 会引导 AI 先用本仓库粗筛 AI PPT 工具，再阅读原始仓库做详细对比；只有在你明确要求时，它才会帮助反馈问题或准备 PR。
+        </p>
+      </section>
+    </header>
+
+    <main class="agent-main">
+      <section class="agent-section">
+        <h2 data-i18n="sayTitle">一句话让 AI 安装</h2>
+        <p data-i18n="sayCopy">把下面这句话发给你的 AI agent：</p>
+        <pre><code data-i18n="sayPrompt">帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt</code></pre>
+      </section>
+
+      <section class="agent-section">
+        <h2 data-i18n="manualTitle">手动安装</h2>
+        <pre><code>npx -y skills@latest add ningzimu/awesome-ai-ppt \
+  --skill awesome-ai-ppt \
+  --agent codex \
+  --global</code></pre>
+      </section>
+
+      <section class="agent-grid">
+        <article class="agent-section">
+          <h2 data-i18n="useTitle">用于工具选型</h2>
+          <p data-i18n="useCopy">
+            本清单适合发现候选项目，但详细判断必须回到原始仓库。让 AI 对比时，要求它阅读 README、文档、示例、安装方式和维护情况。
+          </p>
+          <pre><code data-i18n="usePrompt">请使用 awesome-ai-ppt skill，先用清单粗筛，再去原仓库详细对比适合生成可编辑 PPTX 的方案。</code></pre>
+        </article>
+
+        <article class="agent-section">
+          <h2 data-i18n="contributeTitle">用于贡献清单</h2>
+          <p data-i18n="contributeCopy">
+            只有当你明确要求反馈问题、修改清单、提交 Issue 或准备 PR 时，skill 才会进入贡献流程。
+          </p>
+          <pre><code data-i18n="contributePrompt">请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。</code></pre>
+        </article>
+      </section>
+
+      <section class="agent-section">
+        <h2 data-i18n="linksTitle">相关链接</h2>
+        <div class="agent-links">
+          <a href="https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt" data-i18n="skillLink">Skill 源码</a>
+          <a href="https://raw.githubusercontent.com/ningzimu/awesome-ai-ppt/main/skills/awesome-ai-ppt/SKILL.md" data-i18n="rawLink">SKILL.md Raw</a>
+          <a href="https://github.com/ningzimu/awesome-ai-ppt/blob/main/CONTRIBUTING.md" data-i18n="contributingLink">贡献指南</a>
+          <a href="https://github.com/ningzimu/awesome-ai-ppt/issues" data-i18n="issuesLink">Issues</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-i18n="footerCopy">数据由本仓库维护。</span>
+      <a href="https://github.com/ningzimu/awesome-ai-ppt/issues/new?template=add-project.md" data-i18n="suggestProject">推荐项目</a>
+    </footer>
+
+    <script>
+      const translations = {
+        zh: {
+          directory: "目录",
+          contribute: "贡献",
+          kicker: "Agent / Skill 接入",
+          title: "让 AI 学会使用和贡献这个清单。",
+          subtitle: "awesome-ai-ppt skill 会引导 AI 先用本仓库粗筛 AI PPT 工具，再阅读原始仓库做详细对比；只有在你明确要求时，它才会帮助反馈问题或准备 PR。",
+          sayTitle: "一句话让 AI 安装",
+          sayCopy: "把下面这句话发给你的 AI agent：",
+          sayPrompt: "帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt",
+          manualTitle: "手动安装",
+          useTitle: "用于工具选型",
+          useCopy: "本清单适合发现候选项目，但详细判断必须回到原始仓库。让 AI 对比时，要求它阅读 README、文档、示例、安装方式和维护情况。",
+          usePrompt: "请使用 awesome-ai-ppt skill，先用清单粗筛，再去原仓库详细对比适合生成可编辑 PPTX 的方案。",
+          contributeTitle: "用于贡献清单",
+          contributeCopy: "只有当你明确要求反馈问题、修改清单、提交 Issue 或准备 PR 时，skill 才会进入贡献流程。",
+          contributePrompt: "请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。",
+          linksTitle: "相关链接",
+          skillLink: "Skill 源码",
+          rawLink: "SKILL.md Raw",
+          contributingLink: "贡献指南",
+          issuesLink: "Issues",
+          footerCopy: "数据由本仓库维护。",
+          suggestProject: "推荐项目"
+        },
+        en: {
+          directory: "Directory",
+          contribute: "Contribute",
+          kicker: "Agent / Skill Access",
+          title: "Teach AI agents to use and contribute this list.",
+          subtitle: "The awesome-ai-ppt skill guides AI agents to use this repository as a rough discovery index, inspect original repositories for detailed comparisons, and only report issues or prepare PRs when you explicitly ask.",
+          sayTitle: "Tell Your AI Agent",
+          sayCopy: "Send this sentence to your AI agent:",
+          sayPrompt: "Install the awesome-ai-ppt skill from https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt",
+          manualTitle: "Manual Install",
+          useTitle: "Choose Tools",
+          useCopy: "This list is useful for discovering candidates, but detailed decisions should come from the original repositories. Ask the AI to read README files, docs, examples, setup paths, and maintenance signals.",
+          usePrompt: "Use the awesome-ai-ppt skill to first shortlist tools from the list, then inspect original repositories to compare options for editable PPTX generation.",
+          contributeTitle: "Contribute To The List",
+          contributeCopy: "The skill enters contribution mode only when you explicitly ask it to report a problem, modify the list, submit an issue, or prepare a PR.",
+          contributePrompt: "Use the awesome-ai-ppt skill to check whether this GitHub project belongs in the list.",
+          linksTitle: "Links",
+          skillLink: "Skill source",
+          rawLink: "SKILL.md Raw",
+          contributingLink: "Contributing guide",
+          issuesLink: "Issues",
+          footerCopy: "Data is maintained in this repository.",
+          suggestProject: "Suggest a project"
+        }
+      };
+
+      const buttons = document.querySelectorAll("[data-lang]");
+      const nodes = document.querySelectorAll("[data-i18n]");
+
+      function setLanguage(lang) {
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        nodes.forEach((node) => {
+          const value = translations[lang][node.dataset.i18n];
+          if (value) node.textContent = value;
+        });
+        buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === lang));
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => setLanguage(button.dataset.lang));
+      });
+    </script>
+  </body>
+</html>

@@ -25,6 +25,7 @@ const state = {
 
 const translations = {
   zh: {
+    agentAccess: "Agent 接入",
     contribute: "贡献",
     heroTitle: "按技术路线、可编辑性和工作流查找 AI PPT 项目。",
     heroCopy: "搜索 HTML 风格、图片生成式、PPTX 原生生成，以及 PPTX 自动化和可编辑重建工具。",
@@ -54,6 +55,7 @@ const translations = {
     suggestProject: "推荐项目"
   },
   en: {
+    agentAccess: "Agent",
     contribute: "Contribute",
     heroTitle: "Find AI PPT projects by technical route, editability, and workflow.",
     heroCopy: "Search HTML-first, image-first, PPTX-native generation, PPTX automation, and editable reconstruction tools.",

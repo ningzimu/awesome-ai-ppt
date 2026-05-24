@@ -97,7 +97,31 @@ Website: https://ningzimu.github.io/awesome-ai-ppt/
 
 """
 
-ZH_TAIL = """## 收录范围
+ZH_TAIL = """## Agent / Skill 接入
+
+本仓库提供 `awesome-ai-ppt` skill，帮助 AI 先用清单粗筛 AI PPT 工具，再去原始仓库做详细对比；也可以在你明确要求时，引导 AI 按规则反馈问题、贡献项目或准备 PR。
+
+你可以对 AI 说：帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
+
+手动安装：
+
+```bash
+npx -y skills@latest add ningzimu/awesome-ai-ppt \\
+  --skill awesome-ai-ppt \\
+  --agent codex \\
+  --global
+```
+
+示例：
+
+```text
+请使用 awesome-ai-ppt skill，先用清单粗筛，再去原仓库详细对比适合生成可编辑 PPTX 的方案。
+请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。
+```
+
+更多说明见 [Agent 接入页面](https://ningzimu.github.io/awesome-ai-ppt/agent/)。
+
+## 收录范围
 
 入选项目应与 AI 辅助演示工作直接相关，例如生成幻灯片、编辑 PPTX、把内容转换为演示文稿、重建可编辑 deck、渲染或验证幻灯片。
 
@@ -125,7 +149,31 @@ GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 </a>
 """
 
-EN_TAIL = """## Scope
+EN_TAIL = """## Agent / Skill Access
+
+This repository provides the `awesome-ai-ppt` skill. It helps AI agents use the list as a rough discovery index, inspect original repositories for detailed comparisons, and, when explicitly requested, follow the repository rules to report issues, contribute projects, or prepare PRs.
+
+Tell your AI agent: Install the awesome-ai-ppt skill from https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
+
+Manual install:
+
+```bash
+npx -y skills@latest add ningzimu/awesome-ai-ppt \\
+  --skill awesome-ai-ppt \\
+  --agent codex \\
+  --global
+```
+
+Examples:
+
+```text
+Use the awesome-ai-ppt skill to first shortlist tools from the list, then inspect original repositories to compare options for editable PPTX generation.
+Use the awesome-ai-ppt skill to check whether this GitHub project belongs in the list.
+```
+
+See the [Agent access page](https://ningzimu.github.io/awesome-ai-ppt/agent/) for details.
+
+## Scope
 
 Included projects should have a direct relationship to AI-assisted presentation work: generating slides, editing PPTX files, converting content into presentations, reconstructing editable decks, or rendering and validating slides.
 
@@ -195,7 +243,7 @@ def render_readme(projects: list[dict], lang: str) -> str:
         lines = [ZH_HEADER]
         for category, category_zh in CATEGORIES:
             lines.append(f"- [{category_zh}](#{ZH_SLUGS[category_zh]})")
-        lines.extend(["- [收录范围](#收录范围)", "- [贡献](#贡献)\n"])
+        lines.extend(["- [Agent / Skill 接入](#agent--skill-接入)", "- [收录范围](#收录范围)", "- [贡献](#贡献)\n"])
         for category, category_zh in CATEGORIES:
             lines.extend([f"## {category_zh}\n", f"{ZH_SECTION_COPY[category]}\n"])
             lines.extend(["| 仓库 | 简介 | 标签 | 可编辑性 | Skill | Star |", "| --- | --- | --- | --- | --- | --- |"])
@@ -207,7 +255,7 @@ def render_readme(projects: list[dict], lang: str) -> str:
     lines = [EN_HEADER]
     for category, _ in CATEGORIES:
         lines.append(f"- [{category}](#{slug_en(category)})")
-    lines.extend(["- [Scope](#scope)", "- [Contributing](#contributing)\n"])
+    lines.extend(["- [Agent / Skill Access](#agent--skill-access)", "- [Scope](#scope)", "- [Contributing](#contributing)\n"])
     for category, _ in CATEGORIES:
         lines.extend([f"## {category}\n", f"{EN_SECTION_COPY[category]}\n"])
         lines.extend(["| Repository | Description | Tags | Editability | Skill | Stars |", "| --- | --- | --- | --- | --- | --- |"])
