@@ -144,6 +144,4 @@ Pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before sugges
 
 Thanks to everyone who has helped maintain and improve this project.
 
-<a href="https://github.com/ningzimu/awesome-ai-ppt/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ningzimu/awesome-ai-ppt" alt="Contributors">
-</a>
+<a href="https://github.com/ningzimu"><img src="https://github.com/ningzimu.png?size=96" width="64" height="64" alt="ningzimu"></a>
