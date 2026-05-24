@@ -17,6 +17,8 @@ When updating any of these files, update both English and Chinese text in the sa
 - `README.md`
 - `CONTRIBUTING.md`
 - `ARCHIVE.md`
+- `docs/index.html`
+- `docs/projects.json`
 - `.github/ISSUE_TEMPLATE/*.md`
 - `.github/pull_request_template.md`
 
@@ -25,6 +27,8 @@ Do not add English-only or Chinese-only user-facing sections unless there is a c
 For project list entries in `README.md`, keep the English description first, followed by the Chinese description in the same bullet.
 
 Pull requests must keep English and Chinese user-facing text in sync. PRs that do not update both languages should not pass review.
+
+When changing the main list in `README.md`, update the GitHub Pages data in `docs/projects.json` in the same change.
 
 ## Inclusion Rules
 

@@ -11,6 +11,10 @@ This is a curated list, not a dump of every slide-related link. It focuses on Gi
 
 这是一个精选列表，不是“所有相关链接大全”。本仓库重点收集能帮助 agent 或开发者创建、编辑、转换、检查或评估演示文稿的 GitHub 仓库与研究项目。
 
+Website: https://ningzimu.github.io/awesome-ai-ppt/
+
+网站：https://ningzimu.github.io/awesome-ai-ppt/
+
 ## Quick Picks
 
 快速选择。

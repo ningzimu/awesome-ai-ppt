@@ -2,6 +2,7 @@
 """Check that user-facing Markdown keeps English and Chinese in sync."""
 
 from pathlib import Path
+import json
 import re
 import sys
 
@@ -13,6 +14,8 @@ USER_FACING_FILES = [
     Path("README.md"),
     Path("CONTRIBUTING.md"),
     Path("ARCHIVE.md"),
+    Path("docs/index.html"),
+    Path("docs/projects.json"),
     Path(".github/pull_request_template.md"),
     Path(".github/ISSUE_TEMPLATE/add-project.md"),
     Path(".github/ISSUE_TEMPLATE/broken-link.md"),
@@ -57,6 +60,21 @@ def check_pr_template(errors: list[str]) -> None:
             errors.append(f"{path}: missing required PR checklist phrase: {phrase}")
 
 
+def check_projects_json(errors: list[str]) -> None:
+    path = Path("docs/projects.json")
+    projects = json.loads((ROOT / path).read_text(encoding="utf-8"))
+    for index, project in enumerate(projects, 1):
+        name = project.get("name", f"entry #{index}")
+        if not has_cjk(project.get("descriptionZh", "")):
+            errors.append(f"{path}: {name}: missing Chinese descriptionZh.")
+        if not project.get("description"):
+            errors.append(f"{path}: {name}: missing English description.")
+        stars = project.get("stars")
+        repo = project.get("repo")
+        if repo and isinstance(stars, int) and stars < 10:
+            errors.append(f"{path}: {name}: GitHub repositories need at least 10 stars.")
+
+
 def main() -> int:
     errors: list[str] = []
 
@@ -65,6 +83,7 @@ def main() -> int:
 
     check_readme_entries(errors)
     check_pr_template(errors)
+    check_projects_json(errors)
 
     if errors:
         print("Bilingual check failed:")
@@ -78,4 +97,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
