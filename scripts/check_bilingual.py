@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check that user-facing Markdown keeps English and Chinese in sync."""
+"""Check that user-facing content keeps Chinese and English versions in sync."""
 
 from pathlib import Path
 import json
@@ -12,6 +12,7 @@ CJK_RE = re.compile(r"[\u4e00-\u9fff]")
 
 USER_FACING_FILES = [
     Path("README.md"),
+    Path("README_EN.md"),
     Path("CONTRIBUTING.md"),
     Path("ARCHIVE.md"),
     Path("docs/index.html"),
@@ -33,19 +34,31 @@ def check_file_has_chinese(path: Path, errors: list[str]) -> None:
         errors.append(f"{path}: user-facing Markdown must include Chinese text.")
 
 
-def check_readme_entries(errors: list[str]) -> None:
-    path = ROOT / "README.md"
-    for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
-        stripped = line.strip()
-        if not stripped.startswith("- ["):
-            continue
-        if "](http" not in stripped:
-            continue
-        if has_cjk(stripped):
-            continue
-        errors.append(
-            f"README.md:{lineno}: project/list entry must include Chinese in the same bullet."
-        )
+def check_readme_pair(errors: list[str]) -> None:
+    zh_path = ROOT / "README.md"
+    en_path = ROOT / "README_EN.md"
+    zh_text = zh_path.read_text(encoding="utf-8")
+    en_text = en_path.read_text(encoding="utf-8")
+
+    if not has_cjk(zh_text):
+        errors.append("README.md: default README must be Chinese.")
+    if has_cjk(en_text):
+        errors.append("README_EN.md: English README should not contain Chinese text.")
+
+    required_links = [
+        ("README.md", "README_EN.md"),
+        ("README_EN.md", "README.md"),
+    ]
+    for filename, expected in required_links:
+        text = (ROOT / filename).read_text(encoding="utf-8")
+        if expected not in text:
+            errors.append(f"{filename}: missing language switch link to {expected}.")
+
+    link_re = re.compile(r"^- \[[^\]]+\]\((https?://[^)]+)\)", re.MULTILINE)
+    zh_links = sorted(link_re.findall(zh_text))
+    en_links = sorted(link_re.findall(en_text))
+    if zh_links != en_links:
+        errors.append("README.md and README_EN.md project/link entries are not synchronized.")
 
 
 def check_pr_template(errors: list[str]) -> None:
@@ -75,15 +88,27 @@ def check_projects_json(errors: list[str]) -> None:
             errors.append(f"{path}: {name}: GitHub repositories need at least 10 stars.")
 
 
+def check_pages_default_language(errors: list[str]) -> None:
+    path = Path("docs/index.html")
+    text = (ROOT / path).read_text(encoding="utf-8")
+    if 'lang="zh-CN"' not in text:
+        errors.append(f"{path}: GitHub Pages should default to Chinese.")
+    if 'data-lang="en"' not in text or 'data-lang="zh"' not in text:
+        errors.append(f"{path}: GitHub Pages must provide Chinese and English switches.")
+
+
 def main() -> int:
     errors: list[str] = []
 
     for path in USER_FACING_FILES:
+        if path == Path("README_EN.md"):
+            continue
         check_file_has_chinese(path, errors)
 
-    check_readme_entries(errors)
+    check_readme_pair(errors)
     check_pr_template(errors)
     check_projects_json(errors)
+    check_pages_default_language(errors)
 
     if errors:
         print("Bilingual check failed:")

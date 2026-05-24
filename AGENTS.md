@@ -10,11 +10,17 @@ It is a curated list, not a complete directory. Keep changes focused, conservati
 
 ## Bilingual Maintenance
 
-User-facing content must stay bilingual.
+User-facing content must stay available in both Chinese and English, but README files are split by language.
 
-When updating any of these files, update both English and Chinese text in the same change:
+When updating the main README, update both files in the same change:
+
+- `README.md` is Chinese and is the default GitHub landing README.
+- `README_EN.md` is English and is linked from the Docs badge in `README.md`.
+
+When updating any of these files, keep the Chinese and English versions synchronized in the same change:
 
 - `README.md`
+- `README_EN.md`
 - `CONTRIBUTING.md`
 - `ARCHIVE.md`
 - `docs/index.html`
@@ -22,13 +28,13 @@ When updating any of these files, update both English and Chinese text in the sa
 - `.github/ISSUE_TEMPLATE/*.md`
 - `.github/pull_request_template.md`
 
-Do not add English-only or Chinese-only user-facing sections unless there is a clear reason and the paired translation is intentionally not needed.
-
-For project list entries in `README.md`, keep the English description first, followed by the Chinese description in the same bullet.
+Do not add English-only or Chinese-only user-facing changes unless there is a clear reason and the paired translation is intentionally not needed.
 
 Pull requests must keep English and Chinese user-facing text in sync. PRs that do not update both languages should not pass review.
 
 When changing the main list in `README.md`, update the GitHub Pages data in `docs/projects.json` in the same change.
+
+GitHub Pages should default to Chinese and provide an English switch.
 
 ## Inclusion Rules
 

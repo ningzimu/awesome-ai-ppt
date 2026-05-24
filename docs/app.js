@@ -24,7 +24,55 @@ const state = {
   projects: [],
   category: "All",
   query: "",
-  sort: "stars-desc"
+  sort: "stars-desc",
+  lang: "zh"
+};
+
+const translations = {
+  zh: {
+    contribute: "贡献",
+    kicker: "双语精选目录",
+    heroTitle: "按分类、星标和工作流查找 AI PPT 项目。",
+    heroCopy: "搜索 AI 演示生成、PowerPoint 自动化、PPTX 编辑、可编辑重建和幻灯片 agent 工作流开源工具。",
+    projectsLabel: "项目",
+    categoriesLabel: "分类",
+    thresholdLabel: "入选门槛",
+    searchLabel: "搜索",
+    searchPlaceholder: "搜索名称、分类、输出类型、英文描述...",
+    sortLabel: "排序",
+    sortStarsDesc: "星标降序",
+    sortStarsAsc: "星标升序",
+    sortNameAsc: "名称 A-Z",
+    allCategories: "全部分类",
+    projectCount: (count) => `${count} 个项目`,
+    starsLabel: "星标",
+    noResults: "没有找到匹配的项目。",
+    loadFailed: "项目数据加载失败。",
+    footerCopy: "数据由本仓库维护。",
+    suggestProject: "推荐项目"
+  },
+  en: {
+    contribute: "Contribute",
+    kicker: "Curated bilingual directory",
+    heroTitle: "Find AI PPT projects by category, stars, and workflow.",
+    heroCopy: "Search open-source tools for AI-assisted presentation generation, PowerPoint automation, PPTX editing, editable reconstruction, and slide agent workflows.",
+    projectsLabel: "Projects",
+    categoriesLabel: "Categories",
+    thresholdLabel: "Stars threshold",
+    searchLabel: "Search",
+    searchPlaceholder: "Search name, category, output, Chinese description...",
+    sortLabel: "Sort",
+    sortStarsDesc: "Stars high to low",
+    sortStarsAsc: "Stars low to high",
+    sortNameAsc: "Name A-Z",
+    allCategories: "All categories",
+    projectCount: (count) => `${count} projects`,
+    starsLabel: "stars",
+    noResults: "No projects match this search.",
+    loadFailed: "Could not load project data.",
+    footerCopy: "Data is maintained in this repository.",
+    suggestProject: "Suggest a project"
+  }
 };
 
 const nodes = {
@@ -35,7 +83,9 @@ const nodes = {
   resultCount: document.querySelector("#resultCount"),
   activeCategory: document.querySelector("#activeCategory"),
   statProjects: document.querySelector("#statProjects"),
-  statCategories: document.querySelector("#statCategories")
+  statCategories: document.querySelector("#statCategories"),
+  languageButtons: document.querySelectorAll("[data-lang]"),
+  i18nNodes: document.querySelectorAll("[data-i18n]")
 };
 
 function formatStars(stars) {
@@ -97,7 +147,7 @@ function renderCategories() {
       const active = category === state.category ? " active" : "";
       return `
         <button class="${active}" type="button" data-category="${category}">
-          <span>${category}<br><small>${categoryZh[category]}</small></span>
+          <span>${state.lang === "zh" ? categoryZh[category] : category}<br><small>${state.lang === "zh" ? category : categoryZh[category]}</small></span>
           <strong>${count}</strong>
         </button>
       `;
@@ -106,14 +156,20 @@ function renderCategories() {
 }
 
 function renderProjects() {
+  const t = translations[state.lang];
   const projects = filteredProjects();
-  nodes.resultCount.textContent = `${projects.length} projects / ${projects.length} 个项目`;
-  nodes.activeCategory.textContent = `${state.category} / ${categoryZh[state.category]}`;
+  nodes.resultCount.textContent = t.projectCount(projects.length);
+  nodes.activeCategory.textContent =
+    state.category === "All"
+      ? t.allCategories
+      : state.lang === "zh"
+        ? categoryZh[state.category]
+        : state.category;
 
   if (!projects.length) {
     nodes.projectList.innerHTML = `
       <div class="empty">
-        No projects match this search. 没有找到匹配的项目。
+        ${t.noResults}
       </div>
     `;
     return;
@@ -125,10 +181,10 @@ function renderProjects() {
         <article class="project">
           <div>
             <h2><a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.name}</a></h2>
-            <p>${project.description}</p>
-            <p class="zh">${project.descriptionZh}</p>
+            <p>${state.lang === "zh" ? project.descriptionZh : project.description}</p>
+            <p class="secondary">${state.lang === "zh" ? project.description : project.descriptionZh}</p>
             <div class="meta">
-              <span class="chip">${project.categoryZh}</span>
+              <span class="chip">${state.lang === "zh" ? project.categoryZh : project.category}</span>
               <span class="chip">${project.type}</span>
               <span class="chip">${project.output}</span>
               ${project.repo ? `<span class="chip">${project.repo}</span>` : ""}
@@ -136,7 +192,7 @@ function renderProjects() {
           </div>
           <div class="stars" aria-label="Stars">
             <strong>${formatStars(project.stars)}</strong>
-            <span>stars / 星标</span>
+            <span>${t.starsLabel}</span>
           </div>
         </article>
       `
@@ -145,8 +201,25 @@ function renderProjects() {
 }
 
 function render() {
+  renderStaticText();
   renderCategories();
   renderProjects();
+}
+
+function renderStaticText() {
+  const t = translations[state.lang];
+  document.documentElement.lang = state.lang === "zh" ? "zh-CN" : "en";
+  nodes.i18nNodes.forEach((node) => {
+    const key = node.dataset.i18n;
+    const value = t[key];
+    if (typeof value === "string") {
+      node.textContent = value;
+    }
+  });
+  nodes.searchInput.placeholder = t.searchPlaceholder;
+  nodes.languageButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.lang === state.lang);
+  });
 }
 
 nodes.categoryNav.addEventListener("click", (event) => {
@@ -166,6 +239,13 @@ nodes.sortSelect.addEventListener("change", (event) => {
   renderProjects();
 });
 
+nodes.languageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    state.lang = button.dataset.lang;
+    render();
+  });
+});
+
 fetch("projects.json")
   .then((response) => response.json())
   .then((projects) => {
@@ -177,7 +257,7 @@ fetch("projects.json")
   .catch(() => {
     nodes.projectList.innerHTML = `
       <div class="empty">
-        Could not load project data. 项目数据加载失败。
+        ${translations[state.lang].loadFailed}
       </div>
     `;
   });

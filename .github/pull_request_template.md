@@ -27,11 +27,11 @@
 - [ ] The entry is in the most relevant category.
 - [ ] The category remains alphabetized.
 - [ ] This pull request changes one project entry only.
-- [ ] Bilingual update: English and Chinese user-facing text were updated together.
+- [ ] Bilingual update: `README.md` and `README_EN.md` were updated together when README content changed.
 - [ ] 项目与 AI 演示、PPTX 编辑、幻灯片转换、deck 可编辑重建、渲染、QA、研究或评估直接相关。
 - [ ] GitHub 仓库至少有 10 stars，除非它是论文、官方目录或基础资源。
 - [ ] 描述简短、客观，并以句号结尾。
 - [ ] 条目放在最相关的分类中。
 - [ ] 分类内仍按字母顺序排列。
 - [ ] 本 PR 只修改一个项目条目。
-- [ ] 中英文同步：所有面向用户的英文和中文内容已同步更新。
+- [ ] 中英文同步：修改 README 内容时，`README.md` 和 `README_EN.md` 已同步更新。

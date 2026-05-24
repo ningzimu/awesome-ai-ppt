@@ -82,6 +82,33 @@ a {
   color: var(--accent);
 }
 
+.language-switch {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.language-switch button {
+  min-width: 72px;
+  min-height: 30px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.language-switch button.active {
+  background: var(--text);
+  color: #fff;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
@@ -291,7 +318,7 @@ select:focus {
   color: var(--muted);
 }
 
-.project p.zh {
+.project p.secondary {
   margin-top: 6px;
 }
 

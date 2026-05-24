@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A bilingual searchable directory for AI PPT, PowerPoint automation, PPTX editing, and slide workflow tooling.">
+    <meta name="description" content="AI PPT、PowerPoint 自动化、PPTX 编辑和幻灯片工作流工具的双语可搜索目录。">
     <title>Awesome AI PPT</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -16,32 +16,33 @@
         </a>
         <div class="top-actions">
           <a href="https://github.com/ningzimu/awesome-ai-ppt">GitHub</a>
-          <a href="https://github.com/ningzimu/awesome-ai-ppt/blob/main/CONTRIBUTING.md">Contribute / 贡献</a>
+          <a href="https://github.com/ningzimu/awesome-ai-ppt/blob/main/CONTRIBUTING.md" data-i18n="contribute">贡献</a>
+          <div class="language-switch" aria-label="Language switch">
+            <button class="active" type="button" data-lang="zh">中文</button>
+            <button type="button" data-lang="en">English</button>
+          </div>
         </div>
       </nav>
       <section class="hero">
         <div>
-          <p class="kicker">Curated bilingual directory / 双语精选目录</p>
-          <h1>Find AI PPT projects by category, stars, and workflow.</h1>
-          <p class="hero-copy">
-            Search open-source tools for AI-assisted presentation generation, PowerPoint automation, PPTX editing, editable reconstruction, and slide agent workflows.
-          </p>
-          <p class="hero-copy zh">
-            按分类、星标和工作流查找 AI PPT、PowerPoint 自动化、PPTX 编辑、可编辑重建和幻灯片 agent 项目。
+          <p class="kicker" data-i18n="kicker">双语精选目录</p>
+          <h1 data-i18n="heroTitle">按分类、星标和工作流查找 AI PPT 项目。</h1>
+          <p class="hero-copy" data-i18n="heroCopy">
+            搜索 AI 演示生成、PowerPoint 自动化、PPTX 编辑、可编辑重建和幻灯片 agent 工作流开源工具。
           </p>
         </div>
         <div class="hero-stats" aria-label="Directory summary">
           <div>
             <strong id="statProjects">0</strong>
-            <span>Projects / 项目</span>
+            <span data-i18n="projectsLabel">项目</span>
           </div>
           <div>
             <strong id="statCategories">0</strong>
-            <span>Categories / 分类</span>
+            <span data-i18n="categoriesLabel">分类</span>
           </div>
           <div>
             <strong>10+</strong>
-            <span>Stars threshold / 入选门槛</span>
+            <span data-i18n="thresholdLabel">入选门槛</span>
           </div>
         </div>
       </section>
@@ -50,8 +51,8 @@
     <main class="layout">
       <aside class="sidebar" aria-label="Category navigation">
         <div class="sidebar-head">
-          <span>Categories</span>
           <span>分类</span>
+          <span>Categories</span>
         </div>
         <nav id="categoryNav" class="category-nav"></nav>
       </aside>
@@ -59,22 +60,22 @@
       <section class="content">
         <div class="toolbar">
           <label class="search">
-            <span>Search / 搜索</span>
-            <input id="searchInput" type="search" placeholder="Search name, category, output, 中文描述..." autocomplete="off">
+            <span data-i18n="searchLabel">搜索</span>
+            <input id="searchInput" type="search" placeholder="搜索名称、分类、输出类型、英文描述..." autocomplete="off">
           </label>
           <label class="select">
-            <span>Sort / 排序</span>
+            <span data-i18n="sortLabel">排序</span>
             <select id="sortSelect">
-              <option value="stars-desc">Stars high to low / 星标降序</option>
-              <option value="stars-asc">Stars low to high / 星标升序</option>
-              <option value="name-asc">Name A-Z / 名称 A-Z</option>
+              <option value="stars-desc" data-i18n="sortStarsDesc">星标降序</option>
+              <option value="stars-asc" data-i18n="sortStarsAsc">星标升序</option>
+              <option value="name-asc" data-i18n="sortNameAsc">名称 A-Z</option>
             </select>
           </label>
         </div>
 
         <div class="result-line">
-          <span id="resultCount">0 projects</span>
-          <span id="activeCategory">All categories / 全部分类</span>
+          <span id="resultCount">0 个项目</span>
+          <span id="activeCategory">全部分类</span>
         </div>
 
         <div id="projectList" class="project-list" aria-live="polite"></div>
@@ -82,8 +83,8 @@
     </main>
 
     <footer class="site-footer">
-      <span>Data is maintained in this repository. 数据由本仓库维护。</span>
-      <a href="https://github.com/ningzimu/awesome-ai-ppt/issues/new?template=add-project.md">Suggest a project / 推荐项目</a>
+      <span data-i18n="footerCopy">数据由本仓库维护。</span>
+      <a href="https://github.com/ningzimu/awesome-ai-ppt/issues/new?template=add-project.md" data-i18n="suggestProject">推荐项目</a>
     </footer>
 
     <script src="app.js" defer></script>
