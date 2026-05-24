@@ -24,6 +24,8 @@ Do not add English-only or Chinese-only user-facing sections unless there is a c
 
 For project list entries in `README.md`, keep the English description first, followed by the Chinese description in the same bullet.
 
+Pull requests must keep English and Chinese user-facing text in sync. PRs that do not update both languages should not pass review.
+
 ## Inclusion Rules
 
 Main-list GitHub repositories should usually have at least 10 stars.
@@ -47,6 +49,7 @@ Before finishing changes, run:
 
 ```sh
 git diff --check
+python3 scripts/check_bilingual.py
 ```
 
 If Node works in the local environment, also run:
@@ -56,4 +59,3 @@ npx awesome-lint
 ```
 
 If `npx awesome-lint` cannot run because of local toolchain issues, mention the exact reason in the final response.
-
