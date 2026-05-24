@@ -78,7 +78,7 @@ ZH_HEADER = """# Awesome AI PPT
 
 ## Agent / Skill 接入
 
-本仓库提供 `awesome-ai-ppt` skill，帮助 AI 先用清单粗筛 AI PPT 工具，再去原始仓库做详细对比；也可以在你明确要求时，引导 AI 按规则反馈问题、贡献项目或准备 PR。
+本仓库提供 `awesome-ai-ppt` skill。告诉 AI 你的场景、材料和偏好，它会结合这个清单帮你个性化推荐合适的 AI PPT 工具；也可以在你需要时辅助提交问题、准备 PR，一起贡献这个项目。
 
 你可以对 AI 说：帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
 
@@ -94,7 +94,7 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \\
 示例：
 
 ```text
-请使用 awesome-ai-ppt skill，先用清单粗筛，再去原仓库详细对比适合生成可编辑 PPTX 的方案。
+我想把一篇技术文章做成可编辑 PPT，重视后续修改和自动化，请使用 awesome-ai-ppt skill 帮我推荐最合适的 AI PPT 项目。
 请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。
 ```
 
@@ -119,7 +119,7 @@ Website: https://ningzimu.github.io/awesome-ai-ppt/
 
 ## Agent / Skill Access
 
-This repository provides the `awesome-ai-ppt` skill. It helps AI agents use the list as a rough discovery index, inspect original repositories for detailed comparisons, and, when explicitly requested, follow the repository rules to report issues, contribute projects, or prepare PRs.
+This repository provides the `awesome-ai-ppt` skill. Tell your AI agent your scenario, source material, and preferences, and it can use this list to recommend the best-fit AI PPT tools. It can also help submit issues, prepare PRs, and contribute to this project with you when you ask.
 
 Tell your AI agent: Install the awesome-ai-ppt skill from https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
 
@@ -135,7 +135,7 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \\
 Examples:
 
 ```text
-Use the awesome-ai-ppt skill to first shortlist tools from the list, then inspect original repositories to compare options for editable PPTX generation.
+I want to turn a technical article into an editable PPT and care about later editing and automation. Use the awesome-ai-ppt skill to recommend the best-fit AI PPT projects.
 Use the awesome-ai-ppt skill to check whether this GitHub project belongs in the list.
 ```
 

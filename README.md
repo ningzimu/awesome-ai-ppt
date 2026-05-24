@@ -13,7 +13,7 @@
 
 ## Agent / Skill 接入
 
-本仓库提供 `awesome-ai-ppt` skill，帮助 AI 先用清单粗筛 AI PPT 工具，再去原始仓库做详细对比；也可以在你明确要求时，引导 AI 按规则反馈问题、贡献项目或准备 PR。
+本仓库提供 `awesome-ai-ppt` skill。告诉 AI 你的场景、材料和偏好，它会结合这个清单帮你个性化推荐合适的 AI PPT 工具；也可以在你需要时辅助提交问题、准备 PR，一起贡献这个项目。
 
 你可以对 AI 说：帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
 
@@ -29,7 +29,7 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 示例：
 
 ```text
-请使用 awesome-ai-ppt skill，先用清单粗筛，再去原仓库详细对比适合生成可编辑 PPTX 的方案。
+我想把一篇技术文章做成可编辑 PPT，重视后续修改和自动化，请使用 awesome-ai-ppt skill 帮我推荐最合适的 AI PPT 项目。
 请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。
 ```
 

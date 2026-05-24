@@ -13,7 +13,7 @@ Website: https://ningzimu.github.io/awesome-ai-ppt/
 
 ## Agent / Skill Access
 
-This repository provides the `awesome-ai-ppt` skill. It helps AI agents use the list as a rough discovery index, inspect original repositories for detailed comparisons, and, when explicitly requested, follow the repository rules to report issues, contribute projects, or prepare PRs.
+This repository provides the `awesome-ai-ppt` skill. Tell your AI agent your scenario, source material, and preferences, and it can use this list to recommend the best-fit AI PPT tools. It can also help submit issues, prepare PRs, and contribute to this project with you when you ask.
 
 Tell your AI agent: Install the awesome-ai-ppt skill from https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
 
@@ -29,7 +29,7 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 Examples:
 
 ```text
-Use the awesome-ai-ppt skill to first shortlist tools from the list, then inspect original repositories to compare options for editable PPTX generation.
+I want to turn a technical article into an editable PPT and care about later editing and automation. Use the awesome-ai-ppt skill to recommend the best-fit AI PPT projects.
 Use the awesome-ai-ppt skill to check whether this GitHub project belongs in the list.
 ```
 
