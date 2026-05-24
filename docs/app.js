@@ -17,6 +17,7 @@ const categoryZh = {
 const state = {
   projects: [],
   category: "All",
+  tags: [],
   query: "",
   sort: "stars-desc",
   lang: "zh"
@@ -41,8 +42,11 @@ const translations = {
     sortStarsDesc: "星标降序",
     sortStarsAsc: "星标升序",
     sortNameAsc: "名称 A-Z",
+    tagsLabel: "标签",
+    clearTags: "清除",
     allCategories: "全部分类",
     projectCount: (count) => `${count} 个项目`,
+    activeTags: (tags) => `标签：${tags.join("、")}`,
     starsLabel: "星标",
     noResults: "没有找到匹配的项目。",
     loadFailed: "项目数据加载失败。",
@@ -67,8 +71,11 @@ const translations = {
     sortStarsDesc: "Stars high to low",
     sortStarsAsc: "Stars low to high",
     sortNameAsc: "Name A-Z",
+    tagsLabel: "Tags",
+    clearTags: "Clear",
     allCategories: "All categories",
     projectCount: (count) => `${count} projects`,
+    activeTags: (tags) => `Tags: ${tags.join(", ")}`,
     starsLabel: "stars",
     noResults: "No projects match this search.",
     loadFailed: "Could not load project data.",
@@ -79,6 +86,8 @@ const translations = {
 
 const nodes = {
   categoryNav: document.querySelector("#categoryNav"),
+  tagNav: document.querySelector("#tagNav"),
+  clearTagsButton: document.querySelector("#clearTagsButton"),
   projectList: document.querySelector("#projectList"),
   searchInput: document.querySelector("#searchInput"),
   sortSelect: document.querySelector("#sortSelect"),
@@ -126,6 +135,16 @@ function metaChips(project) {
   return [...new Set(values)];
 }
 
+function allTags() {
+  const counts = new Map();
+  state.projects.forEach((project) => {
+    (project.tags || []).forEach((tag) => {
+      counts.set(tag, (counts.get(tag) || 0) + 1);
+    });
+  });
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+}
+
 function sorted(projects) {
   return [...projects].sort((a, b) => {
     if (state.sort === "name-asc") {
@@ -148,8 +167,9 @@ function filteredProjects() {
   return sorted(
     state.projects.filter((project) => {
       const categoryMatch = state.category === "All" || project.category === state.category;
+      const tagMatch = state.tags.every((tag) => (project.tags || []).includes(tag));
       const queryMatch = !query || searchable(project).includes(query);
-      return categoryMatch && queryMatch;
+      return categoryMatch && tagMatch && queryMatch;
     })
   );
 }
@@ -172,16 +192,34 @@ function renderCategories() {
     .join("");
 }
 
+function renderTags() {
+  nodes.tagNav.innerHTML = allTags()
+    .map(([tag, count]) => {
+      const active = state.tags.includes(tag) ? " active" : "";
+      return `
+        <button class="${active}" type="button" data-tag="${tag}">
+          <span>${tag}</span>
+          <strong>${count}</strong>
+        </button>
+      `;
+    })
+    .join("");
+  nodes.clearTagsButton.disabled = state.tags.length === 0;
+}
+
 function renderProjects() {
   const t = translations[state.lang];
   const projects = filteredProjects();
   nodes.resultCount.textContent = t.projectCount(projects.length);
-  nodes.activeCategory.textContent =
+  const activeCategory =
     state.category === "All"
       ? t.allCategories
       : state.lang === "zh"
         ? categoryZh[state.category]
         : state.category;
+  nodes.activeCategory.textContent = state.tags.length
+    ? `${activeCategory} · ${t.activeTags(state.tags)}`
+    : activeCategory;
 
   if (!projects.length) {
     nodes.projectList.innerHTML = `
@@ -218,6 +256,7 @@ function renderProjects() {
 function render() {
   renderStaticText();
   renderCategories();
+  renderTags();
   renderProjects();
 }
 
@@ -241,6 +280,21 @@ nodes.categoryNav.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-category]");
   if (!button) return;
   state.category = button.dataset.category;
+  render();
+});
+
+nodes.tagNav.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-tag]");
+  if (!button) return;
+  const tag = button.dataset.tag;
+  state.tags = state.tags.includes(tag)
+    ? state.tags.filter((activeTag) => activeTag !== tag)
+    : [...state.tags, tag];
+  render();
+});
+
+nodes.clearTagsButton.addEventListener("click", () => {
+  state.tags = [];
   render();
 });
 

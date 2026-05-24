@@ -60,11 +60,20 @@
 
     <main class="layout">
       <aside class="sidebar" aria-label="Category navigation">
-        <div class="sidebar-head">
-          <span>分类</span>
-          <span>Categories</span>
-        </div>
-        <nav id="categoryNav" class="category-nav"></nav>
+        <section class="sidebar-section">
+          <div class="sidebar-head">
+            <span>分类</span>
+            <span>Categories</span>
+          </div>
+          <nav id="categoryNav" class="category-nav"></nav>
+        </section>
+        <section class="sidebar-section">
+          <div class="sidebar-head">
+            <span data-i18n="tagsLabel">标签</span>
+            <button id="clearTagsButton" class="clear-filter" type="button" data-i18n="clearTags">清除</button>
+          </div>
+          <nav id="tagNav" class="tag-nav" aria-label="Tag filters"></nav>
+        </section>
       </aside>
 
       <section class="content">
