@@ -76,28 +76,7 @@ ZH_HEADER = """# Awesome AI PPT
 
 网站：https://ningzimu.github.io/awesome-ai-ppt/
 
-## 目录
-
-"""
-
-EN_HEADER = """# Awesome AI PPT
-
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
-[![Docs](https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-blue)](README.md)
-[![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
-
-A curated list of open-source projects for AI-assisted presentation generation, PowerPoint automation, PPTX editing, and slide workflow tooling.
-
-This is a curated list, not a dump of every slide-related link. It focuses on GitHub repositories and technical projects that help agents or developers create, edit, convert, or inspect presentations.
-
-Website: https://ningzimu.github.io/awesome-ai-ppt/
-
-## Contents
-
-"""
-
-ZH_TAIL = """## Agent / Skill 接入
+## Agent / Skill 接入
 
 本仓库提供 `awesome-ai-ppt` skill，帮助 AI 先用清单粗筛 AI PPT 工具，再去原始仓库做详细对比；也可以在你明确要求时，引导 AI 按规则反馈问题、贡献项目或准备 PR。
 
@@ -121,7 +100,52 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \\
 
 更多说明见 [Agent 接入页面](https://ningzimu.github.io/awesome-ai-ppt/agent/)。
 
-## 收录范围
+## 目录
+
+"""
+
+EN_HEADER = """# Awesome AI PPT
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
+[![Docs](https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-blue)](README.md)
+[![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
+
+A curated list of open-source projects for AI-assisted presentation generation, PowerPoint automation, PPTX editing, and slide workflow tooling.
+
+This is a curated list, not a dump of every slide-related link. It focuses on GitHub repositories and technical projects that help agents or developers create, edit, convert, or inspect presentations.
+
+Website: https://ningzimu.github.io/awesome-ai-ppt/
+
+## Agent / Skill Access
+
+This repository provides the `awesome-ai-ppt` skill. It helps AI agents use the list as a rough discovery index, inspect original repositories for detailed comparisons, and, when explicitly requested, follow the repository rules to report issues, contribute projects, or prepare PRs.
+
+Tell your AI agent: Install the awesome-ai-ppt skill from https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
+
+Manual install:
+
+```bash
+npx -y skills@latest add ningzimu/awesome-ai-ppt \\
+  --skill awesome-ai-ppt \\
+  --agent codex \\
+  --global
+```
+
+Examples:
+
+```text
+Use the awesome-ai-ppt skill to first shortlist tools from the list, then inspect original repositories to compare options for editable PPTX generation.
+Use the awesome-ai-ppt skill to check whether this GitHub project belongs in the list.
+```
+
+See the [Agent access page](https://ningzimu.github.io/awesome-ai-ppt/agent/) for details.
+
+## Contents
+
+"""
+
+ZH_TAIL = """## 收录范围
 
 入选项目应与 AI 辅助演示工作直接相关，例如生成幻灯片、编辑 PPTX、把内容转换为演示文稿、重建可编辑 deck、渲染或验证幻灯片。
 
@@ -149,31 +173,7 @@ GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 </a>
 """
 
-EN_TAIL = """## Agent / Skill Access
-
-This repository provides the `awesome-ai-ppt` skill. It helps AI agents use the list as a rough discovery index, inspect original repositories for detailed comparisons, and, when explicitly requested, follow the repository rules to report issues, contribute projects, or prepare PRs.
-
-Tell your AI agent: Install the awesome-ai-ppt skill from https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
-
-Manual install:
-
-```bash
-npx -y skills@latest add ningzimu/awesome-ai-ppt \\
-  --skill awesome-ai-ppt \\
-  --agent codex \\
-  --global
-```
-
-Examples:
-
-```text
-Use the awesome-ai-ppt skill to first shortlist tools from the list, then inspect original repositories to compare options for editable PPTX generation.
-Use the awesome-ai-ppt skill to check whether this GitHub project belongs in the list.
-```
-
-See the [Agent access page](https://ningzimu.github.io/awesome-ai-ppt/agent/) for details.
-
-## Scope
+EN_TAIL = """## Scope
 
 Included projects should have a direct relationship to AI-assisted presentation work: generating slides, editing PPTX files, converting content into presentations, reconstructing editable decks, or rendering and validating slides.
 
@@ -241,7 +241,6 @@ def table_row(project: dict, lang: str) -> str:
 def render_readme(projects: list[dict], lang: str) -> str:
     if lang == "zh":
         lines = [ZH_HEADER]
-        lines.append("- [Agent / Skill 接入](#agent--skill-接入)")
         for category, category_zh in CATEGORIES:
             lines.append(f"- [{category_zh}](#{ZH_SLUGS[category_zh]})")
         lines.extend(["- [收录范围](#收录范围)", "- [贡献](#贡献)\n"])
@@ -254,7 +253,6 @@ def render_readme(projects: list[dict], lang: str) -> str:
         return "\n".join(lines) + "\n"
 
     lines = [EN_HEADER]
-    lines.append("- [Agent / Skill Access](#agent--skill-access)")
     for category, _ in CATEGORIES:
         lines.append(f"- [{category}](#{slug_en(category)})")
     lines.extend(["- [Scope](#scope)", "- [Contributing](#contributing)\n"])

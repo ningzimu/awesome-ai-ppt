@@ -17,7 +17,7 @@ const categoryZh = {
 const state = {
   projects: [],
   category: "All",
-  tags: [],
+  tag: "",
   query: "",
   sort: "stars-desc",
   lang: "zh"
@@ -25,45 +25,45 @@ const state = {
 
 const translations = {
   zh: {
-    agentAccess: "Agent 接入",
+    agentCta: "安装 Agent Skill",
     contribute: "贡献",
-    heroTitle: "按技术路线、可编辑性和工作流查找 AI PPT 项目。",
+    heroTitle: "按技术路线和工作流查找 AI PPT 项目",
     heroCopy: "搜索 HTML 风格、图片生成式、PPTX 原生生成，以及 PPTX 自动化和可编辑重建工具。",
     tagGeneration: "HTML-first",
     tagAutomation: "Image-first",
     tagRebuild: "PPTX-native",
     summaryLabel: "目录概览",
     browseLabel: "浏览项目",
+    starAction: "Star",
     projectsLabel: "项目",
     categoriesLabel: "分类",
     thresholdLabel: "入选门槛",
     searchLabel: "搜索",
     searchPlaceholder: "搜索名称、分类、标签、输出类型、英文描述...",
     sortLabel: "排序",
-    sortStarsDesc: "星标降序",
-    sortStarsAsc: "星标升序",
+    sortStarsDesc: "Star 降序",
+    sortStarsAsc: "Star 升序",
     sortNameAsc: "名称 A-Z",
     tagsLabel: "标签",
-    clearTags: "清除",
+    allTags: "全部标签",
     allCategories: "全部分类",
     projectCount: (count) => `${count} 个项目`,
-    activeTags: (tags) => `标签：${tags.join("、")}`,
-    starsLabel: "星标",
+    activeTag: (tag) => `标签：${tag}`,
+    starsLabel: "Star",
     noResults: "没有找到匹配的项目。",
-    loadFailed: "项目数据加载失败。",
-    footerCopy: "数据由本仓库维护。",
-    suggestProject: "推荐项目"
+    loadFailed: "项目数据加载失败。"
   },
   en: {
-    agentAccess: "Agent",
+    agentCta: "Install Agent Skill",
     contribute: "Contribute",
-    heroTitle: "Find AI PPT projects by technical route, editability, and workflow.",
+    heroTitle: "Find AI PPT projects by technical route, editability, and workflow",
     heroCopy: "Search HTML-first, image-first, PPTX-native generation, PPTX automation, and editable reconstruction tools.",
     tagGeneration: "HTML-first",
     tagAutomation: "Image-first",
     tagRebuild: "PPTX-native",
     summaryLabel: "Directory overview",
     browseLabel: "Browse projects",
+    starAction: "Star",
     projectsLabel: "Projects",
     categoriesLabel: "Categories",
     thresholdLabel: "Stars threshold",
@@ -74,22 +74,19 @@ const translations = {
     sortStarsAsc: "Stars low to high",
     sortNameAsc: "Name A-Z",
     tagsLabel: "Tags",
-    clearTags: "Clear",
+    allTags: "All tags",
     allCategories: "All categories",
     projectCount: (count) => `${count} projects`,
-    activeTags: (tags) => `Tags: ${tags.join(", ")}`,
+    activeTag: (tag) => `Tag: ${tag}`,
     starsLabel: "stars",
     noResults: "No projects match this search.",
-    loadFailed: "Could not load project data.",
-    footerCopy: "Data is maintained in this repository.",
-    suggestProject: "Suggest a project"
+    loadFailed: "Could not load project data."
   }
 };
 
 const nodes = {
   categoryNav: document.querySelector("#categoryNav"),
-  tagNav: document.querySelector("#tagNav"),
-  clearTagsButton: document.querySelector("#clearTagsButton"),
+  tagSelect: document.querySelector("#tagSelect"),
   projectList: document.querySelector("#projectList"),
   searchInput: document.querySelector("#searchInput"),
   sortSelect: document.querySelector("#sortSelect"),
@@ -97,12 +94,19 @@ const nodes = {
   activeCategory: document.querySelector("#activeCategory"),
   statProjects: document.querySelector("#statProjects"),
   statCategories: document.querySelector("#statCategories"),
+  repoStars: document.querySelector("#repoStars"),
   languageButtons: document.querySelectorAll("[data-lang]"),
   i18nNodes: document.querySelectorAll("[data-i18n]")
 };
 
 function formatStars(stars) {
   if (typeof stars !== "number") return "N/A";
+  return new Intl.NumberFormat("en-US").format(stars);
+}
+
+function formatCompactStars(stars) {
+  if (typeof stars !== "number") return "Star";
+  if (stars >= 1000) return `${(stars / 1000).toFixed(stars >= 10000 ? 1 : 2).replace(/\.0$/, "")}k`;
   return new Intl.NumberFormat("en-US").format(stars);
 }
 
@@ -169,7 +173,7 @@ function filteredProjects() {
   return sorted(
     state.projects.filter((project) => {
       const categoryMatch = state.category === "All" || project.category === state.category;
-      const tagMatch = state.tags.every((tag) => (project.tags || []).includes(tag));
+      const tagMatch = !state.tag || (project.tags || []).includes(state.tag);
       const queryMatch = !query || searchable(project).includes(query);
       return categoryMatch && tagMatch && queryMatch;
     })
@@ -184,9 +188,10 @@ function renderCategories() {
           ? state.projects.length
           : state.projects.filter((project) => project.category === category).length;
       const active = category === state.category ? " active" : "";
+      const label = state.lang === "zh" ? categoryZh[category] : category;
       return `
         <button class="${active}" type="button" data-category="${category}">
-          <span>${state.lang === "zh" ? categoryZh[category] : category}<br><small>${state.lang === "zh" ? category : categoryZh[category]}</small></span>
+          <span>${label}</span>
           <strong>${count}</strong>
         </button>
       `;
@@ -195,18 +200,14 @@ function renderCategories() {
 }
 
 function renderTags() {
-  nodes.tagNav.innerHTML = allTags()
-    .map(([tag, count]) => {
-      const active = state.tags.includes(tag) ? " active" : "";
-      return `
-        <button class="${active}" type="button" data-tag="${tag}">
-          <span>${tag}</span>
-          <strong>${count}</strong>
-        </button>
-      `;
-    })
+  const t = translations[state.lang];
+  const currentValue = state.tag;
+  nodes.tagSelect.innerHTML = [
+    `<option value="">${t.allTags}</option>`,
+    ...allTags().map(([tag, count]) => `<option value="${tag}">${tag} (${count})</option>`)
+  ]
     .join("");
-  nodes.clearTagsButton.disabled = state.tags.length === 0;
+  nodes.tagSelect.value = currentValue;
 }
 
 function renderProjects() {
@@ -219,8 +220,8 @@ function renderProjects() {
       : state.lang === "zh"
         ? categoryZh[state.category]
         : state.category;
-  nodes.activeCategory.textContent = state.tags.length
-    ? `${activeCategory} · ${t.activeTags(state.tags)}`
+  nodes.activeCategory.textContent = state.tag
+    ? `${activeCategory} · ${t.activeTag(state.tag)}`
     : activeCategory;
 
   if (!projects.length) {
@@ -276,6 +277,9 @@ function renderStaticText() {
   nodes.languageButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === state.lang);
   });
+  if (nodes.repoStars && typeof window.AWESOME_AI_PPT_STARS === "number") {
+    nodes.repoStars.textContent = formatCompactStars(window.AWESOME_AI_PPT_STARS);
+  }
 }
 
 nodes.categoryNav.addEventListener("click", (event) => {
@@ -285,18 +289,8 @@ nodes.categoryNav.addEventListener("click", (event) => {
   render();
 });
 
-nodes.tagNav.addEventListener("click", (event) => {
-  const button = event.target.closest("button[data-tag]");
-  if (!button) return;
-  const tag = button.dataset.tag;
-  state.tags = state.tags.includes(tag)
-    ? state.tags.filter((activeTag) => activeTag !== tag)
-    : [...state.tags, tag];
-  render();
-});
-
-nodes.clearTagsButton.addEventListener("click", () => {
-  state.tags = [];
+nodes.tagSelect.addEventListener("change", (event) => {
+  state.tag = event.target.value;
   render();
 });
 
@@ -317,18 +311,26 @@ nodes.languageButtons.forEach((button) => {
   });
 });
 
-fetch("projects.json")
-  .then((response) => response.json())
-  .then((projects) => {
-    state.projects = projects;
-    nodes.statProjects.textContent = projects.length;
-    nodes.statCategories.textContent = categories.length - 1;
-    render();
-  })
-  .catch(() => {
-    nodes.projectList.innerHTML = `
-      <div class="empty">
-        ${translations[state.lang].loadFailed}
-      </div>
-    `;
-  });
+function applyProjects(projects) {
+  state.projects = projects;
+  nodes.statProjects.textContent = projects.length;
+  nodes.statCategories.textContent = categories.length - 1;
+  render();
+}
+
+function showLoadError() {
+  nodes.projectList.innerHTML = `
+    <div class="empty">
+      ${translations[state.lang].loadFailed}
+    </div>
+  `;
+}
+
+if (window.AWESOME_AI_PPT_PROJECTS) {
+  applyProjects(window.AWESOME_AI_PPT_PROJECTS);
+} else {
+  fetch("projects.json")
+    .then((response) => response.json())
+    .then(applyProjects)
+    .catch(showLoadError);
+}

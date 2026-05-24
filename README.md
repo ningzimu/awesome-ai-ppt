@@ -11,10 +11,33 @@
 
 网站：https://ningzimu.github.io/awesome-ai-ppt/
 
+## Agent / Skill 接入
+
+本仓库提供 `awesome-ai-ppt` skill，帮助 AI 先用清单粗筛 AI PPT 工具，再去原始仓库做详细对比；也可以在你明确要求时，引导 AI 按规则反馈问题、贡献项目或准备 PR。
+
+你可以对 AI 说：帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
+
+手动安装：
+
+```bash
+npx -y skills@latest add ningzimu/awesome-ai-ppt \
+  --skill awesome-ai-ppt \
+  --agent codex \
+  --global
+```
+
+示例：
+
+```text
+请使用 awesome-ai-ppt skill，先用清单粗筛，再去原仓库详细对比适合生成可编辑 PPTX 的方案。
+请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。
+```
+
+更多说明见 [Agent 接入页面](https://ningzimu.github.io/awesome-ai-ppt/agent/)。
+
 ## 目录
 
 
-- [Agent / Skill 接入](#agent--skill-接入)
 - [HTML 风格 PPT 方案](#html-风格-ppt-方案)
 - [图片生成式 PPT 方案](#图片生成式-ppt-方案)
 - [PPTX 库生成式 PPT 方案](#pptx-库生成式-ppt-方案)
@@ -97,30 +120,6 @@
 | [trsdn/mcp-server-ppt](https://github.com/trsdn/mcp-server-ppt) | 通过 Windows PowerPoint COM API 自动化创建、编辑和导出 PowerPoint 的 MCP server 与 CLI。 | MCP, 自动化, PowerPoint, COM | 可编辑 | MCP | 29 |
 | [ykuwai/ppt-mcp](https://github.com/ykuwai/ppt-mcp) | 通过 COM 自动化实时控制 PowerPoint 的 MCP server。 | MCP, 自动化, PowerPoint | 可编辑 | MCP | 19 |
 | [ningzimu/image-to-editable-ppt-skill](https://github.com/ningzimu/image-to-editable-ppt-skill) | 把幻灯片图片、PDF 和图片版 PPTX 转换为可编辑 PowerPoint deck 的 Codex skill。 | 转换, 图片式, PDF | 可编辑 | Skill | 15 |
-
-## Agent / Skill 接入
-
-本仓库提供 `awesome-ai-ppt` skill，帮助 AI 先用清单粗筛 AI PPT 工具，再去原始仓库做详细对比；也可以在你明确要求时，引导 AI 按规则反馈问题、贡献项目或准备 PR。
-
-你可以对 AI 说：帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt
-
-手动安装：
-
-```bash
-npx -y skills@latest add ningzimu/awesome-ai-ppt \
-  --skill awesome-ai-ppt \
-  --agent codex \
-  --global
-```
-
-示例：
-
-```text
-请使用 awesome-ai-ppt skill，先用清单粗筛，再去原仓库详细对比适合生成可编辑 PPTX 的方案。
-请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。
-```
-
-更多说明见 [Agent 接入页面](https://ningzimu.github.io/awesome-ai-ppt/agent/)。
 
 ## 收录范围
 

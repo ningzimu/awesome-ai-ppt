@@ -21,7 +21,10 @@ jobs:
         run: python3 scripts/update_stars.py
 
       - name: Validate project data
-        run: python3 -m json.tool docs/projects.json > /tmp/projects.json
+        run: |
+          python3 -m json.tool docs/projects.json > /tmp/projects.json
+          node --check docs/projects-data.js
+          node --check docs/stars-data.js
 
       - name: Check bilingual content
         run: python3 scripts/check_bilingual.py
@@ -30,4 +33,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update GitHub star counts"
-          file_pattern: README.md README_EN.md docs/projects.json
+          file_pattern: README.md README_EN.md docs/projects.json docs/projects-data.js docs/stars-data.js

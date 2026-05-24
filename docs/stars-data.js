@@ -1,0 +1,1 @@
+window.AWESOME_AI_PPT_STARS = 1;

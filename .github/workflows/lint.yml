@@ -27,5 +27,10 @@ jobs:
           python3 scripts/render_readme.py
           git diff --exit-code README.md README_EN.md
 
+      - name: Check generated Pages data
+        run: |
+          python3 scripts/render_pages_data.py --keep-stars
+          git diff --exit-code docs/projects-data.js docs/stars-data.js
+
       - name: Check bilingual content
         run: python3 scripts/check_bilingual.py
