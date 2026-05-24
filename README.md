@@ -58,7 +58,7 @@ Installable or agent-oriented workflows for creating, editing, or transforming p
 - [bytedance/deer-flow - ppt-generation](https://github.com/bytedance/deer-flow/tree/main/skills/public/ppt-generation) - Image-generation based PPT workflow inside DeerFlow. DeerFlow 中基于图片生成的 PPT 工作流。
 - [MiniMax-AI/skills - pptx-generator](https://github.com/MiniMax-AI/skills) - MiniMax office skill for generating, editing, and reading PowerPoint presentations. MiniMax Office skill，支持生成、编辑和读取 PowerPoint。
 - [Noi1r/powerpoint-skill](https://github.com/Noi1r/powerpoint-skill) - PowerPoint skill for academic slides, formulas, and diagrams using PptxGenJS. 面向学术幻灯片、公式和图表的 PowerPoint skill。
-- [openai/skills - slides](https://github.com/openai/skills/tree/main/skills/.curated/slides) - OpenAI curated skill for creating and editing `.pptx` decks with PptxGenJS and validation utilities. OpenAI curated slides skill，基于 PptxGenJS 并带验证工具。
+- [openai/skills - slides](https://github.com/openai/skills) - OpenAI curated skill for creating and editing `.pptx` decks with PptxGenJS and validation utilities. OpenAI curated slides skill，基于 PptxGenJS 并带验证工具。
 - [SkyworkAI/Skywork-Skills - skywork-ppt](https://github.com/SkyworkAI/Skywork-Skills) - Skill for generating, imitating, and editing PowerPoint presentations. Skywork PPT skill，支持生成、仿制和编辑 PowerPoint。
 - [stevenjinlong/awesome-ppt-skills](https://github.com/stevenjinlong/awesome-ppt-skills) - Codex skills for image-first PPT generation with `gpt-image-2` and editable reconstruction handoff. Codex PPT skills，使用 `gpt-image-2` 生成图片式 PPT，并支持可编辑化交接。
 
@@ -106,7 +106,6 @@ Directories, indexes, and related resource collections.
 
 目录、索引和相关资源集合。
 
-- [awesome-skills.app - pptx](https://awesome-skills.app/skills/pptx) - Skill directory entry for PPTX-related document processing skills. PPTX 文档处理 skill 的目录条目。
 - [openagentskills.dev - pptx](https://openagentskills.dev/skills/pptx) - Open Agent Skills directory entry for PPTX. Open Agent Skills 的 PPTX 目录条目。
 - [powerpoint.md](https://powerpoint.md/) - Community-maintained directory comparing AI agent PowerPoint and Excel skills. 社区维护的 AI agent PowerPoint 与 Excel skills 对比目录。
 

@@ -25,7 +25,7 @@
   },
   {
     "name": "openai/skills - slides",
-    "url": "https://github.com/openai/skills/tree/main/skills/.curated/slides",
+    "url": "https://github.com/openai/skills",
     "repo": "openai/skills",
     "category": "Agent Skills and Workflows",
     "categoryZh": "Agent 技能与工作流",
@@ -250,18 +250,6 @@
     "output": "PPTX",
     "description": "Benchmark for reliable PowerPoint editing across real decks.",
     "descriptionZh": "面向真实幻灯片的可靠 PowerPoint 编辑基准。"
-  },
-  {
-    "name": "awesome-skills.app - pptx",
-    "url": "https://awesome-skills.app/skills/pptx",
-    "repo": null,
-    "category": "Directories and Related Lists",
-    "categoryZh": "目录与相关清单",
-    "stars": null,
-    "type": "Directory",
-    "output": "PPTX",
-    "description": "Skill directory entry for PPTX-related document processing skills.",
-    "descriptionZh": "PPTX 文档处理 skill 的目录条目。"
   },
   {
     "name": "openagentskills.dev - pptx",
