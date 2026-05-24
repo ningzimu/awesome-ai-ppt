@@ -151,16 +151,16 @@ def slug_en(title: str) -> str:
     return title.lower().replace(",", "").replace(" and ", "-and-").replace(" ", "-")
 
 
-def star_badge(project: dict) -> str:
-    repo = project.get("repo")
-    if not repo:
+def star_text(project: dict) -> str:
+    stars = project.get("stars")
+    if not isinstance(stars, int):
         return "-"
-    return f"[![GitHub stars](https://img.shields.io/github/stars/{repo}?style=social)](https://github.com/{repo})"
+    return f"{stars:,}"
 
 
 def table_row(project: dict, lang: str) -> str:
     description = project["descriptionZh"] if lang == "zh" else project["description"]
-    return f"| [{project['name']}]({project['url']}) | {description} | {star_badge(project)} |"
+    return f"| [{project['name']}]({project['url']}) | {description} | {star_text(project)} |"
 
 
 def render_readme(projects: list[dict], lang: str) -> str:
