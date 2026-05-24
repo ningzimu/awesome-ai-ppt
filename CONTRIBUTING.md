@@ -9,9 +9,9 @@ This is a curated list, not a directory of every presentation product. Prefer fe
 Good candidates should meet most of these:
 
 - Directly related to AI-assisted presentation generation, PPTX editing, slide conversion, deck reconstruction, rendering, QA, or evaluation.
-- Public GitHub repository, research artifact, or open technical resource.
+- Public GitHub repository or open technical resource.
 - GitHub repositories should have at least 10 stars.
-- Clear README, documentation, example, demo, or paper.
+- Clear README, documentation, example, or demo.
 - Visible license when source code is included.
 - Active maintenance in the last 12 months, or stable enough to justify keeping.
 - Clear input and output formats, such as prompt to PPTX, PDF to slides, HTML to PPTX, or Markdown to deck.
@@ -40,7 +40,9 @@ Rules:
 - Start the description with a capital letter.
 - End the description with a period.
 - Keep descriptions objective and useful.
-- Put the entry in the category where readers would most likely look first.
+- Put the entry in the category that matches the primary workflow route, not merely the final export format.
+- Add useful tags such as `HTML-first`, `Image-first`, `PPTX-native`, `Editable`, `Partially editable`, `Image-based`, `Skill`, `App`, `Library`, `MCP`, `Backend`, `Conversion`, or `Automation`.
+- Use `editable` to describe editability status and `skill` to describe whether the project is a skill, MCP server, or neither.
 - Keep the `stars` field current enough for sorting. The scheduled workflow refreshes it automatically.
 
 ## Pull Requests
@@ -57,12 +59,17 @@ Rules:
 
 Current categories:
 
-- End-to-End AI Presentation Tools
-- Agent Skills and Workflows
-- PowerPoint and PPTX Libraries
-- Editable Reconstruction
-- Markdown, HTML, and Document to Slides
-- Research and Benchmarks
-- Directories and Related Lists
+- HTML-First Presentation Workflows
+- Image-First Presentation Workflows
+- PPTX-Native Generation Workflows
+- PPTX Libraries and Automation Infrastructure
 
-If a project fits multiple categories, choose the one that best matches its primary use.
+Classification rules:
+
+- Classify by the source representation of the main workflow, not by the final export format.
+- Use HTML-First Presentation Workflows when the project creates HTML, web slides, or page-style presentations first, then exports, screenshots, or converts them into PPT outputs.
+- Use Image-First Presentation Workflows when the project centers on image models or whole-slide images, even if it later packages those pages into PPTX, PDF, video, or HTML.
+- Use PPTX-Native Generation Workflows when the project directly generates native editable PPTX through PptxGenJS, python-pptx, Office XML, PowerPoint APIs, or a skill that wraps those routes.
+- Use PPTX Libraries and Automation Infrastructure for underlying libraries, MCP servers, Office automation, backend services, DOM/image/PDF-to-PPTX conversion, and editable reconstruction tools.
+- `Skill`, `editable PPTX`, and `PPTX export` are tags, not category decisions.
+- Do not add broad directory links, unverified catalog entries, or PDF/LaTeX-only projects to the main list unless they clearly fit one of the four routes.

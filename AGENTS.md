@@ -39,14 +39,27 @@ GitHub Pages should default to Chinese and provide an English switch.
 
 Main-list GitHub repositories should usually have at least 10 stars.
 
-Research papers, official directories, or foundational resources may be included below 10 stars only when they are clearly relevant and useful.
-
 Projects below the threshold should not stay in the main README.
+
+Do not add broad directory links, unverified catalog entries, or PDF/LaTeX-only projects to the main list unless they clearly fit the classification rules below.
+
+## Classification Rules
+
+Classify projects by the source representation of their primary workflow, not by their final export format. `Skill`, `editable PPTX`, and `PPTX export` are tags, not category decisions.
+
+Current categories:
+
+- `HTML-First Presentation Workflows` / `HTML 风格 PPT 方案`: projects that create HTML, web slides, or page-style presentations first, then export, screenshot, or convert them into PPT outputs.
+- `Image-First Presentation Workflows` / `图片生成式 PPT 方案`: projects centered on image models or whole-slide images, even if they later package those pages into PPTX, PDF, video, or HTML.
+- `PPTX-Native Generation Workflows` / `PPTX 库生成式 PPT 方案`: projects that directly generate native editable PPTX through PptxGenJS, python-pptx, Office XML, PowerPoint APIs, or a skill wrapping those routes.
+- `PPTX Libraries and Automation Infrastructure` / `PPTX 库与自动化基础设施`: underlying libraries, MCP servers, Office automation, backend services, DOM/image/PDF-to-PPTX conversion, and editable reconstruction tools.
+
+When a project fits multiple categories, choose the primary workflow route readers need to understand first, then preserve secondary signals in `tags`, `editable`, and `skill`.
 
 ## Editing Rules
 
 - Keep entries short, factual, and non-marketing.
-- Keep categories alphabetized where practical.
+- Keep entries within a category sorted by stars where practical.
 - Do not add broad new categories for one project.
 - Do not move unrelated entries while adding or editing a project.
 - Prefer canonical GitHub repository URLs.

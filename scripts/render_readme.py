@@ -11,35 +11,56 @@ ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_PATH = ROOT / "docs/projects.json"
 
 CATEGORIES = [
-    ("End-to-End AI Presentation Tools", "端到端 AI 演示工具"),
-    ("Agent Skills and Workflows", "Agent 技能与工作流"),
-    ("PowerPoint and PPTX Libraries", "PowerPoint 与 PPTX 库"),
-    ("Editable Reconstruction", "可编辑重建"),
-    ("Markdown, HTML, and Document to Slides", "Markdown、HTML 与文档转幻灯片"),
+    ("HTML-First Presentation Workflows", "HTML 风格 PPT 方案"),
+    ("Image-First Presentation Workflows", "图片生成式 PPT 方案"),
+    ("PPTX-Native Generation Workflows", "PPTX 库生成式 PPT 方案"),
+    ("PPTX Libraries and Automation Infrastructure", "PPTX 库与自动化基础设施"),
 ]
 
 ZH_SECTION_COPY = {
-    "End-to-End AI Presentation Tools": "可从提示词、文档或结构化输入生成完整演示文稿的项目。",
-    "Agent Skills and Workflows": "面向 agent 的可安装技能或工作流，用于创建、编辑或转换演示文稿。",
-    "PowerPoint and PPTX Libraries": "用于创建、修改、合并或检查 PPTX 文件的开发者库。",
-    "Editable Reconstruction": "专注于把文档、图片、HTML 或已有幻灯片重建为可编辑演示对象的项目。",
-    "Markdown, HTML, and Document to Slides": "将结构化内容转换为幻灯片或网页演示的工具。",
+    "HTML-First Presentation Workflows": "先生成 HTML、Web slides 或页面式演示，再导出、截图或转换为 PPT 的方案。",
+    "Image-First Presentation Workflows": "以图像模型或整页图片为核心生成幻灯片，再打包为 PPTX、PDF、视频或网页演示的方案。",
+    "PPTX-Native Generation Workflows": "直接通过 PptxGenJS、python-pptx、Office XML 或 PowerPoint API 生成原生可编辑 PPTX 的方案。",
+    "PPTX Libraries and Automation Infrastructure": "底层 PPTX 库、MCP、Office 自动化、后端服务，以及可编辑重建与转换基础设施。",
 }
 
 EN_SECTION_COPY = {
-    "End-to-End AI Presentation Tools": "Projects that can generate complete presentations from prompts, documents, or structured inputs.",
-    "Agent Skills and Workflows": "Installable or agent-oriented workflows for creating, editing, or transforming presentations.",
-    "PowerPoint and PPTX Libraries": "Developer libraries for creating, modifying, merging, or inspecting PPTX files.",
-    "Editable Reconstruction": "Projects focused on rebuilding documents, images, HTML, or existing slides into editable presentation objects.",
-    "Markdown, HTML, and Document to Slides": "Tools that convert structured content into slide decks or web presentations.",
+    "HTML-First Presentation Workflows": "Workflows that create HTML, web slides, or page-style presentations first, then export, screenshot, or convert them into PPT outputs.",
+    "Image-First Presentation Workflows": "Workflows centered on image models or whole-slide images, then packaging those slides as PPTX, PDF, video, or web presentations.",
+    "PPTX-Native Generation Workflows": "Workflows that directly generate native editable PPTX files through PptxGenJS, python-pptx, Office XML, or PowerPoint APIs.",
+    "PPTX Libraries and Automation Infrastructure": "Underlying PPTX libraries, MCP servers, Office automation, backend services, and editable reconstruction or conversion infrastructure.",
 }
 
 ZH_SLUGS = {
-    "端到端 AI 演示工具": "端到端-ai-演示工具",
-    "Agent 技能与工作流": "agent-技能与工作流",
-    "PowerPoint 与 PPTX 库": "powerpoint-与-pptx-库",
-    "可编辑重建": "可编辑重建",
-    "Markdown、HTML 与文档转幻灯片": "markdownhtml-与文档转幻灯片",
+    "HTML 风格 PPT 方案": "html-风格-ppt-方案",
+    "图片生成式 PPT 方案": "图片生成式-ppt-方案",
+    "PPTX 库生成式 PPT 方案": "pptx-库生成式-ppt-方案",
+    "PPTX 库与自动化基础设施": "pptx-库与自动化基础设施",
+}
+
+ZH_TAGS = {
+    "HTML-first": "HTML-first",
+    "Image-first": "Image-first",
+    "PPTX-native": "PPTX-native",
+    "Automation": "自动化",
+    "Conversion": "转换",
+    "Editable": "可编辑",
+    "Partially editable": "部分可编辑",
+    "Image-based": "图片式",
+    "Source editable": "源码可编辑",
+    "Skill": "Skill",
+    "Workflow": "工作流",
+    "App": "应用",
+    "Library": "库",
+    "MCP": "MCP",
+    "Backend": "后端",
+    "PDF": "PDF",
+    "Video": "视频",
+    "Template": "模板",
+    "PowerPoint": "PowerPoint",
+    "PPTX": "PPTX",
+    "Unknown": "未确认",
+    "No": "否",
 }
 
 ZH_HEADER = """# Awesome AI PPT
@@ -59,12 +80,10 @@ ZH_HEADER = """# Awesome AI PPT
 
 | 需求 | 推荐入口 | 所在分类 |
 | --- | --- | --- |
-| 原生 AI PPT 应用 | `Anionex/banana-slides` | [端到端 AI 演示工具](#端到端-ai-演示工具) |
-| 精致 HTML 演示 skill | `op7418/guizang-ppt-skill` | [Agent 技能与工作流](#agent-技能与工作流) |
-| 通用可编辑 PPTX 生成 | `openai/skills - slides` | [Agent 技能与工作流](#agent-技能与工作流) |
-| 完整 agentic PPT 生成 | `hugohe3/ppt-master` | [可编辑重建](#可编辑重建) |
-| 图片式 PPT 生成 | `ningzimu/codex-ppt-skill` | [Agent 技能与工作流](#agent-技能与工作流) |
-| 图片/PDF 转可编辑 PPT | `ningzimu/image-to-editable-ppt-skill` | [可编辑重建](#可编辑重建) |
+| HTML 风格演示 | `op7418/guizang-ppt-skill` | [HTML 风格 PPT 方案](#html-风格-ppt-方案) |
+| 图片式 PPT 生成 | `bytedance/deer-flow - ppt-generation` | [图片生成式 PPT 方案](#图片生成式-ppt-方案) |
+| 原生可编辑 PPTX 生成 | `anthropics/skills - pptx` | [PPTX 库生成式 PPT 方案](#pptx-库生成式-ppt-方案) |
+| 图片/PDF 转可编辑 PPT | `ningzimu/image-to-editable-ppt-skill` | [PPTX 库与自动化基础设施](#pptx-库与自动化基础设施) |
 
 ## 目录
 
@@ -87,12 +106,10 @@ Website: https://ningzimu.github.io/awesome-ai-ppt/
 
 | Need | Start Here | Section |
 | --- | --- | --- |
-| Native AI presentation app | `Anionex/banana-slides` | [End-to-End AI Presentation Tools](#end-to-end-ai-presentation-tools) |
-| Polished HTML slide skill | `op7418/guizang-ppt-skill` | [Agent Skills and Workflows](#agent-skills-and-workflows) |
-| General editable PPTX authoring | `openai/skills - slides` | [Agent Skills and Workflows](#agent-skills-and-workflows) |
-| Full agentic PPT generation | `hugohe3/ppt-master` | [Editable Reconstruction](#editable-reconstruction) |
-| Image-based PPT generation | `ningzimu/codex-ppt-skill` | [Agent Skills and Workflows](#agent-skills-and-workflows) |
-| Images/PDF to editable PPT | `ningzimu/image-to-editable-ppt-skill` | [Editable Reconstruction](#editable-reconstruction) |
+| HTML-style presentations | `op7418/guizang-ppt-skill` | [HTML-First Presentation Workflows](#html-first-presentation-workflows) |
+| Image-first PPT generation | `bytedance/deer-flow - ppt-generation` | [Image-First Presentation Workflows](#image-first-presentation-workflows) |
+| Native editable PPTX authoring | `anthropics/skills - pptx` | [PPTX-Native Generation Workflows](#pptx-native-generation-workflows) |
+| Images/PDF to editable PPT | `ningzimu/image-to-editable-ppt-skill` | [PPTX Libraries and Automation Infrastructure](#pptx-libraries-and-automation-infrastructure) |
 
 ## Contents
 
@@ -101,6 +118,8 @@ Website: https://ningzimu.github.io/awesome-ai-ppt/
 ZH_TAIL = """## 收录范围
 
 入选项目应与 AI 辅助演示工作直接相关，例如生成幻灯片、编辑 PPTX、把内容转换为演示文稿、重建可编辑 deck、渲染或验证幻灯片。
+
+分类按主工作流的源表示决定，而不是按最终导出格式决定。能导出 PPTX 不等于属于 PPTX 库生成式；`Skill`、`可编辑 PPTX` 和 `PPTX export` 都只是标签，不能单独决定分类。
 
 GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 
@@ -119,6 +138,8 @@ GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 EN_TAIL = """## Scope
 
 Included projects should have a direct relationship to AI-assisted presentation work: generating slides, editing PPTX files, converting content into presentations, reconstructing editable decks, or rendering and validating slides.
+
+Categories are based on the source representation of the main workflow, not the final export format. PPTX export does not automatically make a project PPTX-native; `Skill`, `editable PPTX`, and `PPTX export` are tags, not category decisions.
 
 GitHub repositories should have at least 10 stars before being included.
 
@@ -150,9 +171,25 @@ def star_text(project: dict) -> str:
     return f"{stars:,}"
 
 
+def tag_text(project: dict, lang: str) -> str:
+    tags = list(project.get("tags") or [])
+    if lang == "zh":
+        tags = [ZH_TAGS.get(tag, tag) for tag in tags]
+    return ", ".join(tags)
+
+
+def status_text(project: dict, key: str, lang: str) -> str:
+    value = project.get(key) or "Unknown"
+    return ZH_TAGS.get(value, value) if lang == "zh" else value
+
+
 def table_row(project: dict, lang: str) -> str:
     description = project["descriptionZh"] if lang == "zh" else project["description"]
-    return f"| [{project['name']}]({project['url']}) | {description} | {star_text(project)} |"
+    return (
+        f"| [{project['name']}]({project['url']}) | {description} | "
+        f"{tag_text(project, lang)} | {status_text(project, 'editable', lang)} | "
+        f"{status_text(project, 'skill', lang)} | {star_text(project)} |"
+    )
 
 
 def render_readme(projects: list[dict], lang: str) -> str:
@@ -163,7 +200,7 @@ def render_readme(projects: list[dict], lang: str) -> str:
         lines.extend(["- [收录范围](#收录范围)", "- [贡献](#贡献)\n"])
         for category, category_zh in CATEGORIES:
             lines.extend([f"## {category_zh}\n", f"{ZH_SECTION_COPY[category]}\n"])
-            lines.extend(["| 仓库 | 简介 | Star |", "| --- | --- | --- |"])
+            lines.extend(["| 仓库 | 简介 | 标签 | 可编辑性 | Skill | Star |", "| --- | --- | --- | --- | --- | --- |"])
             lines.extend(table_row(project, "zh") for project in projects if project["category"] == category)
             lines.append("")
         lines.append(ZH_TAIL.rstrip())
@@ -175,7 +212,7 @@ def render_readme(projects: list[dict], lang: str) -> str:
     lines.extend(["- [Scope](#scope)", "- [Contributing](#contributing)\n"])
     for category, _ in CATEGORIES:
         lines.extend([f"## {category}\n", f"{EN_SECTION_COPY[category]}\n"])
-        lines.extend(["| Repository | Description | Stars |", "| --- | --- | --- |"])
+        lines.extend(["| Repository | Description | Tags | Editability | Skill | Stars |", "| --- | --- | --- | --- | --- | --- |"])
         lines.extend(table_row(project, "en") for project in projects if project["category"] == category)
         lines.append("")
     lines.append(EN_TAIL.rstrip())

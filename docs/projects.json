@@ -3,504 +3,766 @@
     "name": "anthropics/skills - pptx",
     "url": "https://github.com/anthropics/skills/tree/main/skills/pptx",
     "repo": "anthropics/skills",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 139790,
     "type": "Skill",
     "output": "PPTX",
     "description": "Anthropic skill for reading, creating, editing, and analyzing PowerPoint presentations.",
-    "descriptionZh": "Anthropic 官方 PPTX skill，用于读取、创建、编辑和分析 PowerPoint。"
+    "descriptionZh": "Anthropic 官方 PPTX skill，用于读取、创建、编辑和分析 PowerPoint。",
+    "tags": [
+      "PPTX-native",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "bytedance/deer-flow - ppt-generation",
     "url": "https://github.com/bytedance/deer-flow/tree/main/skills/public/ppt-generation",
     "repo": "bytedance/deer-flow",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
     "stars": 69332,
     "type": "Workflow",
     "output": "PPTX",
     "description": "Image-generation based PPT workflow inside DeerFlow.",
-    "descriptionZh": "DeerFlow 中基于图片生成的 PPT 工作流。"
+    "descriptionZh": "DeerFlow 中基于图片生成的 PPT 工作流。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "Workflow"
+    ],
+    "editable": "Image-based",
+    "skill": "Skill"
   },
   {
     "name": "hugohe3/ppt-master",
     "url": "https://github.com/hugohe3/ppt-master",
     "repo": "hugohe3/ppt-master",
-    "category": "Editable Reconstruction",
-    "categoryZh": "可编辑重建",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 20248,
     "type": "Agent",
     "output": "PPTX",
     "description": "AI-driven workflow for producing natively editable PowerPoint decks from documents, URLs, and Markdown.",
-    "descriptionZh": "从文档、URL 和 Markdown 生成原生可编辑 PowerPoint 的 AI 工作流。"
-  },
-  {
-    "name": "openai/skills - slides",
-    "url": "https://github.com/openai/skills",
-    "repo": "openai/skills",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
-    "stars": 20080,
-    "type": "Skill",
-    "output": "PPTX",
-    "description": "OpenAI curated skill for creating and editing .pptx decks with PptxGenJS and validation utilities.",
-    "descriptionZh": "OpenAI curated slides skill，基于 PptxGenJS 并带验证工具。"
+    "descriptionZh": "从文档、URL 和 Markdown 生成原生可编辑 PowerPoint 的 AI 工作流。",
+    "tags": [
+      "PPTX-native",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "zarazhangrui/frontend-slides",
     "url": "https://github.com/zarazhangrui/frontend-slides",
     "repo": "zarazhangrui/frontend-slides",
-    "category": "Markdown, HTML, and Document to Slides",
-    "categoryZh": "Markdown、HTML 与文档转幻灯片",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 18681,
     "type": "Skill",
     "output": "HTML",
     "description": "Skill for creating animation-rich HTML presentations and converting PowerPoint files to web slides.",
-    "descriptionZh": "用于创建动画 HTML 演示、并将 PowerPoint 转为网页幻灯片的 skill。"
+    "descriptionZh": "用于创建动画 HTML 演示、并将 PowerPoint 转为网页幻灯片的 skill。",
+    "tags": [
+      "HTML-first",
+      "Conversion",
+      "PDF"
+    ],
+    "editable": "Source editable",
+    "skill": "Skill"
   },
   {
     "name": "alchaincyf/huashu-design",
     "url": "https://github.com/alchaincyf/huashu-design",
     "repo": "alchaincyf/huashu-design",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 14765,
     "type": "Skill",
     "output": "HTML/PPTX/MP4",
     "description": "HTML-native design skill for Claude Code covering high-fidelity prototypes, slides, animation, review systems, and MP4 export.",
-    "descriptionZh": "Claude Code 的 HTML 原生设计 skill，覆盖高保真原型、幻灯片、动画、评审体系和 MP4 导出。"
+    "descriptionZh": "Claude Code 的 HTML 原生设计 skill，覆盖高保真原型、幻灯片、动画、评审体系和 MP4 导出。",
+    "tags": [
+      "HTML-first",
+      "PDF",
+      "Video"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
   },
   {
     "name": "Anionex/banana-slides",
     "url": "https://github.com/Anionex/banana-slides",
     "repo": "Anionex/banana-slides",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
     "stars": 14676,
     "type": "App",
     "output": "PPTX/PDF/Video",
     "description": "AI-native Nano Banana Pro presentation app for generating slides from ideas, outlines, assets, or page descriptions, with editable PPT export.",
-    "descriptionZh": "基于 Nano Banana Pro 的原生 AI PPT 应用，支持从想法、大纲、素材或页面描述生成演示，并导出可编辑 PPT。"
+    "descriptionZh": "基于 Nano Banana Pro 的原生 AI PPT 应用，支持从想法、大纲、素材或页面描述生成演示，并导出可编辑 PPT。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "App",
+      "PDF",
+      "Video"
+    ],
+    "editable": "Partially editable",
+    "skill": "No"
   },
   {
     "name": "MiniMax-AI/skills - pptx-generator",
     "url": "https://github.com/MiniMax-AI/skills",
     "repo": "MiniMax-AI/skills",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 12053,
     "type": "Skill",
     "output": "PPTX",
     "description": "MiniMax office skill for generating, editing, and reading PowerPoint presentations.",
-    "descriptionZh": "MiniMax Office skill，支持生成、编辑和读取 PowerPoint。"
+    "descriptionZh": "MiniMax Office skill，支持生成、编辑和读取 PowerPoint。",
+    "tags": [
+      "PPTX-native",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "op7418/guizang-ppt-skill",
     "url": "https://github.com/op7418/guizang-ppt-skill",
     "repo": "op7418/guizang-ppt-skill",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 11561,
     "type": "Skill",
     "output": "HTML",
     "description": "AI-agent skill for polished HTML slide decks with editorial magazine and Swiss layouts, image prompts, social covers, and a presentation runtime.",
-    "descriptionZh": "用于生成精致 HTML 幻灯片的 AI-agent skill，内置杂志风、瑞士风布局、图片提示词、社媒封面和演示运行时。"
+    "descriptionZh": "用于生成精致 HTML 幻灯片的 AI-agent skill，内置杂志风、瑞士风布局、图片提示词、社媒封面和演示运行时。",
+    "tags": [
+      "HTML-first",
+      "Template",
+      "Image-based"
+    ],
+    "editable": "Source editable",
+    "skill": "Skill"
   },
   {
     "name": "presenton/presenton",
     "url": "https://github.com/presenton/presenton",
     "repo": "presenton/presenton",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 6449,
     "type": "App",
     "output": "PPTX/PDF",
     "description": "Open-source AI presentation generator and API with PPTX and PDF export.",
-    "descriptionZh": "开源 AI 演示生成器和 API，支持 PPTX/PDF 导出。"
+    "descriptionZh": "开源 AI 演示生成器和 API，支持 PPTX/PDF 导出。",
+    "tags": [
+      "HTML-first",
+      "App",
+      "Backend",
+      "MCP",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "MCP"
   },
   {
     "name": "gitbrent/PptxGenJS",
     "url": "https://github.com/gitbrent/PptxGenJS",
     "repo": "gitbrent/PptxGenJS",
-    "category": "PowerPoint and PPTX Libraries",
-    "categoryZh": "PowerPoint 与 PPTX 库",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
     "stars": 5434,
     "type": "Library",
     "output": "PPTX",
     "description": "JavaScript library for creating PowerPoint presentations.",
-    "descriptionZh": "用于创建 PowerPoint 的 JavaScript 库。"
+    "descriptionZh": "用于创建 PowerPoint 的 JavaScript 库。",
+    "tags": [
+      "Library",
+      "PPTX-native",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "No"
   },
   {
     "name": "lewislulu/html-ppt-skill",
     "url": "https://github.com/lewislulu/html-ppt-skill",
     "repo": "lewislulu/html-ppt-skill",
-    "category": "Markdown, HTML, and Document to Slides",
-    "categoryZh": "Markdown、HTML 与文档转幻灯片",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 4537,
     "type": "Skill",
     "output": "HTML",
     "description": "HTML PPT Studio agent skill with 24 themes, 31 layouts, and 20+ animations for professional web presentations.",
-    "descriptionZh": "HTML PPT Studio agent skill，提供 24 套主题、31 种布局和 20+ 动画，用于制作专业网页演示。"
+    "descriptionZh": "HTML PPT Studio agent skill，提供 24 套主题、31 种布局和 20+ 动画，用于制作专业网页演示。",
+    "tags": [
+      "HTML-first",
+      "Template"
+    ],
+    "editable": "Source editable",
+    "skill": "Skill"
   },
   {
     "name": "1weiho/open-slide",
     "url": "https://github.com/1weiho/open-slide",
     "repo": "1weiho/open-slide",
-    "category": "Markdown, HTML, and Document to Slides",
-    "categoryZh": "Markdown、HTML 与文档转幻灯片",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 3599,
     "type": "Framework",
     "output": "Slides",
     "description": "Slide framework built for agents, where each page can be represented as a React component and updated by agent feedback.",
-    "descriptionZh": "为 agent 设计的 slide framework，每页可作为 React 组件，并支持由 agent 根据反馈迭代修改。"
+    "descriptionZh": "为 agent 设计的 slide framework，每页可作为 React 组件，并支持由 agent 根据反馈迭代修改。",
+    "tags": [
+      "HTML-first",
+      "App",
+      "PDF"
+    ],
+    "editable": "Source editable",
+    "skill": "Skill"
   },
   {
     "name": "scanny/python-pptx",
     "url": "https://github.com/scanny/python-pptx",
     "repo": "scanny/python-pptx",
-    "category": "PowerPoint and PPTX Libraries",
-    "categoryZh": "PowerPoint 与 PPTX 库",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
     "stars": 3377,
     "type": "Library",
     "output": "PPTX",
     "description": "Python library for creating and updating PowerPoint files.",
-    "descriptionZh": "用于创建和更新 PowerPoint 文件的 Python 库。"
+    "descriptionZh": "用于创建和更新 PowerPoint 文件的 Python 库。",
+    "tags": [
+      "Library",
+      "PPTX-native",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "No"
   },
   {
     "name": "sligter/LandPPT",
     "url": "https://github.com/sligter/LandPPT",
     "repo": "sligter/LandPPT",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 3265,
     "type": "App",
     "output": "PPTX",
     "description": "LLM-based presentation generation platform that turns documents into professional decks with templates, styling, and multiple model options.",
-    "descriptionZh": "基于 LLM 的演示生成平台，可把文档转换为专业 PPT，并支持模板、样式和多模型选择。"
+    "descriptionZh": "基于 LLM 的演示生成平台，可把文档转换为专业 PPT，并支持模板、样式和多模型选择。",
+    "tags": [
+      "HTML-first",
+      "App",
+      "Image-based",
+      "PDF",
+      "Video"
+    ],
+    "editable": "Partially editable",
+    "skill": "No"
   },
   {
     "name": "allweonedev/presentation-ai",
     "url": "https://github.com/allweonedev/presentation-ai",
     "repo": "allweonedev/presentation-ai",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 2818,
     "type": "App",
     "output": "PPTX",
     "description": "Open-source Gamma-style AI presentation generator with themes, editing, and PowerPoint export.",
-    "descriptionZh": "开源 Gamma 风格 AI 演示生成器，支持主题、编辑和 PowerPoint 导出。"
+    "descriptionZh": "开源 Gamma 风格 AI 演示生成器，支持主题、编辑和 PowerPoint 导出。",
+    "tags": [
+      "HTML-first",
+      "App",
+      "Template"
+    ],
+    "editable": "Partially editable",
+    "skill": "No"
   },
   {
     "name": "op7418/NanoBanana-PPT-Skills",
     "url": "https://github.com/op7418/NanoBanana-PPT-Skills",
     "repo": "op7418/NanoBanana-PPT-Skills",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
     "stars": 2756,
     "type": "Skill",
     "output": "Images/Video",
     "description": "NanoBanana PPT skills for generating high-quality presentation images and videos with smart transitions and interactive playback.",
-    "descriptionZh": "NanoBanana PPT Skills，用于自动生成高质量 PPT 图片和视频，支持智能转场和交互式播放。"
+    "descriptionZh": "NanoBanana PPT Skills，用于自动生成高质量 PPT 图片和视频，支持智能转场和交互式播放。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "Video"
+    ],
+    "editable": "Image-based",
+    "skill": "Skill"
   },
   {
     "name": "veasion/AiPPT",
     "url": "https://github.com/veasion/AiPPT",
     "repo": "veasion/AiPPT",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 1882,
     "type": "App",
     "output": "PPTX",
     "description": "AI PPT generator from topics, files, or URLs, with template customization and support for charts, animations, and 3D effects.",
-    "descriptionZh": "可通过主题、文件或网址生成 PPT 的 AI 工具，支持自定义模板、图表、动画和 3D 特效解析渲染。"
+    "descriptionZh": "可通过主题、文件或网址生成 PPT 的 AI 工具，支持自定义模板、图表、动画和 3D 特效解析渲染。",
+    "tags": [
+      "Automation",
+      "Conversion",
+      "App",
+      "PPTX-native"
+    ],
+    "editable": "Editable",
+    "skill": "No"
   },
   {
     "name": "SmartSchoolAI/ai-to-pptx",
     "url": "https://github.com/SmartSchoolAI/ai-to-pptx",
     "repo": "SmartSchoolAI/ai-to-pptx",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 1433,
     "type": "App",
     "output": "PPTX",
     "description": "Open-source AI assistant for generating PPTX outlines and decks with template selection, online editing, and export.",
-    "descriptionZh": "前后端开源的 AI PPTX 助手，支持生成大纲、选择模板、在线编辑并导出 PPTX。"
+    "descriptionZh": "前后端开源的 AI PPTX 助手，支持生成大纲、选择模板、在线编辑并导出 PPTX。",
+    "tags": [
+      "PPTX-native",
+      "App",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "No"
   },
   {
     "name": "NyxTides/ppt-image-first",
     "url": "https://github.com/NyxTides/ppt-image-first",
     "repo": "NyxTides/ppt-image-first",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
     "stars": 873,
     "type": "Skill",
     "output": "PPTX",
     "description": "Image-first PPT skill for Codex, Claude Code, and Opencode CLI workflows.",
-    "descriptionZh": "面向 Codex、Claude Code 和 Opencode CLI 的 image-first PPT skill。"
+    "descriptionZh": "面向 Codex、Claude Code 和 Opencode CLI 的 image-first PPT skill。",
+    "tags": [
+      "Image-first",
+      "Image-based"
+    ],
+    "editable": "Image-based",
+    "skill": "Skill"
   },
   {
     "name": "sunbigfly/ppt-agent-skills",
     "url": "https://github.com/sunbigfly/ppt-agent-skills",
     "repo": "sunbigfly/ppt-agent-skills",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 748,
     "type": "Skill",
     "output": "Presentation",
     "description": "Code-driven presentation generation framework that treats deck creation like building software.",
-    "descriptionZh": "代码驱动的演示文稿生成框架，强调像构建软件工程一样生成演示文稿。"
+    "descriptionZh": "代码驱动的演示文稿生成框架，强调像构建软件工程一样生成演示文稿。",
+    "tags": [
+      "HTML-first",
+      "Image-based",
+      "Automation"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
   },
   {
     "name": "JuneYaooo/gpt-image2-ppt-skills",
     "url": "https://github.com/JuneYaooo/gpt-image2-ppt-skills",
     "repo": "JuneYaooo/gpt-image2-ppt-skills",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
     "stars": 700,
     "type": "Skill",
     "output": "PPTX",
     "description": "Skill for cloning PPTX visual layouts with gpt-image-2 while replacing the content, including bundled styles.",
-    "descriptionZh": "使用 gpt-image-2 仿制 PPTX 版式并替换内容的 skill，附带多套精选风格。"
+    "descriptionZh": "使用 gpt-image-2 仿制 PPTX 版式并替换内容的 skill，附带多套精选风格。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "Template"
+    ],
+    "editable": "Image-based",
+    "skill": "Skill"
   },
   {
     "name": "Gabberflast/academic-pptx-skill",
     "url": "https://github.com/Gabberflast/academic-pptx-skill",
     "repo": "Gabberflast/academic-pptx-skill",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 448,
     "type": "Skill",
     "output": "PPTX",
     "description": "Claude skill for academic presentations, enforcing action titles, argument structure, exhibit discipline, citations, and communication-first design.",
-    "descriptionZh": "面向学术演示的 Claude skill，强调行动标题、论证结构、图表纪律、引用规范和表达优先设计。"
+    "descriptionZh": "面向学术演示的 Claude skill，强调行动标题、论证结构、图表纪律、引用规范和表达优先设计。",
+    "tags": [
+      "PPTX-native",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "barun-saha/slide-deck-ai",
     "url": "https://github.com/barun-saha/slide-deck-ai",
     "repo": "barun-saha/slide-deck-ai",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 358,
     "type": "CLI",
     "output": "PPTX",
     "description": "AI-assisted PowerPoint deck generation.",
-    "descriptionZh": "AI 辅助 PowerPoint 幻灯片生成。"
+    "descriptionZh": "AI 辅助 PowerPoint 幻灯片生成。",
+    "tags": [
+      "PPTX-native",
+      "App",
+      "Backend",
+      "PDF"
+    ],
+    "editable": "Editable",
+    "skill": "No"
   },
   {
     "name": "HuiMi24/chatppt",
     "url": "https://github.com/HuiMi24/chatppt",
     "repo": "HuiMi24/chatppt",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 306,
     "type": "App",
     "output": "Slides",
     "description": "ChatGPT/Ollama-powered tool for generating PPT or slides, with English and Chinese output support.",
-    "descriptionZh": "由 ChatGPT/Ollama 驱动的 PPT/slide 生成工具，支持中英文输出。"
+    "descriptionZh": "由 ChatGPT/Ollama 驱动的 PPT/slide 生成工具，支持中英文输出。",
+    "tags": [
+      "PPTX-native",
+      "App",
+      "Backend"
+    ],
+    "editable": "Editable",
+    "skill": "No"
   },
   {
     "name": "ningzimu/codex-ppt-skill",
     "url": "https://github.com/ningzimu/codex-ppt-skill",
     "repo": "ningzimu/codex-ppt-skill",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
     "stars": 274,
     "type": "Skill",
     "output": "PPTX",
     "description": "Codex skill for generating image-based PowerPoint decks with gpt-image-2.",
-    "descriptionZh": "使用 gpt-image-2 生成图片式 PowerPoint deck 的 Codex skill。"
-  },
-  {
-    "name": "Noi1r/beamer-skill",
-    "url": "https://github.com/Noi1r/beamer-skill",
-    "repo": "Noi1r/beamer-skill",
-    "category": "Markdown, HTML, and Document to Slides",
-    "categoryZh": "Markdown、HTML 与文档转幻灯片",
-    "stars": 236,
-    "type": "Skill",
-    "output": "PDF",
-    "description": "Claude Code skill for creating, compiling, reviewing, and polishing academic Beamer LaTeX presentations.",
-    "descriptionZh": "用于创建、编译、审阅和润色学术 Beamer LaTeX 演示的 Claude Code skill。"
+    "descriptionZh": "使用 gpt-image-2 生成图片式 PowerPoint deck 的 Codex skill。",
+    "tags": [
+      "Image-first",
+      "Image-based"
+    ],
+    "editable": "Image-based",
+    "skill": "Skill"
   },
   {
     "name": "singerla/pptx-automizer",
     "url": "https://github.com/singerla/pptx-automizer",
     "repo": "singerla/pptx-automizer",
-    "category": "PowerPoint and PPTX Libraries",
-    "categoryZh": "PowerPoint 与 PPTX 库",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
     "stars": 202,
     "type": "Library",
     "output": "PPTX",
     "description": "Node.js library for modifying, merging, and templating PowerPoint files.",
-    "descriptionZh": "用于修改、合并和模板化 PowerPoint 文件的 Node.js 库。"
+    "descriptionZh": "用于修改、合并和模板化 PowerPoint 文件的 Node.js 库。",
+    "tags": [
+      "Library",
+      "Automation",
+      "PPTX-native",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "No"
   },
   {
     "name": "atharva9167j/dom-to-pptx",
     "url": "https://github.com/atharva9167j/dom-to-pptx",
     "repo": "atharva9167j/dom-to-pptx",
-    "category": "Editable Reconstruction",
-    "categoryZh": "可编辑重建",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
     "stars": 188,
     "type": "Library",
     "output": "PPTX",
     "description": "Client-side DOM/CSS to editable PowerPoint converter with an agent skill installer.",
-    "descriptionZh": "客户端 DOM/CSS 转可编辑 PowerPoint 工具，并提供 agent skill 安装器。"
+    "descriptionZh": "客户端 DOM/CSS 转可编辑 PowerPoint 工具，并提供 agent skill 安装器。",
+    "tags": [
+      "HTML-first",
+      "Conversion",
+      "Library",
+      "PPTX-native"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "CyberTimon/Powerpointer",
     "url": "https://github.com/CyberTimon/Powerpointer",
     "repo": "CyberTimon/Powerpointer",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 176,
     "type": "App",
     "output": "PPTX",
     "description": "GPT-powered PowerPoint generator using Python and python-pptx.",
-    "descriptionZh": "基于 GPT、Python 和 python-pptx 的 PowerPoint 生成器。"
+    "descriptionZh": "基于 GPT、Python 和 python-pptx 的 PowerPoint 生成器。",
+    "tags": [
+      "PPTX-native",
+      "App",
+      "Backend"
+    ],
+    "editable": "Editable",
+    "skill": "No"
   },
   {
     "name": "JuniverseCoder/MinerU2PPT",
     "url": "https://github.com/JuniverseCoder/MinerU2PPT",
     "repo": "JuniverseCoder/MinerU2PPT",
-    "category": "Editable Reconstruction",
-    "categoryZh": "可编辑重建",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
     "stars": 162,
     "type": "Converter",
     "output": "PPTX",
     "description": "Converts PDFs and images into editable PowerPoint presentations using structure extraction.",
-    "descriptionZh": "使用结构提取把 PDF 和图片转换为可编辑 PowerPoint。"
+    "descriptionZh": "使用结构提取把 PDF 和图片转换为可编辑 PowerPoint。",
+    "tags": [
+      "Conversion",
+      "PPTX-native",
+      "PDF",
+      "Image-based"
+    ],
+    "editable": "Editable",
+    "skill": "No"
   },
   {
     "name": "SkyworkAI/Skywork-Skills - skywork-ppt",
     "url": "https://github.com/SkyworkAI/Skywork-Skills",
     "repo": "SkyworkAI/Skywork-Skills",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 156,
     "type": "Skill",
     "output": "PPTX",
     "description": "Skill for generating, imitating, and editing PowerPoint presentations.",
-    "descriptionZh": "Skywork PPT skill，支持生成、仿制和编辑 PowerPoint。"
+    "descriptionZh": "Skywork PPT skill，支持生成、仿制和编辑 PowerPoint。",
+    "tags": [
+      "PPTX-native",
+      "Template",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "likaku/Mck-ppt-design-skill",
     "url": "https://github.com/likaku/Mck-ppt-design-skill",
     "repo": "likaku/Mck-ppt-design-skill",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 150,
     "type": "Skill",
     "output": "PPTX",
     "description": "Consulting-style PowerPoint design system for AI agents, with many layout patterns and python-pptx output.",
-    "descriptionZh": "面向 AI agents 的咨询风 PowerPoint 设计系统，提供大量布局模式并基于 python-pptx 输出。"
+    "descriptionZh": "面向 AI agents 的咨询风 PowerPoint 设计系统，提供大量布局模式并基于 python-pptx 输出。",
+    "tags": [
+      "PPTX-native",
+      "Template",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "SlideSpeak/slidespeak-backend",
     "url": "https://github.com/SlideSpeak/slidespeak-backend",
     "repo": "SlideSpeak/slidespeak-backend",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
     "stars": 93,
     "type": "Backend",
     "output": "PPTX",
     "description": "Backend for SlideSpeak, supporting AI summaries, Q&A, and PowerPoint creation workflows.",
-    "descriptionZh": "SlideSpeak 后端，支持 AI 总结、问答和 PowerPoint 创建流程。"
+    "descriptionZh": "SlideSpeak 后端，支持 AI 总结、问答和 PowerPoint 创建流程。",
+    "tags": [
+      "Backend",
+      "Automation",
+      "Conversion",
+      "PPTX-native",
+      "PDF"
+    ],
+    "editable": "Unknown",
+    "skill": "No"
   },
   {
     "name": "Noi1r/powerpoint-skill",
     "url": "https://github.com/Noi1r/powerpoint-skill",
     "repo": "Noi1r/powerpoint-skill",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 85,
     "type": "Skill",
     "output": "PPTX",
     "description": "PowerPoint skill for academic slides, formulas, and diagrams using PptxGenJS.",
-    "descriptionZh": "面向学术幻灯片、公式和图表的 PowerPoint skill。"
+    "descriptionZh": "面向学术幻灯片、公式和图表的 PowerPoint skill。",
+    "tags": [
+      "PPTX-native",
+      "PDF",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "grapeot/nbp_slides",
     "url": "https://github.com/grapeot/nbp_slides",
     "repo": "grapeot/nbp_slides",
-    "category": "End-to-End AI Presentation Tools",
-    "categoryZh": "端到端 AI 演示工具",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
     "stars": 83,
     "type": "Generator",
     "output": "PPTX/HTML",
     "description": "AI-generated slide deck generator with narrative-based methodology and templates.",
-    "descriptionZh": "基于叙事方法论和模板的 AI 幻灯片生成器，支持生成演示 deck。"
+    "descriptionZh": "基于叙事方法论和模板的 AI 幻灯片生成器，支持生成演示 deck。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "HTML-first",
+      "PPTX"
+    ],
+    "editable": "Image-based",
+    "skill": "No"
   },
   {
     "name": "Kuneosu/make-slide",
     "url": "https://github.com/Kuneosu/make-slide",
     "repo": "Kuneosu/make-slide",
-    "category": "Markdown, HTML, and Document to Slides",
-    "categoryZh": "Markdown、HTML 与文档转幻灯片",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
     "stars": 69,
     "type": "Skill",
     "output": "HTML/PPTX",
     "description": "Universal AI skill for generating standalone HTML slide decks.",
-    "descriptionZh": "用于生成独立 HTML 幻灯片 deck 的通用 AI skill。"
+    "descriptionZh": "用于生成独立 HTML 幻灯片 deck 的通用 AI skill。",
+    "tags": [
+      "HTML-first",
+      "PDF",
+      "Template"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
   },
   {
     "name": "tristan-mcinnis/pptx-from-layouts-skill",
     "url": "https://github.com/tristan-mcinnis/pptx-from-layouts-skill",
     "repo": "tristan-mcinnis/pptx-from-layouts-skill",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 50,
     "type": "Skill",
     "output": "PPTX",
     "description": "Claude Code skill for generating PowerPoint decks from Markdown using template slide master layouts.",
-    "descriptionZh": "使用模板 slide master layouts 从 Markdown 生成 PowerPoint deck 的 Claude Code skill。"
+    "descriptionZh": "使用模板 slide master layouts 从 Markdown 生成 PowerPoint deck 的 Claude Code skill。",
+    "tags": [
+      "PPTX-native",
+      "Template",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "stevenjinlong/awesome-ppt-skills",
     "url": "https://github.com/stevenjinlong/awesome-ppt-skills",
     "repo": "stevenjinlong/awesome-ppt-skills",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
     "stars": 43,
     "type": "Skill",
     "output": "PPTX",
     "description": "Codex skills for image-first PPT generation with gpt-image-2 and editable reconstruction handoff.",
-    "descriptionZh": "Codex PPT skills，使用 gpt-image-2 生成图片式 PPT，并支持可编辑化交接。"
+    "descriptionZh": "Codex PPT skills，使用 gpt-image-2 生成图片式 PPT，并支持可编辑化交接。",
+    "tags": [
+      "Image-first",
+      "Image-based"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
   },
   {
     "name": "ykuwai/ppt-mcp",
     "url": "https://github.com/ykuwai/ppt-mcp",
     "repo": "ykuwai/ppt-mcp",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
     "stars": 19,
     "type": "MCP Server",
     "output": "PowerPoint",
     "description": "PowerPoint MCP server for real-time PowerPoint control through COM automation.",
-    "descriptionZh": "通过 COM 自动化实时控制 PowerPoint 的 MCP server。"
+    "descriptionZh": "通过 COM 自动化实时控制 PowerPoint 的 MCP server。",
+    "tags": [
+      "MCP",
+      "Automation",
+      "PowerPoint"
+    ],
+    "editable": "Editable",
+    "skill": "MCP"
   },
   {
     "name": "ningzimu/image-to-editable-ppt-skill",
     "url": "https://github.com/ningzimu/image-to-editable-ppt-skill",
     "repo": "ningzimu/image-to-editable-ppt-skill",
-    "category": "Editable Reconstruction",
-    "categoryZh": "可编辑重建",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
     "stars": 15,
     "type": "Skill",
     "output": "PPTX",
     "description": "Codex skill for converting slide images, PDFs, and image-based PPTX files into editable PowerPoint decks.",
-    "descriptionZh": "把幻灯片图片、PDF 和图片版 PPTX 转换为可编辑 PowerPoint deck 的 Codex skill。"
+    "descriptionZh": "把幻灯片图片、PDF 和图片版 PPTX 转换为可编辑 PowerPoint deck 的 Codex skill。",
+    "tags": [
+      "Conversion",
+      "Image-based",
+      "PDF"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "PHY041/claude-skill-academic-ppt",
     "url": "https://github.com/PHY041/claude-skill-academic-ppt",
     "repo": "PHY041/claude-skill-academic-ppt",
-    "category": "Agent Skills and Workflows",
-    "categoryZh": "Agent 技能与工作流",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
     "stars": 11,
     "type": "Skill",
     "output": "PPTX",
     "description": "Claude Code skill for academic defense presentations from LaTeX or PDF, with figures, notes, and Q&A prediction.",
-    "descriptionZh": "从 LaTeX 或 PDF 生成学术答辩 PPT 的 Claude Code skill，支持图表、备注和 Q&A 预测。"
+    "descriptionZh": "从 LaTeX 或 PDF 生成学术答辩 PPT 的 Claude Code skill，支持图表、备注和 Q&A 预测。",
+    "tags": [
+      "PPTX-native",
+      "PDF",
+      "Template"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
   }
 ]

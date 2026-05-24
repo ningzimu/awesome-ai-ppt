@@ -1,19 +1,17 @@
 const categories = [
   "All",
-  "End-to-End AI Presentation Tools",
-  "Agent Skills and Workflows",
-  "PowerPoint and PPTX Libraries",
-  "Editable Reconstruction",
-  "Markdown, HTML, and Document to Slides"
+  "HTML-First Presentation Workflows",
+  "Image-First Presentation Workflows",
+  "PPTX-Native Generation Workflows",
+  "PPTX Libraries and Automation Infrastructure"
 ];
 
 const categoryZh = {
   All: "全部分类",
-  "End-to-End AI Presentation Tools": "端到端 AI 演示工具",
-  "Agent Skills and Workflows": "Agent 技能与工作流",
-  "PowerPoint and PPTX Libraries": "PowerPoint 与 PPTX 库",
-  "Editable Reconstruction": "可编辑重建",
-  "Markdown, HTML, and Document to Slides": "Markdown、HTML 与文档转幻灯片"
+  "HTML-First Presentation Workflows": "HTML 风格 PPT 方案",
+  "Image-First Presentation Workflows": "图片生成式 PPT 方案",
+  "PPTX-Native Generation Workflows": "PPTX 库生成式 PPT 方案",
+  "PPTX Libraries and Automation Infrastructure": "PPTX 库与自动化基础设施"
 };
 
 const state = {
@@ -27,18 +25,18 @@ const state = {
 const translations = {
   zh: {
     contribute: "贡献",
-    heroTitle: "按分类、星标和工作流查找 AI PPT 项目。",
-    heroCopy: "搜索 AI 演示生成、PowerPoint 自动化、PPTX 编辑、可编辑重建和幻灯片 agent 工作流开源工具。",
-    tagGeneration: "AI 生成",
-    tagAutomation: "PPTX 自动化",
-    tagRebuild: "可编辑重建",
+    heroTitle: "按技术路线、可编辑性和工作流查找 AI PPT 项目。",
+    heroCopy: "搜索 HTML 风格、图片生成式、PPTX 原生生成，以及 PPTX 自动化和可编辑重建工具。",
+    tagGeneration: "HTML-first",
+    tagAutomation: "Image-first",
+    tagRebuild: "PPTX-native",
     summaryLabel: "目录概览",
     browseLabel: "浏览项目",
     projectsLabel: "项目",
     categoriesLabel: "分类",
     thresholdLabel: "入选门槛",
     searchLabel: "搜索",
-    searchPlaceholder: "搜索名称、分类、输出类型、英文描述...",
+    searchPlaceholder: "搜索名称、分类、标签、输出类型、英文描述...",
     sortLabel: "排序",
     sortStarsDesc: "星标降序",
     sortStarsAsc: "星标升序",
@@ -53,18 +51,18 @@ const translations = {
   },
   en: {
     contribute: "Contribute",
-    heroTitle: "Find AI PPT projects by category, stars, and workflow.",
-    heroCopy: "Search open-source tools for AI-assisted presentation generation, PowerPoint automation, PPTX editing, editable reconstruction, and slide agent workflows.",
-    tagGeneration: "AI generation",
-    tagAutomation: "PPTX automation",
-    tagRebuild: "Editable rebuild",
+    heroTitle: "Find AI PPT projects by technical route, editability, and workflow.",
+    heroCopy: "Search HTML-first, image-first, PPTX-native generation, PPTX automation, and editable reconstruction tools.",
+    tagGeneration: "HTML-first",
+    tagAutomation: "Image-first",
+    tagRebuild: "PPTX-native",
     summaryLabel: "Directory overview",
     browseLabel: "Browse projects",
     projectsLabel: "Projects",
     categoriesLabel: "Categories",
     thresholdLabel: "Stars threshold",
     searchLabel: "Search",
-    searchPlaceholder: "Search name, category, output, Chinese description...",
+    searchPlaceholder: "Search name, category, tags, output, Chinese description...",
     sortLabel: "Sort",
     sortStarsDesc: "Stars high to low",
     sortStarsAsc: "Stars low to high",
@@ -105,12 +103,27 @@ function searchable(project) {
     project.categoryZh,
     project.type,
     project.output,
+    project.editable,
+    project.skill,
+    ...(project.tags || []),
     project.description,
     project.descriptionZh
   ]
     .filter(Boolean)
     .join(" ")
     .toLowerCase();
+}
+
+function metaChips(project) {
+  const values = [
+    ...(project.tags || []),
+    project.type,
+    project.output,
+    project.editable,
+    project.skill,
+    project.repo
+  ].filter((value) => value && value !== "No");
+  return [...new Set(values)];
 }
 
 function sorted(projects) {
@@ -189,9 +202,7 @@ function renderProjects() {
             <p class="secondary">${state.lang === "zh" ? project.description : project.descriptionZh}</p>
             <div class="meta">
               <span class="chip">${state.lang === "zh" ? project.categoryZh : project.category}</span>
-              <span class="chip">${project.type}</span>
-              <span class="chip">${project.output}</span>
-              ${project.repo ? `<span class="chip">${project.repo}</span>` : ""}
+              ${metaChips(project).map((chip) => `<span class="chip">${chip}</span>`).join("")}
             </div>
           </div>
           <div class="stars" aria-label="Stars">
