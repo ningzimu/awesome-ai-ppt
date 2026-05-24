@@ -17,21 +17,6 @@ CATEGORIES = [
     ("PPTX Libraries and Automation Infrastructure", "PPTX 库与自动化基础设施"),
 ]
 
-CONTRIBUTORS = [
-    {
-        "login": "ningzimu",
-        "url": "https://github.com/ningzimu",
-        "avatar": "https://github.com/ningzimu.png?size=96",
-    }
-]
-
-
-def render_contributors() -> str:
-    return "\n".join(
-        f'<a href="{contributor["url"]}"><img src="{contributor["avatar"]}" width="64" height="64" alt="{contributor["login"]}"></a>'
-        for contributor in CONTRIBUTORS
-    )
-
 ZH_SECTION_COPY = {
     "HTML-First Presentation Workflows": "先生成 HTML、Web slides 或页面式演示，再导出、截图或转换为 PPT 的方案。",
     "Image-First Presentation Workflows": "以图像模型或整页图片为核心生成幻灯片，再打包为 PPTX、PDF、视频或网页演示的方案。",
@@ -160,7 +145,7 @@ See the [Agent access page](https://ningzimu.github.io/awesome-ai-ppt/agent/) fo
 
 """
 
-ZH_TAIL = f"""## 收录范围
+ZH_TAIL = """## 收录范围
 
 入选项目应与 AI 辅助演示工作直接相关，例如生成幻灯片、编辑 PPTX、把内容转换为演示文稿、重建可编辑 deck、渲染或验证幻灯片。
 
@@ -183,10 +168,12 @@ GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 
 感谢所有参与维护和改进这个项目的人。
 
-{render_contributors()}
+<a href="https://github.com/ningzimu/awesome-ai-ppt/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ningzimu/awesome-ai-ppt" alt="Contributors">
+</a>
 """
 
-EN_TAIL = f"""## Scope
+EN_TAIL = """## Scope
 
 Included projects should have a direct relationship to AI-assisted presentation work: generating slides, editing PPTX files, converting content into presentations, reconstructing editable decks, or rendering and validating slides.
 
@@ -209,7 +196,9 @@ Pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before sugges
 
 Thanks to everyone who has helped maintain and improve this project.
 
-{render_contributors()}
+<a href="https://github.com/ningzimu/awesome-ai-ppt/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ningzimu/awesome-ai-ppt" alt="Contributors">
+</a>
 """
 
 

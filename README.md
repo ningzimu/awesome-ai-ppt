@@ -144,4 +144,6 @@ GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 
 感谢所有参与维护和改进这个项目的人。
 
-<a href="https://github.com/ningzimu"><img src="https://github.com/ningzimu.png?size=96" width="64" height="64" alt="ningzimu"></a>
+<a href="https://github.com/ningzimu/awesome-ai-ppt/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ningzimu/awesome-ai-ppt" alt="Contributors">
+</a>
