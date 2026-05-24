@@ -7,7 +7,7 @@
 
 A curated list of open-source projects for AI-assisted presentation generation, PowerPoint automation, PPTX editing, and slide workflow tooling.
 
-This is a curated list, not a dump of every slide-related link. It focuses on GitHub repositories and research projects that help agents or developers create, edit, convert, inspect, or evaluate presentations.
+This is a curated list, not a dump of every slide-related link. It focuses on GitHub repositories and technical projects that help agents or developers create, edit, convert, or inspect presentations.
 
 Website: https://ningzimu.github.io/awesome-ai-ppt/
 
@@ -30,8 +30,6 @@ Website: https://ningzimu.github.io/awesome-ai-ppt/
 - [PowerPoint and PPTX Libraries](#powerpoint-and-pptx-libraries)
 - [Editable Reconstruction](#editable-reconstruction)
 - [Markdown, HTML, and Document to Slides](#markdown-html-and-document-to-slides)
-- [Research and Benchmarks](#research-and-benchmarks)
-- [Directories and Related Lists](#directories-and-related-lists)
 - [Scope](#scope)
 - [Contributing](#contributing)
 
@@ -112,30 +110,11 @@ Tools that convert structured content into slide decks or web presentations.
 | [Noi1r/beamer-skill](https://github.com/Noi1r/beamer-skill) | Claude Code skill for creating, compiling, reviewing, and polishing academic Beamer LaTeX presentations. | 236 |
 | [Kuneosu/make-slide](https://github.com/Kuneosu/make-slide) | Universal AI skill for generating standalone HTML slide decks. | 69 |
 
-## Research and Benchmarks
-
-Research projects and papers about presentation generation, editing, or multimodal slide agents.
-
-| Repository | Description | Stars |
-| --- | --- | --- |
-| [icip-cas/PPTAgent](https://github.com/icip-cas/PPTAgent) | Research-backed agentic framework for presentation generation and evaluation. | 4,434 |
-| [AIGeeksGroup/PresentAgent-2](https://github.com/AIGeeksGroup/PresentAgent-2) | Multimodal presentation agent research project. | 13 |
-| [PPTArena](https://arxiv.org/abs/2512.03042) | Benchmark for reliable PowerPoint editing across real decks. | - |
-
-## Directories and Related Lists
-
-Directories, indexes, and related resource collections.
-
-| Repository | Description | Stars |
-| --- | --- | --- |
-| [openagentskills.dev - pptx](https://openagentskills.dev/skills/pptx) | Open Agent Skills directory entry for PPTX. | - |
-| [powerpoint.md](https://powerpoint.md/) | Community-maintained directory comparing AI agent PowerPoint and Excel skills. | - |
-
 ## Scope
 
-Included projects should have a direct relationship to AI-assisted presentation work: generating slides, editing PPTX files, converting content into presentations, reconstructing editable decks, rendering or validating slides, or evaluating presentation agents.
+Included projects should have a direct relationship to AI-assisted presentation work: generating slides, editing PPTX files, converting content into presentations, reconstructing editable decks, or rendering and validating slides.
 
-GitHub repositories should have at least 10 stars before being included. Research papers, official directories, or foundational resources may be included when they are clearly relevant.
+GitHub repositories should have at least 10 stars before being included.
 
 Out of scope:
 

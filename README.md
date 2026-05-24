@@ -7,7 +7,7 @@
 
 一个关于 AI PPT、PowerPoint 自动化、PPTX 编辑和幻灯片工作流工具的开源项目精选清单。
 
-这是一个精选列表，不是“所有相关链接大全”。本仓库重点收集能帮助 agent 或开发者创建、编辑、转换、检查或评估演示文稿的 GitHub 仓库与研究项目。
+这是一个精选列表，不是“所有相关链接大全”。本仓库重点收集能帮助 agent 或开发者创建、编辑、转换或检查演示文稿的 GitHub 仓库与技术项目。
 
 网站：https://ningzimu.github.io/awesome-ai-ppt/
 
@@ -30,8 +30,6 @@
 - [PowerPoint 与 PPTX 库](#powerpoint-与-pptx-库)
 - [可编辑重建](#可编辑重建)
 - [Markdown、HTML 与文档转幻灯片](#markdownhtml-与文档转幻灯片)
-- [研究与基准](#研究与基准)
-- [目录与相关清单](#目录与相关清单)
 - [收录范围](#收录范围)
 - [贡献](#贡献)
 
@@ -112,30 +110,11 @@
 | [Noi1r/beamer-skill](https://github.com/Noi1r/beamer-skill) | 用于创建、编译、审阅和润色学术 Beamer LaTeX 演示的 Claude Code skill。 | 236 |
 | [Kuneosu/make-slide](https://github.com/Kuneosu/make-slide) | 用于生成独立 HTML 幻灯片 deck 的通用 AI skill。 | 69 |
 
-## 研究与基准
-
-关于演示生成、编辑或多模态幻灯片 agent 的研究项目与论文。
-
-| 仓库 | 简介 | Star |
-| --- | --- | --- |
-| [icip-cas/PPTAgent](https://github.com/icip-cas/PPTAgent) | 有研究支撑的演示生成与评估 agentic 框架。 | 4,434 |
-| [AIGeeksGroup/PresentAgent-2](https://github.com/AIGeeksGroup/PresentAgent-2) | 多模态演示 agent 研究项目。 | 13 |
-| [PPTArena](https://arxiv.org/abs/2512.03042) | 面向真实幻灯片的可靠 PowerPoint 编辑基准。 | - |
-
-## 目录与相关清单
-
-目录、索引和相关资源集合。
-
-| 仓库 | 简介 | Star |
-| --- | --- | --- |
-| [openagentskills.dev - pptx](https://openagentskills.dev/skills/pptx) | Open Agent Skills 的 PPTX 目录条目。 | - |
-| [powerpoint.md](https://powerpoint.md/) | 社区维护的 AI agent PowerPoint 与 Excel skills 对比目录。 | - |
-
 ## 收录范围
 
-入选项目应与 AI 辅助演示工作直接相关，例如生成幻灯片、编辑 PPTX、把内容转换为演示文稿、重建可编辑 deck、渲染或验证幻灯片，或评估演示 agent。
+入选项目应与 AI 辅助演示工作直接相关，例如生成幻灯片、编辑 PPTX、把内容转换为演示文稿、重建可编辑 deck、渲染或验证幻灯片。
 
-GitHub 仓库通常需要至少 10 stars 才能进入主列表。论文、官方目录或基础资源如果高度相关，可以作为例外收录。
+GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 
 不收录：
 

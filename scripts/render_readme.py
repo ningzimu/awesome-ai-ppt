@@ -16,8 +16,6 @@ CATEGORIES = [
     ("PowerPoint and PPTX Libraries", "PowerPoint 与 PPTX 库"),
     ("Editable Reconstruction", "可编辑重建"),
     ("Markdown, HTML, and Document to Slides", "Markdown、HTML 与文档转幻灯片"),
-    ("Research and Benchmarks", "研究与基准"),
-    ("Directories and Related Lists", "目录与相关清单"),
 ]
 
 ZH_SECTION_COPY = {
@@ -26,8 +24,6 @@ ZH_SECTION_COPY = {
     "PowerPoint and PPTX Libraries": "用于创建、修改、合并或检查 PPTX 文件的开发者库。",
     "Editable Reconstruction": "专注于把文档、图片、HTML 或已有幻灯片重建为可编辑演示对象的项目。",
     "Markdown, HTML, and Document to Slides": "将结构化内容转换为幻灯片或网页演示的工具。",
-    "Research and Benchmarks": "关于演示生成、编辑或多模态幻灯片 agent 的研究项目与论文。",
-    "Directories and Related Lists": "目录、索引和相关资源集合。",
 }
 
 EN_SECTION_COPY = {
@@ -36,8 +32,6 @@ EN_SECTION_COPY = {
     "PowerPoint and PPTX Libraries": "Developer libraries for creating, modifying, merging, or inspecting PPTX files.",
     "Editable Reconstruction": "Projects focused on rebuilding documents, images, HTML, or existing slides into editable presentation objects.",
     "Markdown, HTML, and Document to Slides": "Tools that convert structured content into slide decks or web presentations.",
-    "Research and Benchmarks": "Research projects and papers about presentation generation, editing, or multimodal slide agents.",
-    "Directories and Related Lists": "Directories, indexes, and related resource collections.",
 }
 
 ZH_SLUGS = {
@@ -46,8 +40,6 @@ ZH_SLUGS = {
     "PowerPoint 与 PPTX 库": "powerpoint-与-pptx-库",
     "可编辑重建": "可编辑重建",
     "Markdown、HTML 与文档转幻灯片": "markdownhtml-与文档转幻灯片",
-    "研究与基准": "研究与基准",
-    "目录与相关清单": "目录与相关清单",
 }
 
 ZH_HEADER = """# Awesome AI PPT
@@ -59,7 +51,7 @@ ZH_HEADER = """# Awesome AI PPT
 
 一个关于 AI PPT、PowerPoint 自动化、PPTX 编辑和幻灯片工作流工具的开源项目精选清单。
 
-这是一个精选列表，不是“所有相关链接大全”。本仓库重点收集能帮助 agent 或开发者创建、编辑、转换、检查或评估演示文稿的 GitHub 仓库与研究项目。
+这是一个精选列表，不是“所有相关链接大全”。本仓库重点收集能帮助 agent 或开发者创建、编辑、转换或检查演示文稿的 GitHub 仓库与技术项目。
 
 网站：https://ningzimu.github.io/awesome-ai-ppt/
 
@@ -87,7 +79,7 @@ EN_HEADER = """# Awesome AI PPT
 
 A curated list of open-source projects for AI-assisted presentation generation, PowerPoint automation, PPTX editing, and slide workflow tooling.
 
-This is a curated list, not a dump of every slide-related link. It focuses on GitHub repositories and research projects that help agents or developers create, edit, convert, inspect, or evaluate presentations.
+This is a curated list, not a dump of every slide-related link. It focuses on GitHub repositories and technical projects that help agents or developers create, edit, convert, or inspect presentations.
 
 Website: https://ningzimu.github.io/awesome-ai-ppt/
 
@@ -108,9 +100,9 @@ Website: https://ningzimu.github.io/awesome-ai-ppt/
 
 ZH_TAIL = """## 收录范围
 
-入选项目应与 AI 辅助演示工作直接相关，例如生成幻灯片、编辑 PPTX、把内容转换为演示文稿、重建可编辑 deck、渲染或验证幻灯片，或评估演示 agent。
+入选项目应与 AI 辅助演示工作直接相关，例如生成幻灯片、编辑 PPTX、把内容转换为演示文稿、重建可编辑 deck、渲染或验证幻灯片。
 
-GitHub 仓库通常需要至少 10 stars 才能进入主列表。论文、官方目录或基础资源如果高度相关，可以作为例外收录。
+GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 
 不收录：
 
@@ -126,9 +118,9 @@ GitHub 仓库通常需要至少 10 stars 才能进入主列表。论文、官方
 
 EN_TAIL = """## Scope
 
-Included projects should have a direct relationship to AI-assisted presentation work: generating slides, editing PPTX files, converting content into presentations, reconstructing editable decks, rendering or validating slides, or evaluating presentation agents.
+Included projects should have a direct relationship to AI-assisted presentation work: generating slides, editing PPTX files, converting content into presentations, reconstructing editable decks, or rendering and validating slides.
 
-GitHub repositories should have at least 10 stars before being included. Research papers, official directories, or foundational resources may be included when they are clearly relevant.
+GitHub repositories should have at least 10 stars before being included.
 
 Out of scope:
 

@@ -4,9 +4,7 @@ const categories = [
   "Agent Skills and Workflows",
   "PowerPoint and PPTX Libraries",
   "Editable Reconstruction",
-  "Markdown, HTML, and Document to Slides",
-  "Research and Benchmarks",
-  "Directories and Related Lists"
+  "Markdown, HTML, and Document to Slides"
 ];
 
 const categoryZh = {
@@ -15,9 +13,7 @@ const categoryZh = {
   "Agent Skills and Workflows": "Agent 技能与工作流",
   "PowerPoint and PPTX Libraries": "PowerPoint 与 PPTX 库",
   "Editable Reconstruction": "可编辑重建",
-  "Markdown, HTML, and Document to Slides": "Markdown、HTML 与文档转幻灯片",
-  "Research and Benchmarks": "研究与基准",
-  "Directories and Related Lists": "目录与相关清单"
+  "Markdown, HTML, and Document to Slides": "Markdown、HTML 与文档转幻灯片"
 };
 
 const state = {

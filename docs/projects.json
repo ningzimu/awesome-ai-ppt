@@ -144,18 +144,6 @@
     "descriptionZh": "HTML PPT Studio agent skill，提供 24 套主题、31 种布局和 20+ 动画，用于制作专业网页演示。"
   },
   {
-    "name": "icip-cas/PPTAgent",
-    "url": "https://github.com/icip-cas/PPTAgent",
-    "repo": "icip-cas/PPTAgent",
-    "category": "Research and Benchmarks",
-    "categoryZh": "研究与基准",
-    "stars": 4434,
-    "type": "Research",
-    "output": "PPTX",
-    "description": "Research-backed agentic framework for presentation generation and evaluation.",
-    "descriptionZh": "有研究支撑的演示生成与评估 agentic 框架。"
-  },
-  {
     "name": "1weiho/open-slide",
     "url": "https://github.com/1weiho/open-slide",
     "repo": "1weiho/open-slide",
@@ -504,18 +492,6 @@
     "descriptionZh": "把幻灯片图片、PDF 和图片版 PPTX 转换为可编辑 PowerPoint deck 的 Codex skill。"
   },
   {
-    "name": "AIGeeksGroup/PresentAgent-2",
-    "url": "https://github.com/AIGeeksGroup/PresentAgent-2",
-    "repo": "AIGeeksGroup/PresentAgent-2",
-    "category": "Research and Benchmarks",
-    "categoryZh": "研究与基准",
-    "stars": 13,
-    "type": "Research",
-    "output": "PPTX",
-    "description": "Multimodal presentation agent research project.",
-    "descriptionZh": "多模态演示 agent 研究项目。"
-  },
-  {
     "name": "PHY041/claude-skill-academic-ppt",
     "url": "https://github.com/PHY041/claude-skill-academic-ppt",
     "repo": "PHY041/claude-skill-academic-ppt",
@@ -526,41 +502,5 @@
     "output": "PPTX",
     "description": "Claude Code skill for academic defense presentations from LaTeX or PDF, with figures, notes, and Q&A prediction.",
     "descriptionZh": "从 LaTeX 或 PDF 生成学术答辩 PPT 的 Claude Code skill，支持图表、备注和 Q&A 预测。"
-  },
-  {
-    "name": "openagentskills.dev - pptx",
-    "url": "https://openagentskills.dev/skills/pptx",
-    "repo": null,
-    "category": "Directories and Related Lists",
-    "categoryZh": "目录与相关清单",
-    "stars": null,
-    "type": "Directory",
-    "output": "PPTX",
-    "description": "Open Agent Skills directory entry for PPTX.",
-    "descriptionZh": "Open Agent Skills 的 PPTX 目录条目。"
-  },
-  {
-    "name": "powerpoint.md",
-    "url": "https://powerpoint.md/",
-    "repo": null,
-    "category": "Directories and Related Lists",
-    "categoryZh": "目录与相关清单",
-    "stars": null,
-    "type": "Directory",
-    "output": "Index",
-    "description": "Community-maintained directory comparing AI agent PowerPoint and Excel skills.",
-    "descriptionZh": "社区维护的 AI agent PowerPoint 与 Excel skills 对比目录。"
-  },
-  {
-    "name": "PPTArena",
-    "url": "https://arxiv.org/abs/2512.03042",
-    "repo": null,
-    "category": "Research and Benchmarks",
-    "categoryZh": "研究与基准",
-    "stars": null,
-    "type": "Benchmark",
-    "output": "PPTX",
-    "description": "Benchmark for reliable PowerPoint editing across real decks.",
-    "descriptionZh": "面向真实幻灯片的可靠 PowerPoint 编辑基准。"
   }
 ]
