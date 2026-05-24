@@ -126,20 +126,6 @@ a {
   min-width: 0;
 }
 
-.kicker {
-  display: inline-flex;
-  align-items: center;
-  min-height: 30px;
-  margin: 0 0 18px;
-  padding: 5px 10px;
-  border: 1px solid rgba(30, 100, 216, 0.18);
-  border-radius: 6px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-size: 13px;
-  font-weight: 800;
-}
-
 h1 {
   max-width: 760px;
   margin: 0;

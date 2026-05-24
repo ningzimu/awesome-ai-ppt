@@ -31,7 +31,6 @@ const state = {
 const translations = {
   zh: {
     contribute: "贡献",
-    kicker: "双语精选目录",
     heroTitle: "按分类、星标和工作流查找 AI PPT 项目。",
     heroCopy: "搜索 AI 演示生成、PowerPoint 自动化、PPTX 编辑、可编辑重建和幻灯片 agent 工作流开源工具。",
     tagGeneration: "AI 生成",
@@ -58,7 +57,6 @@ const translations = {
   },
   en: {
     contribute: "Contribute",
-    kicker: "Curated bilingual directory",
     heroTitle: "Find AI PPT projects by category, stars, and workflow.",
     heroCopy: "Search open-source tools for AI-assisted presentation generation, PowerPoint automation, PPTX editing, editable reconstruction, and slide agent workflows.",
     tagGeneration: "AI generation",
