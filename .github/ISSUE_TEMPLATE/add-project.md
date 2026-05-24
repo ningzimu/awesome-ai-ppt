@@ -1,6 +1,6 @@
 ---
 name: Add a project
-about: Suggest a GitHub repository for Awesome AI PPT
+about: Suggest a repository or research project for Awesome AI PPT
 title: "Add: "
 labels: project
 assignees: ""
@@ -12,9 +12,17 @@ https://github.com/
 
 ## Category
 
-Agent Skills / AI Presentation Generators / Editable PPTX Systems / HTML and DOM to PPTX / PPTX Libraries / Research and Benchmarks / Directories
+End-to-End AI Presentation Tools / Agent Skills and Workflows / PowerPoint and PPTX Libraries / Editable Reconstruction / Markdown, HTML, and Document to Slides / Research and Benchmarks / Directories and Related Lists
 
 ## Why it fits
 
-Short factual reason.
+Explain the direct connection to AI presentations, PPTX editing, slide conversion, deck reconstruction, rendering, QA, or evaluation.
 
+## Input and output
+
+- Input:
+- Output:
+
+## Maintenance signal
+
+License, recent activity, documentation, demo, paper, or other evidence.

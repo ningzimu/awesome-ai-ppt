@@ -1,76 +1,105 @@
 # Awesome AI PPT
 
-A curated list of open-source projects for AI-generated presentations, PowerPoint automation, PPTX editing, and agentic slide workflows.
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
 
-The focus is GitHub repositories that help agents or developers create, edit, convert, inspect, or evaluate presentations. This list includes agent skills, full applications, PPTX libraries, HTML-to-PPTX tools, and research systems.
+A curated list of open-source projects for AI-assisted presentation generation, PowerPoint automation, PPTX editing, and slide workflow tooling.
+
+This is a curated list, not a dump of every slide-related link. It focuses on GitHub repositories and research projects that help agents or developers create, edit, convert, inspect, or evaluate presentations.
+
+## Quick Picks
+
+| Need | Start Here | Section |
+| --- | --- | --- |
+| General editable PPTX authoring | `openai/skills - slides` | [Agent Skills and Workflows](#agent-skills-and-workflows) |
+| Full agentic PPT generation | `hugohe3/ppt-master` | [Editable Reconstruction](#editable-reconstruction) |
+| Research-heavy deck generation | `icip-cas/PPTAgent` | [Research and Benchmarks](#research-and-benchmarks) |
+| Local AI presentation app | `dbrainio/presenton` | [End-to-End AI Presentation Tools](#end-to-end-ai-presentation-tools) |
+| DOM/CSS to editable PPTX | `atharva9167j/dom-to-pptx` | [Editable Reconstruction](#editable-reconstruction) |
 
 ## Contents
 
-- [Agent Skills](#agent-skills)
-- [AI Presentation Generators](#ai-presentation-generators)
-- [Editable PPTX Systems](#editable-pptx-systems)
-- [HTML and DOM to PPTX](#html-and-dom-to-pptx)
-- [PPTX Libraries](#pptx-libraries)
+- [End-to-End AI Presentation Tools](#end-to-end-ai-presentation-tools)
+- [Agent Skills and Workflows](#agent-skills-and-workflows)
+- [PowerPoint and PPTX Libraries](#powerpoint-and-pptx-libraries)
+- [Editable Reconstruction](#editable-reconstruction)
+- [Markdown, HTML, and Document to Slides](#markdown-html-and-document-to-slides)
 - [Research and Benchmarks](#research-and-benchmarks)
-- [Directories](#directories)
-- [Contributing](#contributing)
+- [Directories and Related Lists](#directories-and-related-lists)
 
-## Agent Skills
+## End-to-End AI Presentation Tools
 
-- [stevenjinlong/awesome-ppt-skills](https://github.com/stevenjinlong/awesome-ppt-skills) - Codex skills for image-first PPT generation with `gpt-image-2`, plus an experimental editable reconstruction workflow.
-- [openai/skills - slides](https://github.com/openai/skills/tree/main/skills/.curated/slides) - OpenAI curated skill for creating and editing `.pptx` decks with PptxGenJS and validation utilities.
-- [anthropics/skills - pptx](https://github.com/anthropics/skills/tree/main/skills/pptx) - Anthropic skill for reading, creating, editing, and analyzing PowerPoint presentations.
-- [MiniMax-AI/skills - pptx-generator](https://github.com/MiniMax-AI/skills) - MiniMax office skill for generating, editing, and reading PowerPoint presentations.
-- [bytedance/deer-flow - ppt-generation](https://github.com/bytedance/deer-flow/tree/main/skills/public/ppt-generation) - Image-generation based PPT workflow inside DeerFlow.
-- [SkyworkAI/Skywork-Skills - skywork-ppt](https://github.com/SkyworkAI/Skywork-Skills) - Skill for generating, imitating, and editing PowerPoint presentations.
-- [Noi1r/powerpoint-skill](https://github.com/Noi1r/powerpoint-skill) - PowerPoint skill for academic slides, formulas, and diagrams using PptxGenJS.
-- [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) - Skill for creating animation-rich HTML presentations and converting PowerPoint files to web slides.
+Projects that can generate complete presentations from prompts, documents, or structured inputs.
 
-## AI Presentation Generators
-
-- [dbrainio/presenton](https://github.com/dbrainio/presenton) - Open-source AI presentation generator and API with PPTX and PDF export.
 - [allweonedev/presentation-ai](https://github.com/allweonedev/presentation-ai) - Open-source Gamma-style AI presentation generator with themes, editing, and PowerPoint export.
-- [CyberTimon/Powerpointer](https://github.com/CyberTimon/Powerpointer) - GPT-powered PowerPoint generator using Python and `python-pptx`.
 - [barun-saha/slide-deck-ai](https://github.com/barun-saha/slide-deck-ai) - AI-assisted PowerPoint deck generation.
+- [CyberTimon/Powerpointer](https://github.com/CyberTimon/Powerpointer) - GPT-powered PowerPoint generator using Python and `python-pptx`.
+- [dbrainio/presenton](https://github.com/dbrainio/presenton) - Open-source AI presentation generator and API with PPTX and PDF export.
 
-## Editable PPTX Systems
+## Agent Skills and Workflows
 
-- [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) - AI-driven workflow for producing natively editable PowerPoint decks from documents, URLs, and Markdown.
-- [icip-cas/PPTAgent](https://github.com/icip-cas/PPTAgent) - Agentic framework for reflective PowerPoint generation, including PPTX export and research-oriented workflows.
-- [JuniverseCoder/MinerU2PPT](https://github.com/JuniverseCoder/MinerU2PPT) - Converts PDFs and images into editable PowerPoint presentations using structure extraction.
+Installable or agent-oriented workflows for creating, editing, or transforming presentations.
 
-## HTML and DOM to PPTX
+- [anthropics/skills - pptx](https://github.com/anthropics/skills/tree/main/skills/pptx) - Anthropic skill for reading, creating, editing, and analyzing PowerPoint presentations.
+- [bytedance/deer-flow - ppt-generation](https://github.com/bytedance/deer-flow/tree/main/skills/public/ppt-generation) - Image-generation based PPT workflow inside DeerFlow.
+- [MiniMax-AI/skills - pptx-generator](https://github.com/MiniMax-AI/skills) - MiniMax office skill for generating, editing, and reading PowerPoint presentations.
+- [Noi1r/powerpoint-skill](https://github.com/Noi1r/powerpoint-skill) - PowerPoint skill for academic slides, formulas, and diagrams using PptxGenJS.
+- [openai/skills - slides](https://github.com/openai/skills/tree/main/skills/.curated/slides) - OpenAI curated skill for creating and editing `.pptx` decks with PptxGenJS and validation utilities.
+- [sirilsengolraj-source/presentation-skill](https://github.com/sirilsengolraj-source/presentation-skill) - Presentation skill for Codex and ChatGPT agents using PptxGenJS.
+- [SkyworkAI/Skywork-Skills - skywork-ppt](https://github.com/SkyworkAI/Skywork-Skills) - Skill for generating, imitating, and editing PowerPoint presentations.
+- [stevenjinlong/awesome-ppt-skills](https://github.com/stevenjinlong/awesome-ppt-skills) - Codex skills for image-first PPT generation with `gpt-image-2` and editable reconstruction handoff.
 
-- [atharva9167j/dom-to-pptx](https://github.com/atharva9167j/dom-to-pptx) - Client-side DOM/CSS to editable PowerPoint converter with agent skill installer.
-- [halobiron/dom-to-pptx](https://github.com/halobiron/dom-to-pptx) - DOM to PPTX conversion engine focused on editable output.
+## PowerPoint and PPTX Libraries
 
-## PPTX Libraries
+Developer libraries for creating, modifying, merging, or inspecting PPTX files.
 
 - [beautifulai/PptxGenJS](https://github.com/beautifulai/PptxGenJS) - JavaScript library for creating PowerPoint presentations.
-- [singerla/pptx-automizer](https://github.com/singerla/pptx-automizer) - Node.js library for modifying, merging, and templating PowerPoint files.
-- [scanny/python-pptx](https://github.com/scanny/python-pptx) - Python library for creating and updating PowerPoint files.
 - [paulstothard/fast-pptx](https://github.com/paulstothard/fast-pptx) - Generates Markdown and PowerPoint slides from folders of images, code, data files, PDFs, and URLs.
+- [scanny/python-pptx](https://github.com/scanny/python-pptx) - Python library for creating and updating PowerPoint files.
+- [singerla/pptx-automizer](https://github.com/singerla/pptx-automizer) - Node.js library for modifying, merging, and templating PowerPoint files.
+
+## Editable Reconstruction
+
+Projects focused on rebuilding documents, images, HTML, or existing slides into editable presentation objects.
+
+- [atharva9167j/dom-to-pptx](https://github.com/atharva9167j/dom-to-pptx) - Client-side DOM/CSS to editable PowerPoint converter with an agent skill installer.
+- [halobiron/dom-to-pptx](https://github.com/halobiron/dom-to-pptx) - DOM to PPTX conversion engine focused on editable output.
+- [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) - AI-driven workflow for producing natively editable PowerPoint decks from documents, URLs, and Markdown.
+- [JuniverseCoder/MinerU2PPT](https://github.com/JuniverseCoder/MinerU2PPT) - Converts PDFs and images into editable PowerPoint presentations using structure extraction.
+
+## Markdown, HTML, and Document to Slides
+
+Tools that convert structured content into slide decks or web presentations.
+
+- [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) - Skill for creating animation-rich HTML presentations and converting PowerPoint files to web slides.
 
 ## Research and Benchmarks
 
-- [icip-cas/PPTAgent](https://github.com/icip-cas/PPTAgent) - Research-backed agentic framework for presentation generation and evaluation.
+Research projects and papers about presentation generation, editing, or multimodal slide agents.
+
 - [AIGeeksGroup/PresentAgent-2](https://github.com/AIGeeksGroup/PresentAgent-2) - Multimodal presentation agent research project.
-- [PPTArena](https://arxiv.org/abs/2512.03042) - Benchmark for agentic PowerPoint editing.
+- [icip-cas/PPTAgent](https://github.com/icip-cas/PPTAgent) - Research-backed agentic framework for presentation generation and evaluation.
+- [PPTArena](https://arxiv.org/abs/2512.03042) - Benchmark for reliable PowerPoint editing across real decks.
 
-## Directories
+## Directories and Related Lists
 
-- [powerpoint.md](https://powerpoint.md/) - Community-maintained directory comparing AI agent PowerPoint and Excel skills.
+Directories, indexes, and related resource collections.
+
 - [awesome-skills.app - pptx](https://awesome-skills.app/skills/pptx) - Skill directory entry for PPTX-related document processing skills.
 - [openagentskills.dev - pptx](https://openagentskills.dev/skills/pptx) - Open Agent Skills directory entry for PPTX.
+- [powerpoint.md](https://powerpoint.md/) - Community-maintained directory comparing AI agent PowerPoint and Excel skills.
+
+## Scope
+
+Included projects should have a direct relationship to AI-assisted presentation work: generating slides, editing PPTX files, converting content into presentations, reconstructing editable decks, rendering or validating slides, or evaluating presentation agents.
+
+Out of scope:
+
+- Generic AI writing tools without a presentation workflow.
+- Generic image generators without slide or deck output.
+- Template marketplaces with no open repository or technical workflow.
+- Archived, deprecated, or empty repositories. Historical references belong in [ARCHIVE.md](ARCHIVE.md).
 
 ## Contributing
 
-Pull requests are welcome. Please prefer GitHub repositories with source code, clear installation instructions, and a visible license.
-
-Good entries usually include:
-
-- A public repository URL.
-- A short, factual description.
-- The main output format: PPTX, PDF, HTML slides, images, or video.
-- Whether the project creates editable PowerPoint objects or image-based slides.
-
+Pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before suggesting a project.
