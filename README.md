@@ -3,7 +3,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-English-blue)](README_EN.md)
-[![Website](https://img.shields.io/badge/GitHub%20Pages-%E4%B8%AD%E6%96%87%E9%BB%98%E8%AE%A4-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
+[![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
 
 一个关于 AI PPT、PowerPoint 自动化、PPTX 编辑和幻灯片工作流工具的开源项目精选清单。
 
@@ -14,11 +14,11 @@
 ## 目录
 
 
+- [Agent / Skill 接入](#agent--skill-接入)
 - [HTML 风格 PPT 方案](#html-风格-ppt-方案)
 - [图片生成式 PPT 方案](#图片生成式-ppt-方案)
 - [PPTX 库生成式 PPT 方案](#pptx-库生成式-ppt-方案)
 - [PPTX 库与自动化基础设施](#pptx-库与自动化基础设施)
-- [Agent / Skill 接入](#agent--skill-接入)
 - [收录范围](#收录范围)
 - [贡献](#贡献)
 

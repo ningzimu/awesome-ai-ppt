@@ -9,27 +9,28 @@ Use this skill to work with the `awesome-ai-ppt` curated list. Treat the list as
 
 ## First Step
 
-Determine whether the current workspace is the `awesome-ai-ppt` repository:
+Start from the remote `awesome-ai-ppt` list.
 
-- If `docs/projects.json`, `scripts/render_readme.py`, and `CONTRIBUTING.md` exist, prefer local files.
-- Otherwise, read the public repository files from `https://github.com/ningzimu/awesome-ai-ppt`.
-- For tool comparison, use `docs/projects.json` only to find candidates. Before making a detailed recommendation, open each candidate's original repository and inspect its README, docs, examples, install path, license, maintenance activity, and relevant source files.
+- Read the public `docs/projects.json` from `https://github.com/ningzimu/awesome-ai-ppt` or the raw GitHub URL.
+- Before asking the user questions, read the already listed PPT tool entries and descriptions enough to understand the candidate space at a high level.
+- Do not open every candidate's original repository before asking the user about their needs. Detailed original-repository inspection is only needed after the user's requirements narrow the shortlist.
 
 ## Tool Selection Workflow
 
 Use this workflow when the user wants recommendations, comparisons, or help choosing a PPT tool.
 
-1. Clarify the user's target workflow only when necessary: HTML/web slides, image-based slides, editable PPTX, conversion/reconstruction, MCP/agent integration, or automation infrastructure.
-2. Search `docs/projects.json` for a rough shortlist of 3-6 matching candidates.
-3. Visit the original repository for each serious candidate. Do not rely only on the awesome-list description, tags, or star count.
-4. Compare the candidates on concrete evidence:
+1. Read the existing tool entries and descriptions in the remote `docs/projects.json` first to understand the available candidate space.
+2. Ask detailed questions about the user's real need before choosing: target audience, desired output format, editability, visual quality, automation depth, agent integration, input materials, local/cloud constraints, budget/time constraints, and tolerance for setup complexity.
+3. Search `docs/projects.json` for a rough shortlist of 3-6 matching candidates based on the user's answers.
+4. Visit the original repository for each serious candidate. Do not rely only on the awesome-list description, tags, or star count.
+5. Compare the candidates on concrete evidence:
    - Primary workflow and output format
    - Editability of the resulting deck
    - Agent skill, MCP, API, CLI, or library integration path
    - Install/setup complexity
    - Examples, docs, and active maintenance signals
    - Known limitations or mismatches with the user's need
-5. In the answer, separate rough list metadata from original-repository findings. If the user explicitly asks for a quick coarse filter, say that the result has not been deeply verified.
+6. Recommend based on the user's specific constraints, not on popularity alone. In the answer, separate rough list metadata from original-repository findings. If the user explicitly asks for a quick coarse filter, say that the result has not been deeply verified.
 
 ## Contribution Workflow
 
@@ -37,14 +38,15 @@ Enter contribution mode only when the user explicitly asks to report an issue, s
 
 Do not proactively open issues or PRs just because you notice a broken link, missing project, weak description, or possible misclassification. If the user is only choosing tools, at most mention that list problems can be reported through GitHub Issues.
 
-For contribution work:
+When helping a third-party contributor:
 
 1. Read `references/curation-rules.md`.
 2. Read `references/contribution-workflow.md`.
-3. Check for duplicates in `docs/projects.json`.
-4. Verify facts from the original repository, not only from search snippets or the current list.
-5. If working inside the local repository, edit the source data and regenerate derived files as described in the contribution workflow.
-6. If not working inside the local repository, prepare concise issue/PR suggestion text instead of pretending to modify files.
+3. Explain whether the project or issue appears to fit the list before editing.
+4. Guide the contributor to collect evidence from the original repository: workflow, input/output formats, editability, skill/MCP support, license, stars, and maintenance.
+5. If preparing a PR, describe the exact files to update and the checks to run.
+6. If preparing an issue, keep it concise and include evidence links, expected category, and the requested change.
+7. Do not imply that the contributor can skip the repository's bilingual and generated README requirements.
 
 ## Output Style
 
@@ -53,17 +55,3 @@ For contribution work:
 - Say when a conclusion is based on original-repository inspection.
 - Do not market projects; describe what they actually do.
 - Preserve the repository's bilingual maintenance expectations when proposing or making user-facing changes.
-
-## Updating This Skill
-
-When the user asks to update this skill, edit the source files under `skills/awesome-ai-ppt/` in the `awesome-ai-ppt` repository. Keep `SKILL.md` concise and move detailed rules into `references/` when they are not needed for every invocation.
-
-After changing the skill:
-
-1. Run the Skill Creator validator:
-   ```bash
-   python3 /Users/ningzimu/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/awesome-ai-ppt
-   ```
-2. If user-facing install or usage text changed, update `scripts/render_readme.py`, run `python3 scripts/render_readme.py`, and keep `README.md`, `README_EN.md`, and Pages text synchronized.
-3. Run the repository checks listed in `references/contribution-workflow.md`.
-4. Do not publish, submit a PR, or open an issue for the skill update unless the user explicitly requests that action.

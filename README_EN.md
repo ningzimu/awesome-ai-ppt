@@ -3,7 +3,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-blue)](README.md)
-[![Website](https://img.shields.io/badge/GitHub%20Pages-default%20Chinese-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
+[![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
 
 A curated list of open-source projects for AI-assisted presentation generation, PowerPoint automation, PPTX editing, and slide workflow tooling.
 
@@ -14,11 +14,11 @@ Website: https://ningzimu.github.io/awesome-ai-ppt/
 ## Contents
 
 
+- [Agent / Skill Access](#agent--skill-access)
 - [HTML-First Presentation Workflows](#html-first-presentation-workflows)
 - [Image-First Presentation Workflows](#image-first-presentation-workflows)
 - [PPTX-Native Generation Workflows](#pptx-native-generation-workflows)
 - [PPTX Libraries and Automation Infrastructure](#pptx-libraries-and-automation-infrastructure)
-- [Agent / Skill Access](#agent--skill-access)
 - [Scope](#scope)
 - [Contributing](#contributing)
 

@@ -68,7 +68,7 @@ ZH_HEADER = """# Awesome AI PPT
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-English-blue)](README_EN.md)
-[![Website](https://img.shields.io/badge/GitHub%20Pages-%E4%B8%AD%E6%96%87%E9%BB%98%E8%AE%A4-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
+[![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
 
 一个关于 AI PPT、PowerPoint 自动化、PPTX 编辑和幻灯片工作流工具的开源项目精选清单。
 
@@ -85,7 +85,7 @@ EN_HEADER = """# Awesome AI PPT
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-blue)](README.md)
-[![Website](https://img.shields.io/badge/GitHub%20Pages-default%20Chinese-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
+[![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
 
 A curated list of open-source projects for AI-assisted presentation generation, PowerPoint automation, PPTX editing, and slide workflow tooling.
 
@@ -241,9 +241,10 @@ def table_row(project: dict, lang: str) -> str:
 def render_readme(projects: list[dict], lang: str) -> str:
     if lang == "zh":
         lines = [ZH_HEADER]
+        lines.append("- [Agent / Skill 接入](#agent--skill-接入)")
         for category, category_zh in CATEGORIES:
             lines.append(f"- [{category_zh}](#{ZH_SLUGS[category_zh]})")
-        lines.extend(["- [Agent / Skill 接入](#agent--skill-接入)", "- [收录范围](#收录范围)", "- [贡献](#贡献)\n"])
+        lines.extend(["- [收录范围](#收录范围)", "- [贡献](#贡献)\n"])
         for category, category_zh in CATEGORIES:
             lines.extend([f"## {category_zh}\n", f"{ZH_SECTION_COPY[category]}\n"])
             lines.extend(["| 仓库 | 简介 | 标签 | 可编辑性 | Skill | Star |", "| --- | --- | --- | --- | --- | --- |"])
@@ -253,9 +254,10 @@ def render_readme(projects: list[dict], lang: str) -> str:
         return "\n".join(lines) + "\n"
 
     lines = [EN_HEADER]
+    lines.append("- [Agent / Skill Access](#agent--skill-access)")
     for category, _ in CATEGORIES:
         lines.append(f"- [{category}](#{slug_en(category)})")
-    lines.extend(["- [Agent / Skill Access](#agent--skill-access)", "- [Scope](#scope)", "- [Contributing](#contributing)\n"])
+    lines.extend(["- [Scope](#scope)", "- [Contributing](#contributing)\n"])
     for category, _ in CATEGORIES:
         lines.extend([f"## {category}\n", f"{EN_SECTION_COPY[category]}\n"])
         lines.extend(["| Repository | Description | Tags | Editability | Skill | Stars |", "| --- | --- | --- | --- | --- | --- |"])
