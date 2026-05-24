@@ -24,25 +24,36 @@
         </div>
       </nav>
       <section class="hero">
-        <div>
+        <div class="hero-main">
           <p class="kicker" data-i18n="kicker">双语精选目录</p>
           <h1 data-i18n="heroTitle">按分类、星标和工作流查找 AI PPT 项目。</h1>
           <p class="hero-copy" data-i18n="heroCopy">
             搜索 AI 演示生成、PowerPoint 自动化、PPTX 编辑、可编辑重建和幻灯片 agent 工作流开源工具。
           </p>
+          <div class="hero-tags" aria-label="Highlighted workflows">
+            <span data-i18n="tagGeneration">AI 生成</span>
+            <span data-i18n="tagAutomation">PPTX 自动化</span>
+            <span data-i18n="tagRebuild">可编辑重建</span>
+          </div>
         </div>
-        <div class="hero-stats" aria-label="Directory summary">
-          <div>
-            <strong id="statProjects">0</strong>
-            <span data-i18n="projectsLabel">项目</span>
+        <div class="hero-panel" aria-label="Directory summary">
+          <div class="hero-panel-head">
+            <span data-i18n="summaryLabel">目录概览</span>
+            <a href="#projectList" data-i18n="browseLabel">浏览项目</a>
           </div>
-          <div>
-            <strong id="statCategories">0</strong>
-            <span data-i18n="categoriesLabel">分类</span>
-          </div>
-          <div>
-            <strong>10+</strong>
-            <span data-i18n="thresholdLabel">入选门槛</span>
+          <div class="hero-stats">
+            <div>
+              <strong id="statProjects">0</strong>
+              <span data-i18n="projectsLabel">项目</span>
+            </div>
+            <div>
+              <strong id="statCategories">0</strong>
+              <span data-i18n="categoriesLabel">分类</span>
+            </div>
+            <div>
+              <strong>10+</strong>
+              <span data-i18n="thresholdLabel">入选门槛</span>
+            </div>
           </div>
         </div>
       </section>
@@ -58,7 +69,7 @@
       </aside>
 
       <section class="content">
-        <div class="toolbar">
+        <div class="toolbar" aria-label="Directory controls">
           <label class="search">
             <span data-i18n="searchLabel">搜索</span>
             <input id="searchInput" type="search" placeholder="搜索名称、分类、输出类型、英文描述..." autocomplete="off">
