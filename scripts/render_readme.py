@@ -76,15 +76,6 @@ ZH_HEADER = """# Awesome AI PPT
 
 网站：https://ningzimu.github.io/awesome-ai-ppt/
 
-## 快速选择
-
-| 需求 | 推荐入口 | 所在分类 |
-| --- | --- | --- |
-| HTML 风格演示 | `op7418/guizang-ppt-skill` | [HTML 风格 PPT 方案](#html-风格-ppt-方案) |
-| 图片式 PPT 生成 | `bytedance/deer-flow - ppt-generation` | [图片生成式 PPT 方案](#图片生成式-ppt-方案) |
-| 原生可编辑 PPTX 生成 | `anthropics/skills - pptx` | [PPTX 库生成式 PPT 方案](#pptx-库生成式-ppt-方案) |
-| 图片/PDF 转可编辑 PPT | `ningzimu/image-to-editable-ppt-skill` | [PPTX 库与自动化基础设施](#pptx-库与自动化基础设施) |
-
 ## 目录
 
 """
@@ -101,15 +92,6 @@ A curated list of open-source projects for AI-assisted presentation generation, 
 This is a curated list, not a dump of every slide-related link. It focuses on GitHub repositories and technical projects that help agents or developers create, edit, convert, or inspect presentations.
 
 Website: https://ningzimu.github.io/awesome-ai-ppt/
-
-## Quick Picks
-
-| Need | Start Here | Section |
-| --- | --- | --- |
-| HTML-style presentations | `op7418/guizang-ppt-skill` | [HTML-First Presentation Workflows](#html-first-presentation-workflows) |
-| Image-first PPT generation | `bytedance/deer-flow - ppt-generation` | [Image-First Presentation Workflows](#image-first-presentation-workflows) |
-| Native editable PPTX authoring | `anthropics/skills - pptx` | [PPTX-Native Generation Workflows](#pptx-native-generation-workflows) |
-| Images/PDF to editable PPT | `ningzimu/image-to-editable-ppt-skill` | [PPTX Libraries and Automation Infrastructure](#pptx-libraries-and-automation-infrastructure) |
 
 ## Contents
 

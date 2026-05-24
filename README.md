@@ -11,15 +11,6 @@
 
 网站：https://ningzimu.github.io/awesome-ai-ppt/
 
-## 快速选择
-
-| 需求 | 推荐入口 | 所在分类 |
-| --- | --- | --- |
-| HTML 风格演示 | `op7418/guizang-ppt-skill` | [HTML 风格 PPT 方案](#html-风格-ppt-方案) |
-| 图片式 PPT 生成 | `bytedance/deer-flow - ppt-generation` | [图片生成式 PPT 方案](#图片生成式-ppt-方案) |
-| 原生可编辑 PPTX 生成 | `anthropics/skills - pptx` | [PPTX 库生成式 PPT 方案](#pptx-库生成式-ppt-方案) |
-| 图片/PDF 转可编辑 PPT | `ningzimu/image-to-editable-ppt-skill` | [PPTX 库与自动化基础设施](#pptx-库与自动化基础设施) |
-
 ## 目录
 
 

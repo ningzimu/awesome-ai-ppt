@@ -11,15 +11,6 @@ This is a curated list, not a dump of every slide-related link. It focuses on Gi
 
 Website: https://ningzimu.github.io/awesome-ai-ppt/
 
-## Quick Picks
-
-| Need | Start Here | Section |
-| --- | --- | --- |
-| HTML-style presentations | `op7418/guizang-ppt-skill` | [HTML-First Presentation Workflows](#html-first-presentation-workflows) |
-| Image-first PPT generation | `bytedance/deer-flow - ppt-generation` | [Image-First Presentation Workflows](#image-first-presentation-workflows) |
-| Native editable PPTX authoring | `anthropics/skills - pptx` | [PPTX-Native Generation Workflows](#pptx-native-generation-workflows) |
-| Images/PDF to editable PPT | `ningzimu/image-to-editable-ppt-skill` | [PPTX Libraries and Automation Infrastructure](#pptx-libraries-and-automation-infrastructure) |
-
 ## Contents
 
 
