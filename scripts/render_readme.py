@@ -154,8 +154,13 @@ def slug_en(title: str) -> str:
 def star_badge(project: dict) -> str:
     repo = project.get("repo")
     if not repo:
-        return ""
-    return f" [![GitHub stars](https://img.shields.io/github/stars/{repo}?style=social)](https://github.com/{repo})"
+        return "-"
+    return f"[![GitHub stars](https://img.shields.io/github/stars/{repo}?style=social)](https://github.com/{repo})"
+
+
+def table_row(project: dict, lang: str) -> str:
+    description = project["descriptionZh"] if lang == "zh" else project["description"]
+    return f"| [{project['name']}]({project['url']}) | {description} | {star_badge(project)} |"
 
 
 def render_readme(projects: list[dict], lang: str) -> str:
@@ -166,11 +171,8 @@ def render_readme(projects: list[dict], lang: str) -> str:
         lines.extend(["- [收录范围](#收录范围)", "- [贡献](#贡献)\n"])
         for category, category_zh in CATEGORIES:
             lines.extend([f"## {category_zh}\n", f"{ZH_SECTION_COPY[category]}\n"])
-            lines.extend(
-                f"- [{project['name']}]({project['url']}){star_badge(project)} - {project['descriptionZh']}"
-                for project in projects
-                if project["category"] == category
-            )
+            lines.extend(["| 仓库 | 简介 | Star |", "| --- | --- | --- |"])
+            lines.extend(table_row(project, "zh") for project in projects if project["category"] == category)
             lines.append("")
         lines.append(ZH_TAIL.rstrip())
         return "\n".join(lines) + "\n"
@@ -181,11 +183,8 @@ def render_readme(projects: list[dict], lang: str) -> str:
     lines.extend(["- [Scope](#scope)", "- [Contributing](#contributing)\n"])
     for category, _ in CATEGORIES:
         lines.extend([f"## {category}\n", f"{EN_SECTION_COPY[category]}\n"])
-        lines.extend(
-            f"- [{project['name']}]({project['url']}){star_badge(project)} - {project['description']}"
-            for project in projects
-            if project["category"] == category
-        )
+        lines.extend(["| Repository | Description | Stars |", "| --- | --- | --- |"])
+        lines.extend(table_row(project, "en") for project in projects if project["category"] == category)
         lines.append("")
     lines.append(EN_TAIL.rstrip())
     return "\n".join(lines) + "\n"
