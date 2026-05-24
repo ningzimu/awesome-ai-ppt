@@ -114,7 +114,7 @@ GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 
 ## 贡献
 
-欢迎提交 PR。推荐项目前请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
+欢迎提交 PR。推荐项目前请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。如果发现分类、描述或链接有问题，可以通过 [Issue](https://github.com/ningzimu/awesome-ai-ppt/issues) 反馈。
 
 ## 贡献者
 
