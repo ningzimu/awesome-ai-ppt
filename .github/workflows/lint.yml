@@ -22,5 +22,10 @@ jobs:
       - name: Validate project data
         run: python3 -m json.tool docs/projects.json > /tmp/projects.json
 
+      - name: Check generated READMEs
+        run: |
+          python3 scripts/render_readme.py
+          git diff --exit-code README.md README_EN.md
+
       - name: Check bilingual content
         run: python3 scripts/check_bilingual.py

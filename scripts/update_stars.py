@@ -10,6 +10,8 @@ import time
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
+from render_readme import render_readmes, sort_projects
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_PATH = ROOT / "docs/projects.json"
@@ -54,13 +56,14 @@ def main() -> int:
             changed = True
         time.sleep(0.1)
 
-    projects.sort(key=lambda item: (item.get("stars") is None, -(item.get("stars") or -1), item["name"].lower()))
+    projects = sort_projects(projects)
 
     if changed:
         PROJECTS_PATH.write_text(json.dumps(projects, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     else:
         print("Star counts already up to date.")
 
+    render_readmes(projects)
     return 0
 
 

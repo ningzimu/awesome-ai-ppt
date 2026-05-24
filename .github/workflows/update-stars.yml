@@ -30,4 +30,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update GitHub star counts"
-          file_pattern: docs/projects.json
+          file_pattern: README.md README_EN.md docs/projects.json
