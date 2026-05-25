@@ -7,8 +7,7 @@ const categories = [
 ];
 
 const REPO = "ningzimu/awesome-ai-ppt";
-const STAR_CACHE_API_URL =
-  window.AWESOME_AI_PPT_STAR_API_URL || "https://awesome-ai-ppt-stars.ningzimu.workers.dev/stars";
+const STAR_CACHE_URL = window.AWESOME_AI_PPT_STAR_CACHE_URL || "stars.json";
 
 const categoryZh = {
   All: "全部分类",
@@ -306,7 +305,7 @@ function applyStarCache(cache) {
 }
 
 function loadStarCache() {
-  fetch(STAR_CACHE_API_URL)
+  fetch(STAR_CACHE_URL, { cache: "no-store" })
     .then((response) => {
       if (!response.ok) throw new Error("Could not load star cache");
       return response.json();

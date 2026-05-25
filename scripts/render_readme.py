@@ -5,11 +5,11 @@ from __future__ import annotations
 
 from pathlib import Path
 import json
-from urllib.parse import quote, urlencode
 
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS_PATH = ROOT / "docs/projects.json"
+STARS_PATH = ROOT / "docs/stars.json"
 
 CATEGORIES = [
     ("HTML-First Presentation Workflows", "HTML 风格 PPT 方案"),
@@ -213,21 +213,17 @@ def slug_en(title: str) -> str:
     return title.lower().replace(",", "").replace(" and ", "-and-").replace(" ", "-")
 
 
-def star_text(project: dict) -> str:
+def format_stars(value: int | None) -> str:
+    if not isinstance(value, int):
+        return "None"
+    return f"{value:,}"
+
+
+def star_text(project: dict, stars: dict[str, int]) -> str:
     repo = project.get("repo")
     if not repo:
         return "-"
-    query = urlencode(
-        {
-            "style": "flat",
-            "label": "★",
-            "color": "f6f8fa",
-            "labelColor": "f6f8fa",
-            "cacheSeconds": "1800",
-        }
-    )
-    badge = f"https://img.shields.io/github/stars/{quote(repo, safe='/')}?{query}"
-    return f'<a href="https://github.com/{repo}/stargazers"><img src="{badge}" alt="Stars" height="26"></a>'
+    return format_stars(stars.get(repo))
 
 
 def tag_text(project: dict, lang: str) -> str:
@@ -242,16 +238,16 @@ def status_text(project: dict, key: str, lang: str) -> str:
     return ZH_TAGS.get(value, value) if lang == "zh" else value
 
 
-def table_row(project: dict, lang: str) -> str:
+def table_row(project: dict, lang: str, stars: dict[str, int]) -> str:
     description = project["descriptionZh"] if lang == "zh" else project["description"]
     return (
         f"| [{project['name']}]({project['url']}) | {description} | "
         f"{tag_text(project, lang)} | {status_text(project, 'editable', lang)} | "
-        f"{status_text(project, 'skill', lang)} | {star_text(project)} |"
+        f"{status_text(project, 'skill', lang)} | {star_text(project, stars)} |"
     )
 
 
-def render_readme(projects: list[dict], lang: str) -> str:
+def render_readme(projects: list[dict], lang: str, stars: dict[str, int]) -> str:
     if lang == "zh":
         lines = [ZH_HEADER]
         for category, category_zh in CATEGORIES:
@@ -260,7 +256,7 @@ def render_readme(projects: list[dict], lang: str) -> str:
         for category, category_zh in CATEGORIES:
             lines.extend([f"## {category_zh}\n", f"{ZH_SECTION_COPY[category]}\n"])
             lines.extend(["| 仓库 | 简介 | 标签 | 可编辑性 | Skill | Star |", "| --- | --- | --- | --- | --- | --- |"])
-            lines.extend(table_row(project, "zh") for project in projects if project["category"] == category)
+            lines.extend(table_row(project, "zh", stars) for project in projects if project["category"] == category)
             lines.append("")
         lines.append(ZH_TAIL.rstrip())
         return "\n".join(lines) + "\n"
@@ -272,7 +268,7 @@ def render_readme(projects: list[dict], lang: str) -> str:
     for category, _ in CATEGORIES:
         lines.extend([f"## {category}\n", f"{EN_SECTION_COPY[category]}\n"])
         lines.extend(["| Repository | Description | Tags | Editability | Skill | Stars |", "| --- | --- | --- | --- | --- | --- |"])
-        lines.extend(table_row(project, "en") for project in projects if project["category"] == category)
+        lines.extend(table_row(project, "en", stars) for project in projects if project["category"] == category)
         lines.append("")
     lines.append(EN_TAIL.rstrip())
     return "\n".join(lines) + "\n"
@@ -282,8 +278,10 @@ def render_readmes(projects: list[dict] | None = None) -> list[dict]:
     if projects is None:
         projects = json.loads(PROJECTS_PATH.read_text(encoding="utf-8"))
     projects = sort_projects(projects)
-    (ROOT / "README.md").write_text(render_readme(projects, "zh"), encoding="utf-8")
-    (ROOT / "README_EN.md").write_text(render_readme(projects, "en"), encoding="utf-8")
+    star_payload = json.loads(STARS_PATH.read_text(encoding="utf-8")) if STARS_PATH.exists() else {}
+    stars = star_payload.get("stars", {}) if isinstance(star_payload, dict) else {}
+    (ROOT / "README.md").write_text(render_readme(projects, "zh", stars), encoding="utf-8")
+    (ROOT / "README_EN.md").write_text(render_readme(projects, "en", stars), encoding="utf-8")
     return projects
 
 
