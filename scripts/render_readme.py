@@ -206,7 +206,7 @@ Thanks to everyone who has helped maintain and improve this project.
 
 
 def sort_projects(projects: list[dict]) -> list[dict]:
-    return sorted(projects, key=lambda item: (item.get("stars") is None, -(item.get("stars") or -1), item["name"].lower()))
+    return list(projects)
 
 
 def slug_en(title: str) -> str:

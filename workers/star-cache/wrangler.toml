@@ -1,0 +1,7 @@
+name = "awesome-ai-ppt-stars"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+[triggers]
+crons = ["*/30 * * * *"]

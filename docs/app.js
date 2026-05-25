@@ -6,7 +6,9 @@ const categories = [
   "PPTX Libraries and Automation Infrastructure"
 ];
 
-const REPO_STARS_BADGE_URL = "https://img.shields.io/github/stars/ningzimu/awesome-ai-ppt.json";
+const REPO = "ningzimu/awesome-ai-ppt";
+const STAR_CACHE_API_URL =
+  window.AWESOME_AI_PPT_STAR_API_URL || "https://awesome-ai-ppt-stars.ningzimu.workers.dev/stars";
 
 const categoryZh = {
   All: "全部分类",
@@ -102,13 +104,17 @@ const nodes = {
 };
 
 function formatStars(stars) {
-  if (typeof stars !== "number") return "N/A";
+  if (typeof stars !== "number") return "None";
   return new Intl.NumberFormat("en-US").format(stars);
 }
 
-function renderRepoStars(value) {
-  if (!nodes.repoStars || !value) return;
-  nodes.repoStars.textContent = value;
+function renderRepoStars(stars) {
+  if (!nodes.repoStars || typeof stars !== "number") return;
+  nodes.repoStars.textContent = formatStars(stars);
+}
+
+function projectStars(project) {
+  return typeof project.stars === "number" ? project.stars : null;
 }
 
 function searchable(project) {
@@ -158,8 +164,14 @@ function sorted(projects) {
       return a.name.localeCompare(b.name);
     }
 
-    const aStars = typeof a.stars === "number" ? a.stars : -1;
-    const bStars = typeof b.stars === "number" ? b.stars : -1;
+    const aStars = projectStars(a);
+    const bStars = projectStars(b);
+
+    if (aStars === null && bStars === null) {
+      return a.name.localeCompare(b.name);
+    }
+    if (aStars === null) return 1;
+    if (bStars === null) return -1;
 
     if (state.sort === "stars-asc") {
       return aStars - bStars || a.name.localeCompare(b.name);
@@ -280,15 +292,27 @@ function renderStaticText() {
   });
 }
 
-function loadRepoStars() {
-  if (!nodes.repoStars) return;
-  fetch(REPO_STARS_BADGE_URL)
+function applyStarCache(cache) {
+  const stars = cache && cache.stars && typeof cache.stars === "object" ? cache.stars : {};
+  state.projects = state.projects.map((project) => {
+    const value = stars[project.repo];
+    return {
+      ...project,
+      stars: Number.isFinite(value) ? value : null
+    };
+  });
+  renderRepoStars(stars[REPO]);
+  renderProjects();
+}
+
+function loadStarCache() {
+  fetch(STAR_CACHE_API_URL)
     .then((response) => {
-      if (!response.ok) throw new Error("Could not load Shields star badge");
+      if (!response.ok) throw new Error("Could not load star cache");
       return response.json();
     })
-    .then((badge) => renderRepoStars(badge.value || badge.message))
-    .catch(() => renderRepoStars("Star"));
+    .then(applyStarCache)
+    .catch(() => renderProjects());
 }
 
 nodes.categoryNav.addEventListener("click", (event) => {
@@ -321,10 +345,11 @@ nodes.languageButtons.forEach((button) => {
 });
 
 function applyProjects(projects) {
-  state.projects = projects;
+  state.projects = projects.map((project) => ({ ...project, stars: null }));
   nodes.statProjects.textContent = projects.length;
   nodes.statCategories.textContent = categories.length - 1;
   render();
+  loadStarCache();
 }
 
 function showLoadError() {
@@ -343,5 +368,3 @@ if (window.AWESOME_AI_PPT_PROJECTS) {
     .then(applyProjects)
     .catch(showLoadError);
 }
-
-loadRepoStars();
