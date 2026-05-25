@@ -1163,5 +1163,365 @@ window.AWESOME_AI_PPT_PROJECTS = [
     ],
     "editable": "Editable",
     "skill": "Skill"
+  },
+  {
+    "name": "Morgensonne/EditDeck",
+    "url": "https://github.com/Morgensonne/EditDeck",
+    "repo": "Morgensonne/EditDeck",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 926,
+    "type": "Workflow",
+    "output": "PPTX",
+    "description": "End-to-end deck workflow that creates slide images, standard PPTX files, and fully editable PPTX decks, including reconstruction from existing slide images.",
+    "descriptionZh": "端到端演示工作流，可生成幻灯片图片、标准 PPTX 和完全可编辑 PPTX，并支持从既有幻灯片图片重建可编辑 deck。",
+    "tags": [
+      "Conversion",
+      "Image-based",
+      "PPTX-native",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
+    "name": "Tansuo2021/OCRPDF-TO-PPT",
+    "url": "https://github.com/Tansuo2021/OCRPDF-TO-PPT",
+    "repo": "Tansuo2021/OCRPDF-TO-PPT",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 467,
+    "type": "Converter",
+    "output": "PPTX",
+    "description": "Converts images and PDF pages into editable PowerPoint decks by placing OCR text boxes over slide backgrounds.",
+    "descriptionZh": "将图片和 PDF 页面转换为可编辑 PowerPoint，通过在幻灯片背景上叠加 OCR 文本框实现文本编辑。",
+    "tags": [
+      "Conversion",
+      "PDF",
+      "OCR",
+      "PPTX-native"
+    ],
+    "editable": "Partially editable",
+    "skill": "No"
+  },
+  {
+    "name": "Sven-LI-sankyuu/presentation-skills",
+    "url": "https://github.com/Sven-LI-sankyuu/presentation-skills",
+    "repo": "Sven-LI-sankyuu/presentation-skills",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "stars": 128,
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Presentation skill collection centered on polished, editable, and validated PowerPoint deck generation workflows.",
+    "descriptionZh": "围绕精修、可编辑、可验证 PowerPoint deck 生成工作流的演示 skill 集合。",
+    "tags": [
+      "PPTX-native",
+      "Template",
+      "Automation",
+      "QA"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "mucsbr/ppt-agent-workflow-san",
+    "url": "https://github.com/mucsbr/ppt-agent-workflow-san",
+    "repo": "mucsbr/ppt-agent-workflow-san",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "stars": 536,
+    "type": "Skill",
+    "output": "PPTX/HTML/PNG",
+    "description": "Agent workflow that creates HTML/PNG slide previews and converts HTML slides into natively editable PowerPoint decks.",
+    "descriptionZh": "Agent 工作流，可生成 HTML/PNG 幻灯片预览，并将 HTML slides 转换为原生可编辑 PowerPoint。",
+    "tags": [
+      "HTML-first",
+      "Conversion",
+      "Image-based",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "Daniel-Siae/image2pptx",
+    "url": "https://github.com/Daniel-Siae/image2pptx",
+    "repo": "Daniel-Siae/image2pptx",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 23,
+    "type": "Converter",
+    "output": "PPTX",
+    "description": "Uses PaddleOCR-VL to parse document images into structured OCR data and rebuild editable PPTX slides with text boxes, tables, and image blocks.",
+    "descriptionZh": "使用 PaddleOCR-VL 将文档图片解析为结构化 OCR 数据，并重建包含文本框、表格和图片块的可编辑 PPTX。",
+    "tags": [
+      "Conversion",
+      "Image-based",
+      "OCR",
+      "PPTX-native"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
+    "name": "JadeLiu-tech/px-image2pptx",
+    "url": "https://github.com/JadeLiu-tech/px-image2pptx",
+    "repo": "JadeLiu-tech/px-image2pptx",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 24,
+    "type": "Converter",
+    "output": "PPTX",
+    "description": "Converts static slide images into editable PPTX text layers using OCR, text masking, inpainting, and python-pptx reconstruction.",
+    "descriptionZh": "通过 OCR、文字遮罩、图像修复和 python-pptx 重建，将静态幻灯片图片转换为带可编辑文本层的 PPTX。",
+    "tags": [
+      "Conversion",
+      "Image-based",
+      "OCR",
+      "PPTX-native"
+    ],
+    "editable": "Partially editable",
+    "skill": "No"
+  },
+  {
+    "name": "MYZY-AI/dokie-ai-ppt",
+    "url": "https://github.com/MYZY-AI/dokie-ai-ppt",
+    "repo": "MYZY-AI/dokie-ai-ppt",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "stars": 61,
+    "type": "Skill",
+    "output": "HTML/PPTX/PDF",
+    "description": "Agent skill for creating interactive HTML slides that can be edited in Dokie and exported as PDF, PPTX, or images.",
+    "descriptionZh": "用于生成交互式 HTML slides 的 agent skill，可在 Dokie 中继续编辑并导出为 PDF、PPTX 或图片。",
+    "tags": [
+      "HTML-first",
+      "Editor",
+      "Conversion",
+      "Skill"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "LangChat/langchat-slides",
+    "url": "https://github.com/LangChat/langchat-slides",
+    "repo": "LangChat/langchat-slides",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "stars": 210,
+    "type": "App",
+    "output": "PPT/PDF/Images",
+    "description": "Vue-based AI slide generator with multi-page editing and export to PPT, PDF, PNG, SVG, JPG, and WebP.",
+    "descriptionZh": "基于 Vue 的 AI 幻灯片生成器，支持多页编辑，并可导出 PPT、PDF、PNG、SVG、JPG 和 WebP。",
+    "tags": [
+      "HTML-first",
+      "App",
+      "Editor",
+      "Conversion"
+    ],
+    "editable": "Partially editable",
+    "skill": "No"
+  },
+  {
+    "name": "jitOffice/aippt",
+    "url": "https://github.com/jitOffice/aippt",
+    "repo": "jitOffice/aippt",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "stars": 69,
+    "type": "App",
+    "output": "PPTX",
+    "description": "Vue AI presentation editor with multi-model generation, canvas editing, and PPTX export through PptxGenJS.",
+    "descriptionZh": "Vue AI 演示编辑器，支持多模型生成、Canvas 编辑，并通过 PptxGenJS 导出 PPTX。",
+    "tags": [
+      "PPTX-native",
+      "App",
+      "Editor",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
+    "name": "MartinPacker/md2pptx",
+    "url": "https://github.com/MartinPacker/md2pptx",
+    "repo": "MartinPacker/md2pptx",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "stars": 501,
+    "type": "CLI",
+    "output": "PPTX",
+    "description": "Markdown-to-PowerPoint converter built on python-pptx with template support.",
+    "descriptionZh": "基于 python-pptx 的 Markdown 转 PowerPoint 工具，支持模板。",
+    "tags": [
+      "PPTX-native",
+      "Markdown",
+      "Template",
+      "CLI"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
+    "name": "bowenliang123/markdown-exporter",
+    "url": "https://github.com/bowenliang123/markdown-exporter",
+    "repo": "bowenliang123/markdown-exporter",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "stars": 223,
+    "type": "CLI",
+    "output": "PPTX/DOCX/HTML/PDF",
+    "description": "Agent skill, Dify plugin, and CLI for exporting Markdown to PPTX, DOCX, HTML, PDF, and other formats with template support.",
+    "descriptionZh": "Agent skill、Dify plugin 和 CLI，可将 Markdown 导出为 PPTX、DOCX、HTML、PDF 等格式，并支持模板。",
+    "tags": [
+      "PPTX-native",
+      "Markdown",
+      "Conversion",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "yingkitw/ppt-rs",
+    "url": "https://github.com/yingkitw/ppt-rs",
+    "repo": "yingkitw/ppt-rs",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 40,
+    "type": "Library",
+    "output": "PPTX/HTML/Images",
+    "description": "Rust PPTX library and CLI for Markdown-to-PPTX, HTML-to-PPTX, PPTX-to-HTML, image export, and MCP workflows.",
+    "descriptionZh": "Rust PPTX 库和 CLI，支持 Markdown 转 PPTX、HTML 转 PPTX、PPTX 转 HTML、图片导出和 MCP 工作流。",
+    "tags": [
+      "Library",
+      "PPTX-native",
+      "Conversion",
+      "MCP"
+    ],
+    "editable": "Editable",
+    "skill": "MCP"
+  },
+  {
+    "name": "abdelkrimkr/html2pptx",
+    "url": "https://github.com/abdelkrimkr/html2pptx",
+    "repo": "abdelkrimkr/html2pptx",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 13,
+    "type": "CLI",
+    "output": "PPTX",
+    "description": "Node.js CLI and library for converting HTML files into PowerPoint by mapping text, images, SVG, and CSS layout into PPTX objects.",
+    "descriptionZh": "Node.js CLI 和库，可将 HTML 文件转换为 PowerPoint，把文本、图片、SVG 和 CSS 布局映射为 PPTX 对象。",
+    "tags": [
+      "HTML-first",
+      "Conversion",
+      "PPTX-native",
+      "Library"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
+    "name": "Emily27-alt/html-to-pptx",
+    "url": "https://github.com/Emily27-alt/html-to-pptx",
+    "repo": "Emily27-alt/html-to-pptx",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 16,
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Claude Code skill for converting existing HTML slide decks into editable PPTX with native text, shapes, images, and layout reconstruction.",
+    "descriptionZh": "用于将既有 HTML slide deck 转换为可编辑 PPTX 的 Claude Code skill，支持原生文本、形状、图片和版式重建。",
+    "tags": [
+      "HTML-first",
+      "Conversion",
+      "PPTX-native",
+      "Skill"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "supercurses/powerpoint",
+    "url": "https://github.com/supercurses/powerpoint",
+    "repo": "supercurses/powerpoint",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 145,
+    "type": "MCP",
+    "output": "PPTX",
+    "description": "PowerPoint-focused MCP server for creating presentations with python-pptx, serving as an early baseline in the PPT MCP ecosystem.",
+    "descriptionZh": "专注 PowerPoint 的 MCP server，基于 python-pptx 创建演示文稿，是 PPT MCP 生态中的早期基线项目。",
+    "tags": [
+      "MCP",
+      "Automation",
+      "PPTX-native",
+      "PowerPoint"
+    ],
+    "editable": "Editable",
+    "skill": "MCP"
+  },
+  {
+    "name": "Ayushmaniar/powerpoint-mcp",
+    "url": "https://github.com/Ayushmaniar/powerpoint-mcp",
+    "repo": "Ayushmaniar/powerpoint-mcp",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 77,
+    "type": "MCP",
+    "output": "PowerPoint",
+    "description": "Windows PowerPoint MCP server using pywin32 and COM automation for local PowerPoint control.",
+    "descriptionZh": "基于 pywin32 和 COM 自动化的 Windows PowerPoint MCP server，用于控制本机 PowerPoint。",
+    "tags": [
+      "MCP",
+      "Automation",
+      "PowerPoint",
+      "COM"
+    ],
+    "editable": "Editable",
+    "skill": "MCP"
+  },
+  {
+    "name": "daekeun-ml/ppt-translator",
+    "url": "https://github.com/daekeun-ml/ppt-translator",
+    "repo": "daekeun-ml/ppt-translator",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 64,
+    "type": "MCP",
+    "output": "PPTX",
+    "description": "PowerPoint translation CLI and MCP server that preserves layout and structure while translating PPTX content with Amazon Bedrock.",
+    "descriptionZh": "PowerPoint 翻译 CLI 和 MCP server，可在使用 Amazon Bedrock 翻译 PPTX 内容时保留版式和结构。",
+    "tags": [
+      "MCP",
+      "Translation",
+      "Automation",
+      "PPTX-native"
+    ],
+    "editable": "Editable",
+    "skill": "MCP"
+  },
+  {
+    "name": "theWDY/office-editor-mcp",
+    "url": "https://github.com/theWDY/office-editor-mcp",
+    "repo": "theWDY/office-editor-mcp",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 90,
+    "type": "MCP",
+    "output": "PPTX/DOCX/XLSX",
+    "description": "Office document MCP server with explicit PowerPoint creation and editing support alongside Word and Excel workflows.",
+    "descriptionZh": "Office 文档 MCP server，在 Word 和 Excel 工作流之外明确支持 PowerPoint 创建与编辑。",
+    "tags": [
+      "MCP",
+      "Automation",
+      "PowerPoint",
+      "Office"
+    ],
+    "editable": "Editable",
+    "skill": "MCP"
   }
 ];
