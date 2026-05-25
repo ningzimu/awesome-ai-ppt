@@ -29,8 +29,8 @@ jobs:
 
       - name: Check generated Pages data
         run: |
-          python3 scripts/render_pages_data.py --keep-stars
-          git diff --exit-code docs/projects-data.js docs/stars-data.js
+          python3 scripts/render_pages_data.py
+          git diff --exit-code docs/projects-data.js
 
       - name: Check bilingual content
         run: python3 scripts/check_bilingual.py

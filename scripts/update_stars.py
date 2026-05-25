@@ -10,7 +10,7 @@ import time
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
-from render_pages_data import REPO, fetch_repo_stars as fetch_pages_repo_stars, render_pages_data
+from render_pages_data import render_pages_data
 from render_readme import render_readmes, sort_projects
 
 
@@ -58,15 +58,13 @@ def main() -> int:
         time.sleep(0.1)
 
     projects = sort_projects(projects)
-    repo_stars = fetch_pages_repo_stars(REPO, token)
-
     if changed:
         PROJECTS_PATH.write_text(json.dumps(projects, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     else:
         print("Star counts already up to date.")
 
     render_readmes(projects)
-    render_pages_data(projects, repo_stars)
+    render_pages_data(projects)
     return 0
 
 

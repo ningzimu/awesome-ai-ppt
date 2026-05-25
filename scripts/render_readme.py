@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import json
+from urllib.parse import quote, urlencode
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,6 +70,7 @@ ZH_HEADER = """# Awesome AI PPT
 [![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-English-blue)](README_EN.md)
 [![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
+[![Stars](https://img.shields.io/github/stars/ningzimu/awesome-ai-ppt?style=social)](https://github.com/ningzimu/awesome-ai-ppt/stargazers)
 
 一个关于 AI PPT、PowerPoint 自动化、PPTX 编辑和幻灯片工作流工具的开源项目精选清单。
 
@@ -110,6 +112,7 @@ EN_HEADER = """# Awesome AI PPT
 [![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-blue)](README.md)
 [![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
+[![Stars](https://img.shields.io/github/stars/ningzimu/awesome-ai-ppt?style=social)](https://github.com/ningzimu/awesome-ai-ppt/stargazers)
 
 A curated list of open-source projects for AI-assisted presentation generation, PowerPoint automation, PPTX editing, and slide workflow tooling.
 
@@ -211,10 +214,20 @@ def slug_en(title: str) -> str:
 
 
 def star_text(project: dict) -> str:
-    stars = project.get("stars")
-    if not isinstance(stars, int):
+    repo = project.get("repo")
+    if not repo:
         return "-"
-    return f"{stars:,}"
+    query = urlencode(
+        {
+            "style": "flat",
+            "label": "★",
+            "color": "f6f8fa",
+            "labelColor": "f6f8fa",
+            "cacheSeconds": "1800",
+        }
+    )
+    badge = f"https://img.shields.io/github/stars/{quote(repo, safe='/')}?{query}"
+    return f'<a href="https://github.com/{repo}/stargazers"><img src="{badge}" alt="Stars" height="26"></a>'
 
 
 def tag_text(project: dict, lang: str) -> str:

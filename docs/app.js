@@ -6,6 +6,8 @@ const categories = [
   "PPTX Libraries and Automation Infrastructure"
 ];
 
+const REPO_STARS_BADGE_URL = "https://img.shields.io/github/stars/ningzimu/awesome-ai-ppt.json";
+
 const categoryZh = {
   All: "全部分类",
   "HTML-First Presentation Workflows": "HTML 风格 PPT 方案",
@@ -104,10 +106,9 @@ function formatStars(stars) {
   return new Intl.NumberFormat("en-US").format(stars);
 }
 
-function formatCompactStars(stars) {
-  if (typeof stars !== "number") return "Star";
-  if (stars >= 1000) return `${(stars / 1000).toFixed(stars >= 10000 ? 1 : 2).replace(/\.0$/, "")}k`;
-  return new Intl.NumberFormat("en-US").format(stars);
+function renderRepoStars(value) {
+  if (!nodes.repoStars || !value) return;
+  nodes.repoStars.textContent = value;
 }
 
 function searchable(project) {
@@ -277,9 +278,17 @@ function renderStaticText() {
   nodes.languageButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === state.lang);
   });
-  if (nodes.repoStars && typeof window.AWESOME_AI_PPT_STARS === "number") {
-    nodes.repoStars.textContent = formatCompactStars(window.AWESOME_AI_PPT_STARS);
-  }
+}
+
+function loadRepoStars() {
+  if (!nodes.repoStars) return;
+  fetch(REPO_STARS_BADGE_URL)
+    .then((response) => {
+      if (!response.ok) throw new Error("Could not load Shields star badge");
+      return response.json();
+    })
+    .then((badge) => renderRepoStars(badge.value || badge.message))
+    .catch(() => renderRepoStars("Star"));
 }
 
 nodes.categoryNav.addEventListener("click", (event) => {
@@ -334,3 +343,5 @@ if (window.AWESOME_AI_PPT_PROJECTS) {
     .then(applyProjects)
     .catch(showLoadError);
 }
+
+loadRepoStars();
