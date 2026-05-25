@@ -73,11 +73,3 @@ Before finishing changes, run:
 git diff --check
 python3 scripts/check_bilingual.py
 ```
-
-If Node works in the local environment, also run:
-
-```sh
-npx awesome-lint
-```
-
-If `npx awesome-lint` cannot run because of local toolchain issues, mention the exact reason in the final response.

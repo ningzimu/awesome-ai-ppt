@@ -40,14 +40,6 @@ python3 scripts/check_bilingual.py
 python3 -m json.tool docs/projects.json
 ```
 
-If Node is available, also run:
-
-```bash
-npx awesome-lint
-```
-
-If `awesome-lint` fails because of pre-existing awesome-list formatting rules or local toolchain issues, mention the exact reason in the PR.
-
 ## PR Description
 
 Help the contributor include:

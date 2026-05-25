@@ -923,5 +923,245 @@
     ],
     "editable": "Partially editable",
     "skill": "Skill"
+  },
+  {
+    "name": "slidevjs/slidev",
+    "url": "https://github.com/slidevjs/slidev",
+    "repo": "slidevjs/slidev",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "stars": 46715,
+    "type": "Framework",
+    "output": "PPTX/PDF/PNG",
+    "description": "Markdown and Vue-based slide framework with browser and CLI export to PPTX, PDF, PNG, and Markdown.",
+    "descriptionZh": "基于 Markdown 和 Vue 的网页幻灯片框架，支持通过浏览器或 CLI 导出 PPTX、PDF、PNG 和 Markdown。",
+    "tags": [
+      "HTML-first",
+      "Markdown",
+      "Vue",
+      "PDF"
+    ],
+    "editable": "Image-based PPTX",
+    "skill": "No"
+  },
+  {
+    "name": "marp-team/marp-cli",
+    "url": "https://github.com/marp-team/marp-cli",
+    "repo": "marp-team/marp-cli",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "stars": 3582,
+    "type": "CLI",
+    "output": "PPTX/PDF/HTML",
+    "description": "Marp CLI for converting Markdown slide decks into HTML, PDF, images, and PowerPoint files.",
+    "descriptionZh": "Marp 命令行工具，可将 Markdown 幻灯片转换为 HTML、PDF、图片和 PowerPoint 文件。",
+    "tags": [
+      "HTML-first",
+      "Markdown",
+      "Conversion"
+    ],
+    "editable": "Partially editable",
+    "skill": "No"
+  },
+  {
+    "name": "icip-cas/PPTAgent",
+    "url": "https://github.com/icip-cas/PPTAgent",
+    "repo": "icip-cas/PPTAgent",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "stars": 4438,
+    "type": "Agent",
+    "output": "PPTX",
+    "description": "Agentic framework for reflective PowerPoint generation with PPTX export, offline mode, WebUI, CLI, and MCP support.",
+    "descriptionZh": "用于反思式 PowerPoint 生成的 agentic framework，支持 PPTX 导出、离线模式、WebUI、CLI 和 MCP。",
+    "tags": [
+      "PPTX-native",
+      "Agent",
+      "MCP",
+      "Research"
+    ],
+    "editable": "Editable",
+    "skill": "MCP"
+  },
+  {
+    "name": "YOOTeam/OpenPPT",
+    "url": "https://github.com/YOOTeam/OpenPPT",
+    "repo": "YOOTeam/OpenPPT",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "stars": 1077,
+    "type": "App",
+    "output": "PPTX/PDF",
+    "description": "Open-source AI PPT editor covering generation, import, online editing, presentation playback, and Office-compatible PPTX export.",
+    "descriptionZh": "开源 AI PPT 编辑器，覆盖生成、导入、在线编辑、演示播放和 Office 兼容 PPTX 导出。",
+    "tags": [
+      "PPTX-native",
+      "App",
+      "Editor",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
+    "name": "OpenDCAI/Paper2Any",
+    "url": "https://github.com/OpenDCAI/Paper2Any",
+    "repo": "OpenDCAI/Paper2Any",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "stars": 2400,
+    "type": "App",
+    "output": "PPTX/SVG/DrawIO",
+    "description": "Research-paper multimodal workflow for editable figures, diagrams, posters, and slide decks, including Paper2PPT, PDF2PPT, and Image2PPT.",
+    "descriptionZh": "面向论文的多模态工作流，可生成可编辑科研图、图解、海报和幻灯片，包含 Paper2PPT、PDF2PPT 和 Image2PPT。",
+    "tags": [
+      "PPTX-native",
+      "Academic",
+      "Conversion",
+      "Image-based"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
+    "name": "iOfficeAI/OfficeCLI",
+    "url": "https://github.com/iOfficeAI/OfficeCLI",
+    "repo": "iOfficeAI/OfficeCLI",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 5100,
+    "type": "CLI",
+    "output": "PPTX/DOCX/XLSX",
+    "description": "Local-first Office CLI for AI agents to create, inspect, edit, render, and automate PowerPoint files without Microsoft Office.",
+    "descriptionZh": "面向 AI agent 的本地优先 Office CLI，可在无需 Microsoft Office 的情况下创建、检查、编辑、渲染和自动化 PowerPoint。",
+    "tags": [
+      "CLI",
+      "Automation",
+      "PPTX-native",
+      "Preview"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "laihenyi/NBLM2PPTX",
+    "url": "https://github.com/laihenyi/NBLM2PPTX",
+    "repo": "laihenyi/NBLM2PPTX",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 312,
+    "type": "Converter",
+    "output": "PPTX",
+    "description": "Converts NotebookLM PDF slide exports into PPTX with slide backgrounds and editable text layers.",
+    "descriptionZh": "将 NotebookLM 导出的 PDF 幻灯片转换为带背景图和可编辑文字层的 PPTX。",
+    "tags": [
+      "Conversion",
+      "PDF",
+      "Image-based",
+      "PPTX-native"
+    ],
+    "editable": "Partially editable",
+    "skill": "No"
+  },
+  {
+    "name": "archlizheng/frontend-slides-editable",
+    "url": "https://github.com/archlizheng/frontend-slides-editable",
+    "repo": "archlizheng/frontend-slides-editable",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "stars": 228,
+    "type": "Skill",
+    "output": "HTML",
+    "description": "Editable HTML presentation skill for Codex and Claude Code with drag-resize editing, slide reordering, local save/export, and PPTX-to-web conversion.",
+    "descriptionZh": "面向 Codex 和 Claude Code 的可编辑 HTML 演示 skill，支持拖拽缩放、页面排序、本地保存/导出和 PPTX 转网页。",
+    "tags": [
+      "HTML-first",
+      "Editor",
+      "Conversion",
+      "Skill"
+    ],
+    "editable": "Source editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "seulee26/mckinsey-pptx",
+    "url": "https://github.com/seulee26/mckinsey-pptx",
+    "repo": "seulee26/mckinsey-pptx",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "stars": 459,
+    "type": "Plugin",
+    "output": "PPTX",
+    "description": "Claude Code plugin for McKinsey-style PPTX generation with consulting slide templates and a template-selection subagent.",
+    "descriptionZh": "用于生成咨询风 PPTX 的 Claude Code plugin，内置咨询幻灯片模板和模板选择 subagent。",
+    "tags": [
+      "PPTX-native",
+      "Template",
+      "Consulting",
+      "Plugin"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "zouchenzhen/thesis-defense-pptx-skill",
+    "url": "https://github.com/zouchenzhen/thesis-defense-pptx-skill",
+    "repo": "zouchenzhen/thesis-defense-pptx-skill",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "stars": 112,
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Claude Code skill for generating editable thesis-defense PowerPoint decks from LaTeX or PDF papers and PPTX templates.",
+    "descriptionZh": "从 LaTeX 或 PDF 论文和 PPTX 模板生成可编辑论文答辩 PowerPoint 的 Claude Code skill。",
+    "tags": [
+      "PPTX-native",
+      "Academic",
+      "Template",
+      "PDF"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "snowmanzhuang/yixueAIganhuo-PPT",
+    "url": "https://github.com/snowmanzhuang/yixueAIganhuo-PPT",
+    "repo": "snowmanzhuang/yixueAIganhuo-PPT",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
+    "stars": 160,
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Medical academic PPT workflow based on gpt-image-2 and PaddleOCR for generating slide decks from papers, PDFs, figures, screenshots, and prepared materials, then rebuilding editable PPTX files.",
+    "descriptionZh": "基于 gpt-image-2 和 PaddleOCR 的医学学术 PPT 工作流，可从论文、PDF、图表、截图和整理材料生成幻灯片，并重建为可编辑 PPTX。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "Academic",
+      "Conversion",
+      "PDF"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "soulmujoco/EditableImage2PPTSkill",
+    "url": "https://github.com/soulmujoco/EditableImage2PPTSkill",
+    "repo": "soulmujoco/EditableImage2PPTSkill",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "stars": 33,
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Codex skill for reconstructing slide screenshots or exported slide images into editable PowerPoint decks with editable text, native shapes, extracted assets, and QA helpers.",
+    "descriptionZh": "用于将幻灯片截图或导出的幻灯片图片重建为可编辑 PowerPoint 的 Codex skill，支持可编辑文本、原生形状、素材提取和 QA 辅助。",
+    "tags": [
+      "Conversion",
+      "Image-based",
+      "PPTX-native",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   }
 ]
