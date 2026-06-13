@@ -61,14 +61,10 @@ Workflows that create HTML, web slides, or page-style presentations first, then 
 | [sligter/LandPPT](https://github.com/sligter/LandPPT) | LLM-based presentation generation platform that turns documents into professional decks with templates, styling, and multiple model options. | HTML-first, App, Image-based, PDF, Video | Partially editable | No | 3,397 |
 | [allweonedev/presentation-ai](https://github.com/allweonedev/presentation-ai) | Open-source Gamma-style AI presentation generator with themes, editing, and PowerPoint export. | HTML-first, App, Template | Partially editable | No | 2,861 |
 | [sunbigfly/ppt-agent-skills](https://github.com/sunbigfly/ppt-agent-skills) | Code-driven presentation generation framework that treats deck creation like building software. | HTML-first, Image-based, Automation | Partially editable | Skill | 788 |
-| [zai-org/GLM-skills - glmv-pdf-to-ppt](https://github.com/zai-org/GLM-skills/tree/main/skills/glmv-pdf-to-ppt) | GLM-V skill for converting PDFs into structured multi-slide HTML presentations with cropped visuals and summary notes. | HTML-first, PDF, Image-based, Conversion | Source editable | Skill | 411 |
-| [claude-office-skills/skills - html-slides](https://github.com/claude-office-skills/skills/tree/main/html-slides) | HTML slides skill for creating reveal.js presentations with animation, code highlighting, and speaker notes. | HTML-first, Reveal.js, Conversion | Source editable | Skill | 210 |
 | [code-on-sunday/slide-deck-generator](https://github.com/code-on-sunday/slide-deck-generator) | AI skill for generating interactive browser-based slide decks as React and Vite applications. | HTML-first, React, Interactive, Template | Source editable | Skill | 118 |
 | [Kuneosu/make-slide](https://github.com/Kuneosu/make-slide) | Universal AI skill for generating standalone HTML slide decks. | HTML-first, PDF, Template | Partially editable | Skill | 86 |
-| [zocomputer/skills - revealjs-presentation](https://github.com/zocomputer/skills/tree/main/Community/revealjs-presentation) | Reveal.js presentation skill that creates single-file HTML slide decks with Chart.js charts and optional zo.space publishing. | HTML-first, Reveal.js, Charts | Source editable | Skill | 42 |
 | [kdnsna/ultimate-ppt-master-skill](https://github.com/kdnsna/ultimate-ppt-master-skill) | Local-first AI presentation hub that packages source files for agents and produces editable PowerPoint decks or magazine-style web decks. | HTML-first, PPTX-native, Conversion, Template, Automation | Editable | Skill | 47 |
 | [codesstar/next-slide](https://github.com/codesstar/next-slide) | Skill for generating zero-dependency HTML presentations with curated styles, bilingual support, and PPT content conversion. | HTML-first, Conversion, Bilingual | Source editable | Skill | 31 |
-| [slidevjs/slidev](https://github.com/slidevjs/slidev) | Markdown and Vue-based slide framework with browser and CLI export to PPTX, PDF, PNG, and Markdown. | HTML-first, Markdown, Vue, PDF | Image-based PPTX | No | 47,141 |
 | [marp-team/marp-cli](https://github.com/marp-team/marp-cli) | Marp CLI for converting Markdown slide decks into HTML, PDF, images, and PowerPoint files. | HTML-first, Markdown, Conversion | Partially editable | No | 3,626 |
 | [archlizheng/frontend-slides-editable](https://github.com/archlizheng/frontend-slides-editable) | Editable HTML presentation skill for Codex and Claude Code with drag-resize editing, slide reordering, local save/export, and PPTX-to-web conversion. | HTML-first, Editor, Conversion, Skill | Source editable | Skill | 328 |
 | [mucsbr/ppt-agent-workflow-san](https://github.com/mucsbr/ppt-agent-workflow-san) | Agent workflow that creates HTML/PNG slide previews and converts HTML slides into natively editable PowerPoint decks. | HTML-first, Conversion, Image-based, Automation | Editable | Skill | 570 |
@@ -81,7 +77,6 @@ Workflows centered on image models or whole-slide images, then packaging those s
 
 | Repository | Description | Tags | Editability | Skill | Stars |
 | --- | --- | --- | --- | --- | --- |
-| [bytedance/deer-flow - ppt-generation](https://github.com/bytedance/deer-flow/tree/main/skills/public/ppt-generation) | Image-generation based PPT workflow inside DeerFlow. | Image-first, Image-based, Workflow | Image-based | Skill | 71,049 |
 | [Anionex/banana-slides](https://github.com/Anionex/banana-slides) | AI-native Nano Banana Pro presentation app for generating slides from ideas, outlines, assets, or page descriptions, with editable PPT export. | Image-first, Image-based, App, PDF, Video | Partially editable | No | 14,913 |
 | [op7418/NanoBanana-PPT-Skills](https://github.com/op7418/NanoBanana-PPT-Skills) | NanoBanana PPT skills for generating high-quality presentation images and videos with smart transitions and interactive playback. | Image-first, Image-based, Video | Image-based | Skill | 2,964 |
 | [NyxTides/ppt-image-first](https://github.com/NyxTides/ppt-image-first) | Image-first PPT skill for Codex, Claude Code, and Opencode CLI workflows. | Image-first, Image-based | Image-based | Skill | 1,051 |
@@ -97,17 +92,13 @@ Workflows that directly generate native editable PPTX files through PptxGenJS, p
 
 | Repository | Description | Tags | Editability | Skill | Stars |
 | --- | --- | --- | --- | --- | --- |
-| [anthropics/skills - pptx](https://github.com/anthropics/skills/tree/main/skills/pptx) | Anthropic skill for reading, creating, editing, and analyzing PowerPoint presentations. | PPTX-native, Automation | Editable | Skill | 149,912 |
 | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | AI-driven workflow for producing natively editable PowerPoint decks from documents, URLs, and Markdown. | PPTX-native, Template | Editable | Skill | 26,979 |
-| [MiniMax-AI/skills - pptx-generator](https://github.com/MiniMax-AI/skills) | MiniMax office skill for generating, editing, and reading PowerPoint presentations. | PPTX-native, Automation | Editable | Skill | 12,600 |
-| [wanshuiyin/Auto-claude-code-research-in-sleep - paper-slides](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/main/skills/paper-slides) | ARIS skill for turning papers into Beamer/PDF slides and editable PPTX decks with notes and a talk script. | PPTX-native, Academic, LaTeX, PDF, Notes | Editable | Skill | 11,989 |
 | [veasion/AiPPT](https://github.com/veasion/AiPPT) | AI PPT generator from topics, files, or URLs, with template customization and support for charts, animations, and 3D effects. | Automation, Conversion, App, PPTX-native | Editable | No | 1,887 |
 | [SmartSchoolAI/ai-to-pptx](https://github.com/SmartSchoolAI/ai-to-pptx) | Open-source AI assistant for generating PPTX outlines and decks with template selection, online editing, and export. | PPTX-native, App, Template | Editable | No | 1,451 |
 | [Gabberflast/academic-pptx-skill](https://github.com/Gabberflast/academic-pptx-skill) | Claude skill for academic presentations, enforcing action titles, argument structure, exhibit discipline, citations, and communication-first design. | PPTX-native, Template | Editable | Skill | 561 |
 | [barun-saha/slide-deck-ai](https://github.com/barun-saha/slide-deck-ai) | AI-assisted PowerPoint deck generation. | PPTX-native, App, Backend, PDF | Editable | No | 360 |
 | [HuiMi24/chatppt](https://github.com/HuiMi24/chatppt) | ChatGPT/Ollama-powered tool for generating PPT or slides, with English and Chinese output support. | PPTX-native, App, Backend | Editable | No | 306 |
 | [CyberTimon/Powerpointer](https://github.com/CyberTimon/Powerpointer) | GPT-powered PowerPoint generator using Python and python-pptx. | PPTX-native, App, Backend | Editable | No | 176 |
-| [SkyworkAI/Skywork-Skills - skywork-ppt](https://github.com/SkyworkAI/Skywork-Skills) | Skill for generating, imitating, and editing PowerPoint presentations. | PPTX-native, Template, Automation | Editable | Skill | 172 |
 | [likaku/Mck-ppt-design-skill](https://github.com/likaku/Mck-ppt-design-skill) | Consulting-style PowerPoint design system for AI agents, with many layout patterns and python-pptx output. | PPTX-native, Template, Automation | Editable | Skill | 182 |
 | [Noi1r/powerpoint-skill](https://github.com/Noi1r/powerpoint-skill) | PowerPoint skill for academic slides, formulas, and diagrams using PptxGenJS. | PPTX-native, PDF, Automation | Editable | Skill | 88 |
 | [tristan-mcinnis/pptx-from-layouts-skill](https://github.com/tristan-mcinnis/pptx-from-layouts-skill) | Claude Code skill for generating PowerPoint decks from Markdown using template slide master layouts. | PPTX-native, Template, Automation | Editable | Skill | 73 |
@@ -160,10 +151,13 @@ Categories are based on the source representation of the main workflow, not the 
 
 GitHub repositories should have at least 10 stars before being included.
 
+If a project is only a subdirectory or skill inside a broad collection, general agent framework, or multi-skill repository, and the parent repository's stars do not represent that PPT workflow itself, it should not be included in the main list.
+
 Out of scope:
 
 - Generic AI writing tools without a presentation workflow.
 - Generic image generators without slide or deck output.
+- Generic slide frameworks without AI, agent, or PowerPoint automation behavior.
 - Template marketplaces with no open repository or technical workflow.
 - Archived, deprecated, or empty repositories.
 

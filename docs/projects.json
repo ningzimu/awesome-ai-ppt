@@ -1,40 +1,5 @@
 [
   {
-    "name": "anthropics/skills - pptx",
-    "url": "https://github.com/anthropics/skills/tree/main/skills/pptx",
-    "repo": "anthropics/skills",
-    "category": "PPTX-Native Generation Workflows",
-    "categoryZh": "PPTX 库生成式 PPT 方案",
-    "type": "Skill",
-    "output": "PPTX",
-    "description": "Anthropic skill for reading, creating, editing, and analyzing PowerPoint presentations.",
-    "descriptionZh": "Anthropic 官方 PPTX skill，用于读取、创建、编辑和分析 PowerPoint。",
-    "tags": [
-      "PPTX-native",
-      "Automation"
-    ],
-    "editable": "Editable",
-    "skill": "Skill"
-  },
-  {
-    "name": "bytedance/deer-flow - ppt-generation",
-    "url": "https://github.com/bytedance/deer-flow/tree/main/skills/public/ppt-generation",
-    "repo": "bytedance/deer-flow",
-    "category": "Image-First Presentation Workflows",
-    "categoryZh": "图片生成式 PPT 方案",
-    "type": "Workflow",
-    "output": "PPTX",
-    "description": "Image-generation based PPT workflow inside DeerFlow.",
-    "descriptionZh": "DeerFlow 中基于图片生成的 PPT 工作流。",
-    "tags": [
-      "Image-first",
-      "Image-based",
-      "Workflow"
-    ],
-    "editable": "Image-based",
-    "skill": "Skill"
-  },
-  {
     "name": "hugohe3/ppt-master",
     "url": "https://github.com/hugohe3/ppt-master",
     "repo": "hugohe3/ppt-master",
@@ -108,23 +73,6 @@
     "skill": "No"
   },
   {
-    "name": "MiniMax-AI/skills - pptx-generator",
-    "url": "https://github.com/MiniMax-AI/skills",
-    "repo": "MiniMax-AI/skills",
-    "category": "PPTX-Native Generation Workflows",
-    "categoryZh": "PPTX 库生成式 PPT 方案",
-    "type": "Skill",
-    "output": "PPTX",
-    "description": "MiniMax office skill for generating, editing, and reading PowerPoint presentations.",
-    "descriptionZh": "MiniMax Office skill，支持生成、编辑和读取 PowerPoint。",
-    "tags": [
-      "PPTX-native",
-      "Automation"
-    ],
-    "editable": "Editable",
-    "skill": "Skill"
-  },
-  {
     "name": "op7418/guizang-ppt-skill",
     "url": "https://github.com/op7418/guizang-ppt-skill",
     "repo": "op7418/guizang-ppt-skill",
@@ -140,26 +88,6 @@
       "Image-based"
     ],
     "editable": "Source editable",
-    "skill": "Skill"
-  },
-  {
-    "name": "wanshuiyin/Auto-claude-code-research-in-sleep - paper-slides",
-    "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/tree/main/skills/paper-slides",
-    "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
-    "category": "PPTX-Native Generation Workflows",
-    "categoryZh": "PPTX 库生成式 PPT 方案",
-    "type": "Skill",
-    "output": "PPTX/PDF",
-    "description": "ARIS skill for turning papers into Beamer/PDF slides and editable PPTX decks with notes and a talk script.",
-    "descriptionZh": "ARIS 论文演示 skill，可从论文生成 Beamer/PDF 幻灯片和带备注、讲稿的可编辑 PPTX。",
-    "tags": [
-      "PPTX-native",
-      "Academic",
-      "LaTeX",
-      "PDF",
-      "Notes"
-    ],
-    "editable": "Editable",
     "skill": "Skill"
   },
   {
@@ -417,25 +345,6 @@
     "skill": "Skill"
   },
   {
-    "name": "zai-org/GLM-skills - glmv-pdf-to-ppt",
-    "url": "https://github.com/zai-org/GLM-skills/tree/main/skills/glmv-pdf-to-ppt",
-    "repo": "zai-org/GLM-skills",
-    "category": "HTML-First Presentation Workflows",
-    "categoryZh": "HTML 风格 PPT 方案",
-    "type": "Skill",
-    "output": "HTML",
-    "description": "GLM-V skill for converting PDFs into structured multi-slide HTML presentations with cropped visuals and summary notes.",
-    "descriptionZh": "GLM-V skill，可将 PDF 转为带结构化页纲、裁图素材和摘要说明的多页 HTML 演示。",
-    "tags": [
-      "HTML-first",
-      "PDF",
-      "Image-based",
-      "Conversion"
-    ],
-    "editable": "Source editable",
-    "skill": "Skill"
-  },
-  {
     "name": "barun-saha/slide-deck-ai",
     "url": "https://github.com/barun-saha/slide-deck-ai",
     "repo": "barun-saha/slide-deck-ai",
@@ -565,24 +474,6 @@
     "skill": "No"
   },
   {
-    "name": "SkyworkAI/Skywork-Skills - skywork-ppt",
-    "url": "https://github.com/SkyworkAI/Skywork-Skills",
-    "repo": "SkyworkAI/Skywork-Skills",
-    "category": "PPTX-Native Generation Workflows",
-    "categoryZh": "PPTX 库生成式 PPT 方案",
-    "type": "Skill",
-    "output": "PPTX",
-    "description": "Skill for generating, imitating, and editing PowerPoint presentations.",
-    "descriptionZh": "Skywork PPT skill，支持生成、仿制和编辑 PowerPoint。",
-    "tags": [
-      "PPTX-native",
-      "Template",
-      "Automation"
-    ],
-    "editable": "Editable",
-    "skill": "Skill"
-  },
-  {
     "name": "likaku/Mck-ppt-design-skill",
     "url": "https://github.com/likaku/Mck-ppt-design-skill",
     "repo": "likaku/Mck-ppt-design-skill",
@@ -598,24 +489,6 @@
       "Automation"
     ],
     "editable": "Editable",
-    "skill": "Skill"
-  },
-  {
-    "name": "claude-office-skills/skills - html-slides",
-    "url": "https://github.com/claude-office-skills/skills/tree/main/html-slides",
-    "repo": "claude-office-skills/skills",
-    "category": "HTML-First Presentation Workflows",
-    "categoryZh": "HTML 风格 PPT 方案",
-    "type": "Skill",
-    "output": "HTML",
-    "description": "HTML slides skill for creating reveal.js presentations with animation, code highlighting, and speaker notes.",
-    "descriptionZh": "Claude Office Skills 中的 HTML 幻灯片 skill，用于创建带动画、代码高亮和演讲者备注的 reveal.js 演示。",
-    "tags": [
-      "HTML-first",
-      "Reveal.js",
-      "Conversion"
-    ],
-    "editable": "Source editable",
     "skill": "Skill"
   },
   {
@@ -748,24 +621,6 @@
     "skill": "Skill"
   },
   {
-    "name": "zocomputer/skills - revealjs-presentation",
-    "url": "https://github.com/zocomputer/skills/tree/main/Community/revealjs-presentation",
-    "repo": "zocomputer/skills",
-    "category": "HTML-First Presentation Workflows",
-    "categoryZh": "HTML 风格 PPT 方案",
-    "type": "Skill",
-    "output": "HTML",
-    "description": "Reveal.js presentation skill that creates single-file HTML slide decks with Chart.js charts and optional zo.space publishing.",
-    "descriptionZh": "Zo Computer skills 中的 Reveal.js 演示 skill，可生成带 Chart.js 图表的单文件 HTML slide deck，并可选发布到 zo.space。",
-    "tags": [
-      "HTML-first",
-      "Reveal.js",
-      "Charts"
-    ],
-    "editable": "Source editable",
-    "skill": "Skill"
-  },
-  {
     "name": "kdnsna/ultimate-ppt-master-skill",
     "url": "https://github.com/kdnsna/ultimate-ppt-master-skill",
     "repo": "kdnsna/ultimate-ppt-master-skill",
@@ -875,25 +730,6 @@
     ],
     "editable": "Partially editable",
     "skill": "Skill"
-  },
-  {
-    "name": "slidevjs/slidev",
-    "url": "https://github.com/slidevjs/slidev",
-    "repo": "slidevjs/slidev",
-    "category": "HTML-First Presentation Workflows",
-    "categoryZh": "HTML 风格 PPT 方案",
-    "type": "Framework",
-    "output": "PPTX/PDF/PNG",
-    "description": "Markdown and Vue-based slide framework with browser and CLI export to PPTX, PDF, PNG, and Markdown.",
-    "descriptionZh": "基于 Markdown 和 Vue 的网页幻灯片框架，支持通过浏览器或 CLI 导出 PPTX、PDF、PNG 和 Markdown。",
-    "tags": [
-      "HTML-first",
-      "Markdown",
-      "Vue",
-      "PDF"
-    ],
-    "editable": "Image-based PPTX",
-    "skill": "No"
   },
   {
     "name": "marp-team/marp-cli",

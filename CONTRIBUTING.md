@@ -11,6 +11,7 @@ Good candidates should meet most of these:
 - Directly related to AI-assisted presentation generation, PPTX editing, slide conversion, deck reconstruction, rendering, QA, or evaluation.
 - Public GitHub repository or open technical resource.
 - GitHub repositories should have at least 10 stars.
+- For subdirectory skills inside broad collections or general agent frameworks, the parent repository's stars should represent that PPT workflow itself.
 - Clear README, documentation, example, or demo.
 - Visible license when source code is included.
 - Active maintenance in the last 12 months, or stable enough to justify keeping.
@@ -20,6 +21,8 @@ Avoid:
 
 - Generic AI writing tools with no presentation workflow.
 - Generic image generators with no slide or deck output.
+- Generic slide frameworks with no AI, agent, or PowerPoint automation behavior.
+- Broad skill collections, general agent frameworks, or directory links where the parent repository's stars do not represent the listed PPT workflow.
 - Pure template marketplaces.
 - Empty repositories, dead links, or projects with no README.
 - Archived, deprecated, or abandoned projects.

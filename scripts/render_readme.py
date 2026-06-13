@@ -156,10 +156,13 @@ ZH_TAIL = """## 收录范围
 
 GitHub 仓库通常需要至少 10 stars 才能进入主列表。
 
+如果项目只是大仓库、合集仓库或通用 agent 仓库里的一个子目录 / skill，且父级仓库的 stars 不能代表这个 PPT 工作流本身，则不进入主列表。
+
 不收录：
 
 - 没有演示文稿工作流的泛 AI 写作工具。
 - 没有幻灯片或 deck 输出的泛图片生成工具。
+- 没有 AI、agent 或 PowerPoint 自动化属性的通用幻灯片框架。
 - 没有开源仓库或技术工作流的模板市场。
 - 已归档、废弃或空仓库。
 
@@ -184,10 +187,13 @@ Categories are based on the source representation of the main workflow, not the 
 
 GitHub repositories should have at least 10 stars before being included.
 
+If a project is only a subdirectory or skill inside a broad collection, general agent framework, or multi-skill repository, and the parent repository's stars do not represent that PPT workflow itself, it should not be included in the main list.
+
 Out of scope:
 
 - Generic AI writing tools without a presentation workflow.
 - Generic image generators without slide or deck output.
+- Generic slide frameworks without AI, agent, or PowerPoint automation behavior.
 - Template marketplaces with no open repository or technical workflow.
 - Archived, deprecated, or empty repositories.
 
