@@ -142,6 +142,7 @@ Underlying PPTX libraries, MCP servers, Office automation, backend services, and
 | [Ayushmaniar/powerpoint-mcp](https://github.com/Ayushmaniar/powerpoint-mcp) | Windows PowerPoint MCP server using pywin32 and COM automation for local PowerPoint control. | MCP, Automation, PowerPoint, COM | Editable | MCP | 100 |
 | [daekeun-ml/ppt-translator](https://github.com/daekeun-ml/ppt-translator) | PowerPoint translation CLI and MCP server that preserves layout and structure while translating PPTX content with Amazon Bedrock. | MCP, Translation, Automation, PPTX-native | Editable | MCP | 66 |
 | [theWDY/office-editor-mcp](https://github.com/theWDY/office-editor-mcp) | Office document MCP server with explicit PowerPoint creation and editing support alongside Word and Excel workflows. | MCP, Automation, PowerPoint, Office | Editable | MCP | 91 |
+| [CodingFeng101/slide-alchemy](https://github.com/CodingFeng101/slide-alchemy) | Codex skill for reconstructing slide screenshots, image-based PPTX files, and scanned decks into editable PowerPoint files. | Conversion, Image-based, PPTX-native, Skill | Editable | Skill | None |
 
 ## Scope
 

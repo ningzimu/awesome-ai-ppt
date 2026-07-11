@@ -142,6 +142,7 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 | [Ayushmaniar/powerpoint-mcp](https://github.com/Ayushmaniar/powerpoint-mcp) | 基于 pywin32 和 COM 自动化的 Windows PowerPoint MCP server，用于控制本机 PowerPoint。 | MCP, 自动化, PowerPoint, COM | 可编辑 | MCP | 100 |
 | [daekeun-ml/ppt-translator](https://github.com/daekeun-ml/ppt-translator) | PowerPoint 翻译 CLI 和 MCP server，可在使用 Amazon Bedrock 翻译 PPTX 内容时保留版式和结构。 | MCP, Translation, 自动化, PPTX-native | 可编辑 | MCP | 66 |
 | [theWDY/office-editor-mcp](https://github.com/theWDY/office-editor-mcp) | Office 文档 MCP server，在 Word 和 Excel 工作流之外明确支持 PowerPoint 创建与编辑。 | MCP, 自动化, PowerPoint, Office | 可编辑 | MCP | 91 |
+| [CodingFeng101/slide-alchemy](https://github.com/CodingFeng101/slide-alchemy) | 用于将幻灯片截图、图片型 PPTX 和扫描版幻灯片还原为可编辑 PowerPoint 文件的 Codex skill。 | 转换, 图片式, PPTX-native, Skill | 可编辑 | Skill | None |
 
 ## 收录范围
 

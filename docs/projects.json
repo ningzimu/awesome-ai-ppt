@@ -1281,5 +1281,24 @@
     ],
     "editable": "Editable",
     "skill": "MCP"
+  },
+  {
+    "name": "CodingFeng101/slide-alchemy",
+    "url": "https://github.com/CodingFeng101/slide-alchemy",
+    "repo": "CodingFeng101/slide-alchemy",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Codex skill for reconstructing slide screenshots, image-based PPTX files, and scanned decks into editable PowerPoint files.",
+    "descriptionZh": "用于将幻灯片截图、图片型 PPTX 和扫描版幻灯片还原为可编辑 PowerPoint 文件的 Codex skill。",
+    "tags": [
+      "Conversion",
+      "Image-based",
+      "PPTX-native",
+      "Skill"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   }
 ]
