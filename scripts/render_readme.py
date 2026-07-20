@@ -70,7 +70,7 @@ ZH_HEADER = """# Awesome AI PPT
 [![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-English-blue)](README_EN.md)
 [![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
-[![Stars](https://img.shields.io/github/stars/ningzimu/awesome-ai-ppt?style=social)](https://github.com/ningzimu/awesome-ai-ppt/stargazers)
+[![Stars](https://img.shields.io/github/stars/ningzimu/awesome-ai-ppt?style=social)](https://github.com/ningzimu/awesome-ai-ppt)
 
 一个关于 AI PPT、PowerPoint 自动化、PPTX 编辑和幻灯片工作流工具的开源项目精选清单。
 
@@ -112,7 +112,7 @@ EN_HEADER = """# Awesome AI PPT
 [![CC0](https://img.shields.io/badge/license-CC0-4cc61e.svg)](LICENSE)
 [![Docs](https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-blue)](README.md)
 [![Website](https://img.shields.io/badge/GitHub%20Pages-awesome--ai--ppt-0f9f8f)](https://ningzimu.github.io/awesome-ai-ppt/)
-[![Stars](https://img.shields.io/github/stars/ningzimu/awesome-ai-ppt?style=social)](https://github.com/ningzimu/awesome-ai-ppt/stargazers)
+[![Stars](https://img.shields.io/github/stars/ningzimu/awesome-ai-ppt?style=social)](https://github.com/ningzimu/awesome-ai-ppt)
 
 A curated list of open-source projects for AI-assisted presentation generation, PowerPoint automation, PPTX editing, and slide workflow tooling.
 
