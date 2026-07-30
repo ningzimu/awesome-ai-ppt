@@ -129,6 +129,25 @@
     "skill": "No"
   },
   {
+    "name": "open-xml-templating/docxtemplater",
+    "url": "https://github.com/open-xml-templating/docxtemplater",
+    "repo": "open-xml-templating/docxtemplater",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "type": "Library",
+    "output": "DOCX/PPTX",
+    "description": "Template engine for generating DOCX and PPTX with placeholders, loops, and conditions; advanced PowerPoint modules are commercial.",
+    "descriptionZh": "通过占位符、循环和条件生成 DOCX 与 PPTX 的模板引擎；高级 PowerPoint 模块为商业模块。",
+    "tags": [
+      "Library",
+      "Template",
+      "Automation",
+      "PPTX-native"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
     "name": "lewislulu/html-ppt-skill",
     "url": "https://github.com/lewislulu/html-ppt-skill",
     "repo": "lewislulu/html-ppt-skill",
@@ -181,6 +200,24 @@
     ],
     "editable": "Editable",
     "skill": "Skill"
+  },
+  {
+    "name": "zarazhangrui/beautiful-html-templates",
+    "url": "https://github.com/zarazhangrui/beautiful-html-templates",
+    "repo": "zarazhangrui/beautiful-html-templates",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Template Library",
+    "output": "HTML",
+    "description": "Agent-oriented library of reusable HTML slide templates with an index and operating guide for selecting and adapting decks.",
+    "descriptionZh": "面向 coding agent 的可复用 HTML 幻灯片模板库，提供模板索引以及选择和改编 deck 的操作指南。",
+    "tags": [
+      "HTML-first",
+      "Template",
+      "Agent"
+    ],
+    "editable": "Source editable",
+    "skill": "No"
   },
   {
     "name": "scanny/python-pptx",
@@ -346,6 +383,24 @@
     "skill": "Skill"
   },
   {
+    "name": "stackblitz/bolt-slides",
+    "url": "https://github.com/stackblitz/bolt-slides",
+    "repo": "stackblitz/bolt-slides",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Framework",
+    "output": "HTML",
+    "description": "React presentation framework with a bundled agent skill for producing interactive, responsive web decks.",
+    "descriptionZh": "附带 agent skill 的 React 演示框架，用于生成交互式、响应式 Web deck。",
+    "tags": [
+      "HTML-first",
+      "React",
+      "Interactive"
+    ],
+    "editable": "Source editable",
+    "skill": "Skill"
+  },
+  {
     "name": "JuneYaooo/gpt-image2-ppt-skills",
     "url": "https://github.com/JuneYaooo/gpt-image2-ppt-skills",
     "repo": "JuneYaooo/gpt-image2-ppt-skills",
@@ -400,6 +455,25 @@
     "skill": "No"
   },
   {
+    "name": "addsumtech/slides_maker",
+    "url": "https://github.com/addsumtech/slides_maker",
+    "repo": "addsumtech/slides_maker",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Agent skill that turns papers, repositories, and documents into native editable PPTX with notes, charts, and automated review.",
+    "descriptionZh": "将论文、代码仓库和文档生成原生可编辑 PPTX 的 agent skill，支持备注、图表和自动审核。",
+    "tags": [
+      "PPTX-native",
+      "Template",
+      "Automation",
+      "QA"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
     "name": "ningzimu/codex-ppt-skill",
     "url": "https://github.com/ningzimu/codex-ppt-skill",
     "repo": "ningzimu/codex-ppt-skill",
@@ -415,6 +489,25 @@
     ],
     "editable": "Image-based",
     "skill": "Skill"
+  },
+  {
+    "name": "HKUDS/Paper2Slides",
+    "url": "https://github.com/HKUDS/Paper2Slides",
+    "repo": "HKUDS/Paper2Slides",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
+    "type": "App",
+    "output": "Images/PDF",
+    "description": "Document-to-slide pipeline that uses RAG, planning, and image generation to render slide images and PDF decks.",
+    "descriptionZh": "通过 RAG、内容规划和图像生成把文档渲染为幻灯片图片与 PDF deck 的工作流。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "Academic",
+      "PDF"
+    ],
+    "editable": "Image-based",
+    "skill": "No"
   },
   {
     "name": "HuiMi24/chatppt",
@@ -454,6 +547,43 @@
     "skill": "No"
   },
   {
+    "name": "wyozi/react-pptx",
+    "url": "https://github.com/wyozi/react-pptx",
+    "repo": "wyozi/react-pptx",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "type": "Library",
+    "output": "PPTX",
+    "description": "React wrapper for PptxGenJS that creates PowerPoint presentations from declarative JSX components in Node.js or the browser.",
+    "descriptionZh": "PptxGenJS 的 React 封装，可在 Node.js 或浏览器中通过声明式 JSX 组件创建 PowerPoint。",
+    "tags": [
+      "Library",
+      "React",
+      "PPTX-native"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
+    "name": "EveryInc/hands-on-deck",
+    "url": "https://github.com/EveryInc/hands-on-deck",
+    "repo": "EveryInc/hands-on-deck",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "type": "CLI",
+    "output": "PPTX",
+    "description": "Agent-oriented CLI and skill for inspecting, patching, creating, rendering, linting, and verifying PowerPoint files.",
+    "descriptionZh": "面向 agent 的 PowerPoint CLI 与 skill，支持检查、补丁编辑、创建、渲染、lint 和验证 PPTX。",
+    "tags": [
+      "CLI",
+      "Automation",
+      "PPTX-native",
+      "QA"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
     "name": "atharva9167j/dom-to-pptx",
     "url": "https://github.com/atharva9167j/dom-to-pptx",
     "repo": "atharva9167j/dom-to-pptx",
@@ -490,6 +620,26 @@
     ],
     "editable": "Editable",
     "skill": "No"
+  },
+  {
+    "name": "xiao24bei/xiaobei-skill-image-to-vba",
+    "url": "https://github.com/xiao24bei/xiaobei-skill-image-to-vba",
+    "repo": "xiao24bei/xiaobei-skill-image-to-vba",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "type": "Skill",
+    "output": "VBA/PowerPoint",
+    "description": "Agent skill for reconstructing academic figures and slide screenshots as editable Office shapes and VBA code.",
+    "descriptionZh": "将学术图像和幻灯片截图重建为可编辑 Office shapes 与 VBA 代码的 agent skill。",
+    "tags": [
+      "Conversion",
+      "Image-based",
+      "VBA",
+      "PowerPoint",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "CyberTimon/Powerpointer",
@@ -544,6 +694,45 @@
       "Template"
     ],
     "editable": "Source editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "Akxan/ppt-agent-skill",
+    "url": "https://github.com/Akxan/ppt-agent-skill",
+    "repo": "Akxan/ppt-agent-skill",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Skill",
+    "output": "HTML/SVG/PPTX",
+    "description": "Claude Code skill that designs slides as HTML, converts them to SVG, and packages the result as editable PPTX.",
+    "descriptionZh": "先以 HTML 设计幻灯片、再转换为 SVG 并打包为可编辑 PPTX 的 Claude Code skill。",
+    "tags": [
+      "HTML-first",
+      "Conversion",
+      "Template",
+      "PPTX-native"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "M1n-n9/academic-ppt-master",
+    "url": "https://github.com/M1n-n9/academic-ppt-master",
+    "repo": "M1n-n9/academic-ppt-master",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Skill",
+    "output": "SVG/PPTX",
+    "description": "Academic presentation skill that turns papers and documents into SVG-designed slide pages and editable PPTX decks.",
+    "descriptionZh": "将论文和文档制作成 SVG 页面并导出为可编辑 PPTX 的学术演示 skill。",
+    "tags": [
+      "HTML-first",
+      "PPTX-native",
+      "Academic",
+      "Conversion",
+      "Template"
+    ],
+    "editable": "Editable",
     "skill": "Skill"
   },
   {
@@ -732,6 +921,24 @@
     "skill": "Skill"
   },
   {
+    "name": "PHPOffice/PHPPresentation",
+    "url": "https://github.com/PHPOffice/PHPPresentation",
+    "repo": "PHPOffice/PHPPresentation",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "type": "Library",
+    "output": "PPTX/ODP",
+    "description": "LGPL-3.0 PHP library for creating and writing PowerPoint and OpenDocument presentation files.",
+    "descriptionZh": "用于创建和写入 PowerPoint 与 OpenDocument 演示文件的 LGPL-3.0 PHP 库。",
+    "tags": [
+      "Library",
+      "PPTX-native",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
     "name": "ykuwai/ppt-mcp",
     "url": "https://github.com/ykuwai/ppt-mcp",
     "repo": "ykuwai/ppt-mcp",
@@ -803,6 +1010,24 @@
     ],
     "editable": "Editable",
     "skill": "MCP"
+  },
+  {
+    "name": "GordenSun/GordenPPTSkill",
+    "url": "https://github.com/GordenSun/GordenPPTSkill",
+    "repo": "GordenSun/GordenPPTSkill",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Python-pptx skill for building editable PowerPoint decks by applying structured text edits to bundled templates; the templates are limited to personal, research, and non-commercial educational use.",
+    "descriptionZh": "通过结构化文本编辑和内置模板生成可编辑 PowerPoint 的 python-pptx skill；其中模板仅限个人、研究和非商业教育用途。",
+    "tags": [
+      "PPTX-native",
+      "Template",
+      "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
   },
   {
     "name": "YOOTeam/OpenPPT",
@@ -1012,6 +1237,25 @@
       "PPTX-native"
     ],
     "editable": "Partially editable",
+    "skill": "No"
+  },
+  {
+    "name": "ShapeCrawler/ShapeCrawler",
+    "url": "https://github.com/ShapeCrawler/ShapeCrawler",
+    "repo": "ShapeCrawler/ShapeCrawler",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "type": "Library",
+    "output": "PPTX",
+    "description": ".NET library for reading, creating, and modifying PowerPoint files through an API built on Open XML SDK.",
+    "descriptionZh": "基于 Open XML SDK API 读取、创建和修改 PowerPoint 文件的 .NET 库。",
+    "tags": [
+      "Library",
+      "PPTX-native",
+      "Automation",
+      ".NET"
+    ],
+    "editable": "Editable",
     "skill": "No"
   },
   {
