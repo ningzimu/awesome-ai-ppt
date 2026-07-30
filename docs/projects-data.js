@@ -164,6 +164,25 @@ window.AWESOME_AI_PPT_PROJECTS = [
     "skill": "Skill"
   },
   {
+    "name": "chuspeeism/dashi-ppt-skill",
+    "url": "https://github.com/chuspeeism/dashi-ppt-skill",
+    "repo": "chuspeeism/dashi-ppt-skill",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Skill",
+    "output": "HTML/PDF/PPTX",
+    "description": "Agent skill for browser-editable presentations with multiple visual themes and HTML, PDF, and editable PPTX export.",
+    "descriptionZh": "用于生成浏览器可编辑演示文稿的 Agent skill，提供多套视觉主题，并支持导出 HTML、PDF 和可编辑 PPTX。",
+    "tags": [
+      "HTML-first",
+      "Editor",
+      "Conversion",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
     "name": "scanny/python-pptx",
     "url": "https://github.com/scanny/python-pptx",
     "repo": "scanny/python-pptx",
@@ -233,6 +252,23 @@ window.AWESOME_AI_PPT_PROJECTS = [
       "Image-first",
       "Image-based",
       "Video"
+    ],
+    "editable": "Image-based",
+    "skill": "Skill"
+  },
+  {
+    "name": "helloianneo/ian-handdrawn-ppt",
+    "url": "https://github.com/helloianneo/ian-handdrawn-ppt",
+    "repo": "helloianneo/ian-handdrawn-ppt",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
+    "type": "Skill",
+    "output": "Images",
+    "description": "Codex skill for generating full-page Chinese hand-drawn technical presentation visuals as PNG images.",
+    "descriptionZh": "用于生成中文手绘技术演示整页视觉的 Codex skill，以 PNG 图片形式输出。",
+    "tags": [
+      "Image-first",
+      "Image-based"
     ],
     "editable": "Image-based",
     "skill": "Skill"

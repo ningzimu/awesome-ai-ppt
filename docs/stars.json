@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-07-29T19:41:43Z",
   "source": "github-api",
-  "repoCount": 70,
+  "repoCount": 72,
   "stars": {
     "1weiho/open-slide": 6044,
     "Anionex/banana-slides": 15350,
@@ -35,11 +35,13 @@
     "atharva9167j/dom-to-pptx": 302,
     "barun-saha/slide-deck-ai": 365,
     "bowenliang123/markdown-exporter": 255,
+    "chuspeeism/dashi-ppt-skill": 4433,
     "code-on-sunday/slide-deck-generator": 134,
     "codesstar/next-slide": 42,
     "daekeun-ml/ppt-translator": 66,
     "gitbrent/PptxGenJS": 5913,
     "grapeot/nbp_slides": 86,
+    "helloianneo/ian-handdrawn-ppt": 1295,
     "hugohe3/ppt-master": 41814,
     "iOfficeAI/OfficeCLI": 23146,
     "icip-cas/PPTAgent": 4862,
