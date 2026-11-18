@@ -91,6 +91,25 @@
     "skill": "Skill"
   },
   {
+    "name": "tw93/Kami",
+    "url": "https://github.com/tw93/Kami",
+    "repo": "tw93/Kami",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Skill",
+    "output": "HTML/PDF/PNG/PPTX",
+    "description": "Agent skill with typography rules and document templates, including slides, that renders HTML to PDF or PNG and can export editable PowerPoint.",
+    "descriptionZh": "带有排版规则和文档模板的 agent skill，包含幻灯片，可将 HTML 渲染为 PDF 或 PNG，并导出可编辑 PowerPoint。",
+    "tags": [
+      "HTML-first",
+      "Template",
+      "PDF",
+      "MCP"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
+  },
+  {
     "name": "presenton/presenton",
     "url": "https://github.com/presenton/presenton",
     "repo": "presenton/presenton",
@@ -365,6 +384,63 @@
     "skill": "Skill"
   },
   {
+    "name": "carnot-tech/jinba-consulting-pptx-skill",
+    "url": "https://github.com/carnot-tech/jinba-consulting-pptx-skill",
+    "repo": "carnot-tech/jinba-consulting-pptx-skill",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Skill",
+    "output": "HTML/PDF/PPTX",
+    "description": "Consulting-style skill that composes 16:9 HTML slide parts, checks layout rules, prints PDF in Chrome, and converts the deck to editable PowerPoint when requested.",
+    "descriptionZh": "咨询风格 skill，组装 16:9 HTML 幻灯片部件并检查版式规则，用 Chrome 打印 PDF，并在需要时转换为可编辑 PowerPoint。",
+    "tags": [
+      "HTML-first",
+      "Template",
+      "PDF",
+      "Conversion"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "feimacode/open-design-agent-kit",
+    "url": "https://github.com/feimacode/open-design-agent-kit",
+    "repo": "feimacode/open-design-agent-kit",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Skill",
+    "output": "HTML/PDF/PNG/PPTX",
+    "description": "Agent design kit for HTML posters, social posts, landing pages, and slide decks, exporting PDF plus image-based or editable PowerPoint.",
+    "descriptionZh": "用于生成 HTML 海报、社媒图、落地页和幻灯片的 agent 设计套件，可导出 PDF，以及图片式或可编辑 PowerPoint。",
+    "tags": [
+      "HTML-first",
+      "MCP",
+      "PDF",
+      "Template",
+      "Conversion"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "op7418/dsh-guizang-design",
+    "url": "https://github.com/op7418/dsh-guizang-design",
+    "repo": "op7418/dsh-guizang-design",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Plugin",
+    "output": "HTML/PNG/PDF",
+    "description": "DeepSeek Harness plugin whose web-PPT workflow is a packaged snapshot of guizang-ppt-skill and writes one HTML deck, with social-card and page skills under the same design system; licensed under AGPL-3.0.",
+    "descriptionZh": "DeepSeek Harness 插件，网页 PPT 工作流打包了 guizang-ppt-skill 的快照并输出单个 HTML 文件，同时包含同一设计系统下的图文卡片和网页排版 skill；采用 AGPL-3.0。",
+    "tags": [
+      "HTML-first",
+      "Plugin",
+      "Template"
+    ],
+    "editable": "Source editable",
+    "skill": "Skill"
+  },
+  {
     "name": "sunbigfly/ppt-agent-skills",
     "url": "https://github.com/sunbigfly/ppt-agent-skills",
     "repo": "sunbigfly/ppt-agent-skills",
@@ -428,6 +504,40 @@
     "output": "PPTX",
     "description": "Claude skill for academic presentations, enforcing action titles, argument structure, exhibit discipline, citations, and communication-first design.",
     "descriptionZh": "面向学术演示的 Claude skill，强调行动标题、论证结构、图表纪律、引用规范和表达优先设计。",
+    "tags": [
+      "PPTX-native",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "sunchaokun/PPT-Design-Skill",
+    "url": "https://github.com/sunchaokun/PPT-Design-Skill",
+    "repo": "sunchaokun/PPT-Design-Skill",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PPTX/PDF/PNG",
+    "description": "Design skill for OpenCode, Claude Code, and Codex that builds native editable PowerPoint with pptx-designer, then reviews rendered pages.",
+    "descriptionZh": "面向 OpenCode、Claude Code 和 Codex 的设计 skill，用 pptx-designer 生成原生可编辑 PowerPoint，再检查渲染后的页面。",
+    "tags": [
+      "PPTX-native",
+      "Template"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "zhouwei713/luobo-ppt",
+    "url": "https://github.com/zhouwei713/luobo-ppt",
+    "repo": "zhouwei713/luobo-ppt",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Agent skill that uses python-pptx to generate a new deck or restyle an existing PPTX into native editable PowerPoint.",
+    "descriptionZh": "使用 python-pptx 从零生成演示稿，或将已有 PPTX 美化为原生可编辑 PowerPoint 的 agent skill。",
     "tags": [
       "PPTX-native",
       "Template"
@@ -642,6 +752,23 @@
     "skill": "Skill"
   },
   {
+    "name": "acnlie/open-kimi-ppt-skill",
+    "url": "https://github.com/acnlie/open-kimi-ppt-skill",
+    "repo": "acnlie/open-kimi-ppt-skill",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PPTD/PPTX",
+    "description": "Unofficial Kimi Slides skill that writes editable PPTD projects and exports native PPTX with a local browser editor; the repository limits use to learning and research.",
+    "descriptionZh": "非官方 Kimi Slides skill，编写可编辑 PPTD，并通过本地浏览器编辑器导出原生 PPTX；仓库限定用于学习与研究。",
+    "tags": [
+      "PPTX-native",
+      "Editor"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
     "name": "CyberTimon/Powerpointer",
     "url": "https://github.com/CyberTimon/Powerpointer",
     "repo": "CyberTimon/Powerpointer",
@@ -673,6 +800,25 @@
       "PPTX-native",
       "Template",
       "Automation"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "thePlannerIvan/planners-ppt-hell",
+    "url": "https://github.com/thePlannerIvan/planners-ppt-hell",
+    "repo": "thePlannerIvan/planners-ppt-hell",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Skill",
+    "output": "SVG/PPTX",
+    "description": "Planner skill that draws each slide as SVG, reviews it on a web workbench, and converts the geometry into native editable PowerPoint with python-pptx; licensed under AGPL-3.0.",
+    "descriptionZh": "面向策划的 skill，先把每页画成 SVG，在网页审阅台修改后，再用 python-pptx 把几何结构转换成原生可编辑 PowerPoint；采用 AGPL-3.0。",
+    "tags": [
+      "HTML-first",
+      "PPTX-native",
+      "Conversion",
+      "Template"
     ],
     "editable": "Editable",
     "skill": "Skill"
@@ -771,6 +917,23 @@
       "Automation"
     ],
     "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "irenerachel/visual-style-ppt-skill",
+    "url": "https://github.com/irenerachel/visual-style-ppt-skill",
+    "repo": "irenerachel/visual-style-ppt-skill",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
+    "type": "Skill",
+    "output": "Images/PPTX",
+    "description": "Visual-style skill that generates one image per slide and packages those images into an image-only PPTX; the repository does not declare a license.",
+    "descriptionZh": "视觉风格 skill，逐页生成幻灯片图片并打包为仅含图片的 PPTX；仓库未声明许可证。",
+    "tags": [
+      "Image-first",
+      "Image-based"
+    ],
+    "editable": "Image-based",
     "skill": "Skill"
   },
   {
