@@ -1936,7 +1936,16 @@ html[lang="en"] .hero-title {
 
 @media (max-width: 760px) {
   .topbar {
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 12px;
+  }
+
+  .top-actions {
+    flex-wrap: wrap;
+    max-width: 100%;
   }
 
   .nav-center {
@@ -1975,5 +1984,22 @@ html[lang="en"] .hero-title {
 
   .footer-inner {
     padding: 18px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    gap: 8px 10px;
+  }
+
+  .top-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .language-switch button {
+    min-width: 40px;
+    padding: 0 8px;
   }
 }
