@@ -39,103 +39,58 @@ const tagLabelsZh = {
   Noncommercial: "非商用"
 };
 
-const routeSvgs = {
-  "HTML-First Presentation Workflows": `
-    <svg width="112" height="36" viewBox="0 0 112 36" fill="none" aria-hidden="true">
-      <rect x="2" y="3" width="60" height="30" rx="5" stroke="currentColor" stroke-width="1.5" opacity="0.85"/>
-      <circle cx="9" cy="9" r="1.5" fill="currentColor" opacity="0.6"/>
-      <circle cx="14" cy="9" r="1.5" fill="currentColor" opacity="0.6"/>
-      <path d="M9 17h20M9 22h32M9 27h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
-      <path d="M68 18h12m0 0-3.5-3.5M80 18l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-      <rect x="85" y="7" width="25" height="22" rx="4" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.5"/>
-      <path d="M91 15h13M91 20h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    </svg>
-  `,
-  "Image-First Presentation Workflows": `
-    <svg width="112" height="36" viewBox="0 0 112 36" fill="none" aria-hidden="true">
-      <rect x="4" y="4" width="48" height="28" rx="5" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.5"/>
-      <circle cx="16" cy="13" r="3" fill="currentColor" opacity="0.75"/>
-      <path d="M9 27l10-9 8 7 7-5 13 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M58 18h14m0 0-3.5-3.5M72 18l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-      <rect x="78" y="6" width="30" height="24" rx="4" stroke="currentColor" stroke-width="1.5"/>
-      <rect x="82" y="10" width="22" height="16" rx="2" fill="currentColor" fill-opacity="0.18"/>
-    </svg>
-  `,
-  "PPTX-Native Generation Workflows": `
-    <svg width="112" height="36" viewBox="0 0 112 36" fill="none" aria-hidden="true">
-      <rect x="6" y="4" width="100" height="28" rx="5" stroke="currentColor" stroke-width="1.5" opacity="0.9"/>
-      <rect x="13" y="10" width="38" height="6" rx="2" fill="currentColor" fill-opacity="0.22"/>
-      <path d="M13 22h28M13 26h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.6"/>
-      <rect x="60" y="10" width="38" height="16" rx="3" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.3"/>
-      <path d="M67 22v-5M74 22v-8M81 22v-4M88 22v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-  `,
-  "PPTX Libraries and Automation Infrastructure": `
-    <svg width="112" height="36" viewBox="0 0 112 36" fill="none" aria-hidden="true">
-      <rect x="6" y="9" width="24" height="18" rx="4" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.5"/>
-      <rect x="44" y="6" width="24" height="24" rx="5" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.6"/>
-      <rect x="82" y="9" width="24" height="18" rx="4" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.5"/>
-      <path d="M30 18h14M68 18h14" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 2.5"/>
-      <circle cx="56" cy="18" r="3.5" fill="currentColor"/>
-    </svg>
-  `
-};
-
 const categoryMeta = {
   All: {
-    index: "ALL",
-    zh: "全部分类",
-    en: "All routes",
-    shortZh: "全部",
-    shortEn: "All",
-    color: "var(--text)",
-    bg: "var(--bg-muted)",
-    border: "var(--border-strong)"
+    zh: "全部路线",
+    en: "All Routes",
+    shortZh: "全部路线",
+    shortEn: "All Routes",
+    briefZh: "横向对比四类开源 PPT 工作流",
+    briefEn: "Compare all four open-source routes",
+    color: "var(--accent)",
+    bg: "var(--accent-soft)",
+    border: "var(--accent)"
   },
   "HTML-First Presentation Workflows": {
-    index: "01 · HTML-FIRST",
     zh: "HTML 风格 PPT 方案",
     en: "HTML-First Workflows",
     shortZh: "HTML 风格",
     shortEn: "HTML-First",
-    descZh: "先生成网页幻灯片或 React 演示，再导出或转换为 PPTX / PDF",
-    descEn: "Create web slides or React decks first, then export or convert to PPTX",
+    briefZh: "网页 / React 先行，再导出转换",
+    briefEn: "Web & React slides first, then export",
     color: "var(--route-html)",
     bg: "var(--route-html-bg)",
     border: "var(--route-html-border)"
   },
   "Image-First Presentation Workflows": {
-    index: "02 · IMAGE-FIRST",
     zh: "图片生成式 PPT 方案",
     en: "Image-First Workflows",
     shortZh: "图片生成式",
     shortEn: "Image-First",
-    descZh: "由图像模型生成整页高视觉幻灯片，再封装为 PPTX、PDF 或视频",
-    descEn: "Generate full visual slides with image models, packaged as PPTX or video",
+    briefZh: "图像模型直出整页高视觉幻灯片",
+    briefEn: "Image models for full-slide visuals",
     color: "var(--route-image)",
     bg: "var(--route-image-bg)",
     border: "var(--route-image-border)"
   },
   "PPTX-Native Generation Workflows": {
-    index: "03 · PPTX-NATIVE",
     zh: "PPTX 库生成式 PPT 方案",
     en: "PPTX-Native Workflows",
     shortZh: "PPTX 原生",
     shortEn: "PPTX-Native",
-    descZh: "通过 python-pptx、PptxGenJS 或 Office XML 直接生成原生可编辑对象",
-    descEn: "Generate native editable PowerPoint elements via libraries or Office XML",
+    briefZh: "直接生成原生可编辑 PPTX 元素",
+    briefEn: "Native editable PowerPoint elements",
     color: "var(--route-pptx)",
     bg: "var(--route-pptx-bg)",
     border: "var(--route-pptx-border)"
   },
   "PPTX Libraries and Automation Infrastructure": {
-    index: "04 · INFRA & REBUILD",
     zh: "PPTX 库与自动化基础设施",
     en: "Libraries & Infrastructure",
     shortZh: "库与基础设施",
     shortEn: "Infrastructure",
-    descZh: "底层库、MCP Server、Office COM 自动化及 OCR / DOM 可编辑重建",
-    descEn: "Core libraries, MCP servers, COM automation, and editable reconstruction",
+    briefZh: "底层库、MCP、COM 与可编辑重建",
+    briefEn: "Core libraries, MCP, COM & rebuild",
     color: "var(--route-infra)",
     bg: "var(--route-infra-bg)",
     border: "var(--route-infra-border)"
@@ -151,6 +106,16 @@ const editableMeta = {
   "Partially editable": { zh: "部分可编辑", en: "Partially editable", cls: "pill-partial" },
   "Image-based": { zh: "图片式", en: "Image-based", cls: "pill-image" },
   Unknown: { zh: "未确认", en: "Unknown", cls: "pill-neutral" }
+};
+
+const quickLevels = ["all", "skill", "mcp", "app", "library"];
+
+const quickMeta = {
+  all: { zh: "全部形态", en: "All types" },
+  skill: { zh: "Agent Skill", en: "Agent Skill" },
+  mcp: { zh: "MCP Server", en: "MCP Server" },
+  app: { zh: "独立应用", en: "App" },
+  library: { zh: "开发库 / CLI", en: "Library / CLI" }
 };
 
 function readStorage(key, fallback) {
@@ -185,49 +150,36 @@ const translations = {
   zh: {
     pageTitle: "Awesome AI PPT — AI 演示与 PPTX 工作流开源目录",
     brandSub: "Slide Workflows",
-    navRoutes: "技术路线",
     navDirectory: "项目目录",
     navAgent: "Agent Skill",
+    navContribute: "贡献指南",
     themeToggleLabel: "切换深浅色主题",
     clearSearchLabel: "清空搜索",
     gridViewLabel: "卡片视图",
     listViewLabel: "表格列表视图",
     sortAriaLabel: "排序方式",
-    heroBadge: "开源精选 · 每日自动同步 GitHub Star",
+    heroBadgeShort: "每日同步 Star",
     heroTitlePre: "发现最合适的",
     heroTitleAccent: "AI PPT 开源工作流",
     heroCopy: "按主工作流源表示分类，而非仅看导出格式。系统对比 HTML 风格、图片生成式、PPTX 原生生成与自动化重建基础设施。",
     searchLabel: "搜索项目",
-    searchPlaceholder: "搜索仓库名、技术路线、输出格式、中英文关键词...",
-    trendingLabel: "热门检索：",
+    searchPlaceholder: "搜索仓库名、技术路线、输出格式或关键词...",
+    trendingLabel: "快捷检索：",
     projectsLabel: "精选项目",
-    skillsLabel: "支持 Skill / MCP",
-    editableLabel: "原生可编辑 PPTX",
-    thresholdLabel: "Star 收录门槛",
-    routesKicker: "FOUR WORKFLOW ROUTES",
-    routesHeading: "四大技术路线画廊",
-    routesSub: "点击任意路线画布，即刻筛选对应开源方案",
-    filterTitle: "筛选条件",
+    skillsLabel: "Skill / MCP",
+    editableLabel: "原生可编辑",
+    filterTitle: "精细筛选",
     resetFilters: "清空",
-    facetRoute: "技术路线",
     facetEditability: "可编辑性",
     facetIntegration: "接入形态",
     facetTags: "热门标签",
     showAllTags: "展开全部",
     collapseTags: "收起",
-    quickAll: "全部",
-    quickSkill: "Agent Skill",
-    quickMcp: "MCP Server",
-    quickApp: "独立应用",
-    quickLib: "开发库 / CLI",
-    promoTitle: "让 AI 帮你做 PPT 工具选型",
-    promoCopy: "安装 awesome-ai-ppt skill，告诉 AI 你的材料与编辑要求，自动对比原仓库推荐方案。",
-    promoCta: "查看接入指南",
     sortLabel: "排序",
     sortStarsDesc: "按 Star 降序",
     sortStarsAsc: "按 Star 升序",
     sortNameAsc: "按名称 A-Z",
-    projectCount: (count) => `共 ${count} 个项目`,
+    projectCount: (count) => `共 ${count} 个`,
     updatedPrefix: (date) => `同步于 ${date}`,
     noResults: "没有找到符合当前筛选条件的项目。",
     resetBtnFull: "重置全部筛选条件",
@@ -244,49 +196,36 @@ const translations = {
   en: {
     pageTitle: "Awesome AI PPT — Open-Source AI Presentation & PPTX Directory",
     brandSub: "Slide Workflows",
-    navRoutes: "Routes",
     navDirectory: "Directory",
     navAgent: "Agent Skill",
+    navContribute: "Contributing",
     themeToggleLabel: "Toggle light or dark theme",
     clearSearchLabel: "Clear search",
     gridViewLabel: "Card grid view",
     listViewLabel: "Compact list view",
     sortAriaLabel: "Sort projects",
-    heroBadge: "Curated Open-Source · Stars Synced Daily",
+    heroBadgeShort: "Stars Synced Daily",
     heroTitlePre: "Find the right",
     heroTitleAccent: "AI PPT Workflow",
     heroCopy: "Classified by primary source representation rather than export format. Compare HTML-first, image-first, PPTX-native, and automation infrastructure.",
     searchLabel: "Search projects",
     searchPlaceholder: "Search repo, route, output format, or keywords...",
-    trendingLabel: "Try:",
+    trendingLabel: "Quick try:",
     projectsLabel: "Projects",
     skillsLabel: "Skill / MCP",
     editableLabel: "Native Editable",
-    thresholdLabel: "Stars Min",
-    routesKicker: "FOUR WORKFLOW ROUTES",
-    routesHeading: "Four Technical Routes",
-    routesSub: "Click any slide route card to filter matching projects",
     filterTitle: "Filters",
     resetFilters: "Reset",
-    facetRoute: "Workflow Route",
     facetEditability: "Editability",
     facetIntegration: "Integration",
     facetTags: "Popular Tags",
     showAllTags: "Show all",
     collapseTags: "Collapse",
-    quickAll: "All",
-    quickSkill: "Agent Skill",
-    quickMcp: "MCP Server",
-    quickApp: "App",
-    quickLib: "Library / CLI",
-    promoTitle: "Let your AI agent pick the tool",
-    promoCopy: "Install the awesome-ai-ppt skill to match projects against your materials, editability, and setup constraints.",
-    promoCta: "Agent setup guide",
     sortLabel: "Sort",
     sortStarsDesc: "Stars: High to Low",
     sortStarsAsc: "Stars: Low to High",
     sortNameAsc: "Name: A-Z",
-    projectCount: (count) => `${count} ${count === 1 ? "project" : "projects"}`,
+    projectCount: (count) => `${count} ${count === 1 ? "item" : "items"}`,
     updatedPrefix: (date) => `Synced ${date}`,
     noResults: "No projects match your current filters.",
     resetBtnFull: "Reset all filters",
@@ -304,16 +243,19 @@ const translations = {
 
 const nodes = {
   routeCards: document.querySelector("#routeCards"),
-  categoryNav: document.querySelector("#categoryNav"),
   editableNav: document.querySelector("#editableNav"),
+  quickFilters: document.querySelector("#quickFilters"),
   tagCloud: document.querySelector("#tagCloud"),
   toggleAllTags: document.querySelector("#toggleAllTags"),
   projectList: document.querySelector("#projectList"),
   searchInput: document.querySelector("#searchInput"),
   clearSearchBtn: document.querySelector("#clearSearchBtn"),
+  searchHints: document.querySelector("#searchHints"),
+  activeFiltersWrap: document.querySelector("#activeFiltersWrap"),
+  activeFilters: document.querySelector("#activeFilters"),
+  toolbarReset: document.querySelector("#toolbarReset"),
   sortSelect: document.querySelector("#sortSelect"),
   resultCount: document.querySelector("#resultCount"),
-  activeFilters: document.querySelector("#activeFilters"),
   sidebarReset: document.querySelector("#sidebarReset"),
   statProjects: document.querySelector("#statProjects"),
   statSkills: document.querySelector("#statSkills"),
@@ -322,7 +264,6 @@ const nodes = {
   repoStars: document.querySelector("#repoStars"),
   themeToggle: document.querySelector("#themeToggle"),
   toast: document.querySelector("#toast"),
-  quickFilterButtons: document.querySelectorAll("[data-quick]"),
   hintButtons: document.querySelectorAll("[data-hint]"),
   viewButtons: document.querySelectorAll("[data-view]"),
   languageButtons: document.querySelectorAll("[data-lang]"),
@@ -377,12 +318,13 @@ function projectStars(project) {
 }
 
 function searchable(project) {
+  if (project._searchText) return project._searchText;
   const catMeta = categoryMeta[project.category] || {};
   const editInfo = editableMeta[project.editable] || {};
   const tags = project.tags || [];
   const translatedTags = tags.map((tag) => tagLabelsZh[tag]).filter(Boolean);
 
-  return [
+  const text = [
     project.name,
     project.repo,
     project.category,
@@ -404,6 +346,8 @@ function searchable(project) {
     .filter(Boolean)
     .join(" ")
     .toLowerCase();
+  project._searchText = text;
+  return text;
 }
 
 function allTags() {
@@ -436,30 +380,70 @@ function sorted(projects) {
   });
 }
 
-function matchesQuickFilter(project) {
+function matchesQuickValue(project, quick) {
   const tags = project.tags || [];
   const type = String(project.type || "").toLowerCase();
-  if (state.quick === "skill") return project.skill === "Skill";
-  if (state.quick === "mcp") return project.skill === "MCP" || tags.includes("MCP");
-  if (state.quick === "app") return type === "app" || tags.includes("App");
-  if (state.quick === "library") {
+  if (quick === "skill") return project.skill === "Skill";
+  if (quick === "mcp") return project.skill === "MCP" || tags.includes("MCP");
+  if (quick === "app") return type === "app" || tags.includes("App");
+  if (quick === "library") {
     return type === "library" || type === "cli" || tags.includes("Library") || tags.includes("CLI");
   }
   return true;
 }
 
-function filteredProjects() {
+function matchesProject(project, omit = {}) {
   const query = state.query.trim().toLowerCase();
-  return sorted(
-    state.projects.filter((project) => {
-      const categoryMatch = state.category === "All" || project.category === state.category;
-      const editableMatch = state.editable === "All" || project.editable === state.editable;
-      const tagMatch = !state.tag || (project.tags || []).includes(state.tag);
-      const quickMatch = matchesQuickFilter(project);
-      const queryMatch = !query || searchable(project).includes(query);
-      return categoryMatch && editableMatch && tagMatch && quickMatch && queryMatch;
-    })
-  );
+  const categoryMatch = omit.category || state.category === "All" || project.category === state.category;
+  const editableMatch = omit.editable || state.editable === "All" || project.editable === state.editable;
+  const tagMatch = omit.tag || !state.tag || (project.tags || []).includes(state.tag);
+  const quickMatch = omit.quick || matchesQuickValue(project, state.quick);
+  const queryMatch = omit.query || !query || searchable(project).includes(query);
+  return categoryMatch && editableMatch && tagMatch && quickMatch && queryMatch;
+}
+
+function filteredProjects() {
+  return sorted(state.projects.filter((project) => matchesProject(project)));
+}
+
+function computeFacetCounts() {
+  const routeCounts = new Map(categories.map((cat) => [cat, 0]));
+  const editableCounts = new Map(editableLevels.map((lvl) => [lvl, 0]));
+  const quickCounts = new Map(quickLevels.map((q) => [q, 0]));
+  const tagCounts = new Map();
+
+  for (const project of state.projects) {
+    if (matchesProject(project, { category: true })) {
+      routeCounts.set("All", (routeCounts.get("All") || 0) + 1);
+      if (routeCounts.has(project.category)) {
+        routeCounts.set(project.category, (routeCounts.get(project.category) || 0) + 1);
+      }
+    }
+
+    if (matchesProject(project, { editable: true })) {
+      editableCounts.set("All", (editableCounts.get("All") || 0) + 1);
+      if (editableCounts.has(project.editable)) {
+        editableCounts.set(project.editable, (editableCounts.get(project.editable) || 0) + 1);
+      }
+    }
+
+    if (matchesProject(project, { quick: true })) {
+      quickCounts.set("all", (quickCounts.get("all") || 0) + 1);
+      for (const q of quickLevels) {
+        if (q !== "all" && matchesQuickValue(project, q)) {
+          quickCounts.set(q, (quickCounts.get(q) || 0) + 1);
+        }
+      }
+    }
+
+    if (matchesProject(project, { tag: true })) {
+      for (const tag of project.tags || []) {
+        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+      }
+    }
+  }
+
+  return { routeCounts, editableCounts, quickCounts, tagCounts };
 }
 
 function hasActiveFilters() {
@@ -476,8 +460,8 @@ function captureFocusTarget() {
   const active = document.activeElement;
   if (!active || active === document.body) return null;
   if (active.dataset.route) return { scope: nodes.routeCards, attr: "data-route", value: active.dataset.route };
-  if (active.dataset.category) return { scope: nodes.categoryNav, attr: "data-category", value: active.dataset.category };
   if (active.dataset.editable) return { scope: nodes.editableNav, attr: "data-editable", value: active.dataset.editable };
+  if (active.dataset.quick) return { scope: nodes.quickFilters, attr: "data-quick", value: active.dataset.quick };
   if (active.dataset.tagClick) {
     const scope = nodes.tagCloud && nodes.tagCloud.contains(active) ? nodes.tagCloud : nodes.projectList;
     return { scope, attr: "data-tag-click", value: active.dataset.tagClick };
@@ -502,74 +486,34 @@ function restoreFocusTarget(token) {
   const replacement = token.scope.querySelector(`[${token.attr}="${escaped}"]`);
   if (replacement && typeof replacement.focus === "function") {
     replacement.focus({ preventScroll: true });
-  } else if (nodes.resultCount && typeof nodes.resultCount.focus === "function") {
-    nodes.resultCount.focus({ preventScroll: true });
   }
 }
 
-function renderRouteDeck() {
+function renderRouteTabs() {
   if (!nodes.routeCards) return;
-  const routes = categories.slice(1);
-  nodes.routeCards.innerHTML = routes
+  nodes.routeCards.innerHTML = categories
     .map((category) => {
       const meta = categoryMeta[category];
-      const count = state.projects.filter((p) => p.category === category).length;
       const isSelected = state.category === category;
-      const active = isSelected ? " active" : "";
-      const title = state.lang === "zh" ? meta.zh : meta.en;
-      const desc = state.lang === "zh" ? meta.descZh : meta.descEn;
+      const title = state.lang === "zh" ? meta.shortZh : meta.shortEn;
+      const brief = state.lang === "zh" ? meta.briefZh : meta.briefEn;
+      const isAll = category === "All";
       return `
         <button
-          class="route-slide-card${active}"
+          class="route-tab-card${isSelected ? " active" : ""}${isAll ? " is-all" : ""}"
           type="button"
           data-route="${escapeHtml(category)}"
           aria-pressed="${isSelected ? "true" : "false"}"
           style="--r-color:${meta.color};--r-bg:${meta.bg};--r-border:${meta.border}"
         >
-          <div class="slide-card-top">
-            <span class="slide-index">${escapeHtml(meta.index)}</span>
-            <span class="slide-count">${count}</span>
+          <div class="route-tab-top">
+            <span class="route-tab-title">
+              ${isAll ? "" : `<span class="route-tab-dot" aria-hidden="true"></span>`}
+              <span>${escapeHtml(title)}</span>
+            </span>
+            <span class="route-tab-count" data-count-for="route">0</span>
           </div>
-          <div class="slide-preview-canvas">
-            ${routeSvgs[category] || ""}
-          </div>
-          <div class="slide-card-body">
-            <h3>${escapeHtml(title)}</h3>
-            <p>${escapeHtml(desc)}</p>
-          </div>
-        </button>
-      `;
-    })
-    .join("");
-}
-
-function renderCategorySidebar() {
-  nodes.categoryNav.innerHTML = categories
-    .map((category) => {
-      const meta = categoryMeta[category];
-      const count =
-        category === "All"
-          ? state.projects.length
-          : state.projects.filter((p) => p.category === category).length;
-      const isSelected = category === state.category;
-      const active = isSelected ? " active" : "";
-      const label = state.lang === "zh" ? meta.shortZh : meta.shortEn;
-      const dot =
-        category === "All"
-          ? ""
-          : `<span class="facet-dot" style="background:${meta.color}"></span>`;
-      return `
-        <button
-          class="facet-row${active}"
-          type="button"
-          data-category="${escapeHtml(category)}"
-          aria-pressed="${isSelected ? "true" : "false"}"
-        >
-          <span class="facet-row-left">
-            ${dot}
-            <span>${escapeHtml(label)}</span>
-          </span>
-          <span class="facet-count">${count}</span>
+          <p class="route-tab-brief">${escapeHtml(brief)}</p>
         </button>
       `;
     })
@@ -583,15 +527,41 @@ function renderEditableSidebar() {
       const info = editableMeta[level];
       const label = state.lang === "zh" ? info.zh : info.en;
       const isSelected = state.editable === level;
-      const active = isSelected ? " active" : "";
       return `
         <button
-          class="facet-pill${active}"
+          class="facet-row${isSelected ? " active" : ""}"
           type="button"
           data-editable="${escapeHtml(level)}"
           aria-pressed="${isSelected ? "true" : "false"}"
         >
-          ${escapeHtml(label)}
+          <span class="facet-row-left">
+            <span>${escapeHtml(label)}</span>
+          </span>
+          <span class="facet-count" data-count-for="editable">0</span>
+        </button>
+      `;
+    })
+    .join("");
+}
+
+function renderQuickSidebar() {
+  if (!nodes.quickFilters) return;
+  nodes.quickFilters.innerHTML = quickLevels
+    .map((level) => {
+      const info = quickMeta[level];
+      const label = state.lang === "zh" ? info.zh : info.en;
+      const isSelected = state.quick === level;
+      return `
+        <button
+          class="facet-row${isSelected ? " active" : ""}"
+          type="button"
+          data-quick="${escapeHtml(level)}"
+          aria-pressed="${isSelected ? "true" : "false"}"
+        >
+          <span class="facet-row-left">
+            <span>${escapeHtml(label)}</span>
+          </span>
+          <span class="facet-count" data-count-for="quick">0</span>
         </button>
       `;
     })
@@ -600,25 +570,26 @@ function renderEditableSidebar() {
 
 function renderTagCloud() {
   if (!nodes.tagCloud) return;
+  const previousScrollTop = nodes.tagCloud.scrollTop;
   const tags = allTags();
   const visible = state.showAllTags ? tags : tags.slice(0, 14);
   nodes.tagCloud.innerHTML = visible
     .map(([tag, count]) => {
       const isSelected = state.tag === tag;
-      const active = isSelected ? " active" : "";
       return `
         <button
-          class="cloud-tag${active}"
+          class="cloud-tag${isSelected ? " active" : ""}"
           type="button"
           data-tag-click="${escapeHtml(tag)}"
           aria-pressed="${isSelected ? "true" : "false"}"
         >
           <span>${escapeHtml(tagDisplay(tag))}</span>
-          <em>${count}</em>
+          <em data-count-for="tag">${count}</em>
         </button>
       `;
     })
     .join("");
+  nodes.tagCloud.scrollTop = previousScrollTop;
 
   if (nodes.toggleAllTags) {
     const t = translations[state.lang];
@@ -626,6 +597,69 @@ function renderTagCloud() {
     nodes.toggleAllTags.textContent = state.showAllTags ? t.collapseTags : t.showAllTags;
     nodes.toggleAllTags.setAttribute("aria-expanded", state.showAllTags ? "true" : "false");
   }
+}
+
+function syncFilterStates() {
+  const { routeCounts, editableCounts, quickCounts, tagCounts } = computeFacetCounts();
+
+  if (nodes.routeCards) {
+    nodes.routeCards.querySelectorAll("button[data-route]").forEach((btn) => {
+      const route = btn.dataset.route;
+      const isActive = state.category === route;
+      const count = routeCounts.get(route) || 0;
+      btn.classList.toggle("active", isActive);
+      btn.classList.toggle("is-empty", !isActive && count === 0 && route !== "All");
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+      const countEl = btn.querySelector("[data-count-for='route']");
+      if (countEl) countEl.textContent = count;
+    });
+  }
+
+  if (nodes.editableNav) {
+    nodes.editableNav.querySelectorAll("button[data-editable]").forEach((btn) => {
+      const level = btn.dataset.editable;
+      const isActive = state.editable === level;
+      const count = editableCounts.get(level) || 0;
+      btn.classList.toggle("active", isActive);
+      btn.classList.toggle("is-empty", !isActive && count === 0 && level !== "All");
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+      const countEl = btn.querySelector("[data-count-for='editable']");
+      if (countEl) countEl.textContent = count;
+    });
+  }
+
+  if (nodes.quickFilters) {
+    nodes.quickFilters.querySelectorAll("button[data-quick]").forEach((btn) => {
+      const level = btn.dataset.quick;
+      const isActive = state.quick === level;
+      const count = quickCounts.get(level) || 0;
+      btn.classList.toggle("active", isActive);
+      btn.classList.toggle("is-empty", !isActive && count === 0 && level !== "all");
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+      const countEl = btn.querySelector("[data-count-for='quick']");
+      if (countEl) countEl.textContent = count;
+    });
+  }
+
+  if (nodes.tagCloud) {
+    nodes.tagCloud.querySelectorAll("button[data-tag-click]").forEach((btn) => {
+      const tag = btn.dataset.tagClick;
+      const isActive = state.tag === tag;
+      const count = tagCounts.get(tag) || 0;
+      btn.classList.toggle("active", isActive);
+      btn.classList.toggle("is-empty", !isActive && count === 0);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+      const countEl = btn.querySelector("[data-count-for='tag']");
+      if (countEl) countEl.textContent = count;
+    });
+  }
+
+  const normalizedQuery = state.query.trim().toLowerCase();
+  nodes.hintButtons.forEach((btn) => {
+    const isActive = normalizedQuery !== "" && normalizedQuery === String(btn.dataset.hint || "").toLowerCase();
+    btn.classList.toggle("active", isActive);
+    btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
 }
 
 function renderActiveFilters() {
@@ -647,13 +681,11 @@ function renderActiveFilters() {
     });
   }
   if (state.quick !== "all") {
-    const quickMap = {
-      skill: t.quickSkill,
-      mcp: t.quickMcp,
-      app: t.quickApp,
-      library: t.quickLib
-    };
-    chips.push({ key: "quick", label: quickMap[state.quick] || state.quick });
+    const info = quickMeta[state.quick];
+    chips.push({
+      key: "quick",
+      label: info ? (state.lang === "zh" ? info.zh : info.en) : state.quick
+    });
   }
   if (state.tag) {
     chips.push({ key: "tag", label: `#${tagDisplay(state.tag)}` });
@@ -661,6 +693,10 @@ function renderActiveFilters() {
   if (state.query.trim()) {
     chips.push({ key: "query", label: `"${state.query.trim()}"` });
   }
+
+  const hasChips = chips.length > 0;
+  if (nodes.searchHints) nodes.searchHints.hidden = hasChips;
+  if (nodes.activeFiltersWrap) nodes.activeFiltersWrap.hidden = !hasChips;
 
   nodes.activeFilters.innerHTML = chips
     .map(
@@ -844,9 +880,13 @@ function renderProjects() {
 }
 
 function renderUpdatedAt() {
-  if (!nodes.starsUpdated || !state.updatedAt) return;
+  if (!nodes.starsUpdated) return;
   const t = translations[state.lang];
-  nodes.starsUpdated.textContent = t.updatedPrefix(String(state.updatedAt).slice(0, 10));
+  if (state.updatedAt) {
+    nodes.starsUpdated.textContent = t.updatedPrefix(String(state.updatedAt).slice(0, 10));
+  } else {
+    nodes.starsUpdated.textContent = t.heroBadgeShort;
+  }
 }
 
 function renderStaticText() {
@@ -874,11 +914,6 @@ function renderStaticText() {
     btn.classList.toggle("active", isActive);
     btn.setAttribute("aria-pressed", isActive ? "true" : "false");
   });
-  nodes.quickFilterButtons.forEach((btn) => {
-    const isActive = btn.dataset.quick === state.quick;
-    btn.classList.toggle("active", isActive);
-    btn.setAttribute("aria-pressed", isActive ? "true" : "false");
-  });
   nodes.viewButtons.forEach((btn) => {
     const isActive = btn.dataset.view === state.view;
     const label = btn.dataset.view === "list" ? t.listViewLabel : t.gridViewLabel;
@@ -890,13 +925,19 @@ function renderStaticText() {
   renderUpdatedAt();
 }
 
+function updateDirectory() {
+  syncFilterStates();
+  renderProjects();
+}
+
 function render() {
   const focusToken = captureFocusTarget();
   renderStaticText();
-  renderRouteDeck();
-  renderCategorySidebar();
+  renderRouteTabs();
   renderEditableSidebar();
+  renderQuickSidebar();
   renderTagCloud();
+  syncFilterStates();
   renderProjects();
   restoreFocusTarget(focusToken);
 }
@@ -908,7 +949,7 @@ function resetAllFilters() {
   state.quick = "all";
   state.query = "";
   nodes.searchInput.value = "";
-  render();
+  updateDirectory();
 }
 
 function applyStarCache(cache) {
@@ -939,19 +980,10 @@ if (nodes.routeCards) {
     const card = event.target.closest("button[data-route]");
     if (!card) return;
     const route = card.dataset.route;
-    state.category = state.category === route ? "All" : route;
-    render();
-    const dir = document.querySelector("#directory");
-    if (dir) dir.scrollIntoView({ behavior: "smooth", block: "start" });
+    state.category = route === "All" || state.category === route ? "All" : route;
+    updateDirectory();
   });
 }
-
-nodes.categoryNav.addEventListener("click", (event) => {
-  const btn = event.target.closest("button[data-category]");
-  if (!btn) return;
-  state.category = btn.dataset.category;
-  render();
-});
 
 if (nodes.editableNav) {
   nodes.editableNav.addEventListener("click", (event) => {
@@ -959,7 +991,17 @@ if (nodes.editableNav) {
     if (!btn) return;
     const value = btn.dataset.editable;
     state.editable = state.editable === value && value !== "All" ? "All" : value;
-    render();
+    updateDirectory();
+  });
+}
+
+if (nodes.quickFilters) {
+  nodes.quickFilters.addEventListener("click", (event) => {
+    const btn = event.target.closest("button[data-quick]");
+    if (!btn) return;
+    const value = btn.dataset.quick;
+    state.quick = state.quick === value && value !== "all" ? "all" : value;
+    updateDirectory();
   });
 }
 
@@ -969,7 +1011,7 @@ if (nodes.tagCloud) {
     if (!btn) return;
     const tag = btn.dataset.tagClick;
     state.tag = state.tag === tag ? "" : tag;
-    render();
+    updateDirectory();
   });
 }
 
@@ -977,38 +1019,30 @@ if (nodes.toggleAllTags) {
   nodes.toggleAllTags.addEventListener("click", () => {
     state.showAllTags = !state.showAllTags;
     renderTagCloud();
+    syncFilterStates();
   });
 }
-
-nodes.quickFilterButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    state.quick = btn.dataset.quick;
-    render();
-  });
-});
 
 nodes.hintButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const hint = btn.dataset.hint;
-    state.query = state.query === hint ? "" : hint;
+    state.query = state.query.trim().toLowerCase() === String(hint || "").toLowerCase() ? "" : hint;
     nodes.searchInput.value = state.query;
-    renderProjects();
-    const dir = document.querySelector("#directory");
-    if (dir && state.query) dir.scrollIntoView({ behavior: "smooth", block: "start" });
+    updateDirectory();
   });
 });
 
 nodes.searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
-  renderProjects();
+  updateDirectory();
 });
 
 if (nodes.clearSearchBtn) {
   nodes.clearSearchBtn.addEventListener("click", () => {
     state.query = "";
     nodes.searchInput.value = "";
-    nodes.searchInput.focus();
-    renderProjects();
+    nodes.searchInput.focus({ preventScroll: true });
+    updateDirectory();
   });
 }
 
@@ -1041,10 +1075,18 @@ if (nodes.sidebarReset) {
   });
 }
 
+if (nodes.toolbarReset) {
+  nodes.toolbarReset.addEventListener("click", () => {
+    resetAllFilters();
+    if (nodes.resultCount) nodes.resultCount.focus({ preventScroll: true });
+  });
+}
+
 if (nodes.activeFilters) {
   nodes.activeFilters.addEventListener("click", (event) => {
     const chip = event.target.closest("button[data-clear-filter]");
     if (!chip) return;
+    const focusToken = captureFocusTarget();
     const key = chip.dataset.clearFilter;
     if (key === "category") state.category = "All";
     if (key === "editable") state.editable = "All";
@@ -1054,7 +1096,8 @@ if (nodes.activeFilters) {
       state.query = "";
       nodes.searchInput.value = "";
     }
-    render();
+    updateDirectory();
+    restoreFocusTarget(focusToken);
   });
 }
 
@@ -1063,7 +1106,7 @@ nodes.projectList.addEventListener("click", async (event) => {
   if (tagBtn) {
     const tag = tagBtn.dataset.tagClick;
     state.tag = state.tag === tag ? "" : tag;
-    render();
+    updateDirectory();
     return;
   }
 
