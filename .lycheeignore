@@ -1,2 +1,3 @@
 # GitHub may rate-limit or block some dynamic pages in CI. Keep this list small.
+^https://github\.com/ningzimu/awesome-ai-ppt/blob/main/(LICENSE|CONTRIBUTING\.md)$
 
