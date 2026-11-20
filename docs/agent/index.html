@@ -83,7 +83,7 @@
         </article>
         <article class="step-card">
           <span class="step-num">02</span>
-          <h3 data-i18n="step2Title">实测对比原仓库</h3>
+          <h3 data-i18n="step2Title">核验并对比原仓库</h3>
           <p data-i18n="step2Copy">锁定 3–6 个候选后深入原 GitHub 仓库核验安装复杂度、活跃度与真实局限，不只看 Star 数。</p>
         </article>
         <article class="step-card">
@@ -182,6 +182,8 @@
 
       const translations = {
         zh: {
+          pageTitle: "Agent 接入 - Awesome AI PPT",
+          themeToggleLabel: "切换深浅色主题",
           brandSub: "Agent Skill",
           directory: "项目目录",
           navAgent: "Agent Skill",
@@ -193,7 +195,7 @@
           examplesCta: "查看 Prompt 示例",
           step1Title: "读取最新清单",
           step1Copy: "自动拉取远程 projects.json，先了解全部候选技术路线，再追问你的输出格式、可编辑性与本地约束。",
-          step2Title: "实测对比原仓库",
+          step2Title: "核验并对比原仓库",
           step2Copy: "锁定 3–6 个候选后深入原 GitHub 仓库核验安装复杂度、活跃度与真实局限，不只看 Star 数。",
           step3Title: "辅助规范贡献",
           step3Copy: "仅在你明确要求时进入贡献流程，协助评估入选门槛、整理中英文双语数据并准备合规 PR。",
@@ -214,9 +216,12 @@
           contributingLink: "贡献指南",
           issuesLink: "Issues",
           copyLabel: "复制",
-          copiedLabel: "已复制"
+          copiedLabel: "已复制",
+          copyFailedLabel: "复制失败"
         },
         en: {
+          pageTitle: "Agent Access - Awesome AI PPT",
+          themeToggleLabel: "Toggle light or dark theme",
           brandSub: "Agent Skill",
           directory: "Directory",
           navAgent: "Agent Skill",
@@ -249,7 +254,8 @@
           contributingLink: "Contributing guide",
           issuesLink: "Issues",
           copyLabel: "Copy",
-          copiedLabel: "Copied"
+          copiedLabel: "Copied",
+          copyFailedLabel: "Failed"
         }
       };
 
@@ -264,12 +270,22 @@
 
       function setLanguage(lang) {
         currentLang = lang === "en" ? "en" : "zh";
+        const t = translations[currentLang];
         document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
+        document.title = t.pageTitle;
+        if (themeToggle) {
+          themeToggle.setAttribute("aria-label", t.themeToggleLabel);
+          themeToggle.title = t.themeToggleLabel;
+        }
         nodes.forEach((node) => {
-          const value = translations[currentLang][node.dataset.i18n];
+          const value = t[node.dataset.i18n];
           if (value) node.textContent = value;
         });
-        buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === currentLang));
+        buttons.forEach((button) => {
+          const isActive = button.dataset.lang === currentLang;
+          button.classList.toggle("active", isActive);
+          button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
         try {
           localStorage.setItem(STORAGE_LANG_KEY, currentLang);
         } catch {}
@@ -295,6 +311,9 @@
           const code = btn.parentElement.querySelector("code");
           if (!code) return;
           try {
+            if (!navigator.clipboard || !navigator.clipboard.writeText) {
+              throw new Error("Clipboard unavailable");
+            }
             await navigator.clipboard.writeText(code.textContent.trim());
             btn.classList.add("copied");
             btn.textContent = translations[currentLang].copiedLabel;
@@ -302,7 +321,12 @@
               btn.classList.remove("copied");
               btn.textContent = translations[currentLang].copyLabel;
             }, 1600);
-          } catch {}
+          } catch {
+            btn.textContent = translations[currentLang].copyFailedLabel;
+            setTimeout(() => {
+              btn.textContent = translations[currentLang].copyLabel;
+            }, 1600);
+          }
         });
       });
 

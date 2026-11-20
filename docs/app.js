@@ -12,6 +12,33 @@ const STORAGE_LANG_KEY = "awesome-ai-ppt-lang";
 const STORAGE_THEME_KEY = "awesome-ai-ppt-theme";
 const STORAGE_VIEW_KEY = "awesome-ai-ppt-view";
 
+const tagLabelsZh = {
+  Automation: "自动化",
+  Conversion: "转换",
+  Editable: "可编辑",
+  "Partially editable": "部分可编辑",
+  "Image-based": "图片式",
+  "Source editable": "源码可编辑",
+  Workflow: "工作流",
+  App: "应用",
+  Library: "库",
+  Backend: "后端",
+  Video: "视频",
+  Template: "模板",
+  Editor: "编辑器",
+  Academic: "学术",
+  Research: "研究",
+  Translation: "翻译",
+  Animation: "动画",
+  Interactive: "交互",
+  Bilingual: "双语",
+  Preview: "预览",
+  Parser: "解析器",
+  Plugin: "插件",
+  "Speaker notes": "演讲者备注",
+  Noncommercial: "非商用"
+};
+
 const routeSvgs = {
   "HTML-First Presentation Workflows": `
     <svg width="112" height="36" viewBox="0 0 112 36" fill="none" aria-hidden="true">
@@ -148,7 +175,7 @@ const state = {
   quick: "all",
   query: "",
   sort: "stars-desc",
-  view: readStorage(STORAGE_VIEW_KEY, "grid"),
+  view: readStorage(STORAGE_VIEW_KEY, "grid") === "list" ? "list" : "grid",
   lang: readStorage(STORAGE_LANG_KEY, "zh") === "en" ? "en" : "zh",
   showAllTags: false,
   updatedAt: null
@@ -156,10 +183,16 @@ const state = {
 
 const translations = {
   zh: {
+    pageTitle: "Awesome AI PPT — AI 演示与 PPTX 工作流开源目录",
     brandSub: "Slide Workflows",
     navRoutes: "技术路线",
     navDirectory: "项目目录",
     navAgent: "Agent Skill",
+    themeToggleLabel: "切换深浅色主题",
+    clearSearchLabel: "清空搜索",
+    gridViewLabel: "卡片视图",
+    listViewLabel: "表格列表视图",
+    sortAriaLabel: "排序方式",
     heroBadge: "开源精选 · 每日自动同步 GitHub Star",
     heroTitlePre: "发现最合适的",
     heroTitleAccent: "AI PPT 开源工作流",
@@ -200,17 +233,25 @@ const translations = {
     resetBtnFull: "重置全部筛选条件",
     loadFailed: "项目数据加载失败。",
     copiedRepo: (name) => `已复制 ${name}`,
+    copyFailed: "复制失败，请手动复制",
     copyRepoTitle: "复制仓库名",
+    removeFilterLabel: (label) => `移除筛选：${label}`,
     footerRepo: "GitHub 仓库",
     footerContribute: "贡献指南",
     footerIssues: "Issues",
     footerAgent: "Agent Skill"
   },
   en: {
+    pageTitle: "Awesome AI PPT — Open-Source AI Presentation & PPTX Directory",
     brandSub: "Slide Workflows",
     navRoutes: "Routes",
     navDirectory: "Directory",
     navAgent: "Agent Skill",
+    themeToggleLabel: "Toggle light or dark theme",
+    clearSearchLabel: "Clear search",
+    gridViewLabel: "Card grid view",
+    listViewLabel: "Compact list view",
+    sortAriaLabel: "Sort projects",
     heroBadge: "Curated Open-Source · Stars Synced Daily",
     heroTitlePre: "Find the right",
     heroTitleAccent: "AI PPT Workflow",
@@ -251,7 +292,9 @@ const translations = {
     resetBtnFull: "Reset all filters",
     loadFailed: "Could not load project data.",
     copiedRepo: (name) => `Copied ${name}`,
+    copyFailed: "Copy failed, please copy manually",
     copyRepoTitle: "Copy repository name",
+    removeFilterLabel: (label) => `Remove filter: ${label}`,
     footerRepo: "GitHub",
     footerContribute: "Contributing",
     footerIssues: "Issues",
@@ -305,6 +348,20 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
+function safeHref(url) {
+  try {
+    const parsed = new URL(String(url || ""));
+    if (parsed.protocol === "https:" || parsed.protocol === "http:") {
+      return parsed.href;
+    }
+  } catch {}
+  return "#";
+}
+
+function tagDisplay(tag) {
+  return state.lang === "zh" ? tagLabelsZh[tag] || tag : tag;
+}
+
 function formatStars(stars) {
   if (typeof stars !== "number") return "—";
   return new Intl.NumberFormat("en-US").format(stars);
@@ -320,16 +377,27 @@ function projectStars(project) {
 }
 
 function searchable(project) {
+  const catMeta = categoryMeta[project.category] || {};
+  const editInfo = editableMeta[project.editable] || {};
+  const tags = project.tags || [];
+  const translatedTags = tags.map((tag) => tagLabelsZh[tag]).filter(Boolean);
+
   return [
     project.name,
     project.repo,
     project.category,
     project.categoryZh,
+    catMeta.shortZh,
+    catMeta.shortEn,
+    catMeta.en,
     project.type,
     project.output,
     project.editable,
+    editInfo.zh,
+    editInfo.en,
     project.skill,
-    ...(project.tags || []),
+    ...tags,
+    ...translatedTags,
     project.description,
     project.descriptionZh
   ]
@@ -404,6 +472,41 @@ function hasActiveFilters() {
   );
 }
 
+function captureFocusTarget() {
+  const active = document.activeElement;
+  if (!active || active === document.body) return null;
+  if (active.dataset.route) return { scope: nodes.routeCards, attr: "data-route", value: active.dataset.route };
+  if (active.dataset.category) return { scope: nodes.categoryNav, attr: "data-category", value: active.dataset.category };
+  if (active.dataset.editable) return { scope: nodes.editableNav, attr: "data-editable", value: active.dataset.editable };
+  if (active.dataset.tagClick) {
+    const scope = nodes.tagCloud && nodes.tagCloud.contains(active) ? nodes.tagCloud : nodes.projectList;
+    return { scope, attr: "data-tag-click", value: active.dataset.tagClick };
+  }
+  if (active.dataset.clearFilter) {
+    const chips = [...(nodes.activeFilters ? nodes.activeFilters.querySelectorAll("[data-clear-filter]") : [])];
+    return { kind: "clear-filter", index: chips.indexOf(active) };
+  }
+  return null;
+}
+
+function restoreFocusTarget(token) {
+  if (!token) return;
+  if (token.kind === "clear-filter") {
+    const chips = [...(nodes.activeFilters ? nodes.activeFilters.querySelectorAll("[data-clear-filter]") : [])];
+    const next = chips[token.index] || chips[token.index - 1] || nodes.resultCount;
+    if (next && typeof next.focus === "function") next.focus({ preventScroll: true });
+    return;
+  }
+  if (!token.scope) return;
+  const escaped = typeof CSS !== "undefined" && CSS.escape ? CSS.escape(token.value) : token.value.replace(/"/g, '\\"');
+  const replacement = token.scope.querySelector(`[${token.attr}="${escaped}"]`);
+  if (replacement && typeof replacement.focus === "function") {
+    replacement.focus({ preventScroll: true });
+  } else if (nodes.resultCount && typeof nodes.resultCount.focus === "function") {
+    nodes.resultCount.focus({ preventScroll: true });
+  }
+}
+
 function renderRouteDeck() {
   if (!nodes.routeCards) return;
   const routes = categories.slice(1);
@@ -411,7 +514,8 @@ function renderRouteDeck() {
     .map((category) => {
       const meta = categoryMeta[category];
       const count = state.projects.filter((p) => p.category === category).length;
-      const active = state.category === category ? " active" : "";
+      const isSelected = state.category === category;
+      const active = isSelected ? " active" : "";
       const title = state.lang === "zh" ? meta.zh : meta.en;
       const desc = state.lang === "zh" ? meta.descZh : meta.descEn;
       return `
@@ -419,6 +523,7 @@ function renderRouteDeck() {
           class="route-slide-card${active}"
           type="button"
           data-route="${escapeHtml(category)}"
+          aria-pressed="${isSelected ? "true" : "false"}"
           style="--r-color:${meta.color};--r-bg:${meta.bg};--r-border:${meta.border}"
         >
           <div class="slide-card-top">
@@ -446,14 +551,20 @@ function renderCategorySidebar() {
         category === "All"
           ? state.projects.length
           : state.projects.filter((p) => p.category === category).length;
-      const active = category === state.category ? " active" : "";
+      const isSelected = category === state.category;
+      const active = isSelected ? " active" : "";
       const label = state.lang === "zh" ? meta.shortZh : meta.shortEn;
       const dot =
         category === "All"
           ? ""
           : `<span class="facet-dot" style="background:${meta.color}"></span>`;
       return `
-        <button class="facet-row${active}" type="button" data-category="${escapeHtml(category)}">
+        <button
+          class="facet-row${active}"
+          type="button"
+          data-category="${escapeHtml(category)}"
+          aria-pressed="${isSelected ? "true" : "false"}"
+        >
           <span class="facet-row-left">
             ${dot}
             <span>${escapeHtml(label)}</span>
@@ -471,9 +582,15 @@ function renderEditableSidebar() {
     .map((level) => {
       const info = editableMeta[level];
       const label = state.lang === "zh" ? info.zh : info.en;
-      const active = state.editable === level ? " active" : "";
+      const isSelected = state.editable === level;
+      const active = isSelected ? " active" : "";
       return `
-        <button class="facet-pill${active}" type="button" data-editable="${escapeHtml(level)}">
+        <button
+          class="facet-pill${active}"
+          type="button"
+          data-editable="${escapeHtml(level)}"
+          aria-pressed="${isSelected ? "true" : "false"}"
+        >
           ${escapeHtml(label)}
         </button>
       `;
@@ -487,10 +604,16 @@ function renderTagCloud() {
   const visible = state.showAllTags ? tags : tags.slice(0, 14);
   nodes.tagCloud.innerHTML = visible
     .map(([tag, count]) => {
-      const active = state.tag === tag ? " active" : "";
+      const isSelected = state.tag === tag;
+      const active = isSelected ? " active" : "";
       return `
-        <button class="cloud-tag${active}" type="button" data-tag-click="${escapeHtml(tag)}">
-          <span>${escapeHtml(tag)}</span>
+        <button
+          class="cloud-tag${active}"
+          type="button"
+          data-tag-click="${escapeHtml(tag)}"
+          aria-pressed="${isSelected ? "true" : "false"}"
+        >
+          <span>${escapeHtml(tagDisplay(tag))}</span>
           <em>${count}</em>
         </button>
       `;
@@ -501,11 +624,13 @@ function renderTagCloud() {
     const t = translations[state.lang];
     nodes.toggleAllTags.hidden = tags.length <= 14;
     nodes.toggleAllTags.textContent = state.showAllTags ? t.collapseTags : t.showAllTags;
+    nodes.toggleAllTags.setAttribute("aria-expanded", state.showAllTags ? "true" : "false");
   }
 }
 
 function renderActiveFilters() {
   if (!nodes.activeFilters) return;
+  const t = translations[state.lang];
   const chips = [];
   if (state.category !== "All") {
     const meta = categoryMeta[state.category];
@@ -522,7 +647,6 @@ function renderActiveFilters() {
     });
   }
   if (state.quick !== "all") {
-    const t = translations[state.lang];
     const quickMap = {
       skill: t.quickSkill,
       mcp: t.quickMcp,
@@ -532,7 +656,7 @@ function renderActiveFilters() {
     chips.push({ key: "quick", label: quickMap[state.quick] || state.quick });
   }
   if (state.tag) {
-    chips.push({ key: "tag", label: `#${state.tag}` });
+    chips.push({ key: "tag", label: `#${tagDisplay(state.tag)}` });
   }
   if (state.query.trim()) {
     chips.push({ key: "query", label: `"${state.query.trim()}"` });
@@ -541,7 +665,13 @@ function renderActiveFilters() {
   nodes.activeFilters.innerHTML = chips
     .map(
       (chip) => `
-        <button class="active-chip" type="button" data-clear-filter="${chip.key}">
+        <button
+          class="active-chip"
+          type="button"
+          data-clear-filter="${chip.key}"
+          aria-label="${escapeHtml(t.removeFilterLabel(chip.label))}"
+          title="${escapeHtml(chip.label)}"
+        >
           <span>${escapeHtml(chip.label)}</span>
           <span aria-hidden="true">×</span>
         </button>
@@ -570,6 +700,7 @@ function renderProjectCard(project) {
   const description = state.lang === "zh" ? project.descriptionZh : project.description;
   const { owner, repo } = splitRepo(project.name);
   const isHot = typeof project.stars === "number" && project.stars >= 5000;
+  const url = safeHref(project.url);
 
   const skillBadge =
     project.skill && project.skill !== "No"
@@ -582,8 +713,9 @@ function renderProjectCard(project) {
   const displayTags = (project.tags || []).slice(0, 4);
   const tagHtml = displayTags
     .map((tag) => {
-      const active = state.tag === tag ? " active" : "";
-      return `<button class="card-tag-btn${active}" type="button" data-tag-click="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`;
+      const isSelected = state.tag === tag;
+      const active = isSelected ? " active" : "";
+      return `<button class="card-tag-btn${active}" type="button" data-tag-click="${escapeHtml(tag)}" aria-pressed="${isSelected ? "true" : "false"}">${escapeHtml(tagDisplay(tag))}</button>`;
     })
     .join("");
 
@@ -596,7 +728,7 @@ function renderProjectCard(project) {
             <div class="card-titles">
               ${owner ? `<span class="card-owner">${escapeHtml(owner)}</span>` : ""}
               <h3 class="card-repo">
-                <a href="${escapeHtml(project.url)}" target="_blank" rel="noopener noreferrer">
+                <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
                   <span>${escapeHtml(repo)}</span>
                   <svg class="ext-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M7 17 17 7M7 7h10v10"/>
@@ -647,6 +779,7 @@ function renderListRow(project) {
   const description = state.lang === "zh" ? project.descriptionZh : project.description;
   const { owner, repo } = splitRepo(project.name);
   const isHot = typeof project.stars === "number" && project.stars >= 5000;
+  const url = safeHref(project.url);
   const skillBadge =
     project.skill && project.skill !== "No"
       ? `<span class="pill-badge pill-skill">${escapeHtml(project.skill)}</span>`
@@ -656,7 +789,7 @@ function renderListRow(project) {
     <article class="list-row" style="--card-accent:${meta.color};--card-accent-bg:${meta.bg}">
       <div class="list-main">
         <div class="list-title-line">
-          <a class="list-repo-link" href="${escapeHtml(project.url)}" target="_blank" rel="noopener noreferrer">
+          <a class="list-repo-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
             ${owner ? `<span class="list-repo-owner">${escapeHtml(owner)} / </span>` : ""}${escapeHtml(repo)}
           </a>
           ${skillBadge}
@@ -719,25 +852,53 @@ function renderUpdatedAt() {
 function renderStaticText() {
   const t = translations[state.lang];
   document.documentElement.lang = state.lang === "zh" ? "zh-CN" : "en";
+  document.title = t.pageTitle;
   nodes.i18nNodes.forEach((node) => {
     const key = node.dataset.i18n;
     const value = t[key];
     if (typeof value === "string") node.textContent = value;
   });
   nodes.searchInput.placeholder = t.searchPlaceholder;
-  nodes.languageButtons.forEach((btn) => btn.classList.toggle("active", btn.dataset.lang === state.lang));
-  nodes.quickFilterButtons.forEach((btn) => btn.classList.toggle("active", btn.dataset.quick === state.quick));
-  nodes.viewButtons.forEach((btn) => btn.classList.toggle("active", btn.dataset.view === state.view));
+  if (nodes.themeToggle) {
+    nodes.themeToggle.setAttribute("aria-label", t.themeToggleLabel);
+    nodes.themeToggle.title = t.themeToggleLabel;
+  }
+  if (nodes.clearSearchBtn) {
+    nodes.clearSearchBtn.setAttribute("aria-label", t.clearSearchLabel);
+  }
+  if (nodes.sortSelect) {
+    nodes.sortSelect.setAttribute("aria-label", t.sortAriaLabel);
+  }
+  nodes.languageButtons.forEach((btn) => {
+    const isActive = btn.dataset.lang === state.lang;
+    btn.classList.toggle("active", isActive);
+    btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
+  nodes.quickFilterButtons.forEach((btn) => {
+    const isActive = btn.dataset.quick === state.quick;
+    btn.classList.toggle("active", isActive);
+    btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
+  nodes.viewButtons.forEach((btn) => {
+    const isActive = btn.dataset.view === state.view;
+    const label = btn.dataset.view === "list" ? t.listViewLabel : t.gridViewLabel;
+    btn.classList.toggle("active", isActive);
+    btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    btn.setAttribute("aria-label", label);
+    btn.title = label;
+  });
   renderUpdatedAt();
 }
 
 function render() {
+  const focusToken = captureFocusTarget();
   renderStaticText();
   renderRouteDeck();
   renderCategorySidebar();
   renderEditableSidebar();
   renderTagCloud();
   renderProjects();
+  restoreFocusTarget(focusToken);
 }
 
 function resetAllFilters() {
@@ -858,7 +1019,7 @@ nodes.sortSelect.addEventListener("change", (event) => {
 
 nodes.viewButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    state.view = btn.dataset.view;
+    state.view = btn.dataset.view === "list" ? "list" : "grid";
     writeStorage(STORAGE_VIEW_KEY, state.view);
     renderStaticText();
     renderProjects();
@@ -874,7 +1035,10 @@ nodes.languageButtons.forEach((btn) => {
 });
 
 if (nodes.sidebarReset) {
-  nodes.sidebarReset.addEventListener("click", resetAllFilters);
+  nodes.sidebarReset.addEventListener("click", () => {
+    resetAllFilters();
+    if (nodes.resultCount) nodes.resultCount.focus({ preventScroll: true });
+  });
 }
 
 if (nodes.activeFilters) {
@@ -907,14 +1071,22 @@ nodes.projectList.addEventListener("click", async (event) => {
   if (copyBtn) {
     const repoName = copyBtn.dataset.copyRepo;
     try {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) {
+        throw new Error("Clipboard unavailable");
+      }
       await navigator.clipboard.writeText(repoName);
       showToast(translations[state.lang].copiedRepo(repoName));
-    } catch {}
+    } catch {
+      showToast(translations[state.lang].copyFailed);
+    }
     return;
   }
 
   const resetEmptyBtn = event.target.closest("button[data-reset-empty]");
-  if (resetEmptyBtn) resetAllFilters();
+  if (resetEmptyBtn) {
+    resetAllFilters();
+    if (nodes.resultCount) nodes.resultCount.focus({ preventScroll: true });
+  }
 });
 
 if (nodes.themeToggle) {
@@ -927,10 +1099,13 @@ if (nodes.themeToggle) {
 }
 
 document.addEventListener("keydown", (event) => {
+  if (event.metaKey || event.ctrlKey || event.altKey || event.isComposing) return;
+  const active = document.activeElement;
   if (
     event.key === "/" &&
-    document.activeElement !== nodes.searchInput &&
-    !["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName)
+    active !== nodes.searchInput &&
+    !["INPUT", "TEXTAREA", "SELECT"].includes(active?.tagName) &&
+    !active?.isContentEditable
   ) {
     event.preventDefault();
     nodes.searchInput.focus();

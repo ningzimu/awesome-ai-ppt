@@ -34,6 +34,9 @@ jobs:
       - name: Render READMEs
         run: python3 scripts/render_readme.py
 
+      - name: Validate threshold and bilingual sync
+        run: python3 scripts/check_bilingual.py
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

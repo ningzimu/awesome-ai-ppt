@@ -154,7 +154,7 @@ ZH_TAIL = """## 收录范围
 
 分类按主工作流的源表示决定，而不是按最终导出格式决定。能导出 PPTX 不等于属于 PPTX 库生成式；`Skill`、`可编辑 PPTX` 和 `PPTX export` 都只是标签，不能单独决定分类。
 
-GitHub 仓库通常需要至少 10 stars 才能进入主列表。
+GitHub 仓库通常需要至少 25 stars 才能进入主列表。
 
 如果项目只是大仓库、合集仓库或通用 agent 仓库里的一个子目录 / skill，且父级仓库的 stars 不能代表这个 PPT 工作流本身，则不进入主列表。
 
@@ -185,7 +185,7 @@ Included projects should have a direct relationship to AI-assisted presentation 
 
 Categories are based on the source representation of the main workflow, not the final export format. PPTX export does not automatically make a project PPTX-native; `Skill`, `editable PPTX`, and `PPTX export` are tags, not category decisions.
 
-GitHub repositories should have at least 10 stars before being included.
+GitHub repositories should have at least 25 stars before being included.
 
 If a project is only a subdirectory or skill inside a broad collection, general agent framework, or multi-skill repository, and the parent repository's stars do not represent that PPT workflow itself, it should not be included in the main list.
 

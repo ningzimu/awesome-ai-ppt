@@ -82,16 +82,39 @@ def check_contributing_language(errors: list[str]) -> None:
 def check_projects_json(errors: list[str]) -> None:
     path = Path("docs/projects.json")
     projects = json.loads((ROOT / path).read_text(encoding="utf-8"))
+    stars_path = ROOT / "docs/stars.json"
+    if not stars_path.exists():
+        errors.append("docs/stars.json: missing star cache file.")
+        stars_map: dict[str, object] = {}
+    else:
+        stars_payload = json.loads(stars_path.read_text(encoding="utf-8"))
+        raw_stars = stars_payload.get("stars") if isinstance(stars_payload, dict) else None
+        if not isinstance(raw_stars, dict):
+            errors.append("docs/stars.json: 'stars' must be a JSON object.")
+            stars_map = {}
+        else:
+            stars_map = raw_stars
+
     for index, project in enumerate(projects, 1):
         name = project.get("name", f"entry #{index}")
         if not has_cjk(project.get("descriptionZh", "")):
             errors.append(f"{path}: {name}: missing Chinese descriptionZh.")
         if not project.get("description"):
             errors.append(f"{path}: {name}: missing English description.")
-        stars = project.get("stars")
+        url = project.get("url")
+        if not isinstance(url, str) or not url.startswith("https://"):
+            errors.append(f"{path}: {name}: project url must use https://.")
         repo = project.get("repo")
-        if repo and isinstance(stars, int) and stars < 10:
-            errors.append(f"{path}: {name}: GitHub repositories need at least 10 stars.")
+        if repo:
+            stars = stars_map.get(repo)
+            if isinstance(stars, bool) or not isinstance(stars, int):
+                errors.append(
+                    f"{path}: {name}: missing or invalid integer star count in docs/stars.json for '{repo}'."
+                )
+            elif stars < 25:
+                errors.append(
+                    f"{path}: {name}: GitHub repositories need at least 25 stars (currently {stars})."
+                )
 
 
 def check_pages_default_language(errors: list[str]) -> None:

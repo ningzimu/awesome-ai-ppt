@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-11-20T00:36:24Z",
   "source": "github-api",
-  "repoCount": 110,
+  "repoCount": 108,
   "stars": {
     "1weiho/open-slide": 9812,
     "Akxan/ppt-agent-skill": 186,
@@ -9,7 +9,6 @@
     "Ayushmaniar/powerpoint-mcp": 130,
     "CyberTimon/Powerpointer": 179,
     "Daniel-Siae/image2pptx": 26,
-    "Emily27-alt/html-to-pptx": 20,
     "EveryInc/hands-on-deck": 224,
     "Gabberflast/academic-pptx-skill": 1638,
     "GordenSun/GordenPPTSkill": 4159,
@@ -66,7 +65,6 @@
     "icip-cas/PPTAgent": 5259,
     "irenerachel/visual-style-ppt-skill": 398,
     "jitOffice/aippt": 75,
-    "kdnsna/ultimate-ppt-master-skill": 2,
     "laihenyi/NBLM2PPTX": 352,
     "lewislulu/html-ppt-skill": 9157,
     "likaku/Mck-ppt-design-skill": 346,

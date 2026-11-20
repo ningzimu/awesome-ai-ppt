@@ -13,34 +13,35 @@
   --grid-dot: rgba(18, 21, 28, 0.065);
 
   --accent: #2563eb;
+  --accent-solid: #1d4ed8;
   --accent-2: #7c3aed;
   --accent-soft: rgba(37, 99, 235, 0.09);
 
-  /* Four slide-route semantic themes */
-  --route-html: #2563eb;
-  --route-html-bg: rgba(37, 99, 235, 0.09);
-  --route-html-border: rgba(37, 99, 235, 0.25);
+  /* Four slide-route semantic themes (WCAG AA >= 4.5:1 on light surfaces) */
+  --route-html: #1d4ed8;
+  --route-html-bg: rgba(37, 99, 235, 0.1);
+  --route-html-border: rgba(37, 99, 235, 0.28);
 
-  --route-image: #d97706;
-  --route-image-bg: rgba(217, 119, 6, 0.1);
-  --route-image-border: rgba(217, 119, 6, 0.28);
+  --route-image: #9a4400;
+  --route-image-bg: rgba(217, 119, 6, 0.11);
+  --route-image-border: rgba(180, 83, 9, 0.3);
 
-  --route-pptx: #059669;
-  --route-pptx-bg: rgba(5, 150, 105, 0.1);
-  --route-pptx-border: rgba(5, 150, 105, 0.28);
+  --route-pptx: #046c4e;
+  --route-pptx-bg: rgba(5, 150, 105, 0.11);
+  --route-pptx-border: rgba(4, 120, 87, 0.3);
 
-  --route-infra: #7c3aed;
+  --route-infra: #6d28d9;
   --route-infra-bg: rgba(124, 58, 237, 0.1);
-  --route-infra-border: rgba(124, 58, 237, 0.28);
+  --route-infra-border: rgba(109, 40, 217, 0.28);
 
   /* Editability status colors */
-  --st-editable: #047857;
-  --st-editable-bg: rgba(16, 185, 129, 0.12);
+  --st-editable: #065f46;
+  --st-editable-bg: rgba(16, 185, 129, 0.13);
   --st-source: #1d4ed8;
   --st-source-bg: rgba(37, 99, 235, 0.11);
-  --st-partial: #b45309;
-  --st-partial-bg: rgba(245, 158, 11, 0.13);
-  --st-image: #7e22ce;
+  --st-partial: #92400e;
+  --st-partial-bg: rgba(245, 158, 11, 0.14);
+  --st-image: #6b21a8;
   --st-image-bg: rgba(147, 51, 234, 0.11);
 
   --shadow-xs: 0 1px 2px rgba(18, 21, 28, 0.04);
@@ -69,6 +70,7 @@
   --grid-dot: rgba(255, 255, 255, 0.06);
 
   --accent: #60a5fa;
+  --accent-solid: #2563eb;
   --accent-2: #a78bfa;
   --accent-soft: rgba(96, 165, 250, 0.15);
 
@@ -964,8 +966,8 @@ html[lang="en"] .hero-title {
 }
 
 .cloud-tag.active {
-  border-color: var(--accent);
-  background: var(--accent);
+  border-color: var(--accent-solid);
+  background: var(--accent-solid);
   color: #ffffff;
 }
 
@@ -1073,6 +1075,7 @@ html[lang="en"] .hero-title {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  max-width: 220px;
   height: 25px;
   padding: 0 9px;
   border: 1px solid var(--border-strong);
@@ -1082,6 +1085,12 @@ html[lang="en"] .hero-title {
   cursor: pointer;
   font-size: 12px;
   font-weight: 700;
+}
+
+.active-chip span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .active-chip:hover {
@@ -1961,10 +1970,6 @@ html[lang="en"] .hero-title {
   }
 
   .spotlight-kbd {
-    display: none;
-  }
-
-  .view-toggle {
     display: none;
   }
 

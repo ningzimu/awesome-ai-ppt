@@ -73,7 +73,6 @@ Workflows that create HTML, web slides, or page-style presentations first, then 
 | [Akxan/ppt-agent-skill](https://github.com/Akxan/ppt-agent-skill) | Claude Code skill that designs slides as HTML, converts them to SVG, and packages the result as editable PPTX. | HTML-first, Conversion, Template, PPTX-native | Editable | Skill | 186 |
 | [M1n-n9/academic-ppt-master](https://github.com/M1n-n9/academic-ppt-master) | Academic presentation skill that turns papers and documents into SVG-designed slide pages and editable PPTX decks. | HTML-first, PPTX-native, Academic, Conversion, Template | Editable | Skill | 320 |
 | [Kuneosu/make-slide](https://github.com/Kuneosu/make-slide) | Universal AI skill for generating standalone HTML slide decks. | HTML-first, PDF, Template | Partially editable | Skill | 145 |
-| [kdnsna/ultimate-ppt-master-skill](https://github.com/kdnsna/ultimate-ppt-master-skill) | Local-first AI presentation hub that packages source files for agents and produces editable PowerPoint decks or magazine-style web decks. | HTML-first, PPTX-native, Conversion, Template, Automation | Editable | Skill | 2 |
 | [codesstar/next-slide](https://github.com/codesstar/next-slide) | Skill for generating zero-dependency HTML presentations with curated styles, bilingual support, and PPT content conversion. | HTML-first, Conversion, Bilingual | Source editable | Skill | 56 |
 | [marp-team/marp-cli](https://github.com/marp-team/marp-cli) | Marp CLI for converting Markdown slide decks into HTML, PDF, images, and PowerPoint files. | HTML-first, Markdown, Conversion | Partially editable | No | 3,940 |
 | [archlizheng/frontend-slides-editable](https://github.com/archlizheng/frontend-slides-editable) | Editable HTML presentation skill for Codex and Claude Code with drag-resize editing, slide reordering, local save/export, and PPTX-to-web conversion. | HTML-first, Editor, Conversion, Skill | Source editable | Skill | 564 |
@@ -170,7 +169,6 @@ Underlying PPTX libraries, MCP servers, Office automation, backend services, and
 | [JadeLiu-tech/px-image2pptx](https://github.com/JadeLiu-tech/px-image2pptx) | Converts static slide images into editable PPTX text layers using OCR, text masking, inpainting, and python-pptx reconstruction. | Conversion, Image-based, OCR, PPTX-native | Partially editable | No | 39 |
 | [yingkitw/ppt-rs](https://github.com/yingkitw/ppt-rs) | Rust PPTX library and CLI for Markdown-to-PPTX, HTML-to-PPTX, PPTX-to-HTML, image export, and MCP workflows. | Library, PPTX-native, Conversion, MCP | Editable | MCP | 53 |
 | [abdelkrimkr/html2pptx](https://github.com/abdelkrimkr/html2pptx) | Node.js CLI and library for converting HTML files into PowerPoint by mapping text, images, SVG, and CSS layout into PPTX objects. | HTML-first, Conversion, PPTX-native, Library | Editable | No | 25 |
-| [Emily27-alt/html-to-pptx](https://github.com/Emily27-alt/html-to-pptx) | Claude Code skill for converting existing HTML slide decks into editable PPTX with native text, shapes, images, and layout reconstruction. | HTML-first, Conversion, PPTX-native, Skill | Editable | Skill | 20 |
 | [supercurses/powerpoint](https://github.com/supercurses/powerpoint) | PowerPoint-focused MCP server for creating presentations with python-pptx, serving as an early baseline in the PPT MCP ecosystem. | MCP, Automation, PPTX-native, PowerPoint | Editable | MCP | 145 |
 | [Ayushmaniar/powerpoint-mcp](https://github.com/Ayushmaniar/powerpoint-mcp) | Windows PowerPoint MCP server using pywin32 and COM automation for local PowerPoint control. | MCP, Automation, PowerPoint, COM | Editable | MCP | 130 |
 | [daekeun-ml/ppt-translator](https://github.com/daekeun-ml/ppt-translator) | PowerPoint translation CLI and MCP server that preserves layout and structure while translating PPTX content with Amazon Bedrock. | MCP, Translation, Automation, PPTX-native | Editable | MCP | 72 |
@@ -189,7 +187,7 @@ Included projects should have a direct relationship to AI-assisted presentation 
 
 Categories are based on the source representation of the main workflow, not the final export format. PPTX export does not automatically make a project PPTX-native; `Skill`, `editable PPTX`, and `PPTX export` are tags, not category decisions.
 
-GitHub repositories should have at least 10 stars before being included.
+GitHub repositories should have at least 25 stars before being included.
 
 If a project is only a subdirectory or skill inside a broad collection, general agent framework, or multi-skill repository, and the parent repository's stars do not represent that PPT workflow itself, it should not be included in the main list.
 

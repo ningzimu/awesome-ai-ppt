@@ -28,9 +28,9 @@ Explain the direct connection to AI presentations, PPTX editing, slide conversio
 
 ## Stars / 星标数
 
-GitHub repositories usually need at least 10 stars.
+GitHub repositories usually need at least 25 stars.
 
-GitHub 仓库通常至少需要 10 stars。
+GitHub 仓库通常至少需要 25 stars。
 
 ## Input and output / 输入输出
 

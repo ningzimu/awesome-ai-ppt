@@ -1009,26 +1009,6 @@
     "skill": "Skill"
   },
   {
-    "name": "kdnsna/ultimate-ppt-master-skill",
-    "url": "https://github.com/kdnsna/ultimate-ppt-master-skill",
-    "repo": "kdnsna/ultimate-ppt-master-skill",
-    "category": "HTML-First Presentation Workflows",
-    "categoryZh": "HTML 风格 PPT 方案",
-    "type": "Skill",
-    "output": "PPTX/HTML",
-    "description": "Local-first AI presentation hub that packages source files for agents and produces editable PowerPoint decks or magazine-style web decks.",
-    "descriptionZh": "本地优先的 AI 演示生产中枢，可把多类资料打包给 agent，并生成可编辑 PowerPoint 或杂志风 Web Deck。",
-    "tags": [
-      "HTML-first",
-      "PPTX-native",
-      "Conversion",
-      "Template",
-      "Automation"
-    ],
-    "editable": "Editable",
-    "skill": "Skill"
-  },
-  {
     "name": "trsdn/mcp-server-ppt",
     "url": "https://github.com/trsdn/mcp-server-ppt",
     "repo": "trsdn/mcp-server-ppt",
@@ -1612,25 +1592,6 @@
     "skill": "No"
   },
   {
-    "name": "Emily27-alt/html-to-pptx",
-    "url": "https://github.com/Emily27-alt/html-to-pptx",
-    "repo": "Emily27-alt/html-to-pptx",
-    "category": "PPTX Libraries and Automation Infrastructure",
-    "categoryZh": "PPTX 库与自动化基础设施",
-    "type": "Skill",
-    "output": "PPTX",
-    "description": "Claude Code skill for converting existing HTML slide decks into editable PPTX with native text, shapes, images, and layout reconstruction.",
-    "descriptionZh": "用于将既有 HTML slide deck 转换为可编辑 PPTX 的 Claude Code skill，支持原生文本、形状、图片和版式重建。",
-    "tags": [
-      "HTML-first",
-      "Conversion",
-      "PPTX-native",
-      "Skill"
-    ],
-    "editable": "Editable",
-    "skill": "Skill"
-  },
-  {
     "name": "supercurses/powerpoint",
     "url": "https://github.com/supercurses/powerpoint",
     "repo": "supercurses/powerpoint",
@@ -1716,7 +1677,12 @@
     "output": "HTML/PPTX",
     "description": "Agent skill for audience-state-driven presentation planning, downstream renderer coordination, speaker notes, and delivery-focused QA.",
     "descriptionZh": "面向观众状态转移的演示规划 skill，支持协调下游渲染器、生成演讲备注并执行交付型 QA。",
-    "tags": ["HTML-first", "Automation", "QA", "PPTX-native"],
+    "tags": [
+      "HTML-first",
+      "Automation",
+      "QA",
+      "PPTX-native"
+    ],
     "editable": "Partially editable",
     "skill": "Skill"
   },
@@ -1730,7 +1696,13 @@
     "output": "HTML/PDF/PNG/PPTX",
     "description": "Agent-oriented HTML slide authoring harness with a browser editor, validation and design gates, image-native mode, and experimental PPTX export.",
     "descriptionZh": "面向 agent 的 HTML 幻灯片创作工具，提供浏览器编辑、验证与设计门禁、图片式模式和实验性 PPTX 导出。",
-    "tags": ["HTML-first", "Editor", "QA", "Conversion", "Image-based"],
+    "tags": [
+      "HTML-first",
+      "Editor",
+      "QA",
+      "Conversion",
+      "Image-based"
+    ],
     "editable": "Source editable",
     "skill": "Skill"
   },
@@ -1744,7 +1716,13 @@
     "output": "HTML/PPTX/PDF/Images/Video",
     "description": "Local-first AI HTML presentation app with document and PPTX import, visual editing, templates, animation, and multi-format export.",
     "descriptionZh": "本地优先的 AI HTML 演示应用，支持文档与 PPTX 导入、可视化编辑、模板、动画和多格式导出。",
-    "tags": ["HTML-first", "App", "Editor", "Conversion", "Video"],
+    "tags": [
+      "HTML-first",
+      "App",
+      "Editor",
+      "Conversion",
+      "Video"
+    ],
     "editable": "Editable",
     "skill": "No"
   },
@@ -1758,7 +1736,11 @@
     "output": "HTML",
     "description": "Agent skill for turning long-form source material into source-anchored HTML note decks with planning and delivery checks.",
     "descriptionZh": "将长篇材料整理为保留来源锚点的 HTML 笔记型 deck，并提供规划和交付检查的 agent skill。",
-    "tags": ["HTML-first", "Conversion", "QA"],
+    "tags": [
+      "HTML-first",
+      "Conversion",
+      "QA"
+    ],
     "editable": "Source editable",
     "skill": "Skill"
   },
@@ -1772,7 +1754,13 @@
     "output": "HTML/PDF",
     "description": "Coding-agent skill for Reveal.js presentations with browser text editing, overflow validation, screenshot review, and PDF export.",
     "descriptionZh": "用于生成 Reveal.js 演示的 coding-agent skill，支持浏览器文字编辑、溢出检查、截图复核和 PDF 导出。",
-    "tags": ["HTML-first", "Reveal.js", "Editor", "QA", "PDF"],
+    "tags": [
+      "HTML-first",
+      "Reveal.js",
+      "Editor",
+      "QA",
+      "PDF"
+    ],
     "editable": "Source editable",
     "skill": "Skill"
   },
@@ -1786,7 +1774,12 @@
     "output": "HTML/PDF/Images",
     "description": "HTML deck conversion and editing workspace with local browser processing, AI-assisted adaptation, and an MCP workflow for agent edits.",
     "descriptionZh": "HTML deck 转换与编辑工作区，支持浏览器本地处理、AI 辅助适配和面向 agent 修改的 MCP 工作流。",
-    "tags": ["HTML-first", "Editor", "Conversion", "MCP"],
+    "tags": [
+      "HTML-first",
+      "Editor",
+      "Conversion",
+      "MCP"
+    ],
     "editable": "Source editable",
     "skill": "MCP"
   },
@@ -1800,7 +1793,12 @@
     "output": "HTML",
     "description": "Agent skill for self-contained HTML presentations with Magic Move transitions, speaker notes, modular source files, and optional research and image generation.",
     "descriptionZh": "用于生成自包含 HTML 演示的 agent skill，支持 Magic Move 转场、演讲备注、模块化源文件及可选研究与图片生成。",
-    "tags": ["HTML-first", "Animation", "Speaker notes", "Research"],
+    "tags": [
+      "HTML-first",
+      "Animation",
+      "Speaker notes",
+      "Research"
+    ],
     "editable": "Source editable",
     "skill": "Skill"
   },
@@ -1814,7 +1812,12 @@
     "output": "HTML/MP4",
     "description": "Multi-agent workflow for animated HTML decks and presentation videos; PolyForm Noncommercial permits monetized content but prohibits resale or embedding Mira in commercial software.",
     "descriptionZh": "用于生成动画 HTML deck 和演示视频的多 agent 工作流；PolyForm Noncommercial 允许内容变现，但禁止转售 Mira 或将其嵌入商业软件。",
-    "tags": ["HTML-first", "Animation", "Video", "Noncommercial"],
+    "tags": [
+      "HTML-first",
+      "Animation",
+      "Video",
+      "Noncommercial"
+    ],
     "editable": "Source editable",
     "skill": "Skill"
   },
@@ -1828,7 +1831,13 @@
     "output": "Web/PPTX/JSON/PDF/Images",
     "description": "Web slide editor with template-based AIPPT, an AI-oriented data schema, rich canvas editing, and PPTX import and export; licensed under AGPL-3.0 with separate commercial licensing available.",
     "descriptionZh": "网页幻灯片编辑器，支持模板式 AIPPT、面向 AI 的数据 schema、丰富画布编辑及 PPTX 导入导出；采用 AGPL-3.0，并可另行取得商业许可。",
-    "tags": ["HTML-first", "App", "Editor", "Conversion", "PPTX-native"],
+    "tags": [
+      "HTML-first",
+      "App",
+      "Editor",
+      "Conversion",
+      "PPTX-native"
+    ],
     "editable": "Editable",
     "skill": "No"
   },
@@ -1842,7 +1851,13 @@
     "output": "PPTX/PDF",
     "description": "Image-native Codex slide studio with persistent projects, research, parallel rendering, editing, and export; bundled community previews retain upstream attribution terms.",
     "descriptionZh": "图片原生的 Codex 幻灯片工作室，支持持久项目、研究、并行渲染、编辑和导出；内置社区预览仍受上游署名条款约束。",
-    "tags": ["Image-first", "Image-based", "App", "Codex", "MCP"],
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "App",
+      "Codex",
+      "MCP"
+    ],
     "editable": "Image-based",
     "skill": "MCP"
   },
@@ -1856,7 +1871,13 @@
     "output": "PPTX/DOCX/XLSX",
     "description": "Office template automation skills that extract reusable brand profiles and generate same-format PowerPoint, Word, and Excel files with deterministic and visual QA.",
     "descriptionZh": "Office 模板自动化 skills，可提取可复用品牌 profile，并通过确定性与视觉 QA 生成同格式 PowerPoint、Word 和 Excel 文件。",
-    "tags": ["Template", "Automation", "PPTX-native", "QA", "Office"],
+    "tags": [
+      "Template",
+      "Automation",
+      "PPTX-native",
+      "QA",
+      "Office"
+    ],
     "editable": "Editable",
     "skill": "Skill"
   },
@@ -1870,7 +1891,12 @@
     "output": "PPTX",
     "description": "Image-to-editable-PowerPoint reconstruction skill with semantic asset decomposition, native text and connectors, residual tracking, and fail-closed delivery validation.",
     "descriptionZh": "图片转可编辑 PowerPoint 的重建 skill，支持语义素材拆分、原生文字与连接线、残差跟踪和失败关闭式交付验证。",
-    "tags": ["Conversion", "Image-based", "PPTX-native", "QA"],
+    "tags": [
+      "Conversion",
+      "Image-based",
+      "PPTX-native",
+      "QA"
+    ],
     "editable": "Editable",
     "skill": "Skill"
   },
@@ -1884,7 +1910,13 @@
     "output": "PPTX/HTML",
     "description": "Python library and CLI for bidirectional PowerPoint-to-HTML conversion with round-trip metadata, editable DrawingML output, and optional AI generation and review.",
     "descriptionZh": "用于 PowerPoint 与 HTML 双向转换的 Python 库和 CLI，支持往返元数据、可编辑 DrawingML 输出及可选 AI 生成与审核。",
-    "tags": ["Library", "Conversion", "HTML-first", "PPTX-native", "Automation"],
+    "tags": [
+      "Library",
+      "Conversion",
+      "HTML-first",
+      "PPTX-native",
+      "Automation"
+    ],
     "editable": "Editable",
     "skill": "Skill"
   },
@@ -1898,7 +1930,14 @@
     "output": "PPTX/DrawIO",
     "description": "Codex plugin for reconstructing scientific reference images as editable PowerPoint, WPS, or draw.io objects with staged drawing, inspection, and correction.",
     "descriptionZh": "Codex plugin，可将科研参考图分阶段重建为可编辑的 PowerPoint、WPS 或 draw.io 对象，并执行检查与修正。",
-    "tags": ["Plugin", "MCP", "Automation", "PowerPoint", "Conversion", "QA"],
+    "tags": [
+      "Plugin",
+      "MCP",
+      "Automation",
+      "PowerPoint",
+      "Conversion",
+      "QA"
+    ],
     "editable": "Editable",
     "skill": "MCP"
   },
@@ -1912,7 +1951,13 @@
     "output": "PPTX",
     "description": "Python template engine and CLI for filling PowerPoint templates from JSON, CSV, Excel, or Python model data.",
     "descriptionZh": "Python PowerPoint 模板引擎和 CLI，可使用 JSON、CSV、Excel 或 Python model 数据填充 PPTX 模板。",
-    "tags": ["Library", "Template", "Automation", "PPTX-native", "CLI"],
+    "tags": [
+      "Library",
+      "Template",
+      "Automation",
+      "PPTX-native",
+      "CLI"
+    ],
     "editable": "Editable",
     "skill": "No"
   },
@@ -1926,7 +1971,12 @@
     "output": "JSON",
     "description": "Browser-first PPTX parser that converts slides, elements, assets, themes, and speaker notes into structured JSON for editing and AI document workflows.",
     "descriptionZh": "浏览器优先的 PPTX parser，可将幻灯片、元素、资源、主题和演讲备注转换为供编辑与 AI 文档工作流使用的结构化 JSON。",
-    "tags": ["Library", "Conversion", "PPTX", "Parser"],
+    "tags": [
+      "Library",
+      "Conversion",
+      "PPTX",
+      "Parser"
+    ],
     "editable": "Unknown",
     "skill": "No"
   },
@@ -1940,7 +1990,12 @@
     "output": "Markdown",
     "description": "PowerPoint-to-Markdown converter that preserves hierarchy, lists, formatting, images, tables, and speaker notes for content and agent workflows.",
     "descriptionZh": "PowerPoint 转 Markdown 工具，可为内容处理和 agent 工作流保留层级、列表、格式、图片、表格和演讲备注。",
-    "tags": ["Conversion", "Markdown", "PPTX", "Parser"],
+    "tags": [
+      "Conversion",
+      "Markdown",
+      "PPTX",
+      "Parser"
+    ],
     "editable": "Unknown",
     "skill": "No"
   }
