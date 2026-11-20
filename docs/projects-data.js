@@ -1881,6 +1881,25 @@ window.AWESOME_AI_PPT_PROJECTS = [
     "skill": "No"
   },
   {
+    "name": "Inplain",
+    "url": "https://inplain.app",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "App",
+    "output": "HTML/Office/PDF",
+    "description": "Turns ChatGPT, Claude, Codex, or Cursor output into editable decks, documents, spreadsheets, dashboards, and shareable links through the web, MCP, or CLI, with Office and PDF export.",
+    "descriptionZh": "通过网页、MCP 或 CLI，把 ChatGPT、Claude、Codex 或 Cursor 的输出转为可编辑的演示文稿、文档、表格、仪表盘和可分享链接，并支持 Office 与 PDF 导出。",
+    "tags": [
+      "HTML-first",
+      "App",
+      "MCP",
+      "CLI",
+      "PDF"
+    ],
+    "editable": "Editable",
+    "skill": "MCP"
+  },
+  {
     "name": "nexu-io/codex-slides",
     "url": "https://github.com/nexu-io/codex-slides",
     "repo": "nexu-io/codex-slides",

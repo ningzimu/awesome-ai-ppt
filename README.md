@@ -89,6 +89,7 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 | [daniel-style/magic-slide](https://github.com/daniel-style/magic-slide) | 用于生成自包含 HTML 演示的 agent skill，支持 Magic Move 转场、演讲备注、模块化源文件及可选研究与图片生成。 | HTML-first, Animation, Speaker notes, Research | 源码可编辑 | Skill | 171 |
 | [sandeco/mira-animator](https://github.com/sandeco/mira-animator) | 用于生成动画 HTML deck 和演示视频的多 agent 工作流；PolyForm Noncommercial 允许内容变现，但禁止转售 Mira 或将其嵌入商业软件。 | HTML-first, Animation, 视频, Noncommercial | 源码可编辑 | Skill | 250 |
 | [pipipi-pikachu/PPTist](https://github.com/pipipi-pikachu/PPTist) | 网页幻灯片编辑器，支持模板式 AIPPT、面向 AI 的数据 schema、丰富画布编辑及 PPTX 导入导出；采用 AGPL-3.0，并可另行取得商业许可。 | HTML-first, 应用, Editor, 转换, PPTX-native | 可编辑 | 否 | 9,507 |
+| [Inplain](https://inplain.app) | 通过网页、MCP 或 CLI，把 ChatGPT、Claude、Codex 或 Cursor 的输出转为可编辑的演示文稿、文档、表格、仪表盘和可分享链接，并支持 Office 与 PDF 导出。 | HTML-first, 应用, MCP, CLI, PDF | 可编辑 | MCP | - |
 
 ## 图片生成式 PPT 方案
 

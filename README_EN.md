@@ -89,6 +89,7 @@ Workflows that create HTML, web slides, or page-style presentations first, then 
 | [daniel-style/magic-slide](https://github.com/daniel-style/magic-slide) | Agent skill for self-contained HTML presentations with Magic Move transitions, speaker notes, modular source files, and optional research and image generation. | HTML-first, Animation, Speaker notes, Research | Source editable | Skill | 171 |
 | [sandeco/mira-animator](https://github.com/sandeco/mira-animator) | Multi-agent workflow for animated HTML decks and presentation videos; PolyForm Noncommercial permits monetized content but prohibits resale or embedding Mira in commercial software. | HTML-first, Animation, Video, Noncommercial | Source editable | Skill | 250 |
 | [pipipi-pikachu/PPTist](https://github.com/pipipi-pikachu/PPTist) | Web slide editor with template-based AIPPT, an AI-oriented data schema, rich canvas editing, and PPTX import and export; licensed under AGPL-3.0 with separate commercial licensing available. | HTML-first, App, Editor, Conversion, PPTX-native | Editable | No | 9,507 |
+| [Inplain](https://inplain.app) | Turns ChatGPT, Claude, Codex, or Cursor output into editable decks, documents, spreadsheets, dashboards, and shareable links through the web, MCP, or CLI, with Office and PDF export. | HTML-first, App, MCP, CLI, PDF | Editable | MCP | - |
 
 ## Image-First Presentation Workflows
 
