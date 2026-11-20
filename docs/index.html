@@ -33,9 +33,9 @@
         </a>
 
         <div class="nav-center" aria-label="Section links">
-          <a class="nav-pill" href="#routes" data-i18n="navRoutes">技术路线</a>
-          <a class="nav-pill" href="#directory" data-i18n="navDirectory">项目目录</a>
+          <a class="nav-pill active" href="#directory" data-i18n="navDirectory">项目目录</a>
           <a class="nav-pill" href="agent/" data-i18n="navAgent">Agent Skill</a>
+          <a class="nav-pill" href="https://github.com/ningzimu/awesome-ai-ppt/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" data-i18n="navContribute">贡献指南</a>
         </div>
 
         <div class="top-actions">
@@ -61,105 +61,59 @@
       </nav>
     </header>
 
-    <section class="hero-stage">
-      <div class="hero-inner">
-        <div class="hero-pill">
-          <span class="live-dot" aria-hidden="true"></span>
-          <span data-i18n="heroBadge">开源精选 · 每日自动同步 GitHub Star</span>
-          <span class="pill-sep" aria-hidden="true">·</span>
-          <span id="starsUpdated" class="pill-date"></span>
+    <section class="page-intro">
+      <div class="intro-main">
+        <div class="intro-title-row">
+          <h1 class="intro-title">
+            <span data-i18n="heroTitlePre">发现最合适的</span>
+            <span class="title-highlight" data-i18n="heroTitleAccent">AI PPT 开源工作流</span>
+          </h1>
+          <span class="sync-badge">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span id="starsUpdated" data-i18n="heroBadgeShort">每日同步 Star</span>
+          </span>
         </div>
-
-        <h1 class="hero-title">
-          <span data-i18n="heroTitlePre">发现最合适的</span>
-          <span class="title-highlight" data-i18n="heroTitleAccent">AI PPT 开源工作流</span>
-        </h1>
-
-        <p class="hero-desc" data-i18n="heroCopy">
+        <p class="intro-desc" data-i18n="heroCopy">
           按主工作流源表示分类，而非仅看导出格式。系统对比 HTML 风格、图片生成式、PPTX 原生生成与自动化重建基础设施。
         </p>
-
-        <div class="spotlight-search-wrap">
-          <label class="spotlight-search">
-            <svg class="spotlight-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="8"/>
-              <path d="m21 21-4.3-4.3"/>
-            </svg>
-            <span class="sr-only" data-i18n="searchLabel">搜索项目</span>
-            <input id="searchInput" type="search" placeholder="搜索仓库名、技术路线、输出格式、中英文关键词..." autocomplete="off">
-            <button id="clearSearchBtn" class="clear-search-btn" type="button" hidden aria-label="清空搜索">×</button>
-            <kbd class="spotlight-kbd" aria-hidden="true">/</kbd>
-          </label>
-          <div class="search-hints">
-            <span class="hints-label" data-i18n="trendingLabel">热门检索：</span>
-            <button class="hint-chip" type="button" data-hint="Skill">Skill</button>
-            <button class="hint-chip" type="button" data-hint="MCP">MCP</button>
-            <button class="hint-chip" type="button" data-hint="python-pptx">python-pptx</button>
-            <button class="hint-chip" type="button" data-hint="Academic">Academic</button>
-            <button class="hint-chip" type="button" data-hint="PDF">PDF</button>
-            <button class="hint-chip" type="button" data-hint="HTML">HTML</button>
-          </div>
-        </div>
-
-        <div class="hero-stats-strip" aria-label="Directory metrics">
-          <div class="stat-pill">
-            <strong id="statProjects">0</strong>
-            <span data-i18n="projectsLabel">精选项目</span>
-          </div>
-          <div class="stat-pill">
-            <strong id="statSkills">0</strong>
-            <span data-i18n="skillsLabel">支持 Skill / MCP</span>
-          </div>
-          <div class="stat-pill">
-            <strong id="statEditable">0</strong>
-            <span data-i18n="editableLabel">原生可编辑 PPTX</span>
-          </div>
-          <div class="stat-pill">
-            <strong>25+</strong>
-            <span data-i18n="thresholdLabel">Star 收录门槛</span>
-          </div>
-        </div>
       </div>
 
-      <div id="routes" class="route-deck-wrap">
-        <div class="route-deck-head">
-          <span class="section-kicker" data-i18n="routesKicker">FOUR WORKFLOW ROUTES</span>
-          <div class="route-deck-bar">
-            <h2 data-i18n="routesHeading">四大技术路线画廊</h2>
-            <p data-i18n="routesSub">点击任意路线画布，即刻筛选对应开源方案</p>
-          </div>
+      <div class="intro-metrics" aria-label="Directory metrics">
+        <div class="metric-item">
+          <strong id="statProjects">0</strong>
+          <span data-i18n="projectsLabel">精选项目</span>
         </div>
-        <div id="routeCards" class="route-deck-grid" role="group" aria-label="Technical routes"></div>
+        <div class="metric-item">
+          <strong id="statSkills">0</strong>
+          <span data-i18n="skillsLabel">Skill / MCP</span>
+        </div>
+        <div class="metric-item">
+          <strong id="statEditable">0</strong>
+          <span data-i18n="editableLabel">原生可编辑</span>
+        </div>
       </div>
+    </section>
+
+    <section id="routes" class="route-tabs-wrap" aria-label="Technical routes">
+      <div id="routeCards" class="route-tabs" role="group" aria-label="Technical routes"></div>
     </section>
 
     <main id="directory" class="workspace">
       <aside class="sidebar" aria-label="Facet filters">
         <div class="sidebar-card">
           <div class="sidebar-head">
-            <span data-i18n="filterTitle">筛选条件</span>
+            <span data-i18n="filterTitle">精细筛选</span>
             <button id="sidebarReset" class="text-reset-btn" type="button" hidden data-i18n="resetFilters">清空</button>
           </div>
 
           <div class="facet-group">
-            <h3 class="facet-title" data-i18n="facetRoute">技术路线</h3>
-            <div id="categoryNav" class="facet-list"></div>
-          </div>
-
-          <div class="facet-group">
             <h3 class="facet-title" data-i18n="facetEditability">可编辑性</h3>
-            <div id="editableNav" class="facet-pills"></div>
+            <div id="editableNav" class="facet-list"></div>
           </div>
 
           <div class="facet-group">
             <h3 class="facet-title" data-i18n="facetIntegration">接入形态</h3>
-            <div id="quickFilters" class="facet-pills" role="group" aria-label="Integration filters">
-              <button class="facet-pill active" type="button" data-quick="all" data-i18n="quickAll">全部</button>
-              <button class="facet-pill" type="button" data-quick="skill" data-i18n="quickSkill">Agent Skill</button>
-              <button class="facet-pill" type="button" data-quick="mcp" data-i18n="quickMcp">MCP Server</button>
-              <button class="facet-pill" type="button" data-quick="app" data-i18n="quickApp">独立应用</button>
-              <button class="facet-pill" type="button" data-quick="library" data-i18n="quickLib">开发库 / CLI</button>
-            </div>
+            <div id="quickFilters" class="facet-list" role="group" aria-label="Integration filters"></div>
           </div>
 
           <div class="facet-group">
@@ -170,49 +124,66 @@
             <div id="tagCloud" class="tag-cloud"></div>
           </div>
         </div>
-
-        <div class="agent-promo-card">
-          <div class="agent-promo-badge">SKILL</div>
-          <h3 data-i18n="promoTitle">让 AI 帮你做 PPT 工具选型</h3>
-          <p data-i18n="promoCopy">安装 awesome-ai-ppt skill，告诉 AI 你的材料与编辑要求，自动对比原仓库推荐方案。</p>
-          <a class="promo-link" href="agent/">
-            <span data-i18n="promoCta">查看接入指南</span>
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
       </aside>
 
       <section class="catalog-main">
-        <div class="catalog-topbar">
-          <div class="catalog-status">
-            <strong id="resultCount" class="result-count" tabindex="-1">0 个项目</strong>
-            <div id="activeFilters" class="active-filters"></div>
-          </div>
-
-          <div class="catalog-controls">
-            <label class="compact-select">
-              <span class="sr-only" data-i18n="sortLabel">排序</span>
-              <select id="sortSelect" aria-label="排序方式">
-                <option value="stars-desc" data-i18n="sortStarsDesc">按 Star 降序</option>
-                <option value="stars-asc" data-i18n="sortStarsAsc">按 Star 升序</option>
-                <option value="name-asc" data-i18n="sortNameAsc">按名称 A-Z</option>
-              </select>
+        <div class="catalog-toolbar">
+          <div class="toolbar-primary">
+            <label class="toolbar-search">
+              <svg class="toolbar-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.3-4.3"/>
+              </svg>
+              <span class="sr-only" data-i18n="searchLabel">搜索项目</span>
+              <input id="searchInput" type="search" placeholder="搜索仓库名、技术路线、输出格式或关键词..." autocomplete="off">
+              <button id="clearSearchBtn" class="clear-search-btn" type="button" hidden aria-label="清空搜索">×</button>
+              <kbd class="spotlight-kbd" aria-hidden="true">/</kbd>
             </label>
 
-            <div class="view-toggle" role="group" aria-label="View mode">
-              <button class="active" type="button" data-view="grid" title="卡片视图" aria-label="卡片视图">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="3" y="3" width="7" height="7" rx="1.5"/>
-                  <rect x="14" y="3" width="7" height="7" rx="1.5"/>
-                  <rect x="3" y="14" width="7" height="7" rx="1.5"/>
-                  <rect x="14" y="14" width="7" height="7" rx="1.5"/>
-                </svg>
-              </button>
-              <button type="button" data-view="list" title="表格列表视图" aria-label="表格列表视图">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
-                </svg>
-              </button>
+            <div class="catalog-controls">
+              <strong id="resultCount" class="result-count" tabindex="-1">共 0 个</strong>
+
+              <label class="compact-select">
+                <span class="sr-only" data-i18n="sortLabel">排序</span>
+                <select id="sortSelect" aria-label="排序方式">
+                  <option value="stars-desc" data-i18n="sortStarsDesc">按 Star 降序</option>
+                  <option value="stars-asc" data-i18n="sortStarsAsc">按 Star 升序</option>
+                  <option value="name-asc" data-i18n="sortNameAsc">按名称 A-Z</option>
+                </select>
+              </label>
+
+              <div class="view-toggle" role="group" aria-label="View mode">
+                <button class="active" type="button" data-view="grid" title="卡片视图" aria-label="卡片视图">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                    <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+                  </svg>
+                </button>
+                <button type="button" data-view="list" title="表格列表视图" aria-label="表格列表视图">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar-subbar">
+            <div id="searchHints" class="subbar-hints">
+              <span class="hints-label" data-i18n="trendingLabel">快捷检索：</span>
+              <button class="hint-chip" type="button" data-hint="Skill">Skill</button>
+              <button class="hint-chip" type="button" data-hint="MCP">MCP</button>
+              <button class="hint-chip" type="button" data-hint="python-pptx">python-pptx</button>
+              <button class="hint-chip" type="button" data-hint="Academic">Academic</button>
+              <button class="hint-chip" type="button" data-hint="PDF">PDF</button>
+              <button class="hint-chip" type="button" data-hint="HTML">HTML</button>
+            </div>
+
+            <div id="activeFiltersWrap" class="subbar-active" hidden>
+              <div id="activeFilters" class="active-filters"></div>
+              <button id="toolbarReset" class="subbar-reset-btn" type="button" data-i18n="resetFilters">清空</button>
             </div>
           </div>
         </div>
