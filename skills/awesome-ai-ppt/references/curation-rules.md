@@ -32,8 +32,8 @@ A project that exports PPTX is not automatically PPTX-native. A project with a s
 
 ## Inclusion
 
-- Main-list GitHub repositories should usually have at least 10 stars.
-- Research papers, official directories, or foundational resources may be included below 10 stars only when clearly useful.
+- Main-list GitHub repositories should usually have at least 25 stars (enforced by CI via `docs/stars.json`).
+- Non-GitHub foundational resources (entries without a GitHub `repo`) may be included without a star count only when clearly useful.
 - Prefer canonical GitHub repository URLs.
 - Avoid duplicate entries. Check by `repo`, `url`, project name, and upstream project identity.
 - Do not include generic AI writing tools without a presentation workflow.

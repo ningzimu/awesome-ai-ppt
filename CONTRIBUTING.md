@@ -10,7 +10,7 @@ Good candidates should meet most of these:
 
 - Directly related to AI-assisted presentation generation, PPTX editing, slide conversion, deck reconstruction, rendering, QA, or evaluation.
 - Public GitHub repository or open technical resource.
-- GitHub repositories should have at least 10 stars.
+- GitHub repositories should have at least 25 stars.
 - For subdirectory skills inside broad collections or general agent frameworks, the parent repository's stars should represent that PPT workflow itself.
 - Clear README, documentation, example, or demo.
 - Visible license when source code is included.
@@ -30,10 +30,12 @@ Avoid:
 
 ## Entry Format
 
-Entries are generated from `docs/projects.json`. Add or edit project metadata there, then run:
+Entries are generated from `docs/projects.json` with GitHub star counts cached in `docs/stars.json`. Add or edit project metadata in `docs/projects.json`, update `docs/stars.json` (by running `python3 scripts/update_stars.py` or adding the verified integer star count for the new `repo`), and then run:
 
 ```sh
 python3 scripts/render_readme.py
+python3 scripts/render_pages_data.py
+python3 scripts/check_bilingual.py
 ```
 
 Rules:
@@ -46,7 +48,7 @@ Rules:
 - Put the entry in the category that matches the primary workflow route, not merely the final export format.
 - Add useful tags such as `HTML-first`, `Image-first`, `PPTX-native`, `Editable`, `Partially editable`, `Image-based`, `Skill`, `App`, `Library`, `MCP`, `Backend`, `Conversion`, or `Automation`.
 - Use `editable` to describe editability status and `skill` to describe whether the project is a skill, MCP server, or neither.
-- Keep the `stars` field current enough for sorting. The scheduled workflow refreshes it automatically.
+- Keep the `docs/stars.json` star cache entry present and valid (integer ≥ 25) for every GitHub `repo`. The scheduled workflow refreshes counts daily.
 
 ## Pull Requests
 

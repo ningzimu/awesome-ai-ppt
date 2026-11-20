@@ -1009,26 +1009,6 @@ window.AWESOME_AI_PPT_PROJECTS = [
     "skill": "Skill"
   },
   {
-    "name": "kdnsna/ultimate-ppt-master-skill",
-    "url": "https://github.com/kdnsna/ultimate-ppt-master-skill",
-    "repo": "kdnsna/ultimate-ppt-master-skill",
-    "category": "HTML-First Presentation Workflows",
-    "categoryZh": "HTML 风格 PPT 方案",
-    "type": "Skill",
-    "output": "PPTX/HTML",
-    "description": "Local-first AI presentation hub that packages source files for agents and produces editable PowerPoint decks or magazine-style web decks.",
-    "descriptionZh": "本地优先的 AI 演示生产中枢，可把多类资料打包给 agent，并生成可编辑 PowerPoint 或杂志风 Web Deck。",
-    "tags": [
-      "HTML-first",
-      "PPTX-native",
-      "Conversion",
-      "Template",
-      "Automation"
-    ],
-    "editable": "Editable",
-    "skill": "Skill"
-  },
-  {
     "name": "trsdn/mcp-server-ppt",
     "url": "https://github.com/trsdn/mcp-server-ppt",
     "repo": "trsdn/mcp-server-ppt",
@@ -1610,25 +1590,6 @@ window.AWESOME_AI_PPT_PROJECTS = [
     ],
     "editable": "Editable",
     "skill": "No"
-  },
-  {
-    "name": "Emily27-alt/html-to-pptx",
-    "url": "https://github.com/Emily27-alt/html-to-pptx",
-    "repo": "Emily27-alt/html-to-pptx",
-    "category": "PPTX Libraries and Automation Infrastructure",
-    "categoryZh": "PPTX 库与自动化基础设施",
-    "type": "Skill",
-    "output": "PPTX",
-    "description": "Claude Code skill for converting existing HTML slide decks into editable PPTX with native text, shapes, images, and layout reconstruction.",
-    "descriptionZh": "用于将既有 HTML slide deck 转换为可编辑 PPTX 的 Claude Code skill，支持原生文本、形状、图片和版式重建。",
-    "tags": [
-      "HTML-first",
-      "Conversion",
-      "PPTX-native",
-      "Skill"
-    ],
-    "editable": "Editable",
-    "skill": "Skill"
   },
   {
     "name": "supercurses/powerpoint",

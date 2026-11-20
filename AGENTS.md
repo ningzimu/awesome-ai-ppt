@@ -37,7 +37,7 @@ GitHub Pages should default to Chinese and provide an English switch.
 
 ## Inclusion Rules
 
-Main-list GitHub repositories should usually have at least 10 stars.
+Main-list GitHub repositories should usually have at least 25 stars.
 
 Projects below the threshold should not stay in the main README.
 

@@ -73,7 +73,6 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 | [Akxan/ppt-agent-skill](https://github.com/Akxan/ppt-agent-skill) | 先以 HTML 设计幻灯片、再转换为 SVG 并打包为可编辑 PPTX 的 Claude Code skill。 | HTML-first, 转换, 模板, PPTX-native | 可编辑 | Skill | 186 |
 | [M1n-n9/academic-ppt-master](https://github.com/M1n-n9/academic-ppt-master) | 将论文和文档制作成 SVG 页面并导出为可编辑 PPTX 的学术演示 skill。 | HTML-first, PPTX-native, Academic, 转换, 模板 | 可编辑 | Skill | 320 |
 | [Kuneosu/make-slide](https://github.com/Kuneosu/make-slide) | 用于生成独立 HTML 幻灯片 deck 的通用 AI skill。 | HTML-first, PDF, 模板 | 部分可编辑 | Skill | 145 |
-| [kdnsna/ultimate-ppt-master-skill](https://github.com/kdnsna/ultimate-ppt-master-skill) | 本地优先的 AI 演示生产中枢，可把多类资料打包给 agent，并生成可编辑 PowerPoint 或杂志风 Web Deck。 | HTML-first, PPTX-native, 转换, 模板, 自动化 | 可编辑 | Skill | 2 |
 | [codesstar/next-slide](https://github.com/codesstar/next-slide) | 面向 Claude Code、Hermes Agent 和 OpenClaw 的 HTML 演示生成 skill，提供多风格、双语和 PPT 内容转换能力。 | HTML-first, 转换, Bilingual | 源码可编辑 | Skill | 56 |
 | [marp-team/marp-cli](https://github.com/marp-team/marp-cli) | Marp 命令行工具，可将 Markdown 幻灯片转换为 HTML、PDF、图片和 PowerPoint 文件。 | HTML-first, Markdown, 转换 | 部分可编辑 | 否 | 3,940 |
 | [archlizheng/frontend-slides-editable](https://github.com/archlizheng/frontend-slides-editable) | 面向 Codex 和 Claude Code 的可编辑 HTML 演示 skill，支持拖拽缩放、页面排序、本地保存/导出和 PPTX 转网页。 | HTML-first, Editor, 转换, Skill | 源码可编辑 | Skill | 564 |
@@ -170,7 +169,6 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 | [JadeLiu-tech/px-image2pptx](https://github.com/JadeLiu-tech/px-image2pptx) | 通过 OCR、文字遮罩、图像修复和 python-pptx 重建，将静态幻灯片图片转换为带可编辑文本层的 PPTX。 | 转换, 图片式, OCR, PPTX-native | 部分可编辑 | 否 | 39 |
 | [yingkitw/ppt-rs](https://github.com/yingkitw/ppt-rs) | Rust PPTX 库和 CLI，支持 Markdown 转 PPTX、HTML 转 PPTX、PPTX 转 HTML、图片导出和 MCP 工作流。 | 库, PPTX-native, 转换, MCP | 可编辑 | MCP | 53 |
 | [abdelkrimkr/html2pptx](https://github.com/abdelkrimkr/html2pptx) | Node.js CLI 和库，可将 HTML 文件转换为 PowerPoint，把文本、图片、SVG 和 CSS 布局映射为 PPTX 对象。 | HTML-first, 转换, PPTX-native, 库 | 可编辑 | 否 | 25 |
-| [Emily27-alt/html-to-pptx](https://github.com/Emily27-alt/html-to-pptx) | 用于将既有 HTML slide deck 转换为可编辑 PPTX 的 Claude Code skill，支持原生文本、形状、图片和版式重建。 | HTML-first, 转换, PPTX-native, Skill | 可编辑 | Skill | 20 |
 | [supercurses/powerpoint](https://github.com/supercurses/powerpoint) | 专注 PowerPoint 的 MCP server，基于 python-pptx 创建演示文稿，是 PPT MCP 生态中的早期基线项目。 | MCP, 自动化, PPTX-native, PowerPoint | 可编辑 | MCP | 145 |
 | [Ayushmaniar/powerpoint-mcp](https://github.com/Ayushmaniar/powerpoint-mcp) | 基于 pywin32 和 COM 自动化的 Windows PowerPoint MCP server，用于控制本机 PowerPoint。 | MCP, 自动化, PowerPoint, COM | 可编辑 | MCP | 130 |
 | [daekeun-ml/ppt-translator](https://github.com/daekeun-ml/ppt-translator) | PowerPoint 翻译 CLI 和 MCP server，可在使用 Amazon Bedrock 翻译 PPTX 内容时保留版式和结构。 | MCP, Translation, 自动化, PPTX-native | 可编辑 | MCP | 72 |
@@ -189,7 +187,7 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 
 分类按主工作流的源表示决定，而不是按最终导出格式决定。能导出 PPTX 不等于属于 PPTX 库生成式；`Skill`、`可编辑 PPTX` 和 `PPTX export` 都只是标签，不能单独决定分类。
 
-GitHub 仓库通常需要至少 10 stars 才能进入主列表。
+GitHub 仓库通常需要至少 25 stars 才能进入主列表。
 
 如果项目只是大仓库、合集仓库或通用 agent 仓库里的一个子目录 / skill，且父级仓库的 stars 不能代表这个 PPT 工作流本身，则不进入主列表。
 
