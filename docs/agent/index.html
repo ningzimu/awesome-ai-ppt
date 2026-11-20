@@ -5,146 +5,308 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="安装和使用 awesome-ai-ppt skill，让 AI 检索、对比和贡献 AI PPT 工具清单。">
     <title>Agent 接入 - Awesome AI PPT</title>
+    <link rel="icon" type="image/png" href="../logo.png">
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("awesome-ai-ppt-theme");
+          var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
+    <div class="canvas-bg" aria-hidden="true"></div>
+
     <header class="site-header">
       <nav class="topbar" aria-label="Primary">
         <a class="brand" href="../" aria-label="Awesome AI PPT home">
-          <span class="brand-mark">AI</span>
-          <span>Awesome AI PPT</span>
+          <span class="brand-mark" aria-hidden="true">
+            <img src="../logo.png" alt="" width="34" height="34">
+          </span>
+          <span class="brand-copy">
+            <strong>Awesome AI PPT</strong>
+            <span class="brand-tag" data-i18n="brandSub">Agent Skill</span>
+          </span>
         </a>
+
+        <div class="nav-center" aria-label="Section links">
+          <a class="nav-pill" href="../" data-i18n="directory">项目目录</a>
+          <a class="nav-pill active" href="./" data-i18n="navAgent">Agent Skill</a>
+          <a class="nav-pill" href="https://github.com/ningzimu/awesome-ai-ppt" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
         <div class="top-actions">
-          <a href="../" data-i18n="directory">目录</a>
-          <a href="https://github.com/ningzimu/awesome-ai-ppt">GitHub</a>
-          <div class="language-switch" aria-label="Language switch">
+          <button id="themeToggle" class="icon-btn" type="button" aria-label="切换深浅色主题" title="切换深浅色主题">
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <div class="language-switch" role="group" aria-label="Language switch">
             <button class="active" type="button" data-lang="zh">中文</button>
-            <button type="button" data-lang="en">English</button>
+            <button type="button" data-lang="en">EN</button>
           </div>
         </div>
       </nav>
-      <section class="agent-hero">
-        <p class="agent-kicker" data-i18n="kicker">Agent / Skill 接入</p>
-        <h1 data-i18n="title">让 AI 学会使用和贡献这个清单</h1>
-        <p class="hero-copy" data-i18n="subtitle">
-          告诉 AI 你的场景、材料和偏好，它会用 awesome-ai-ppt skill 帮你个性化推荐最合适的 AI PPT 工具；也可以在你需要时辅助提交问题、准备 PR，一起贡献这个项目。
-        </p>
-        <div class="hero-actions">
-          <a class="primary-action" href="#install" data-i18n="installCta">安装 Skill</a>
-          <a class="secondary-action" href="#examples" data-i18n="examplesCta">查看示例</a>
-        </div>
-      </section>
     </header>
 
-    <main class="agent-main">
-      <section id="install" class="agent-section install-panel">
-        <h2 data-i18n="sayTitle">一句话让 AI 安装</h2>
-        <p data-i18n="sayCopy">把下面这句话发给你的 AI agent：</p>
-        <pre><code data-i18n="sayPrompt">帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt</code></pre>
-        <h3 data-i18n="manualTitle">手动安装</h3>
-        <pre><code>npx -y skills@latest add ningzimu/awesome-ai-ppt \
+    <main class="agent-stage">
+      <section class="agent-hero-center">
+        <div class="hero-pill">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span data-i18n="kicker">Agent / Skill 接入指南</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-i18n="titlePre">让 AI 学会使用和贡献</span>
+          <span class="title-highlight" data-i18n="titleAccent">这份 AI PPT 清单</span>
+        </h1>
+        <p class="hero-desc" data-i18n="subtitle">
+          告诉 AI 你的场景、材料和偏好，它会用 awesome-ai-ppt skill 帮你个性化推荐最合适的 AI PPT 工具；也可以在你需要时辅助提交问题、准备 PR，一起贡献这个项目。
+        </p>
+        <div class="agent-actions">
+          <a class="primary-btn" href="#install" data-i18n="installCta">立即安装 Skill</a>
+          <a class="secondary-btn" href="#examples" data-i18n="examplesCta">查看 Prompt 示例</a>
+        </div>
+      </section>
+
+      <section class="steps-grid" aria-label="How the skill works">
+        <article class="step-card">
+          <span class="step-num">01</span>
+          <h3 data-i18n="step1Title">读取最新清单</h3>
+          <p data-i18n="step1Copy">自动拉取远程 projects.json，先了解全部候选技术路线，再追问你的输出格式、可编辑性与本地约束。</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">02</span>
+          <h3 data-i18n="step2Title">实测对比原仓库</h3>
+          <p data-i18n="step2Copy">锁定 3–6 个候选后深入原 GitHub 仓库核验安装复杂度、活跃度与真实局限，不只看 Star 数。</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">03</span>
+          <h3 data-i18n="step3Title">辅助规范贡献</h3>
+          <p data-i18n="step3Copy">仅在你明确要求时进入贡献流程，协助评估入选门槛、整理中英文双语数据并准备合规 PR。</p>
+        </article>
+      </section>
+
+      <section id="install" class="terminal-card">
+        <div class="terminal-header">
+          <div class="terminal-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="terminal-title" data-i18n="terminalTitle">安装 awesome-ai-ppt skill</span>
+          <span style="width: 42px;"></span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-block">
+            <h2 data-i18n="sayTitle">方式一：一句话让 AI 安装</h2>
+            <p data-i18n="sayCopy">把下面这句话直接发给你的 AI agent（Codex / Claude Code 等）：</p>
+            <div class="code-shell">
+              <pre><code data-i18n="sayPrompt">帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt</code></pre>
+              <button class="copy-btn" type="button" data-copy data-i18n="copyLabel">复制</button>
+            </div>
+          </div>
+
+          <div class="terminal-block">
+            <h3 data-i18n="manualTitle">方式二：命令行手动安装</h3>
+            <div class="code-shell">
+              <pre><code>npx -y skills@latest add ningzimu/awesome-ai-ppt \
   --skill awesome-ai-ppt \
   --agent codex \
   --global</code></pre>
+              <button class="copy-btn" type="button" data-copy data-i18n="copyLabel">复制</button>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="examples" class="agent-grid">
-        <article class="agent-section">
-          <h2 data-i18n="useTitle">用于工具选型</h2>
-          <p data-i18n="useCopy">
-            直接告诉 AI 你要做什么、有哪些输入材料、是否需要可编辑、是否要本地运行或接入 agent，它会结合你的真实需求推荐合适项目。
-          </p>
-          <pre><code data-i18n="usePrompt">我想把一篇技术文章做成可编辑 PPT，重视后续修改和自动化，请使用 awesome-ai-ppt skill 帮我推荐最合适的 AI PPT 项目。</code></pre>
+      <section id="examples" class="agent-examples-grid">
+        <article class="example-card">
+          <div>
+            <h2 data-i18n="useTitle">用于工具选型</h2>
+            <p data-i18n="useCopy">
+              直接告诉 AI 你要做什么、有哪些输入材料、是否需要可编辑、是否要本地运行或接入 agent，它会结合你的真实需求推荐合适项目。
+            </p>
+          </div>
+          <div class="code-shell">
+            <pre><code data-i18n="usePrompt">我想把一篇技术文章做成可编辑 PPT，重视后续修改和自动化，请使用 awesome-ai-ppt skill 帮我推荐最合适的 AI PPT 项目。</code></pre>
+            <button class="copy-btn" type="button" data-copy data-i18n="copyLabel">复制</button>
+          </div>
         </article>
 
-        <article class="agent-section">
-          <h2 data-i18n="contributeTitle">用于贡献清单</h2>
-          <p data-i18n="contributeCopy">
-            只有当你明确要求反馈问题、修改清单、提交 Issue 或准备 PR 时，skill 才会进入贡献流程。
-          </p>
-          <pre><code data-i18n="contributePrompt">请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。</code></pre>
+        <article class="example-card">
+          <div>
+            <h2 data-i18n="contributeTitle">用于贡献清单</h2>
+            <p data-i18n="contributeCopy">
+              只有当你明确要求反馈问题、修改清单、提交 Issue 或准备 PR 时，skill 才会进入贡献流程。
+            </p>
+          </div>
+          <div class="code-shell">
+            <pre><code data-i18n="contributePrompt">请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。</code></pre>
+            <button class="copy-btn" type="button" data-copy data-i18n="copyLabel">复制</button>
+          </div>
         </article>
       </section>
 
-      <section class="agent-section">
-        <h2 data-i18n="linksTitle">相关链接</h2>
+      <section class="agent-links-card">
+        <h2 data-i18n="linksTitle">相关资源</h2>
         <div class="agent-links">
-          <a href="https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt" data-i18n="skillLink">Skill 源码</a>
-          <a href="https://github.com/ningzimu/awesome-ai-ppt/blob/main/CONTRIBUTING.md" data-i18n="contributingLink">贡献指南</a>
-          <a href="https://github.com/ningzimu/awesome-ai-ppt/issues" data-i18n="issuesLink">Issues</a>
+          <a href="../" data-i18n="backDirectory">返回项目目录</a>
+          <a href="https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt" target="_blank" rel="noopener noreferrer" data-i18n="skillLink">Skill 源码</a>
+          <a href="https://github.com/ningzimu/awesome-ai-ppt/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" data-i18n="contributingLink">贡献指南</a>
+          <a href="https://github.com/ningzimu/awesome-ai-ppt/issues" target="_blank" rel="noopener noreferrer" data-i18n="issuesLink">Issues</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span><a href="https://github.com/ningzimu/awesome-ai-ppt/blob/main/LICENSE">CC0 1.0 Universal</a> @2026 <a href="https://github.com/ningzimu">ningzimu</a></span>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <strong>Awesome AI PPT</strong>
+          <span>· <a href="https://github.com/ningzimu/awesome-ai-ppt/blob/main/LICENSE">CC0 1.0 Universal</a> @2026 <a href="https://github.com/ningzimu">ningzimu</a></span>
+        </div>
+        <div class="footer-links">
+          <a href="../" data-i18n="directory">项目目录</a>
+          <a href="https://github.com/ningzimu/awesome-ai-ppt" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
     </footer>
 
     <script>
+      const STORAGE_LANG_KEY = "awesome-ai-ppt-lang";
+      const STORAGE_THEME_KEY = "awesome-ai-ppt-theme";
+
       const translations = {
         zh: {
-          directory: "目录",
-          contribute: "贡献",
-          kicker: "Agent / Skill 接入",
-          title: "让 AI 学会使用和贡献这个清单",
+          brandSub: "Agent Skill",
+          directory: "项目目录",
+          navAgent: "Agent Skill",
+          kicker: "Agent / Skill 接入指南",
+          titlePre: "让 AI 学会使用和贡献",
+          titleAccent: "这份 AI PPT 清单",
           subtitle: "告诉 AI 你的场景、材料和偏好，它会用 awesome-ai-ppt skill 帮你个性化推荐最合适的 AI PPT 工具；也可以在你需要时辅助提交问题、准备 PR，一起贡献这个项目。",
-          sayTitle: "一句话让 AI 安装",
-          sayCopy: "把下面这句话发给你的 AI agent：",
+          installCta: "立即安装 Skill",
+          examplesCta: "查看 Prompt 示例",
+          step1Title: "读取最新清单",
+          step1Copy: "自动拉取远程 projects.json，先了解全部候选技术路线，再追问你的输出格式、可编辑性与本地约束。",
+          step2Title: "实测对比原仓库",
+          step2Copy: "锁定 3–6 个候选后深入原 GitHub 仓库核验安装复杂度、活跃度与真实局限，不只看 Star 数。",
+          step3Title: "辅助规范贡献",
+          step3Copy: "仅在你明确要求时进入贡献流程，协助评估入选门槛、整理中英文双语数据并准备合规 PR。",
+          terminalTitle: "安装 awesome-ai-ppt skill",
+          sayTitle: "方式一：一句话让 AI 安装",
+          sayCopy: "把下面这句话直接发给你的 AI agent（Codex / Claude Code 等）：",
           sayPrompt: "帮我安装 awesome-ai-ppt skill：https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt",
-          manualTitle: "手动安装",
-          installCta: "安装 Skill",
-          examplesCta: "查看示例",
+          manualTitle: "方式二：命令行手动安装",
           useTitle: "用于工具选型",
           useCopy: "直接告诉 AI 你要做什么、有哪些输入材料、是否需要可编辑、是否要本地运行或接入 agent，它会结合你的真实需求推荐合适项目。",
           usePrompt: "我想把一篇技术文章做成可编辑 PPT，重视后续修改和自动化，请使用 awesome-ai-ppt skill 帮我推荐最合适的 AI PPT 项目。",
           contributeTitle: "用于贡献清单",
           contributeCopy: "只有当你明确要求反馈问题、修改清单、提交 Issue 或准备 PR 时，skill 才会进入贡献流程。",
           contributePrompt: "请使用 awesome-ai-ppt skill，检查这个 GitHub 项目是否适合加入清单。",
-          linksTitle: "相关链接",
+          linksTitle: "相关资源",
+          backDirectory: "返回项目目录",
           skillLink: "Skill 源码",
           contributingLink: "贡献指南",
-          issuesLink: "Issues"
+          issuesLink: "Issues",
+          copyLabel: "复制",
+          copiedLabel: "已复制"
         },
         en: {
+          brandSub: "Agent Skill",
           directory: "Directory",
-          contribute: "Contribute",
-          kicker: "Agent / Skill Access",
-          title: "Teach AI agents to use and contribute this list",
-          subtitle: "Tell your AI agent your scenario, source material, and preferences. The awesome-ai-ppt skill helps it recommend the best-fit AI PPT tools, submit issues, prepare PRs, and contribute to this project with you.",
-          sayTitle: "Tell Your AI Agent",
-          sayCopy: "Send this sentence to your AI agent:",
-          sayPrompt: "Install the awesome-ai-ppt skill from https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt",
-          manualTitle: "Manual Install",
+          navAgent: "Agent Skill",
+          kicker: "Agent / Skill Access Guide",
+          titlePre: "Teach AI agents to use",
+          titleAccent: "Awesome AI PPT",
+          subtitle: "Tell your AI agent your scenario, source material, and preferences. The awesome-ai-ppt skill helps recommend the best-fit tools, submit issues, and prepare PRs with you.",
           installCta: "Install Skill",
-          examplesCta: "View Examples",
+          examplesCta: "Prompt Examples",
+          step1Title: "Read Live Directory",
+          step1Copy: "Fetches the latest projects.json first, then asks targeted questions about output format, editability, and setup constraints.",
+          step2Title: "Verify Original Repos",
+          step2Copy: "Inspects 3–6 shortlisted GitHub repositories directly for workflow fit, maintenance, and caveats—not just star counts.",
+          step3Title: "Guided Contributions",
+          step3Copy: "Enters contribution mode only when asked, helping verify inclusion rules, bilingual metadata, and PR readiness.",
+          terminalTitle: "Install awesome-ai-ppt skill",
+          sayTitle: "Option 1: Tell Your AI Agent",
+          sayCopy: "Send this sentence to your AI agent (Codex, Claude Code, etc.):",
+          sayPrompt: "Install the awesome-ai-ppt skill from https://github.com/ningzimu/awesome-ai-ppt/tree/main/skills/awesome-ai-ppt",
+          manualTitle: "Option 2: Manual CLI Install",
           useTitle: "Choose Tools",
-          useCopy: "Describe what you want to make, your source material, editability needs, local or cloud constraints, and agent integration needs. The skill helps match projects to your real workflow.",
+          useCopy: "Describe what you want to make, your source material, editability needs, local or cloud constraints, and agent integration needs.",
           usePrompt: "I want to turn a technical article into an editable PPT and care about later editing and automation. Use the awesome-ai-ppt skill to recommend the best-fit AI PPT projects.",
           contributeTitle: "Contribute To The List",
           contributeCopy: "The skill enters contribution mode only when you explicitly ask it to report a problem, modify the list, submit an issue, or prepare a PR.",
           contributePrompt: "Use the awesome-ai-ppt skill to check whether this GitHub project belongs in the list.",
-          linksTitle: "Links",
+          linksTitle: "Resources",
+          backDirectory: "Back to Directory",
           skillLink: "Skill source",
           contributingLink: "Contributing guide",
-          issuesLink: "Issues"
+          issuesLink: "Issues",
+          copyLabel: "Copy",
+          copiedLabel: "Copied"
         }
       };
 
       const buttons = document.querySelectorAll("[data-lang]");
       const nodes = document.querySelectorAll("[data-i18n]");
+      const themeToggle = document.querySelector("#themeToggle");
+      let currentLang = "zh";
+
+      try {
+        if (localStorage.getItem(STORAGE_LANG_KEY) === "en") currentLang = "en";
+      } catch {}
 
       function setLanguage(lang) {
-        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        currentLang = lang === "en" ? "en" : "zh";
+        document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
         nodes.forEach((node) => {
-          const value = translations[lang][node.dataset.i18n];
+          const value = translations[currentLang][node.dataset.i18n];
           if (value) node.textContent = value;
         });
-        buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === lang));
+        buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === currentLang));
+        try {
+          localStorage.setItem(STORAGE_LANG_KEY, currentLang);
+        } catch {}
       }
 
       buttons.forEach((button) => {
         button.addEventListener("click", () => setLanguage(button.dataset.lang));
       });
+
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme") || "light";
+          const next = current === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", next);
+          try {
+            localStorage.setItem(STORAGE_THEME_KEY, next);
+          } catch {}
+        });
+      }
+
+      document.querySelectorAll("[data-copy]").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const code = btn.parentElement.querySelector("code");
+          if (!code) return;
+          try {
+            await navigator.clipboard.writeText(code.textContent.trim());
+            btn.classList.add("copied");
+            btn.textContent = translations[currentLang].copiedLabel;
+            setTimeout(() => {
+              btn.classList.remove("copied");
+              btn.textContent = translations[currentLang].copyLabel;
+            }, 1600);
+          } catch {}
+        });
+      });
+
+      setLanguage(currentLang);
     </script>
   </body>
 </html>
