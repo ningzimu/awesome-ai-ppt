@@ -313,6 +313,24 @@ window.AWESOME_AI_PPT_PROJECTS = [
     "skill": "Skill"
   },
   {
+    "name": "GordenSun/GordenSuperPPTSkills",
+    "url": "https://github.com/GordenSun/GordenSuperPPTSkills",
+    "repo": "GordenSun/GordenSuperPPTSkills",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PNG/PPTX",
+    "description": "Codex skills that generate whole-slide image decks, then reconstruct them into layered PPTX files with picture backgrounds, frames, icons, and editable text; the repository has no LICENSE file, and its README allows commercial use with attribution.",
+    "descriptionZh": "Codex skills：先生成整页图片式演示，再重建为带图片背景、框架、图标和可编辑文本的分层 PPTX；仓库没有 LICENSE 文件，README 允许在署名后商用。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "Conversion"
+    ],
+    "editable": "Partially editable",
+    "skill": "Skill"
+  },
+  {
     "name": "helloianneo/ian-handdrawn-ppt",
     "url": "https://github.com/helloianneo/ian-handdrawn-ppt",
     "repo": "helloianneo/ian-handdrawn-ppt",
@@ -327,6 +345,23 @@ window.AWESOME_AI_PPT_PROJECTS = [
       "Image-based"
     ],
     "editable": "Image-based",
+    "skill": "Skill"
+  },
+  {
+    "name": "crazyykhllc-bit/CyberPPT",
+    "url": "https://github.com/crazyykhllc-bit/CyberPPT",
+    "repo": "crazyykhllc-bit/CyberPPT",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Codex skill that locks consulting-slide composition with ImageGen blueprints, then rebuilds each page in PptxGenJS as native text, shapes, tables, and charts, admitting cropped images only for complex visuals.",
+    "descriptionZh": "Codex skill：用 ImageGen 蓝图锁定咨询页构图，再用 PptxGenJS 逐页重建为原生文本、形状、表格和图表，复杂视觉才按准入嵌入裁图。",
+    "tags": [
+      "PPTX-native",
+      "Conversion"
+    ],
+    "editable": "Partially editable",
     "skill": "Skill"
   },
   {
@@ -436,6 +471,22 @@ window.AWESOME_AI_PPT_PROJECTS = [
       "HTML-first",
       "Plugin",
       "Template"
+    ],
+    "editable": "Source editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "ItsssssJack/power-design",
+    "url": "https://github.com/ItsssssJack/power-design",
+    "repo": "ItsssssJack/power-design",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Skill",
+    "output": "HTML",
+    "description": "Claude Code skill that applies a brand system and fixed design rules to write a self-contained HTML slide deck or a responsive website.",
+    "descriptionZh": "Claude Code skill：按品牌体系和固定设计规则生成自包含的 HTML 幻灯片或响应式网站。",
+    "tags": [
+      "HTML-first"
     ],
     "editable": "Source editable",
     "skill": "Skill"
@@ -917,6 +968,24 @@ window.AWESOME_AI_PPT_PROJECTS = [
       "Automation"
     ],
     "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "Pikapika260214/rw-consulting-ppt",
+    "url": "https://github.com/Pikapika260214/rw-consulting-ppt",
+    "repo": "Pikapika260214/rw-consulting-ppt",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PNG/PPTX",
+    "description": "Codex skills that turn rough consulting inputs into PNG slides and image-only PPTX, with a separate per-slide converter for native text, shapes, and cropped images.",
+    "descriptionZh": "Codex skills：把粗糙的咨询材料做成 PNG 幻灯片和纯图片 PPTX，并用另一个 skill 逐页转成含原生文本、形状和裁图的 PPTX。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "Conversion"
+    ],
+    "editable": "Partially editable",
     "skill": "Skill"
   },
   {
