@@ -66,6 +66,7 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 | [carnot-tech/jinba-consulting-pptx-skill](https://github.com/carnot-tech/jinba-consulting-pptx-skill) | 咨询风格 skill，组装 16:9 HTML 幻灯片部件并检查版式规则，用 Chrome 打印 PDF，并在需要时转换为可编辑 PowerPoint。 | HTML-first, 模板, PDF, 转换 | 部分可编辑 | Skill | 1,657 |
 | [feimacode/open-design-agent-kit](https://github.com/feimacode/open-design-agent-kit) | 用于生成 HTML 海报、社媒图、落地页和幻灯片的 agent 设计套件，可导出 PDF，以及图片式或可编辑 PowerPoint。 | HTML-first, MCP, PDF, 模板, 转换 | 部分可编辑 | Skill | 1,164 |
 | [op7418/dsh-guizang-design](https://github.com/op7418/dsh-guizang-design) | DeepSeek Harness 插件，网页 PPT 工作流打包了 guizang-ppt-skill 的快照并输出单个 HTML 文件，同时包含同一设计系统下的图文卡片和网页排版 skill；采用 AGPL-3.0。 | HTML-first, Plugin, 模板 | 源码可编辑 | Skill | 1,003 |
+| [ItsssssJack/power-design](https://github.com/ItsssssJack/power-design) | Claude Code skill：按品牌体系和固定设计规则生成自包含的 HTML 幻灯片或响应式网站。 | HTML-first | 源码可编辑 | Skill | 788 |
 | [sunbigfly/ppt-agent-skills](https://github.com/sunbigfly/ppt-agent-skills) | 代码驱动的演示文稿生成框架，强调像构建软件工程一样生成演示文稿。 | HTML-first, 图片式, 自动化 | 部分可编辑 | Skill | 926 |
 | [stackblitz/bolt-slides](https://github.com/stackblitz/bolt-slides) | 附带 agent skill 的 React 演示框架，用于生成交互式、响应式 Web deck。 | HTML-first, React, Interactive | 源码可编辑 | Skill | 1,167 |
 | [thePlannerIvan/planners-ppt-hell](https://github.com/thePlannerIvan/planners-ppt-hell) | 面向策划的 skill，先把每页画成 SVG，在网页审阅台修改后，再用 python-pptx 把几何结构转换成原生可编辑 PowerPoint；采用 AGPL-3.0。 | HTML-first, PPTX-native, 转换, 模板 | 可编辑 | Skill | 248 |
@@ -97,11 +98,13 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 | --- | --- | --- | --- | --- | --- |
 | [Anionex/banana-slides](https://github.com/Anionex/banana-slides) | 基于 Nano Banana Pro 的原生 AI PPT 应用，支持从想法、大纲、素材或页面描述生成演示，并导出可编辑 PPT。 | Image-first, 图片式, 应用, PDF, 视频 | 部分可编辑 | 否 | 16,047 |
 | [op7418/NanoBanana-PPT-Skills](https://github.com/op7418/NanoBanana-PPT-Skills) | NanoBanana PPT Skills，用于自动生成高质量 PPT 图片和视频，支持智能转场和交互式播放。 | Image-first, 图片式, 视频 | 图片式 | Skill | 3,370 |
+| [GordenSun/GordenSuperPPTSkills](https://github.com/GordenSun/GordenSuperPPTSkills) | Codex skills：先生成整页图片式演示，再重建为带图片背景、框架、图标和可编辑文本的分层 PPTX；仓库没有 LICENSE 文件，README 允许在署名后商用。 | Image-first, 图片式, 转换 | 部分可编辑 | Skill | 2,293 |
 | [helloianneo/ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt) | 用于生成中文手绘技术演示整页视觉的 Codex skill，以 PNG 图片形式输出。 | Image-first, 图片式 | 图片式 | Skill | 1,529 |
 | [NyxTides/ppt-image-first](https://github.com/NyxTides/ppt-image-first) | 面向 Codex、Claude Code 和 Opencode CLI 的 image-first PPT skill。 | Image-first, 图片式 | 图片式 | Skill | 1,238 |
 | [JuneYaooo/gpt-image2-ppt-skills](https://github.com/JuneYaooo/gpt-image2-ppt-skills) | 使用 gpt-image-2 仿制 PPTX 版式并替换内容的 skill，附带多套精选风格。 | Image-first, 图片式, 模板 | 图片式 | Skill | 1,474 |
 | [ningzimu/codex-ppt-skill](https://github.com/ningzimu/codex-ppt-skill) | 使用 gpt-image-2 生成图片式 PowerPoint deck 的 Codex skill。 | Image-first, 图片式 | 图片式 | Skill | 8,068 |
 | [HKUDS/Paper2Slides](https://github.com/HKUDS/Paper2Slides) | 通过 RAG、内容规划和图像生成把文档渲染为幻灯片图片与 PDF deck 的工作流。 | Image-first, 图片式, Academic, PDF | 图片式 | 否 | 3,862 |
+| [Pikapika260214/rw-consulting-ppt](https://github.com/Pikapika260214/rw-consulting-ppt) | Codex skills：把粗糙的咨询材料做成 PNG 幻灯片和纯图片 PPTX，并用另一个 skill 逐页转成含原生文本、形状和裁图的 PPTX。 | Image-first, 图片式, 转换 | 部分可编辑 | Skill | 570 |
 | [irenerachel/visual-style-ppt-skill](https://github.com/irenerachel/visual-style-ppt-skill) | 视觉风格 skill，逐页生成幻灯片图片并打包为仅含图片的 PPTX；仓库未声明许可证。 | Image-first, 图片式 | 图片式 | Skill | 399 |
 | [grapeot/nbp_slides](https://github.com/grapeot/nbp_slides) | 基于叙事方法论和模板的 AI 幻灯片生成器，支持生成演示 deck。 | Image-first, 图片式, HTML-first, PPTX | 图片式 | 否 | 91 |
 | [stevenjinlong/awesome-ppt-skills](https://github.com/stevenjinlong/awesome-ppt-skills) | Codex PPT skills，使用 gpt-image-2 生成图片式 PPT，并支持可编辑化交接。 | Image-first, 图片式 | 部分可编辑 | Skill | 76 |
@@ -115,6 +118,7 @@ npx -y skills@latest add ningzimu/awesome-ai-ppt \
 | 仓库 | 简介 | 标签 | 可编辑性 | Skill | Star |
 | --- | --- | --- | --- | --- | --- |
 | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 从文档、URL 和 Markdown 生成原生可编辑 PowerPoint 的 AI 工作流。 | PPTX-native, 模板 | 可编辑 | Skill | 78,864 |
+| [crazyykhllc-bit/CyberPPT](https://github.com/crazyykhllc-bit/CyberPPT) | Codex skill：用 ImageGen 蓝图锁定咨询页构图，再用 PptxGenJS 逐页重建为原生文本、形状、表格和图表，复杂视觉才按准入嵌入裁图。 | PPTX-native, 转换 | 部分可编辑 | Skill | 1,930 |
 | [veasion/AiPPT](https://github.com/veasion/AiPPT) | 可通过主题、文件或网址生成 PPT 的 AI 工具，支持自定义模板、图表、动画和 3D 特效解析渲染。 | 自动化, 转换, 应用, PPTX-native | 可编辑 | 否 | 1,924 |
 | [SmartSchoolAI/ai-to-pptx](https://github.com/SmartSchoolAI/ai-to-pptx) | 前后端开源的 AI PPTX 助手，支持生成大纲、选择模板、在线编辑并导出 PPTX。 | PPTX-native, 应用, 模板 | 可编辑 | 否 | 1,466 |
 | [Gabberflast/academic-pptx-skill](https://github.com/Gabberflast/academic-pptx-skill) | 面向学术演示的 Claude skill，强调行动标题、论证结构、图表纪律、引用规范和表达优先设计。 | PPTX-native, 模板 | 可编辑 | Skill | 1,649 |
