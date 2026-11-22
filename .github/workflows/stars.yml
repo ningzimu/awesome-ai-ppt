@@ -7,8 +7,7 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
+  actions: write
 
 concurrency:
   group: update-stars
@@ -16,9 +15,6 @@ concurrency:
 
 jobs:
   update:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -43,16 +39,9 @@ jobs:
           commit_message: "Update GitHub stars cache"
           file_pattern: docs/stars.json README.md README_EN.md
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # A push made with GITHUB_TOKEN does not trigger the Pages push workflow.
+      - name: Trigger Pages deployment
+        if: github.ref == 'refs/heads/main'
+        run: gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
