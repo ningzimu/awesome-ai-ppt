@@ -476,6 +476,44 @@
     "skill": "Skill"
   },
   {
+    "name": "CRui5in/paper-ppt-agent",
+    "url": "https://github.com/CRui5in/paper-ppt-agent",
+    "repo": "CRui5in/paper-ppt-agent",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "App",
+    "output": "SVG/PPTX",
+    "description": "Web app that plans paper PDFs or TeX as SVG slides, reviews the pages, and converts them into editable PowerPoint with python-pptx; it can drive local Claude Code or Codex, includes a PPTist editor, and is licensed under AGPL-3.0.",
+    "descriptionZh": "把论文 PDF 或 TeX 规划为 SVG 幻灯片、审查后再用 python-pptx 转成可编辑 PowerPoint 的网页应用；可调用本机 Claude Code 或 Codex，内置 PPTist 编辑器，采用 AGPL-3.0。",
+    "tags": [
+      "HTML-first",
+      "Academic",
+      "Conversion",
+      "App",
+      "PPTX-native"
+    ],
+    "editable": "Editable",
+    "skill": "No"
+  },
+  {
+    "name": "zengwenliang416/ppt-agent",
+    "url": "https://github.com/zengwenliang416/ppt-agent",
+    "repo": "zengwenliang416/ppt-agent",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Plugin",
+    "output": "SVG/HTML",
+"description": "Claude plugin invoked as /ppt-agent:ppt that writes 1280x720 Bento Grid SVG slides and an HTML preview. No license file; README.md only names MIT.",
+        "descriptionZh": "通过 /ppt-agent:ppt 调用的 Claude 插件，输出 1280x720 Bento Grid SVG 幻灯片和 HTML 预览。没有许可证文件，README.md 只写了 MIT。",
+    "tags": [
+      "HTML-first",
+      "Plugin",
+      "Template"
+    ],
+    "editable": "Source editable",
+    "skill": "Skill"
+  },
+  {
     "name": "ItsssssJack/power-design",
     "url": "https://github.com/ItsssssJack/power-design",
     "repo": "ItsssssJack/power-design",
@@ -708,6 +746,24 @@
     "skill": "No"
   },
   {
+    "name": "Arinin77/image2editable-ppt",
+    "url": "https://github.com/Arinin77/image2editable-ppt",
+    "repo": "Arinin77/image2editable-ppt",
+    "category": "PPTX Libraries and Automation Infrastructure",
+    "categoryZh": "PPTX 库与自动化基础设施",
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Codex skill that rebuilds diagrams, screenshots, and paper figures into editable PowerPoint with native text, shapes, and connectors.",
+    "descriptionZh": "把示意图、截图和论文插图重建为带原生文字、形状和连接线的可编辑 PowerPoint 的 Codex skill。",
+    "tags": [
+      "Conversion",
+      "Image-based",
+      "PPTX-native"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
     "name": "wyozi/react-pptx",
     "url": "https://github.com/wyozi/react-pptx",
     "repo": "wyozi/react-pptx",
@@ -820,6 +876,24 @@
     "skill": "Skill"
   },
   {
+    "name": "hustcer/pptx-nova",
+    "url": "https://github.com/hustcer/pptx-nova",
+    "repo": "hustcer/pptx-nova",
+    "category": "PPTX-Native Generation Workflows",
+    "categoryZh": "PPTX 库生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PPTX",
+    "description": "Agent skill that creates, edits, refurbishes, translates, and checks slides as native editable PPTX through the xdoc runtime.",
+    "descriptionZh": "通过 xdoc 运行时创建、编辑、翻新、翻译和检查原生可编辑 PPTX 的 agent skill。",
+    "tags": [
+      "PPTX-native",
+      "Automation",
+      "QA"
+    ],
+    "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
     "name": "CyberTimon/Powerpointer",
     "url": "https://github.com/CyberTimon/Powerpointer",
     "repo": "CyberTimon/Powerpointer",
@@ -853,6 +927,24 @@
       "Automation"
     ],
     "editable": "Editable",
+    "skill": "Skill"
+  },
+  {
+    "name": "minorun365/minorun-marp-skill",
+    "url": "https://github.com/minorun365/minorun-marp-skill",
+    "repo": "minorun365/minorun-marp-skill",
+    "category": "HTML-First Presentation Workflows",
+    "categoryZh": "HTML 风格 PPT 方案",
+    "type": "Skill",
+    "output": "HTML/PDF",
+    "description": "Claude Code skill for Japanese Marp talk decks that applies story, figure, and dark-theme rules, then exports and checks the deck through Marp CLI.",
+    "descriptionZh": "面向日语 Marp 演讲幻灯片的 Claude Code skill，包含叙事、图形和深色主题规则，并通过 Marp CLI 导出和检查。",
+    "tags": [
+      "HTML-first",
+      "Markdown",
+      "QA"
+    ],
+    "editable": "Source editable",
     "skill": "Skill"
   },
   {
@@ -1001,6 +1093,24 @@
     "tags": [
       "Image-first",
       "Image-based"
+    ],
+    "editable": "Image-based",
+    "skill": "Skill"
+  },
+  {
+    "name": "Ronnie2025/codex-ppt-skill",
+    "url": "https://github.com/Ronnie2025/codex-ppt-skill",
+    "repo": "Ronnie2025/codex-ppt-skill",
+    "category": "Image-First Presentation Workflows",
+    "categoryZh": "图片生成式 PPT 方案",
+    "type": "Skill",
+    "output": "PPTX/SVG",
+    "description": "Codex skill, separate from ningzimu/codex-ppt-skill, that generates whole-slide images for Chinese B2B decks and can split pages into editable PPTX elements or SVG.",
+    "descriptionZh": "与 ningzimu/codex-ppt-skill 不同仓库的 Codex skill，面向中文商业汇报生成整页图片，并可把页面拆成可编辑 PPTX 元素或 SVG。",
+    "tags": [
+      "Image-first",
+      "Image-based",
+      "Conversion"
     ],
     "editable": "Image-based",
     "skill": "Skill"
